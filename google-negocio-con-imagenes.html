@@ -1236,6 +1236,39 @@
             setTimeout(loadImages, 1000);
         });
     </script>
+    <!-- Botón «volver arriba» — propio de esta página: no carga js/app.js ni css/montaweb.css -->
+    <style>
+        .back-to-top {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            width: 50px;
+            height: 50px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            line-height: 1;
+            font-weight: 700;
+            color: #fff;
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.45);
+            cursor: pointer;
+            z-index: 1200;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: opacity .3s ease, transform .3s ease, visibility .3s ease;
+        }
+        .back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+        .back-to-top:hover { transform: translateY(-3px); }
+        .back-to-top:focus-visible { outline: 3px solid var(--primary-color); outline-offset: 3px; }
+        @media (prefers-reduced-motion: reduce) { .back-to-top { transition: none; } }
+        @media print { .back-to-top { display: none; } }
+    </style>
 </head>
 <body>
     <!-- Skip to main content link for accessibility -->
@@ -1753,5 +1786,19 @@
             </section>
         </div>
     </main>
+    <!-- Botón «volver arriba»: aparece al bajar en el artículo y devuelve al inicio -->
+    <button type="button" class="back-to-top" id="back-to-top" aria-label="Volver arriba" title="Volver arriba">&uarr;</button>
+    <script>
+        (function () {
+            var btn = document.getElementById('back-to-top');
+            if (!btn) return;
+            function toggle() { btn.classList.toggle('show', window.scrollY > 420); }
+            window.addEventListener('scroll', toggle, { passive: true });
+            toggle();
+            btn.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
 </body>
 </html>

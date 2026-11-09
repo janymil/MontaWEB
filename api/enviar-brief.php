@@ -117,6 +117,9 @@ foreach ($required as $key => $label) {
         $missing[] = $label;
     }
 }
+if (($data['acepto'] ?? '') !== 'on') {
+    mw_respond(422, ['ok' => false, 'error' => 'Debes aceptar la Política de privacidad para enviar el brief.']);
+}
 if ($missing) {
     mw_respond(422, ['ok' => false, 'error' => 'Faltan datos obligatorios: ' . implode(', ', $missing) . '.']);
 }
@@ -208,6 +211,10 @@ $channel = mw_clean($data['canal'] ?? '', 40) ?: 'WhatsApp';
 $lead = [
     'id'       => '',
     'fecha'    => gmdate('c'),
+    'contratado' => false,
+    'fecha_cierre' => null,
+    'privacidad_aceptada' => true,
+    'privacidad_version'  => '2026',
     'ip'       => substr(hash('sha256', $ip), 0, 12),
     'pagina'   => mw_clean($data['pagina'] ?? '', 300),
     'referrer' => mw_clean($data['referrer'] ?? '', 300),

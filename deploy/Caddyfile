@@ -1,60 +1,98 @@
-# MontaWeb — Caddyfile para VPS Linux
-# Copiar a /etc/caddy/Caddyfile y ajustar dominio / ruta / versión de PHP.
-# ⚠️ Caddy NO lee .htaccess: el bloqueo de secretos, las URLs limpias y los
-#    headers de seguridad se definen aquí (no en el .htaccess del proyecto).
-{
-	email admin@montaweb.pe
-}
+# MontaWeb — bloque de sitio para el Caddyfile compartido del VPS (/etc/caddy/Caddyfile).
+#
+# ⚠️ NO copies este archivo ENCIMA de /etc/caddy/Caddyfile: ese archivo ya contiene
+#    kaptia.app, librodigital.pe, mt5connector.uk, etc. Añade SOLO el bloque
+#    `montaweb.pe, www.montaweb.pe { … }` al final del Caddyfile compartido y luego:
+#        caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile
+#        systemctl reload caddy
+#    (No incluye bloque global `{ email … }`: solo puede haber uno por Caddyfile.)
+#
+# ⚠️ El document root REAL del servidor es /var/www/montaweb (no …/public_html).
+# ⚠️ Caddy NO lee .htaccess: los bloqueos, las URLs limpias y los headers están aquí.
+#
+# Estado actual del VPS (2026-11-07): php8.3-fpm INSTALADO y enganchado abajo con
+# `php_fastcgi /api/*.php`. Hardening en /etc/php/8.3/fpm/conf.d/99-montaweb.ini.
+# Pendiente para que el correo salga de verdad: crear api/config.php (desde
+# config.example.php) con la contraseña de aplicación de Zoho y garantizar que el
+# buzón destinatario exista (mx.zoho.com responde 550 5.1.1 si no existe).
 
 montaweb.pe, www.montaweb.pe {
-	root * /var/www/montaweb/public_html
+	root * /var/www/montaweb
 
-	encode zstd gzip
+	encode gzip zstd
 
 	# ---------- 1. Nunca servir secretos, logs ni documentación ----------
-	@private path /api/config.php /api/config.example.php /api/leads /api/leads/* /api/*.log
+	@private path /api/config.php /api/config.example.php /api/leads /api/leads/* /api/*.log /montaweb-mail-config.php
 	respond @private 404
 
 	@docs path *.md
 	respond @docs 404
 
-	@dotfiles path /.git/* /.env /.env.* /.htaccess /api/.htaccess /.user.ini
+	@dotfiles path /.git /.git/* /.gitignore /.env /.env.* /.htaccess /.user.ini /.replit /serve.py /package.json /package-lock.json /api/.htaccess
 	respond @dotfiles 404
 
-	# ---------- 2. /pagina.html → /pagina (igual que el .htaccess antiguo) ----------
-	@htmlFile path_regexp html ^/(?P<clean>.+)\.html$
-	redir @htmlFile /{re.clean} 301
+	# Un .php fuera de /api/ lo entregaría file_server como texto plano (php_fastcgi
+	# solo cubre /api/*.php), filtrando el archivo entero. Ej.: un secrets file
+	# dejado en la raíz del webroot.
+	@phpOutside {
+		path *.php
+		not path /api/*.php
+	}
+	respond @phpOutside 404
 
-	# ---------- 3. URLs limpias: /brief → /brief.html ----------
+	# ---------- 2. PHP-FPM (solo /api/*.php) ----------
+	# Socket real: `ls /run/php/`. El usuario caddy pertenece al grupo www-data,
+	# que es dueño del socket. Los `respond` de arriba se evalúan antes, así que
+	# /api/config.php y /api/leads/ nunca llegan a PHP.
+	php_fastcgi /api/*.php unix//run/php/php8.3-fpm.sock {
+		read_timeout 60s
+		write_timeout 60s
+	}
+
+	# ---------- 4. /pagina.html → /pagina (igual que el .htaccess antiguo) ----------
+	# El placeholder es {re.<nombre_regexp>.<grupo>}: si se usa `{re.clean}` a secas
+	# resuelve a "" y el redir acaba mandando todo a "/".
+	@htmlFile path_regexp html ^/(?P<clean>.+)\.html$
+	redir @htmlFile /{re.html.clean} 301
+
+	# ---------- 5. URLs limpias: /brief → /brief.html ----------
 	@cleanUrl {
-		not path /api/* /downloads/*
+		not path /api/*
 		not file {path}
 		file {path}.html
 	}
 	rewrite @cleanUrl {path}.html
 
-	# ---------- 4. PHP (solo /api/*.php) ----------
-	# Comprueba el socket real con: ls /run/php/  (p.ej. php8.3-fpm.sock)
-	php_fastcgi unix//run/php/php8.3-fpm.sock
-
-	# ---------- 5. Archivos estáticos ----------
+	# ---------- 6. Archivos estáticos ----------
 	file_server
 
-	# ---------- 6. Headers ----------
+	# ---------- 7. Headers de seguridad + política de caché ----------
 	header {
-		X-Content-Type-Options nosniff
-		X-Frame-Options SAMEORIGIN
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "SAMEORIGIN"
 		X-XSS-Protection "1; mode=block"
-		Referrer-Policy strict-origin-when-cross-origin
+		Referrer-Policy "strict-origin-when-cross-origin"
 		Permissions-Policy "geolocation=(), microphone=(), camera=()"
 		Strict-Transport-Security "max-age=31536000; includeSubDomains"
-		-Server
 	}
 
-	# ---------- 7. Página 404 propia (opcional) ----------
+	# HTML siempre revalida; los assets llevan TTL. Va dentro de `route` para
+	# conservar el orden: Caddy reordena las rutas `header` por especificidad.
+	route {
+		header Cache-Control "no-cache"
+		header /css/* Cache-Control "public, max-age=86400"
+		header /js/* Cache-Control "public, max-age=86400"
+		header /images/* Cache-Control "public, max-age=604800"
+		header /attached_assets/* Cache-Control "public, max-age=604800"
+	}
+
+	# ---------- 8. Página 404 propia ----------
 	handle_errors {
 		@404 expression {err.status_code} == 404
 		rewrite @404 /404.html
 		file_server
 	}
+
+	import visitlog
 }
+

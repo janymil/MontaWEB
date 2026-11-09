@@ -294,6 +294,16 @@ with `Reply-To` = the client's address.
 
 `_ts` must be at least 4 seconds in the past (anti-bot). The browser does this automatically.
 
+### Automatic lead retention
+
+Install the daily cleanup job once on the VPS:
+
+```bash
+sudo install -o root -g root -m 0644 deploy/montaweb-lead-retention.cron /etc/cron.d/montaweb-lead-retention
+```
+
+The job removes uncontracted brief files 12 months after submission and stale rate-limit files after one day. When a project is contracted, mark its JSON record with `"contratado": true`; after project closure, set `"fecha_cierre"` to an ISO date so the brief is removed 12 months later. Old records without a contract status are deliberately retained for review. The job does not remove email copies from Zoho or server access logs; apply the same 12-month rule to briefs in Zoho and set a separate retention policy for server access logs.
+
 ---
 
 ## 11. Mail deliverability (do this once)

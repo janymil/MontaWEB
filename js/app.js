@@ -132,14 +132,24 @@ function initSmoothAnchors() {
     });
 }
 
-/* ---------- 7. Back to top ---------- */
+/* ---------- 7. Back to top (one per page, shared by every page loading app.js) ---------- */
+const MW_BACK_TO_TOP_FROM = 420;
+
 function initBackToTop() {
+    if (document.getElementById('back-to-top')) return;
     const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.id = 'back-to-top';
     btn.className = 'back-to-top';
     btn.setAttribute('aria-label', 'Volver arriba');
-    btn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    btn.setAttribute('title', 'Volver arriba');
+    btn.innerHTML = '<i class="fas fa-arrow-up" aria-hidden="true"></i>';
     document.body.appendChild(btn);
-    window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 420), { passive: true });
+
+    const toggle = () => btn.classList.toggle('show', window.scrollY > MW_BACK_TO_TOP_FROM);
+    window.addEventListener('scroll', toggle, { passive: true });
+    // A page opened on an anchor (/servicios#precios) is already scrolled before any scroll event.
+    toggle();
     btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
@@ -341,20 +351,27 @@ function initQuiz() {
 /* ---------- 11. Contact form → WhatsApp ---------- */
 function initContactForm() {
     const form = document.getElementById('contact-form');
-    if (!form) return;
+    if (!form || form.dataset.handler === 'emailjs') return;
     form.addEventListener('submit', e => {
         e.preventDefault();
         const val = id => (document.getElementById(id)?.value || '').trim();
         const nombre = val('nombre'), telefono = val('telefono'), email = val('email');
         const empresa = val('empresa'), servicio = val('servicio');
         const rubro = val('tipo-negocio'), presupuesto = val('presupuesto'), mensaje = val('mensaje');
+        const acepto = document.getElementById('acepto')?.checked === true;
 
         if (!nombre || !telefono || !mensaje) {
             alert('Por favor completa tu nombre, teléfono y detalles del proyecto.');
             return;
         }
+        if (!acepto) {
+            alert('Autoriza el uso de tus datos para responder tu solicitud y consulta la Política de privacidad.');
+            document.getElementById('acepto')?.focus();
+            return;
+        }
         const waMessage = `Hola *MontaWeb*, solicito una cotización web:\n\n` +
             `• *Nombre:* ${nombre}\n• *Teléfono:* ${telefono}\n• *Email:* ${email}\n` +
+            `• *Autorizo el uso de mis datos para responder esta solicitud:* Sí\n` +
             (empresa ? `• *Empresa:* ${empresa}\n` : '') +
             (servicio ? `• *Servicio:* ${servicio}\n` : '') +
             (rubro ? `• *Rubro:* ${rubro}\n` : '') +

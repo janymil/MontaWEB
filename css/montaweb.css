@@ -472,8 +472,10 @@ h1,h2,h3,h4 { font-family:var(--font-display); line-height:1.14; letter-spacing:
 /* ---------- Floating WhatsApp & Back-to-top ---------- */
 .wa-float { position:fixed; right:22px; bottom:22px; z-index:900; width:58px; height:58px; border-radius:50%; background:var(--whatsapp); color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.7rem; box-shadow:0 14px 34px -8px rgba(37,211,102,0.55); transition:transform .25s; }
 .wa-float:hover { transform:scale(1.08); }
-.back-to-top { position:fixed; left:22px; bottom:22px; z-index:900; width:46px; height:46px; border-radius:13px; background:var(--surface); border:1px solid var(--border-2); color:var(--text); cursor:pointer; font-size:1rem; opacity:0; visibility:hidden; transform:translateY(12px); transition:opacity .3s,transform .3s,visibility .3s; }
+.back-to-top { position:fixed; left:22px; bottom:22px; z-index:900; width:46px; height:46px; border-radius:13px; background:var(--surface); border:1px solid var(--border-2); color:var(--text); cursor:pointer; font-size:1rem; display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; transform:translateY(12px); transition:opacity .3s,transform .3s,visibility .3s,border-color .2s; }
 .back-to-top.show { opacity:1; visibility:visible; transform:translateY(0); }
+.back-to-top:hover { border-color:var(--brand-2); color:var(--brand-2); }
+.back-to-top:focus-visible { outline:2px solid var(--brand-2); outline-offset:3px; }
 
 /* ---------- Page Header (inner pages) ---------- */
 .page-head { position:relative; padding:calc(var(--nav-h) + 4.5rem) 0 4.5rem; text-align:center; background:radial-gradient(44rem 24rem at 50% -20%, rgba(99,102,241,0.22), transparent 60%), var(--bg); overflow:hidden; }
@@ -491,6 +493,9 @@ h1,h2,h3,h4 { font-family:var(--font-display); line-height:1.14; letter-spacing:
 .form-field textarea { resize:vertical; min-height:110px; }
 .form-check { display:flex; gap:.7rem; align-items:flex-start; font-size:.84rem; color:var(--muted); margin:1.2rem 0; }
 .form-check input { margin-top:.25rem; accent-color:var(--brand-1); }
+.form-status { margin:1rem 0; padding:.9rem 1rem; border-radius:12px; font-size:.9rem; }
+.form-status--error { color:#fecaca; background:rgba(239,68,68,.12); border:1px solid rgba(239,68,68,.35); }
+.form-status--success { color:#bbf7d0; background:rgba(34,197,94,.12); border:1px solid rgba(34,197,94,.35); }
 
 /* ---------- Contact methods ---------- */
 .contact-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }

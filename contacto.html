@@ -13,7 +13,7 @@
     <link rel="icon" type="image/svg+xml" href="images/modern/favicon.svg">
     <meta name="theme-color" content="#060A13">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/montaweb.css?v=2026">
+    <link rel="stylesheet" href="css/montaweb.css?v=20261107">
 </head>
 <body>
 
@@ -107,10 +107,10 @@
             <div class="section-head">
                 <span class="eyebrow"><i class="fas fa-paper-plane"></i> Cotización express</span>
                 <h2>Envíanos tu proyecto</h2>
-                <p>Completa el formulario y recibirás nuestra propuesta directamente por WhatsApp en minutos.</p>
+                <p>Completa el formulario y recibirás la confirmación de tu solicitud por correo electrónico.</p>
             </div>
             <div class="form-card">
-                <form id="contact-form" novalidate>
+                <form id="contact-form" data-handler="emailjs" novalidate>
                     <div class="form-row">
                         <div class="form-field">
                             <label for="nombre">Tu nombre *</label>
@@ -123,8 +123,8 @@
                     </div>
                     <div class="form-row">
                         <div class="form-field">
-                            <label for="email">Correo electrónico</label>
-                            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
                         </div>
                         <div class="form-field">
                             <label for="empresa">Nombre de tu negocio</label>
@@ -173,10 +173,11 @@
                         <textarea id="mensaje" name="mensaje" placeholder="Ej: Tengo una pollería en Surco y necesito una web con menú digital y pedidos por WhatsApp..." required></textarea>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" id="acepto" required checked>
-                        <label for="acepto" style="font-weight:400;">Acepto recibir mi propuesta y asesoría por WhatsApp o llamada telefónica por parte de MontaWeb (Servicios SAAS) y he leído la <a href="/privacidad" style="color:var(--brand-2);text-decoration:underline;">Política de privacidad</a>.</label>
+                        <input type="checkbox" id="acepto" name="acepto" value="sí" required>
+                        <label for="acepto" style="font-weight:400;">Autorizo a MontaWeb (Servicios SAAS) y a EmailJS a tratar mis datos para gestionar y responder mi solicitud por correo, según la <a href="/privacidad" style="color:var(--brand-2);text-decoration:underline;">Política de privacidad</a>. Esta autorización no incluye promociones.</label>
                     </div>
-                    <button type="submit" class="btn btn--whatsapp btn--lg btn--block"><i class="fab fa-whatsapp"></i> Enviar y recibir propuesta por WhatsApp</button>
+                    <p id="contact-status" role="status" aria-live="polite" hidden></p>
+                    <button type="submit" class="btn btn--primary btn--lg btn--block"><i class="fas fa-paper-plane"></i> Enviar solicitud por correo</button>
                     <p style="text-align:center;font-size:.8rem;color:var(--muted);margin-top:1rem;"><i class="fas fa-lock"></i> Tus datos solo se usan para preparar tu cotización. Nada de spam.</p>
                 </form>
             </div>
@@ -264,6 +265,8 @@
         </div>
     </footer>
 
-    <script src="js/app.js?v=2026"></script>
+    <script src="js/app.js?v=20261107"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/emailjs-contact-fixed.js?v=20261107"></script>
 </body>
 </html>

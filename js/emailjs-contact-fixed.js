@@ -1,184 +1,105 @@
-// Dedicated EmailJS handler - isolated and fixed
-(function() {
+// Contact form handler. EmailJS sends the request to MontaWeb's configured inbox.
+(function () {
     'use strict';
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log('EmailJS contact script loaded');
-        
-        // Initialize EmailJS with your public key
-        if (typeof emailjs !== 'undefined') {
-            emailjs.init('11U-5AJNZGlStMGgr');
-            console.log('EmailJS initialized successfully');
-        } else {
-            console.error('EmailJS library not loaded');
-        }
-        
-        // Get the contact form
-        const contactForm = document.getElementById('contact-form');
-        if (!contactForm) {
-            console.log('Contact form not found on this page');
-            return;
-        }
-        
-        console.log('Contact form found, attaching submit handler');
-        
-        // Handle form submission
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            console.log('Form submitted, processing...');
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            console.log('Form data collected:', data);
-            
-            // Check honeypot
-            if (data._honey) {
-                console.log('Spam detected via honeypot');
-                return;
-            }
-            
-            // Basic validation
-            if (!data.nombre || !data.telefono || !data.email || !data.mensaje) {
-                alert('Por favor completa todos los campos obligatorios');
-                return;
-            }
-            
-            // Show loading state
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            if (submitBtn) {
-                submitBtn.disabled = true;
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-            }
-            
-            // Add timestamp
-            data.fecha_envio = new Date().toLocaleString('es-PE', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit'
-            });
-            
-            console.log('Attempting to send email with data:', data);
-            
-            // Try to send email via EmailJS, fallback to WhatsApp
-            sendEmailViaEmailJS(data, submitBtn);
-        });
-    });
-    
-    function sendEmailViaEmailJS(formData, submitBtn) {
-        console.log('sendEmailViaEmailJS called');
-        
-        // Check if EmailJS is available
+
+    const CONFIG = {
+        publicKey: '11U-5AJNZGlStMGgr',
+        serviceID: 'service_40mjh1h',
+        requestTemplateID: 'template_lhk5jbm',
+        confirmationTemplateID: 'template_qkzlags'
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('contact-form');
+        if (!form || form.dataset.handler !== 'emailjs') return;
+
+        const button = form.querySelector('button[type="submit"]');
+        const status = document.getElementById('contact-status');
+
         if (typeof emailjs === 'undefined') {
-            console.error('EmailJS not available, using fallback');
-            handleFallback(formData, submitBtn);
+            showError('El envío por correo no está disponible en este momento. Escríbenos a hola@montaweb.pe.');
             return;
         }
-        
-        // EmailJS configuration
-        const serviceID = 'service_40mjh1h';
-        const templateID = 'template_lhk5jbm';
-        const userTemplateID = 'template_qkzlags';
-        
-        console.log('Sending email with config:', { serviceID, templateID });
-        
-        // Send main email
-        emailjs.send(serviceID, templateID, formData)
-            .then(function(response) {
-                console.log('Email sent successfully:', response);
-                
-                // Send user confirmation if email provided
-                if (formData.email && userTemplateID) {
-                    console.log('Sending confirmation email to:', formData.email);
-                    emailjs.send(serviceID, userTemplateID, formData)
-                        .then(() => console.log('Confirmation email sent'))
-                        .catch(err => console.log('Confirmation email failed:', err));
-                }
-                
-                // Show success and redirect
-                showSuccess(submitBtn);
-                setTimeout(() => {
-                    window.location.href = '/gracias';
-                }, 2000);
-            })
-            .catch(function(error) {
-                console.error('EmailJS failed:', error);
-                handleFallback(formData, submitBtn);
-            });
-    }
-    
-    function handleFallback(formData, submitBtn) {
-        console.log('Using WhatsApp fallback');
-        
-        // Reset button
-        if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Solicitud';
+
+        try {
+            emailjs.init({ publicKey: CONFIG.publicKey });
+        } catch (error) {
+            showError('El envío por correo no está disponible en este momento. Escríbenos a hola@montaweb.pe.');
+            return;
         }
-        
-        // Create WhatsApp message
-        const message = createWhatsAppMessage(formData);
-        
-        // Show fallback message
-        alert('Redirigiendo a WhatsApp para completar tu solicitud...');
-        
-        // Open WhatsApp and redirect
-        setTimeout(() => {
-            window.open(`https://wa.me/51965403196?text=${encodeURIComponent(message)}`, '_blank');
-            window.location.href = '/gracias';
-        }, 1000);
-    }
-    
-    function createWhatsAppMessage(data) {
-        return `Hola! Solicito cotización para diseño web:
 
-👤 Nombre: ${data.nombre}
-📧 Email: ${data.email}
-📱 Teléfono: ${data.telefono}
-🏢 Empresa: ${data.empresa || 'No especificado'}
-🌐 Sitio actual: ${data.sitio_actual || 'No tiene'}
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+            clearStatus();
 
-💼 Servicio: ${data.tipo_servicio || 'No especificado'}
-🎯 Negocio: ${data.tipo_negocio || 'No especificado'}
-💰 Presupuesto: ${data.presupuesto || 'No especificado'}
-⏰ Urgencia: ${data.urgencia || 'No especificado'}
+            if (!form.reportValidity()) return;
 
-📋 Descripción:
-${data.mensaje}
-
-Enviado desde: MontaWeb.com`;
-    }
-    
-    function showSuccess(submitBtn) {
-        // Reset button to success state
-        if (submitBtn) {
-            submitBtn.innerHTML = '<i class="fas fa-check"></i> ¡Enviado!';
-            submitBtn.style.backgroundColor = '#4CAF50';
-        }
-        
-        // Show success message
-        const messageDiv = document.createElement('div');
-        messageDiv.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #4CAF50;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 5px;
-            z-index: 10000;
-            font-family: Arial, sans-serif;
-        `;
-        messageDiv.textContent = '¡Solicitud enviada exitosamente!';
-        document.body.appendChild(messageDiv);
-        
-        setTimeout(() => {
-            if (document.body.contains(messageDiv)) {
-                document.body.removeChild(messageDiv);
+            const consent = document.getElementById('acepto');
+            if (!consent || !consent.checked) {
+                showError('Marca la casilla de autorización para enviar tu solicitud.');
+                consent?.focus();
+                return;
             }
-        }, 3000);
-    }
+
+            const data = Object.fromEntries(new FormData(form));
+            if (data._honey) return;
+
+            // Preserve friendly aliases used by the existing EmailJS templates.
+            data.tipo_servicio = data.servicio || '';
+            data.tipo_negocio = data['tipo-negocio'] || '';
+            data.acepto = 'Sí. Política de privacidad, versión 2026.';
+            data.privacidad_aceptada = true;
+            data.privacidad_version = '2026';
+            data.privacidad_aceptada_en = new Date().toISOString();
+            data.fecha_envio = new Date().toLocaleString('es-PE');
+
+            setBusy(true);
+            try {
+                await emailjs.send(CONFIG.serviceID, CONFIG.requestTemplateID, data);
+
+                // A confirmation is useful, but its failure must not undo the request.
+                if (data.email && CONFIG.confirmationTemplateID) {
+                    emailjs.send(CONFIG.serviceID, CONFIG.confirmationTemplateID, data).catch(function () {});
+                }
+
+                showSuccess('Recibimos tu solicitud. Te enviaremos una confirmación por correo.');
+                window.setTimeout(function () {
+                    window.location.href = '/gracias';
+                }, 1800);
+            } catch (error) {
+                setBusy(false);
+                showError('No pudimos enviar tu solicitud por correo. Inténtalo otra vez o escríbenos a hola@montaweb.pe.');
+            }
+        });
+
+        function setBusy(busy) {
+            if (!button) return;
+            button.disabled = busy;
+            button.innerHTML = busy
+                ? '<i class="fas fa-spinner fa-spin"></i> Enviando…'
+                : '<i class="fas fa-paper-plane"></i> Enviar solicitud por correo';
+        }
+
+        function clearStatus() {
+            if (!status) return;
+            status.hidden = true;
+            status.textContent = '';
+            status.className = 'form-status';
+        }
+
+        function showError(message) {
+            showStatus(message, 'form-status form-status--error');
+        }
+
+        function showSuccess(message) {
+            showStatus(message, 'form-status form-status--success');
+        }
+
+        function showStatus(message, className) {
+            if (!status) return;
+            status.textContent = message;
+            status.className = className;
+            status.hidden = false;
+        }
+    });
 })();
