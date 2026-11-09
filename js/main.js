@@ -1,12 +1,12 @@
 // ==========================================================================
-// MontaWeb by Servicios SAAS (RUC 10411592982)
+// MontaWeb by Semantika TECH (RUC 20616806981)
 // Interactive Experience & Smart Tools (2026 Edition)
 // ==========================================================================
 
 const MONTAWEB_CONFIG = {
     brand: 'MontaWeb',
-    provider: 'Servicios SAAS',
-    ruc: '10411592982',
+    provider: 'Semantika TECH',
+    ruc: '20616806981',
     phone: '965403196',
     whatsappNumber: '51965403196'
 };

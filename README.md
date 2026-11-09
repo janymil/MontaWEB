@@ -99,7 +99,7 @@ Edit CSS variables in `css/style.css`:
 
 ## 📄 License
 
-All rights reserved © 2026 MontaWeb (Servicios SAAS — RUC 10411592982)
+All rights reserved © 2026 MontaWeb (Semantika TECH — RUC 20616806981)
 
 ## 👥 Contact
 
