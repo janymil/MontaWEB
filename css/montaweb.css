@@ -642,3 +642,7 @@ h1,h2,h3,h4 { font-family:var(--font-display); line-height:1.14; letter-spacing:
     .prices th,.prices td { padding:.7rem .8rem; font-size:.84rem; }
     .audit { padding:1.6rem; }
 }
+
+/* Libro de Reclamaciones (Ley 29571, DS 011-2011-PCM) — visible en todas las páginas */
+.footer__libro { display:inline-flex; align-items:center; gap:.4rem; padding:.3rem .7rem; border:1px solid var(--brand-2); border-radius:6px; white-space:nowrap; }
+.footer__libro:hover { background:rgba(255,255,255,0.06); }
