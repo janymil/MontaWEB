@@ -1,41 +1,71 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="dark">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEMANTIKA TECH — Empresa de software en Lima | MontaWeb</title>
-    <meta name="description" content="SEMANTIKA TECH E.I.R.L. (RUC 20616806981) es una empresa peruana de software: páginas web con MontaWeb, reservas por WhatsApp con MiCita y protección de datos con DatosPrivados.">
+    <title>SEMANTIKA TECH E.I.R.L. — Empresa de software en Lima, Perú</title>
+    <meta name="description" content="SEMANTIKA TECH E.I.R.L. (RUC 20616806981) es una empresa peruana de software en San Isidro, Lima. Creamos MiCita, LibroDigital.pe, Kaptia, DatosPrivados y MontaWeb, además de software a medida y automatización con IA.">
     <link rel="canonical" href="https://montaweb.pe/empresa">
-    <meta name="author" content="SEMANTIKA TECH">
+    <meta name="author" content="SEMANTIKA TECH E.I.R.L.">
     <meta property="og:title" content="SEMANTIKA TECH — Empresa de software en Lima">
-    <meta property="og:description" content="Páginas web y aplicaciones para negocios en Perú. MontaWeb, MiCita y DatosPrivados.">
+    <meta property="og:description" content="Software hecho en Lima para negocios peruanos: MiCita, LibroDigital.pe, Kaptia, DatosPrivados y MontaWeb.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://montaweb.pe/empresa">
     <meta property="og:locale" content="es_PE">
+    <meta property="og:site_name" content="MontaWeb">
     <link rel="icon" type="image/svg+xml" href="images/modern/favicon.svg">
     <meta name="theme-color" content="#060A13">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": "https://montaweb.pe/empresa#organization",
-      "name": "SEMANTIKA TECH",
-      "legalName": "SEMANTIKA TECH E.I.R.L.",
-      "taxID": "20616806981",
-      "url": "https://montaweb.pe/empresa",
-      "description": "Empresa peruana de software: páginas web, aplicaciones y herramientas para negocios.",
-      "address": { "@type": "PostalAddress", "streetAddress": "Av. Javier Prado Este 560, Int. 1302", "addressLocality": "San Isidro", "addressRegion": "Lima", "postalCode": "15040", "addressCountry": "PE" },
-      "areaServed": "PE",
-      "contactPoint": { "@type": "ContactPoint", "telephone": "+51965403196", "contactType": "customer service", "availableLanguage": "Spanish" },
-      "brand": [
-        { "@type": "Brand", "name": "MontaWeb", "url": "https://montaweb.pe/" },
-        { "@type": "Brand", "name": "MiCita", "url": "https://micita.pe/" },
-        { "@type": "Brand", "name": "DatosPrivados" }
-      ],
-      "sameAs": ["https://wa.me/51965403196", "https://micita.pe/"]
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://montaweb.pe/empresa#organization",
+          "name": "SEMANTIKA TECH",
+          "legalName": "SEMANTIKA TECH E.I.R.L.",
+          "taxID": "20616806981",
+          "url": "https://montaweb.pe/empresa",
+          "description": "Empresa peruana de software: productos SaaS, páginas web y tiendas online, aplicaciones móviles, software a medida y automatización con inteligencia artificial.",
+          "address": { "@type": "PostalAddress", "streetAddress": "Av. Javier Prado Este 560, Int. 1302", "addressLocality": "San Isidro", "addressRegion": "Lima", "addressCountry": "PE" },
+          "areaServed": "PE",
+          "founder": { "@id": "https://montaweb.pe/empresa#founder" },
+          "contactPoint": { "@type": "ContactPoint", "telephone": "+51965403196", "contactType": "customer service", "availableLanguage": "Spanish" },
+          "knowsAbout": ["Software como servicio (SaaS)", "Desarrollo web", "Comercio electrónico", "Aplicaciones móviles", "Automatización con inteligencia artificial"],
+          "brand": [
+            { "@type": "Brand", "name": "MontaWeb", "url": "https://montaweb.pe/" },
+            { "@type": "Brand", "name": "MiCita", "url": "https://micita.pe/" },
+            { "@type": "Brand", "name": "LibroDigital.pe", "url": "https://librodigital.pe/" },
+            { "@type": "Brand", "name": "Kaptia", "url": "https://kaptia.app/" },
+            { "@type": "Brand", "name": "DatosPrivados" }
+          ],
+          "subOrganization": [
+            { "@id": "https://montaweb.pe/#organization" },
+            { "@id": "https://librodigital.pe/#brand" }
+          ],
+          "sameAs": ["https://wa.me/51965403196"]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://montaweb.pe/empresa#founder",
+          "name": "Jan Milata",
+          "jobTitle": "Fundador y Gerente General",
+          "worksFor": { "@id": "https://montaweb.pe/empresa#organization" }
+        },
+        {
+          "@type": "AboutPage",
+          "@id": "https://montaweb.pe/empresa#webpage",
+          "url": "https://montaweb.pe/empresa",
+          "name": "SEMANTIKA TECH E.I.R.L. — Empresa de software en Lima, Perú",
+          "inLanguage": "es-PE",
+          "about": { "@id": "https://montaweb.pe/empresa#organization" },
+          "isPartOf": { "@type": "WebSite", "@id": "https://montaweb.pe/#website", "url": "https://montaweb.pe/", "name": "MontaWeb" }
+        }
+      ]
     }
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/montaweb.css?v=20261107">
+    <link rel="stylesheet" href="css/montaweb.css?v=20261119">
 </head>
 <body>
 
@@ -50,8 +80,17 @@
                 <a href="/" class="nav__link">Inicio</a>
                 <a href="/servicios" class="nav__link">Servicios</a>
                 <a href="/ejemplos" class="nav__link">Ejemplos</a>
-                <a href="/#cotizador" class="nav__link">Cotizador</a>
-                <a href="/contacto" class="nav__link active">Contacto</a>
+                <div class="nav__dropdown">
+                    <span class="nav__dropdown-toggle" tabindex="0" role="button" aria-haspopup="true">Productos <i class="fas fa-chevron-down" style="font-size:.65rem;"></i></span>
+                    <div class="nav__dropdown-menu">
+                        <a href="https://micita.pe/" class="nav__dropdown-link" target="_blank" rel="noopener"><i class="fas fa-calendar-check"></i> MiCita — Reservas y agenda</a>
+                        <a href="https://librodigital.pe/" class="nav__dropdown-link" target="_blank" rel="noopener"><i class="fas fa-book-open"></i> LibroDigital.pe — Libro de Reclamaciones</a>
+                        <a href="https://kaptia.app/" class="nav__dropdown-link" target="_blank" rel="noopener"><i class="fas fa-wallet"></i> Kaptia — Finanzas personales con IA</a>
+                        <a href="/empresa#productos" class="nav__dropdown-link"><i class="fas fa-layer-group"></i> Todos los productos</a>
+                    </div>
+                </div>
+                <a href="/empresa" class="nav__link active" aria-current="page">Empresa</a>
+                <a href="/contacto" class="nav__link">Contacto</a>
                 <a href="https://wa.me/51965403196" class="nav__cta" target="_blank" rel="noopener">
                     <i class="fab fa-whatsapp"></i> 965 403 196
                 </a>
@@ -66,73 +105,189 @@
         </div>
     </nav>
 
+    <main>
     <!-- Page header -->
     <header class="page-head">
         <div class="container">
-            <span class="eyebrow"><i class="fas fa-building"></i> Quiénes somos</span>
+            <span class="eyebrow"><i class="fas fa-building"></i> La empresa detrás de MontaWeb</span>
             <h1>Somos <span class="text-gradient">SEMANTIKA TECH</span></h1>
-            <p>Empresa peruana de tecnología que crea páginas web y aplicaciones para negocios. MontaWeb es nuestra marca de diseño web.</p>
+            <p>Una empresa peruana de software con sede en San Isidro, Lima. Creamos y operamos productos SaaS para negocios del Perú, y desarrollamos páginas web, tiendas online, aplicaciones móviles, software a medida y automatización con inteligencia artificial.</p>
+            <div class="btn-group">
+                <a href="#productos" class="btn btn--primary"><i class="fas fa-layer-group"></i> Ver nuestros productos</a>
+                <a href="https://wa.me/51965403196?text=Hola%20SEMANTIKA%20TECH%2C%20quiero%20conversar%20sobre%20un%20proyecto" class="btn btn--ghost" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Conversemos</a>
+            </div>
         </div>
     </header>
 
-    <section class="section" style="padding-top:4rem;">
+    <!-- Why -->
+    <section class="section" id="por-que">
         <div class="container">
             <div class="section-head">
-                <span class="eyebrow"><i class="fas fa-layer-group"></i> Lo que hacemos</span>
-                <h2>Webs y apps para negocios en Perú</h2>
-                <p>Desde San Isidro, Lima, atendemos de forma remota a emprendedores y empresas de todo el país: por WhatsApp, llamada o videollamada.</p>
+                <span class="eyebrow"><i class="fas fa-compass"></i> Por qué existimos</span>
+                <h2>Software pensado para cómo trabajan los negocios en Perú</h2>
             </div>
-            <div class="cards-grid">
+            <div class="prose-block">
+                <!-- PLACEHOLDER: founding story, Jan to confirm or rewrite -->
+                <div class="draft-note">Borrador: Jan confirma o corrige esta historia antes de publicar.</div>
+                <p>Los pequeños negocios peruanos suelen quedar entre dos opciones que no les sirven: agencias caras con plazos largos, o herramientas extranjeras que no cobran con Yape ni Plin, no conocen el Libro de Reclamaciones ni la Ley 29733 de protección de datos y no funcionan por WhatsApp, que es donde de verdad conversan con sus clientes.</p>
+                <p><strong>SEMANTIKA TECH nace en Lima para cerrar esa brecha.</strong> Construimos productos que resuelven obligaciones y tareas concretas de un negocio peruano (agendar citas, atender reclamos dentro del plazo legal, proteger los datos de sus clientes, tener una web que venda) con precios que un emprendedor puede pagar.</p>
+                <p>Cada producto tiene su propio sitio y su propio equipo de soporte, pero todos comparten la misma base: software propio, servidores administrados por nosotros y una empresa peruana que responde por ellos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="section section--alt" id="productos">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow"><i class="fas fa-layer-group"></i> Nuestros productos</span>
+                <h2>Productos de SEMANTIKA TECH</h2>
+                <p>Cada producto tiene su propio dominio. Todos son desarrollados y operados por SEMANTIKA TECH E.I.R.L.</p>
+            </div>
+            <div class="prod-grid">
+                <article class="prod-card">
+                    <div class="prod-card__top">
+                        <div class="prod-card__icon"><i class="fas fa-calendar-check"></i></div>
+                        <span class="status status--live">En línea</span>
+                    </div>
+                    <h3>MiCita</h3>
+                    <p>Agenda online, micrositio con link propio, cola virtual y caja del día (Yape, Plin, efectivo) para barberías, salones, spas, consultorios, veterinarias y canchas.</p>
+                    <div class="prod-card__links"><a href="https://micita.pe/" target="_blank" rel="noopener">micita.pe <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div>
+                </article>
+                <article class="prod-card">
+                    <div class="prod-card__top">
+                        <div class="prod-card__icon"><i class="fas fa-book-open"></i></div>
+                        <span class="status status--live">En línea</span>
+                    </div>
+                    <h3>LibroDigital.pe</h3>
+                    <p>Libro de Reclamaciones virtual con código QR, constancia automática para el consumidor y alertas del plazo de 15 días hábiles que exige el DS 011-2011-PCM.</p>
+                    <div class="prod-card__links"><a href="https://librodigital.pe/" target="_blank" rel="noopener">librodigital.pe <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://librodigital.pe/nosotros" target="_blank" rel="noopener">Nosotros</a></div>
+                </article>
+                <article class="prod-card">
+                    <div class="prod-card__top">
+                        <div class="prod-card__icon"><i class="fas fa-wallet"></i></div>
+                        <span class="status status--live">En línea</span>
+                    </div>
+                    <h3>Kaptia</h3>
+                    <!-- PLACEHOLDER: Kaptia operator wording (PE vs US company), Jan to confirm -->
+                    <div class="draft-note">Borrador: falta confirmar cómo describir el operador en EE.UU.</div>
+                    <p>Control de gastos personales con inteligencia artificial: registra gastos con una foto de la boleta, por voz o por texto, y sigue presupuestos, metas y reportes. Disponible en español e inglés.</p>
+                    <div class="prod-card__links"><a href="https://kaptia.app/" target="_blank" rel="noopener">kaptia.app <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div>
+                </article>
+                <article class="prod-card">
+                    <div class="prod-card__top">
+                        <div class="prod-card__icon"><i class="fas fa-shield-halved"></i></div>
+                        <span class="status status--soon">Próximamente</span>
+                    </div>
+                    <h3>DatosPrivados</h3>
+                    <p>Herramientas para que las pequeñas empresas cumplan la Ley 29733 de Protección de Datos Personales: políticas, registro de bancos de datos y atención de derechos ARCO.</p>
+                    <div class="prod-card__links"><span class="prod-card__domain">datosprivados.pe</span></div>
+                </article>
+                <article class="prod-card">
+                    <div class="prod-card__top">
+                        <div class="prod-card__icon"><i class="fas fa-globe"></i></div>
+                        <span class="status status--live">En línea</span>
+                    </div>
+                    <h3>MontaWeb</h3>
+                    <p>Nuestra marca de páginas web: landing pages, webs corporativas, tiendas online, rediseños y perfiles de Google Mi Negocio, con precios publicados y entrega en 3 a 7 días.</p>
+                    <div class="prod-card__links"><a href="/servicios">Servicios y precios</a><a href="/ejemplos">Diseños de ejemplo</a></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="servicios">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow"><i class="fas fa-code"></i> Qué hacemos</span>
+                <h2>Servicios de desarrollo de software</h2>
+                <p>Lo mismo que usamos para construir nuestros productos lo ponemos al servicio de tu empresa.</p>
+            </div>
+            <div class="cards-grid cards-grid--3">
                 <div class="f-card">
-                    <div class="f-card__icon"><i class="fas fa-globe"></i></div>
-                    <h3>MontaWeb — páginas web</h3>
-                    <p>Landing pages, webs corporativas, tiendas online, rediseños y perfiles de Google para negocios. <a href="/servicios">Ver servicios y precios</a>.</p>
+                    <div class="f-card__icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Plataformas SaaS</h3>
+                    <p>Productos con suscripción, varios clientes en una sola plataforma, pagos recurrentes y paneles de administración.</p>
                 </div>
                 <div class="f-card">
-                    <div class="f-card__icon"><i class="fas fa-calendar-check"></i></div>
-                    <h3>MiCita — reservas por WhatsApp</h3>
-                    <p>Agenda online, micrositio, cola virtual y caja del día para barberías, salones, spas, consultorios y más. <a href="https://micita.pe" target="_blank" rel="noopener">micita.pe</a>.</p>
+                    <div class="f-card__icon"><i class="fas fa-store"></i></div>
+                    <h3>Webs y tiendas online</h3>
+                    <p>A través de MontaWeb: páginas rápidas, optimizadas para celular y conectadas a tu WhatsApp. <a href="/servicios">Ver planes</a>.</p>
                 </div>
                 <div class="f-card">
-                    <div class="f-card__icon"><i class="fas fa-shield-halved"></i></div>
-                    <h3>DatosPrivados — protección de datos</h3>
-                    <p>Herramientas para que las empresas cumplan con la Ley de Protección de Datos Personales (Ley 29733).</p>
+                    <div class="f-card__icon"><i class="fas fa-mobile-screen"></i></div>
+                    <h3>Aplicaciones móviles</h3>
+                    <p>Apps para Android e iOS conectadas a tu sistema, o aplicaciones web instalables en el celular.</p>
                 </div>
                 <div class="f-card">
-                    <div class="f-card__icon"><i class="fas fa-code"></i></div>
-                    <h3>Apps a medida</h3>
-                    <p>Desarrollamos aplicaciones web para tu negocio: sistemas de reservas, paneles, automatizaciones con WhatsApp e integraciones de pago.</p>
+                    <div class="f-card__icon"><i class="fas fa-gears"></i></div>
+                    <h3>Software a medida</h3>
+                    <p>Sistemas de reservas, paneles internos, integraciones con pasarelas de pago peruanas y con tus herramientas actuales.</p>
+                </div>
+                <div class="f-card">
+                    <div class="f-card__icon"><i class="fas fa-robot"></i></div>
+                    <h3>Automatización con IA</h3>
+                    <p>Lectura de documentos y boletas, respuestas por WhatsApp y procesos repetitivos resueltos con inteligencia artificial.</p>
+                </div>
+                <div class="f-card">
+                    <div class="f-card__icon"><i class="fas fa-scale-balanced"></i></div>
+                    <h3>Cumplimiento digital</h3>
+                    <p>Libro de Reclamaciones virtual, políticas de privacidad y protección de datos aplicadas dentro del software, no solo en papel.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section">
+    <!-- Founder -->
+    <section class="section section--alt" id="fundador">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow"><i class="fas fa-user-tie"></i> Quién dirige la empresa</span>
+                <h2>Fundador</h2>
+            </div>
+            <div class="founder">
+                <!-- PLACEHOLDER: replace with <img class="founder__photo" src="images/empresa/jan-milata.jpg" alt="Jan Milata, fundador de SEMANTIKA TECH" width="260" height="325"> -->
+                <div class="founder__photo" role="img" aria-label="Foto de Jan Milata (pendiente)">JM</div>
+                <div>
+                    <h3>Jan Milata</h3>
+                    <p class="founder__role">Fundador &amp; Gerente General</p>
+                    <!-- PLACEHOLDER: founder facts, Jan to supply countries, years, roles, education, LinkedIn -->
+                    <div class="draft-note">Borrador: faltan datos concretos (países y años, cargos anteriores, estudios, LinkedIn y foto).</div>
+                    <p>Con formación en Ciencias Políticas y trayectoria internacional en Europa y Latinoamérica, Jan Milata dirige SEMANTIKA TECH con un objetivo concreto: unir el pensamiento estratégico con la ingeniería de software moderna y la inteligencia artificial.</p>
+                    <p>Se especializa en plataformas SaaS, automatización de procesos e infraestructura digital escalable. Fundó SEMANTIKA TECH en Lima para ayudar a empresas y emprendedores a convertir ideas complejas en productos digitales eficientes, rentables y listos para crecer.</p>
+                    <ul class="founder__facts">
+                        <li><i class="fas fa-graduation-cap"></i><span>[Estudios: carrera, universidad, año]</span></li>
+                        <li><i class="fas fa-earth-americas"></i><span>[Experiencia: países, años y cargos]</span></li>
+                        <li><i class="fas fa-location-dot"></i><span>[En el Perú desde: año]</span></li>
+                    </ul>
+                    <div class="prod-card__links"><a href="#">[LinkedIn]</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal data -->
+    <section class="section" id="datos">
         <div class="container">
             <div class="section-head">
                 <span class="eyebrow"><i class="fas fa-file-invoice"></i> Datos de la empresa</span>
                 <h2>Información legal y contacto</h2>
             </div>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-card__icon"><i class="fas fa-id-card"></i></div>
-                    <h3>Razón social</h3>
-                    <p>SEMANTIKA TECH E.I.R.L.<br>RUC 20616806981</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-card__icon"><i class="fas fa-location-dot"></i></div>
-                    <h3>Domicilio fiscal</h3>
-                    <p>Av. Javier Prado Este 560, Int. 1302, San Isidro, Lima 15040, Perú.<br>Atención remota en Lima, Callao y todo el Perú.</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-card__icon"><i class="fab fa-whatsapp"></i></div>
-                    <h3>WhatsApp y teléfono</h3>
-                    <p>Lunes a sábado, 9 am a 8 pm.</p>
-                    <a href="https://wa.me/51965403196?text=Hola%20SEMANTIKA%20TECH" target="_blank" rel="noopener">+51 965 403 196</a>
-                </div>
-            </div>
+            <table class="legal-table">
+                <tbody>
+                    <tr><th scope="row">Razón social</th><td>SEMANTIKA TECH E.I.R.L.</td></tr>
+                    <tr><th scope="row">RUC</th><td>20616806981</td></tr>
+                    <tr><th scope="row">Domicilio fiscal</th><td>Av. Javier Prado Este 560, Int. 1302, San Isidro, Lima, Perú</td></tr>
+                    <tr><th scope="row">Gerente General</th><td>Jan Milata</td></tr>
+                    <tr><th scope="row">WhatsApp y teléfono</th><td><a href="https://wa.me/51965403196?text=Hola%20SEMANTIKA%20TECH" target="_blank" rel="noopener">+51 965 403 196</a> (lunes a sábado, 9 am a 8 pm)</td></tr>
+                    <tr><th scope="row">Libro de Reclamaciones</th><td><a href="https://librodigital.pe/libro/semantikatech" target="_blank" rel="noopener">librodigital.pe/libro/semantikatech</a></td></tr>
+                    <tr><th scope="row">Documentos</th><td><a href="/terminos">Términos y condiciones</a> · <a href="/privacidad">Política de privacidad</a></td></tr>
+                </tbody>
+            </table>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -140,9 +295,9 @@
             <div class="footer__grid">
                 <div class="footer__brand">
                     <img src="images/modern/montaweb-logo-dark.svg" alt="MontaWeb">
-                    <p>Diseño y desarrollo de páginas web modernas, rápidas y enfocadas en ventas para emprendedores y empresas en todo el Perú.</p>
+                    <p>Páginas web, tiendas online y software a medida para emprendedores y empresas en todo el Perú.</p>
                     <div class="footer__provider">
-                        <span>Un servicio operado por <strong>Semantika TECH</strong></span>
+                        <span>MontaWeb es una marca de <a href="/empresa"><strong>SEMANTIKA TECH E.I.R.L.</strong></a></span>
                         <span><strong>RUC:</strong> 20616806981 • San Isidro, Lima</span>
                     </div>
                 </div>
@@ -151,10 +306,10 @@
                     <ul>
                         <li><a href="/">Inicio</a></li>
                         <li><a href="/servicios">Servicios y planes</a></li>
-                        <li><a href="/ejemplos">Portafolio</a></li>
+                        <li><a href="/ejemplos">Diseños de ejemplo</a></li>
                         <li><a href="/diseño-web-lima">Diseño web en Lima</a></li>
                         <li><a href="/contacto">Solicitar cotización</a></li>
-                        <li><a href="/empresa">Sobre SEMANTIKA TECH</a></li>
+                        <li><a href="/empresa">Empresa</a></li>
                     </ul>
                 </div>
                 <div>
@@ -162,29 +317,34 @@
                     <ul>
                         <li><a href="/servicios#landing-pages">Landing Pages (S/ 50)</a></li>
                         <li><a href="/servicios#web-simple">Web Simple (S/ 99)</a></li>
-                        <li><a href="/servicios#rediseno-web">Rediseño Web (S/ 199)</a></li>
                         <li><a href="/servicios#tienda-online">Tienda Starter (S/ 299)</a></li>
                         <li><a href="/servicios#google-mi-negocio">Google Mi Negocio (S/ 79)</a></li>
-                        <li><a href="/servicios#hosting-dominio">Hosting + dominio (GRATIS)</a></li>
-                        <li><a href="/servicios#packs">Packs desde S/ 149</a></li>
+                        <li><a href="/servicios#software-a-medida">Software a medida</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Productos</h4>
+                    <ul>
+                        <li><a href="https://micita.pe/" target="_blank" rel="noopener">MiCita</a></li>
+                        <li><a href="https://librodigital.pe/" target="_blank" rel="noopener">LibroDigital.pe</a></li>
+                        <li><a href="https://kaptia.app/" target="_blank" rel="noopener">Kaptia</a></li>
+                        <li><a href="/empresa#productos">DatosPrivados (próximamente)</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4>Contacto directo</h4>
                     <div class="footer__contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/51965403196" target="_blank" rel="noopener">+51 965 403 196</a></div>
                     <div class="footer__contact-item"><i class="fas fa-phone"></i><a href="tel:+51965403196">965 403 196</a></div>
-                    <div class="footer__contact-item"><i class="fas fa-file-invoice"></i><span>Semantika TECH • RUC 20616806981</span></div>
-                    <div class="footer__contact-item"><i class="fas fa-location-dot"></i><span>Lima, Perú — atención nacional</span></div>
+                    <div class="footer__contact-item"><i class="fas fa-location-dot"></i><span>Av. Javier Prado Este 560, Int. 1302, San Isidro, Lima</span></div>
                 </div>
             </div>
             <div class="footer__bottom">
-                <span>&copy; 2026 <strong>MontaWeb</strong> — Proveedor oficial: <strong>Semantika TECH (RUC 20616806981)</strong>. Todos los derechos reservados.</span>
-                <span>WhatsApp & Teléfono: <a href="https://wa.me/51965403196" target="_blank" rel="noopener">965 403 196</a></span>
-                <span><a href="/terminos">Términos y condiciones</a> · <a href="/privacidad">Política de privacidad</a> · <a class="footer__libro" href="https://librodigital.pe/libro/semantikatech" target="_blank" rel="noopener" title="Libro de Reclamaciones virtual (se abre en una nueva pestaña)"><i class="fas fa-book-open" aria-hidden="true"></i> Libro de Reclamaciones</a></span>
+                <span>&copy; 2026 <strong>MontaWeb</strong> es una marca de <a href="/empresa">SEMANTIKA TECH E.I.R.L.</a> · RUC 20616806981</span>
+                <span><a href="/terminos">Términos y condiciones</a> · <a href="/privacidad">Política de privacidad</a> · <a href="/privacidad#cookies">Cookies</a> · <a class="footer__libro" href="https://librodigital.pe/libro/semantikatech" target="_blank" rel="noopener" title="Libro de Reclamaciones virtual (se abre en una nueva pestaña)"><i class="fas fa-book-open" aria-hidden="true"></i> Libro de Reclamaciones</a></span>
             </div>
         </div>
     </footer>
 
-    <script src="js/app.js?v=20261107"></script>
+    <script src="js/app.js?v=20261119"></script>
 </body>
 </html>

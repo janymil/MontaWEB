@@ -14,7 +14,7 @@
     <link rel="icon" type="image/svg+xml" href="images/modern/favicon.svg">
     <meta name="theme-color" content="#060A13">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/montaweb.css?v=20261107">
+    <link rel="stylesheet" href="css/montaweb.css?v=20261119">
 </head>
 <body>
 
@@ -27,9 +27,18 @@
             </a>
             <div class="nav__menu" id="nav-menu">
                 <a href="/" class="nav__link">Inicio</a>
-                <a href="/servicios" class="nav__link active">Servicios</a>
+                <a href="/servicios" class="nav__link active" aria-current="page">Servicios</a>
                 <a href="/ejemplos" class="nav__link">Ejemplos</a>
-                <a href="/#cotizador" class="nav__link">Cotizador</a>
+                <div class="nav__dropdown">
+                    <span class="nav__dropdown-toggle" tabindex="0" role="button" aria-haspopup="true">Productos <i class="fas fa-chevron-down" style="font-size:.65rem;"></i></span>
+                    <div class="nav__dropdown-menu">
+                        <a href="https://micita.pe/" class="nav__dropdown-link" target="_blank" rel="noopener"><i class="fas fa-calendar-check"></i> MiCita — Reservas y agenda</a>
+                        <a href="https://librodigital.pe/" class="nav__dropdown-link" target="_blank" rel="noopener"><i class="fas fa-book-open"></i> LibroDigital.pe — Libro de Reclamaciones</a>
+                        <a href="https://kaptia.app/" class="nav__dropdown-link" target="_blank" rel="noopener"><i class="fas fa-wallet"></i> Kaptia — Finanzas personales con IA</a>
+                        <a href="/empresa#productos" class="nav__dropdown-link"><i class="fas fa-layer-group"></i> Todos los productos</a>
+                    </div>
+                </div>
+                <a href="/empresa" class="nav__link">Empresa</a>
                 <a href="/contacto" class="nav__link">Contacto</a>
                 <a href="https://wa.me/51965403196?text=Hola%20MontaWeb,%20necesito%20asesor%C3%ADa%20para%20elegir%20mi%20plan%20web" class="nav__cta" target="_blank" rel="noopener">
                     <i class="fab fa-whatsapp"></i> 965 403 196
@@ -567,6 +576,41 @@
     </section>
 
     <!-- Final CTA -->
+    <section class="section section--alt" id="software-a-medida">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow"><i class="fas fa-code"></i> Más allá de la web</span>
+                <h2>Software a medida, apps y automatización</h2>
+                <p>MontaWeb es la marca de páginas web de <a href="/empresa" style="color:var(--brand-2);font-weight:600;">SEMANTIKA TECH</a>, empresa que también desarrolla software. Si tu proyecto necesita más que una web, lo cotizamos por escrito según el alcance.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="f-card">
+                    <div class="f-card__icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Plataformas SaaS</h3>
+                    <p>Sistemas con suscripción, varios clientes en una sola plataforma y paneles de administración.</p>
+                </div>
+                <div class="f-card">
+                    <div class="f-card__icon"><i class="fas fa-mobile-screen"></i></div>
+                    <h3>Aplicaciones móviles</h3>
+                    <p>Apps para Android e iOS, o aplicaciones web que se instalan en el celular.</p>
+                </div>
+                <div class="f-card">
+                    <div class="f-card__icon"><i class="fas fa-gears"></i></div>
+                    <h3>Sistemas a medida</h3>
+                    <p>Reservas, paneles internos e integraciones con Yape, Plin, pasarelas de pago y tus herramientas actuales.</p>
+                </div>
+                <div class="f-card">
+                    <div class="f-card__icon"><i class="fas fa-robot"></i></div>
+                    <h3>Automatización con IA</h3>
+                    <p>Lectura de documentos, respuestas por WhatsApp y tareas repetitivas resueltas con inteligencia artificial.</p>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:2.4rem;">
+                <a href="https://wa.me/51965403196?text=Hola%2C%20quiero%20cotizar%20un%20proyecto%20de%20software%20a%20medida" class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Cotizar software a medida</a>
+            </div>
+        </div>
+    </section>
+
     <section class="cta-final">
         <svg class="peaks-bg" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
             <path d="M0,320 L0,190 L260,60 L470,170 L700,20 L930,180 L1140,90 L1440,200 L1440,320 Z" fill="#6366F1" opacity="0.14"/>
@@ -590,9 +634,9 @@
             <div class="footer__grid">
                 <div class="footer__brand">
                     <img src="images/modern/montaweb-logo-dark.svg" alt="MontaWeb">
-                    <p>Diseño y desarrollo de páginas web modernas, rápidas y enfocadas en ventas para emprendedores y empresas en todo el Perú.</p>
+                    <p>Páginas web, tiendas online y software a medida para emprendedores y empresas en todo el Perú.</p>
                     <div class="footer__provider">
-                        <span>Un servicio operado por <strong>Semantika TECH</strong></span>
+                        <span>MontaWeb es una marca de <a href="/empresa"><strong>SEMANTIKA TECH E.I.R.L.</strong></a></span>
                         <span><strong>RUC:</strong> 20616806981 • San Isidro, Lima</span>
                     </div>
                 </div>
@@ -601,10 +645,10 @@
                     <ul>
                         <li><a href="/">Inicio</a></li>
                         <li><a href="/servicios">Servicios y planes</a></li>
-                        <li><a href="/ejemplos">Portafolio</a></li>
+                        <li><a href="/ejemplos">Diseños de ejemplo</a></li>
                         <li><a href="/diseño-web-lima">Diseño web en Lima</a></li>
                         <li><a href="/contacto">Solicitar cotización</a></li>
-                        <li><a href="/empresa">Sobre SEMANTIKA TECH</a></li>
+                        <li><a href="/empresa">Empresa</a></li>
                     </ul>
                 </div>
                 <div>
@@ -613,26 +657,33 @@
                         <li><a href="/servicios#landing-pages">Landing Pages (S/ 50)</a></li>
                         <li><a href="/servicios#web-simple">Web Simple (S/ 99)</a></li>
                         <li><a href="/servicios#tienda-online">Tienda Starter (S/ 299)</a></li>
-                        <li><a href="/servicios#packs">Packs desde S/ 149</a></li>
-                        <li><a href="/servicios#hosting-dominio">Hosting + dominio (GRATIS)</a></li>
+                        <li><a href="/servicios#google-mi-negocio">Google Mi Negocio (S/ 79)</a></li>
+                        <li><a href="/servicios#software-a-medida">Software a medida</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Productos</h4>
+                    <ul>
+                        <li><a href="https://micita.pe/" target="_blank" rel="noopener">MiCita</a></li>
+                        <li><a href="https://librodigital.pe/" target="_blank" rel="noopener">LibroDigital.pe</a></li>
+                        <li><a href="https://kaptia.app/" target="_blank" rel="noopener">Kaptia</a></li>
+                        <li><a href="/empresa#productos">DatosPrivados (próximamente)</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4>Contacto directo</h4>
                     <div class="footer__contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/51965403196" target="_blank" rel="noopener">+51 965 403 196</a></div>
                     <div class="footer__contact-item"><i class="fas fa-phone"></i><a href="tel:+51965403196">965 403 196</a></div>
-                    <div class="footer__contact-item"><i class="fas fa-file-invoice"></i><span>Semantika TECH • RUC 20616806981</span></div>
-                    <div class="footer__contact-item"><i class="fas fa-location-dot"></i><span>Lima, Perú — atención nacional</span></div>
+                    <div class="footer__contact-item"><i class="fas fa-location-dot"></i><span>Av. Javier Prado Este 560, Int. 1302, San Isidro, Lima</span></div>
                 </div>
             </div>
             <div class="footer__bottom">
-                <span>&copy; 2026 <strong>MontaWeb</strong> — Proveedor oficial: <strong>Semantika TECH (RUC 20616806981)</strong>. Todos los derechos reservados.</span>
-                <span>WhatsApp & Teléfono: <a href="https://wa.me/51965403196" target="_blank" rel="noopener">965 403 196</a></span>
-                <span><a href="/terminos">Términos y condiciones</a> · <a href="/privacidad">Política de privacidad</a> · <a class="footer__libro" href="https://librodigital.pe/libro/semantikatech" target="_blank" rel="noopener" title="Libro de Reclamaciones virtual (se abre en una nueva pestaña)"><i class="fas fa-book-open" aria-hidden="true"></i> Libro de Reclamaciones</a></span>
+                <span>&copy; 2026 <strong>MontaWeb</strong> es una marca de <a href="/empresa">SEMANTIKA TECH E.I.R.L.</a> · RUC 20616806981</span>
+                <span><a href="/terminos">Términos y condiciones</a> · <a href="/privacidad">Política de privacidad</a> · <a href="/privacidad#cookies">Cookies</a> · <a class="footer__libro" href="https://librodigital.pe/libro/semantikatech" target="_blank" rel="noopener" title="Libro de Reclamaciones virtual (se abre en una nueva pestaña)"><i class="fas fa-book-open" aria-hidden="true"></i> Libro de Reclamaciones</a></span>
             </div>
         </div>
     </footer>
 
-    <script src="js/app.js?v=20261107"></script>
+    <script src="js/app.js?v=20261119"></script>
 </body>
 </html>

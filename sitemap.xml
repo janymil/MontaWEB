@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://montaweb.pe/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://montaweb.pe/servicios</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -31,8 +31,8 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://montaweb.pe/diseño-web-lima</loc>
-    <lastmod>2026-10-25</lastmod>
+    <loc>https://montaweb.pe/dise%C3%B1o-web-lima</loc>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -50,8 +50,8 @@
   </url>
   <url>
     <loc>https://montaweb.pe/empresa</loc>
-    <lastmod>2026-11-18</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

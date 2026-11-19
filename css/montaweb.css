@@ -419,7 +419,9 @@ h1,h2,h3,h4 { font-family:var(--font-display); line-height:1.14; letter-spacing:
 /* ---------- Footer ---------- */
 .footer { background:#05080F; border-top:1px solid var(--border); padding:4.5rem 0 2rem; color:#C7D2E4; }
 [data-theme="light"] .footer { background:#0B1120; color:#C7D2E4; }
-.footer__grid { display:grid; grid-template-columns:1.5fr 1fr 1fr 1.2fr; gap:2.6rem; margin-bottom:3rem; }
+.footer__grid { display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr 1.2fr; gap:2.2rem; margin-bottom:3rem; }
+.footer__provider a { color:inherit; }
+.footer__bottom span a[href="/empresa"] { color:inherit; font-weight:600; text-decoration:underline; text-underline-offset:3px; }
 .footer__brand img { height:40px; margin-bottom:1.1rem; }
 .footer__brand p { color:#8FA0BC; font-size:.92rem; margin-bottom:1.3rem; max-width:300px; }
 .footer__provider { border:1px solid rgba(255,255,255,0.12); border-radius:12px; padding:.9rem 1.1rem; font-size:.82rem; color:#8FA0BC; display:inline-flex; flex-direction:column; gap:.2rem; }
@@ -646,3 +648,51 @@ h1,h2,h3,h4 { font-family:var(--font-display); line-height:1.14; letter-spacing:
 /* Libro de Reclamaciones (Ley 29571, DS 011-2011-PCM) — visible en todas las páginas */
 .footer__libro { display:inline-flex; align-items:center; gap:.4rem; padding:.3rem .7rem; border:1px solid var(--brand-2); border-radius:6px; white-space:nowrap; }
 .footer__libro:hover { background:rgba(255,255,255,0.06); }
+
+/* ---------- Empresa (SEMANTIKA TECH) ---------- */
+.prose-block { max-width:760px; margin:0 auto; }
+.prose-block p { color:var(--muted); font-size:1.05rem; margin-bottom:1.1rem; }
+.prose-block p strong { color:var(--text); }
+.prod-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
+.prod-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:1.8rem 1.6rem; display:flex; flex-direction:column; gap:.7rem; transition:transform .3s,border-color .3s; }
+.prod-card:hover { transform:translateY(-5px); border-color:var(--border-2); }
+.prod-card__top { display:flex; align-items:center; justify-content:space-between; gap:.8rem; }
+.prod-card__icon { width:48px; height:48px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.25rem; color:#fff; background:var(--grad); flex-shrink:0; }
+.prod-card h3 { font-size:1.2rem; }
+.prod-card p { color:var(--muted); font-size:.93rem; flex:1; }
+.prod-card__domain { font-family:var(--font-display); font-weight:600; color:var(--brand-2); }
+.prod-card__links { display:flex; gap:1rem; flex-wrap:wrap; font-size:.9rem; font-weight:600; }
+.prod-card__links a { color:var(--brand-2); }
+.prod-card__links a:hover { text-decoration:underline; }
+.status { font-size:.72rem; font-weight:700; letter-spacing:.02em; padding:.3rem .7rem; border-radius:999px; white-space:nowrap; }
+.status--live { background:rgba(52,211,153,0.14); color:#34D399; border:1px solid rgba(52,211,153,0.35); }
+.status--soon { background:rgba(251,191,36,0.12); color:#F59E0B; border:1px solid rgba(251,191,36,0.35); }
+.founder { display:grid; grid-template-columns:260px 1fr; gap:2.6rem; align-items:start; max-width:960px; margin:0 auto; background:var(--surface); border:1px solid var(--border); border-radius:24px; padding:2.4rem; }
+.founder__photo { width:100%; aspect-ratio:4/5; border-radius:18px; object-fit:cover; background:var(--grad); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:3.4rem; font-weight:700; color:#fff; }
+.founder h3 { font-size:1.6rem; margin-bottom:.2rem; }
+.founder__role { color:var(--brand-2); font-weight:600; margin-bottom:1.2rem; }
+.founder p { color:var(--muted); margin-bottom:1rem; }
+.founder__facts { display:grid; gap:.55rem; margin:1.2rem 0; }
+.founder__facts li { display:flex; gap:.7rem; color:var(--muted); font-size:.95rem; }
+.founder__facts li i { color:var(--brand-3); margin-top:.3rem; width:16px; }
+.legal-table { width:100%; max-width:760px; margin:0 auto; border-collapse:collapse; font-size:.95rem; }
+.legal-table th,.legal-table td { text-align:left; padding:.85rem 1rem; border-bottom:1px solid var(--border); vertical-align:top; }
+.legal-table th { color:var(--muted); font-weight:600; width:38%; }
+.draft-note { border:2px dashed #F59E0B; background:rgba(251,191,36,0.08); color:#F59E0B; border-radius:12px; padding:.7rem 1rem; font-size:.85rem; font-weight:600; margin-bottom:1rem; }
+@media (max-width: 1024px) { .prod-grid { grid-template-columns:repeat(2,1fr); } }
+@media (max-width: 760px) { .founder { grid-template-columns:1fr; padding:1.6rem; } .founder__photo { max-width:220px; } }
+@media (max-width: 620px) { .prod-grid { grid-template-columns:1fr; } .legal-table th { width:auto; } }
+.legal-table td a { color:var(--brand-2); font-weight:600; }
+/* Nav with Productos + Empresa: keep it on one line on mid-size screens */
+.nav__cta { white-space:nowrap; }
+@media (min-width: 861px) and (max-width: 1180px) {
+    .nav__menu { gap:.1rem; }
+    .nav__link,.nav__dropdown-toggle { padding:.5rem .6rem; font-size:.9rem; }
+    .nav__cta { padding:.55rem .8rem; font-size:.85rem; }
+}
+.legal-table td { overflow-wrap:anywhere; }
+@media (max-width: 620px) {
+    .legal-table, .legal-table tbody, .legal-table tr, .legal-table th, .legal-table td { display:block; width:100%; }
+    .legal-table th { border-bottom:none; padding-bottom:.1rem; font-size:.82rem; }
+    .legal-table td { padding-top:0; }
+}

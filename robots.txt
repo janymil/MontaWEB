@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://MontaWeb.com/sitemap.xml
+Sitemap: https://montaweb.pe/sitemap.xml
 
 # Allow all major search engines
 User-agent: Googlebot

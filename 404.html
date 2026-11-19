@@ -8,7 +8,7 @@
     <link rel="icon" type="image/svg+xml" href="images/modern/favicon.svg">
     <meta name="theme-color" content="#060A13">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/montaweb.css?v=20261107">
+    <link rel="stylesheet" href="css/montaweb.css?v=20261119">
 </head>
 <body>
     <nav class="nav">
@@ -21,6 +21,16 @@
                 <a href="/" class="nav__link">Inicio</a>
                 <a href="/servicios" class="nav__link">Servicios</a>
                 <a href="/ejemplos" class="nav__link">Ejemplos</a>
+                <div class="nav__dropdown">
+                    <span class="nav__dropdown-toggle" tabindex="0" role="button" aria-haspopup="true">Productos <i class="fas fa-chevron-down" style="font-size:.65rem;"></i></span>
+                    <div class="nav__dropdown-menu">
+                        <a href="https://micita.pe/" class="nav__dropdown-link" target="_blank" rel="noopener"><i class="fas fa-calendar-check"></i> MiCita — Reservas y agenda</a>
+                        <a href="https://librodigital.pe/" class="nav__dropdown-link" target="_blank" rel="noopener"><i class="fas fa-book-open"></i> LibroDigital.pe — Libro de Reclamaciones</a>
+                        <a href="https://kaptia.app/" class="nav__dropdown-link" target="_blank" rel="noopener"><i class="fas fa-wallet"></i> Kaptia — Finanzas personales con IA</a>
+                        <a href="/empresa#productos" class="nav__dropdown-link"><i class="fas fa-layer-group"></i> Todos los productos</a>
+                    </div>
+                </div>
+                <a href="/empresa" class="nav__link">Empresa</a>
                 <a href="/contacto" class="nav__link">Contacto</a>
                 <a href="https://wa.me/51965403196" class="nav__cta" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> 965 403 196</a>
             </div>
@@ -44,12 +54,12 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__bottom" style="border-top:none;">
-                <span>&copy; 2026 <strong>MontaWeb</strong> — Proveedor oficial: <strong>Semantika TECH (RUC 20616806981)</strong>.</span>
+                <span>&copy; 2026 <strong>MontaWeb</strong> es una marca de <a href="/empresa">SEMANTIKA TECH E.I.R.L.</a> · RUC 20616806981</span>
                 <span>WhatsApp: <a href="https://wa.me/51965403196" target="_blank" rel="noopener">965 403 196</a></span>
-                <span><a href="/terminos">Términos y condiciones</a> · <a href="/privacidad">Política de privacidad</a> · <a class="footer__libro" href="https://librodigital.pe/libro/semantikatech" target="_blank" rel="noopener" title="Libro de Reclamaciones virtual (se abre en una nueva pestaña)"><i class="fas fa-book-open" aria-hidden="true"></i> Libro de Reclamaciones</a></span>
+                <span><a href="/terminos">Términos y condiciones</a> · <a href="/privacidad">Política de privacidad</a> · <a href="/privacidad#cookies">Cookies</a> · <a class="footer__libro" href="https://librodigital.pe/libro/semantikatech" target="_blank" rel="noopener" title="Libro de Reclamaciones virtual (se abre en una nueva pestaña)"><i class="fas fa-book-open" aria-hidden="true"></i> Libro de Reclamaciones</a></span>
             </div>
         </div>
     </footer>
-    <script src="js/app.js?v=20261107"></script>
+    <script src="js/app.js?v=20261119"></script>
 </body>
 </html>
