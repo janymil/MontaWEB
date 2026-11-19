@@ -47,9 +47,9 @@
             // Preserve friendly aliases used by the existing EmailJS templates.
             data.tipo_servicio = data.servicio || '';
             data.tipo_negocio = data['tipo-negocio'] || '';
-            data.acepto = 'Sí. Política de privacidad, versión 2026.';
+            data.acepto = 'Sí. Política de privacidad, versión 2026-11-19.';
             data.privacidad_aceptada = true;
-            data.privacidad_version = '2026';
+            data.privacidad_version = '2026-11-19';
             data.privacidad_aceptada_en = new Date().toISOString();
             data.fecha_envio = new Date().toLocaleString('es-PE');
 
