@@ -45,7 +45,19 @@
             { "@id": "https://montaweb.pe/#organization" },
             { "@id": "https://librodigital.pe/#brand" }
           ],
-          "sameAs": ["https://wa.me/51965403196"]
+          "sameAs": ["https://wa.me/51965403196", "https://www.youtube.com/channel/UC0a1zbaJcEawAvS_HDAiC3w"]
+        },
+        {
+          "@type": "VideoObject",
+          "@id": "https://montaweb.pe/empresa#video",
+          "name": "SEMANTIKA TECH | Video promocional",
+          "description": "Semantika TECH: desarrollo web, apps y soluciones digitales para empresas en Perú.",
+          "thumbnailUrl": "https://i.ytimg.com/vi/V9yUVDbjv-Q/hqdefault.jpg",
+          "uploadDate": "2026-11-20",
+          "duration": "PT31S",
+          "contentUrl": "https://www.youtube.com/watch?v=V9yUVDbjv-Q",
+          "embedUrl": "https://www.youtube.com/embed/V9yUVDbjv-Q",
+          "publisher": { "@id": "https://montaweb.pe/empresa#organization" }
         },
         {
           "@type": "Person",
@@ -68,7 +80,7 @@
     }
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/montaweb.css?v=20261120">
+    <link rel="stylesheet" href="css/montaweb.css?v=20261120b">
 </head>
 <body>
 
@@ -121,6 +133,20 @@
             </div>
         </div>
     </header>
+
+    <!-- Promo video -->
+    <section class="section section--alt" id="video">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow"><i class="fab fa-youtube"></i> En video</span>
+                <h2>Conoce SEMANTIKA TECH en 30 segundos</h2>
+            </div>
+            <div class="video-embed">
+                <iframe src="https://www.youtube-nocookie.com/embed/V9yUVDbjv-Q?rel=0" title="SEMANTIKA TECH | Video promocional" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p class="video-embed__link"><a href="https://youtu.be/V9yUVDbjv-Q" target="_blank" rel="noopener"><i class="fab fa-youtube"></i> Ver en YouTube</a></p>
+        </div>
+    </section>
 
     <!-- Why -->
     <section class="section" id="por-que">
