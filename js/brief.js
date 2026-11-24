@@ -445,6 +445,10 @@
 
     function showSuccess(id) {
         submitted = true;
+        if (saveTimer) {
+            clearTimeout(saveTimer);
+            saveTimer = null;
+        }
         try { localStorage.removeItem(STORAGE_KEY); } catch (err) { /* ignore */ }
 
         const nombre = fieldValue('nombre_contacto');

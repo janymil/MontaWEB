@@ -26,8 +26,18 @@ test('there are pages to check', () => {
 for (const page of pages) {
     const html = read(page);
     const shared = SHARED.find(entry => html.includes(entry.script));
+    const immediateRedirect = /<meta\s+http-equiv="refresh"\s+content="0;\s*url=https:\/\//i.test(html);
 
-    test(`${page} has a go-up button`, () => {
+    test(`${page} has a go-up button or is an immediate redirect`, () => {
+        // Redirect-only documents have no readable page to scroll. Verify their navigation
+        // instead of demanding a floating button that can never be used.
+        if (immediateRedirect) {
+            assert.match(html, /window\.location\.replace\("https:\/\/[^"]+"\)/,
+                `${page} must perform a safe, explicit redirect`);
+            assert.match(html, /<link rel="canonical" href="https:\/\//,
+                `${page} must identify its canonical destination`);
+            return;
+        }
         if (shared) {
             assert.ok(html.includes(shared.css),
                 `${page} loads ${shared.script} but not ${shared.css}, so the injected button is unstyled`);
