@@ -55,6 +55,7 @@ if (typeof document !== 'undefined') {
         initDemoSwitcher();
         initProcess();
         initProjectFinder();
+        initPromoVideo();
         initMagneticButtons();
     });
 }
@@ -222,6 +223,35 @@ function initHomeScroll() {
         });
     }, { threshold: .08, rootMargin: '0px 0px -45px' });
     items.forEach(item => observer.observe(item));
+}
+
+/* Plays the promo reel only while it is on screen, always muted, and never against
+   the visitor's data plan or reduced-motion preference. The native controls stay
+   available, so sound is an explicit choice. */
+function initPromoVideo() {
+    const video = document.getElementById('promo-video');
+    if (!video) return;
+    const saveData = navigator.connection && navigator.connection.saveData === true;
+    if (saveData || !('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    let autoPaused = false;
+    let userPaused = false;
+    video.addEventListener('pause', () => { if (!autoPaused) userPaused = true; });
+    video.addEventListener('play', () => { userPaused = false; });
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.intersectionRatio >= .5 && !userPaused) {
+                const playback = video.play();
+                if (playback && typeof playback.catch === 'function') playback.catch(() => {});
+            } else if (!entry.isIntersecting && !video.paused) {
+                autoPaused = true;
+                video.pause();
+                autoPaused = false;
+            }
+        });
+    }, { threshold: [0, .5] });
+    observer.observe(video);
 }
 
 function initMagneticButtons() {

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, statSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import path from 'node:path';
 import { ROOT } from './dom-harness.mjs';
@@ -12,8 +12,8 @@ const css = readFileSync(path.join(ROOT, 'css/home.css'), 'utf8');
 
 test('homepage loads its isolated editorial design and interaction layer', () => {
     assert.match(html, /<body class="home-page">/);
-    assert.match(html, /css\/home\.css\?v=20261124c/);
-    assert.match(html, /js\/home\.js\?v=20261124c/);
+    assert.match(html, /css\/home\.css\?v=20261124d/);
+    assert.match(html, /js\/home\.js\?v=20261124d/);
     assert.match(html, /Webs con diseño\.<br><em>Y con intención\.<\/em>/);
     assert.match(css, /--paper:\s*#f3f0e7/);
 });
@@ -59,6 +59,30 @@ test('project recommender offers content help without silently changing the base
     const result = recommendProject({ goal: 'store', content: 'help' });
     assert.equal(result.price, 'Desde S/ 299 · pago único');
     assert.match(result.description, /Creación de Contenido desde S\/ 40/);
+});
+
+test('homepage ships the vertical promo as a light, muted, lazy WebM with an MP4 fallback', () => {
+    const tag = html.match(/<video[^>]*id="promo-video"[^>]*>/)?.[0] || '';
+    assert.ok(tag, 'the homepage needs the promo video block');
+    for (const attribute of ['muted', 'loop', 'playsinline', 'controls']) {
+        assert.match(tag, new RegExp(`\\b${attribute}\\b`), `the promo video needs ${attribute}`);
+    }
+    assert.match(tag, /preload="none"/, 'the video must not download before it is on screen');
+    assert.match(tag, /poster="images\/video\/montaweb-promo-poster\.jpg"/);
+    assert.match(tag, /width="480" height="854"/);
+
+    const webm = 'images/video/montaweb-promo.webm';
+    const mp4 = 'images/video/montaweb-promo.mp4';
+    const poster = 'images/video/montaweb-promo-poster.jpg';
+    const webmSource = html.indexOf(`src="${webm}" type="video/webm"`);
+    const mp4Source = html.indexOf(`src="${mp4}" type="video/mp4"`);
+    assert.ok(webmSource > -1 && mp4Source > webmSource, 'WebM is offered first and MP4 as the fallback');
+
+    for (const asset of [webm, mp4, poster]) {
+        assert.ok(existsSync(path.join(ROOT, asset)), `${asset} must exist`);
+    }
+    assert.ok(statSync(path.join(ROOT, webm)).size < 2 * 1024 * 1024, 'the promo must stay under 2 MB for mobile data');
+    assert.match(readFileSync(path.join(ROOT, webm)).subarray(0, 4).toString('hex'), /^1a45dfa3$/, 'WebM must be a real Matroska container');
 });
 
 test('process controls expose and own their associated panels', () => {
