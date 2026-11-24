@@ -19,6 +19,7 @@ Apply the homepage's editorial design to every public site page, increase the ty
 - `scripts/unify_site_design.py` — repeatable static-shell migration for the 12 documents.
 - `test/site-wide-design.test.mjs` — coverage, typography, navigation, form-preservation, pricing-link, and brief autosave-race checks.
 - `js/brief.js`, `brief.html` — final browser-QA fix: cancel a pending draft save on successful submission and bump the script cache version.
+- `images/modern/favicon.svg`, root favicon/Apple/PWA PNG and ICO assets, `site.webmanifest` — replace the legacy gradient-favicon with the header's orange star mark and complete browser fallbacks.
 - `docs/decisions/2026-11-23-site-wide-editorial-design.md` — expanded design decision.
 - `.devkit/lessons.md` — record reusable migration surprises only.
 

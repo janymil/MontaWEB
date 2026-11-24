@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { ROOT } from './dom-harness.mjs';
 
@@ -22,10 +22,27 @@ for (const page of pages) {
         assert.match(html, /class="home-footer"/);
         assert.match(html, /<main[^>]*id="contenido"/);
         assert.match(html, /data-theme="light"/);
+        assert.match(html, /favicon\.svg\?v=20261124c/);
+        assert.match(html, /href="\/favicon-32x32\.png"/);
+        assert.match(html, /rel="apple-touch-icon"/);
         assert.doesNotMatch(html, /class="nav__menu"/);
         assert.doesNotMatch(html, /id="theme-toggle"/);
     });
 }
+
+test('favicon reuses the MontaWeb star mark and ships browser fallbacks', () => {
+    const svg = read('images/modern/favicon.svg');
+    assert.match(svg, /fill="#181816"/);
+    assert.match(svg, /fill="#ff5b35"/);
+    assert.match(svg, /M32 9\.38/);
+    for (const asset of ['favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'apple-touch-icon.png', 'android-chrome-192x192.png', 'android-chrome-512x512.png']) {
+        assert.ok(existsSync(path.join(ROOT, asset)), `${asset} must exist`);
+    }
+    const manifest = JSON.parse(read('site.webmanifest'));
+    assert.equal(manifest.theme_color, '#181816');
+    assert.equal(manifest.background_color, '#f3f0e7');
+    assert.equal(manifest.icons.length, 3);
+});
 
 test('homepage pricing links to the complete services and prices catalog', () => {
     const html = read('index.html');
