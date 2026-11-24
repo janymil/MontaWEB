@@ -50,6 +50,17 @@ test('homepage pricing links to the complete services and prices catalog', () =>
     assert.match(html, /href="\/servicios">Ver todos los servicios y precios/);
 });
 
+test('company page lists every SEMANTIKA TECH product in its product section', () => {
+    const html = read('empresa.html');
+    const section = html.slice(html.indexOf('id="productos"'), html.indexOf('id="servicios"'));
+    assert.ok(section.length > 0, 'the products section must exist');
+    for (const product of ['MiCita', 'LibroDigital.pe', 'Kaptia', 'Zenit Vita', 'MT5Connector', 'DatosPrivados', 'MontaWeb', 'PepCalculator']) {
+        assert.match(section, new RegExp(`<h3>${product.replace('.', '\\.')}</h3>`), `${product} needs a card in #productos`);
+    }
+    assert.match(section, /href="https:\/\/zenitvita\.com\/" target="_blank" rel="noopener"/);
+    assert.match(html, /"name": "Zenit Vita", "url": "https:\/\/zenitvita\.com\/"/);
+});
+
 test('contact form retains EmailJS and all submission fields', () => {
     const html = read('contacto.html');
     assert.match(html, /id="contact-form" data-handler="emailjs"/);
