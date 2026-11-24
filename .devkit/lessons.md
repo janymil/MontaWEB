@@ -8,6 +8,7 @@ Delete a lesson only when the thing that caused it no longer exists.
 
 ---
 
+- 2026-11-24 — "deploy to washington" looks like `git push live`, but `/var/www/montaweb` is a non-bare checkout of `main` with `receive.denyCurrentBranch` unset and no hooks, and the local `live/main` ref is often stale; deploy by pushing `origin` and running `git pull --ff-only origin main` on the server, commit only the paths you mean (the server carries its own uncommitted demo-site work), then verify the origin with `curl --resolve` because Cloudflare rewrites the public body (email obfuscation, challenge script).
 - 2026-11-24 — the brief's debounced autosave could recreate a draft after success, and legacy dark-theme status text was faint on the new light cards; cancel pending saves before clearing storage and override feedback colors in `site.css`.
 - 2026-11-23 — `clinica.html` and `restaurante.html` are immediate redirects, but the shared page test required a scroll button on them; detect redirect-only documents and verify their destination instead of forcing unused UI onto them.
 - 2026-11-07 — "add a go-up button" was already built on every live page by `initBackToTop()` in `js/app.js`; the only pages without one were the three orphan Google guides. Grep for the behaviour before building it, not just for the markup.
