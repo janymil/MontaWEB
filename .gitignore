@@ -56,3 +56,7 @@ api/leads/*
 !api/leads/.htaccess
 montaweb-mail-config.php
 *.env
+
+# Lima web census raw harvest (phones, Ley 29733)
+docs/research/lima-web-census/raw/
+docs/research/lima-web-census/private/

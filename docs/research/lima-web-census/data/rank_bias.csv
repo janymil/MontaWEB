@@ -1,0 +1,4 @@
+group,businesses,functional_site_pct,no_web_pct,social_only_pct,platform_or_directory_pct,broken_or_parked_pct,without_functional_site,with_20plus_reviews,proven_demand_no_site,median_reviews,claimed_pct
+01-20,4064,17.9,62.4,14.1,1.1,4.4,3335,1054,715,2.0,63.7
+21-50,5980,16.5,64.1,13.1,1.4,4.9,4994,1416,998,2.0,63.8
+51-100,9124,15.0,66.8,13.3,1.1,3.8,7754,1809,1299,2.0,59.6

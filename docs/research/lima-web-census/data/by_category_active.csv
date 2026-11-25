@@ -1,0 +1,31 @@
+group,businesses,functional_site_pct,no_web_pct,social_only_pct,platform_or_directory_pct,broken_or_parked_pct,without_functional_site,with_20plus_reviews,proven_demand_no_site,median_reviews,claimed_pct,segment,label
+restaurante,743,16.3,63.8,16.7,0.8,2.4,622,603,485,124,67.8,Complejo (reservas/pedidos),restaurante
+veterinaria,636,10.4,64.6,20.4,0.8,3.8,570,476,420,46.5,77.0,Complejo (reservas/pedidos),veterinaria
+hotel,581,25.6,60.1,9.5,1.0,3.8,432,473,330,93,65.7,Complejo (reservas/pedidos),hotel
+gimnasio,431,10.9,61.0,23.7,0.7,3.7,384,262,223,28,63.3,Complejo (reservas/pedidos),gimnasio
+dentista,420,28.8,37.1,27.1,1.9,5.0,299,240,147,25.5,93.3,Complejo (reservas/pedidos),dentista
+taller,415,18.8,59.0,11.1,4.8,6.3,337,194,136,17,70.8,Presentación,taller mecánico
+pasteleria,389,12.3,66.1,17.5,0.0,4.1,341,207,167,24,61.4,Tienda online,pastelería
+barberia,388,11.9,56.2,24.7,5.2,2.1,342,268,226,35.5,81.7,Complejo (reservas/pedidos),barbería
+clinica,347,38.3,46.1,9.2,0.6,5.8,214,205,105,26,72.6,Complejo (reservas/pedidos),centro médico
+spa,319,24.8,46.1,21.6,1.9,5.6,240,178,114,26,82.4,Complejo (reservas/pedidos),spa
+eventos,256,12.1,59.8,23.4,0.8,3.9,225,137,118,21.5,66.4,Complejo (reservas/pedidos),local de eventos
+psicologo,211,43.1,27.0,17.5,4.3,8.1,120,85,37,14,92.9,Presentación,psicólogo
+fisioterapia,206,23.8,43.2,21.4,2.9,8.7,157,99,65,18.0,90.8,Complejo (reservas/pedidos),fisioterapia
+floreria,187,45.5,31.0,12.8,0.5,10.2,102,95,36,20,86.6,Tienda online,florería
+ferreteria,186,5.9,90.3,1.1,0.5,2.2,175,64,59,14.0,43.5,Tienda online,ferretería
+abogado,183,59.0,23.0,11.5,0.5,6.0,75,85,24,17,89.1,Presentación,abogado
+optica,172,17.4,55.2,19.8,1.2,6.4,142,59,43,11.0,76.2,Tienda online,óptica
+ropa,163,33.7,39.9,19.0,0.6,6.7,108,75,39,17,71.2,Tienda online,tienda de ropa
+imprenta,149,38.3,38.3,12.1,2.7,8.7,92,50,22,11,83.9,Presentación,imprenta
+joyeria,149,49.0,32.9,11.4,0.0,6.7,76,72,26,19,90.6,Tienda online,joyería
+academia,136,27.2,37.5,27.9,0.7,6.6,99,62,37,18.5,79.4,Complejo (reservas/pedidos),academia
+salon,124,13.7,50.8,29.0,1.6,4.8,107,86,74,37.0,86.3,Complejo (reservas/pedidos),salón de belleza
+nido,115,27.0,53.0,13.9,0.9,5.2,84,17,8,9,53.0,Complejo (reservas/pedidos),nido
+constructora,114,50.0,34.2,1.8,0.0,14.0,57,34,14,12.5,57.9,Presentación,empresa constructora
+inmobiliaria,100,59.0,23.0,6.0,0.0,12.0,41,42,12,13.5,90.0,Presentación,inmobiliaria
+cosmeticos,94,38.3,38.3,14.9,2.1,6.4,58,33,13,13.0,78.7,Tienda online,tienda de cosméticos
+muebleria,81,38.3,44.4,14.8,0.0,2.5,50,36,15,15,76.5,Tienda online,mueblería
+arquitecto,74,62.2,16.2,12.2,0.0,9.5,28,16,4,9.0,82.4,Presentación,arquitecto
+contador,47,46.8,31.9,6.4,0.0,14.9,25,11,3,8,100.0,Presentación,estudio contable
+petshop,25,20.0,64.0,16.0,0.0,0.0,20,15,10,22,76.0,Tienda online,pet shop

@@ -1,0 +1,38 @@
+{
+  "generated": "2026-11-24",
+  "businesses_all": 19683,
+  "chain_listings_excluded": 515,
+  "independent": 19168,
+  "state_counts_independent": {
+    "none": 12465,
+    "directory_only": 60,
+    "functional": 3085,
+    "broken": 753,
+    "social_only": 2569,
+    "platform_only": 171,
+    "parked": 60,
+    "redirects_social": 5
+  },
+  "state_pct_independent": {
+    "none": 65.0,
+    "directory_only": 0.3,
+    "functional": 16.1,
+    "broken": 3.9,
+    "social_only": 13.4,
+    "platform_only": 0.9,
+    "parked": 0.3,
+    "redirects_social": 0.0
+  },
+  "functional_sites": 3085,
+  "active_5plus_reviews": 7441,
+  "state_pct_active": {
+    "none": 51.9,
+    "social_only": 17.0,
+    "functional": 24.4,
+    "broken": 4.8,
+    "platform_only": 1.2,
+    "parked": 0.3,
+    "directory_only": 0.3,
+    "redirects_social": 0.0
+  }
+}
