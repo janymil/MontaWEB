@@ -278,3 +278,10 @@ html:has(body.blog-page), body.blog-page { overflow-x:clip; }
 /* `.blog-page a { color:inherit }` outranks `.nav-cta`, which left the header button black on black */
 .blog-page .nav-cta { color:var(--cream); }
 .blog-page .nav-cta:hover { color:var(--ink); }
+
+/* "Cómo citar" box (AEO) */
+.cite-box { max-width:none !important; margin:36px 0 8px; padding:20px 24px; border-left:4px solid var(--orange); background:var(--cream); }
+.cite-box h3 { margin:0 0 6px; font-size:19px; }
+.cite-box p { margin:0 0 8px; }
+.cite-box__ref { font:500 14px/1.55 var(--font-mono); color:var(--ink); overflow-wrap:anywhere; user-select:all; }
+.cite-box__ref cite { font-style:italic; }

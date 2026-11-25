@@ -1,0 +1,35 @@
+# MontaWeb
+
+> MontaWeb diseña páginas web para pequeños negocios y emprendedores del Perú. La landing page cuesta desde S/ 50 y la web simple desde S/ 99, con pago único y sin mensualidades obligatorias. Se puede pagar con Yape, Plin o transferencia bancaria. La empresa detrás es SEMANTIKA TECH E.I.R.L. (RUC 20616806981), con sede en San Isidro, Lima.
+
+Precios y condiciones:
+
+- Precios con pago único: Landing Page desde S/ 50, Web Simple Profesional S/ 99, Rediseño Web S/ 199, Web Corporativa S/ 249, Tienda Starter desde S/ 299, Tienda Pro S/ 499.
+- Otros servicios: Catálogo WhatsApp S/ 59, Menú Digital QR S/ 69, Google Mi Negocio S/ 79, Creación de Contenido S/ 40 por página, Correo Corporativo S/ 49 al año.
+- Soporte opcional: Soporte Básico S/ 49 al mes, Soporte Pro S/ 99 al mes, cambio puntual S/ 25.
+- Cada web incluye 6 meses de hosting y SSL gratis. Desde el segundo año, hosting y SSL cuestan S/ 120 al año. Dominio propio: .com S/ 50 y .pe S/ 65 al año.
+- Forma de pago: 50 % para empezar y 50 % cuando el cliente aprueba la web terminada.
+- Plazos: landing page de 2 a 4 días hábiles; web simple y rediseño de 3 a 7 días hábiles.
+- Atendemos a todo el Perú, por WhatsApp: +51 965 403 196.
+
+## Páginas principales
+
+- [Servicios y precios](https://montaweb.pe/servicios): los 15 servicios con su precio, packs, extras y lo que ningún plan incluye
+- [Diseño web en Lima](https://montaweb.pe/dise%C3%B1o-web-lima): servicio para negocios de Lima y preguntas frecuentes
+- [Ejemplos](https://montaweb.pe/ejemplos): diseños de ejemplo por rubro (restaurantes, abogados, inmobiliarias, barberías, veterinarias, tiendas)
+- [Contacto](https://montaweb.pe/contacto): cotización gratis por WhatsApp
+- [Brief del proyecto](https://montaweb.pe/brief): cuestionario de 6 pasos para empezar una web
+
+## Estudios
+
+- [Negocios sin página web en Lima (2026)](https://montaweb.pe/blog/estudio-web-negocios-lima-2026): estudio de 19 168 negocios independientes de 30 rubros en 10 distritos de Lima, con datos de Google Maps del 24 de noviembre de 2026. El 16,1 % tiene una web propia que funciona; entre los negocios activos (5 reseñas o más en Google) es el 24,4 %. Lima Este (12 %), Lima Norte (15 %) y Lima Sur (16 %) están muy por debajo de Lima Moderna (42 %).
+
+## Empresa
+
+- [SEMANTIKA TECH E.I.R.L.](https://montaweb.pe/empresa): la empresa peruana de software que opera MontaWeb
+- [Términos](https://montaweb.pe/terminos) y [privacidad](https://montaweb.pe/privacidad)
+
+## Optional
+
+- [Blog](https://montaweb.pe/blog): estudios y guías para negocios de Lima
+- [Guía de Google Mi Negocio](https://montaweb.pe/google-mi-negocio)
