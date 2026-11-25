@@ -104,8 +104,8 @@ test('the anonymised CSV carries no names or phone numbers', () => {
 
 test('article uses the shared shell and loads its own css and js', () => {
     assert.match(art, /css\/site\.css\?v=20261124c/);
-    assert.match(art, /css\/blog\.css\?v=20261124g/);
-    assert.match(art, /js\/blog\.js\?v=20261124g/);
+    assert.match(art, /css\/blog\.css\?v=20261124h/);
+    assert.match(art, /js\/blog\.js\?v=20261124h/);
     assert.match(art, /class="site-header" id="site-header"/);
     assert.match(art, /<main[^>]*id="contenido"/);
     assert.ok(existsSync(path.join(ROOT, 'css/blog.css')) && existsSync(path.join(ROOT, 'js/blog.js')));
