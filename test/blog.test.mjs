@@ -30,10 +30,11 @@ test('article SEO basics: title, description, canonical, OG, one h1', () => {
     assert.equal([...index.matchAll(/<h1[ >]/g)].length, 1);
 });
 
-test('JSON-LD parses and declares Article, Breadcrumb, Dataset and FAQ', () => {
+test('JSON-LD parses and declares Article, Breadcrumb and FAQ, and no Dataset', () => {
     const ld = JSON.parse(art.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
     const types = ld['@graph'].map(n => n['@type']);
-    for (const t of ['Article', 'BreadcrumbList', 'Dataset', 'FAQPage']) assert.ok(types.includes(t), t);
+    for (const t of ['Article', 'BreadcrumbList', 'FAQPage']) assert.ok(types.includes(t), t);
+    assert.ok(!types.includes('Dataset'), 'the study data is not offered as a public dataset');
     const faq = ld['@graph'].find(n => n['@type'] === 'FAQPage');
     assert.ok(faq.mainEntity.length >= 4);
     JSON.parse(index.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
@@ -82,14 +83,15 @@ test('outbound links open safely and editorial citations are not nofollow', () =
         assert.match(tag, /rel="noopener"/, tag);
         assert.doesNotMatch(tag, /nofollow/);
     }
-    for (const host of ['gob.pe/institucion/inei', 'gob.pe/institucion/produce', 'support.google.com/business', 'dataforseo.com', 'gob.pe/institucion/anpd'])
+    for (const host of ['gob.pe/institucion/inei', 'gob.pe/institucion/produce', 'support.google.com/business', 'gob.pe/institucion/anpd'])
         assert.ok(art.includes(host), host);
 });
 
-test('data downloads exist, and the sitemap lists the blog and the article', () => {
-    for (const f of ['businesses-anon.csv', 'by_category_active.csv', 'by_zone_active.csv', 'summary.json'])
-        assert.ok(existsSync(path.join(ROOT, 'docs/research/lima-web-census/data', f)), f);
-    assert.ok(art.includes('/docs/research/lima-web-census/data/businesses-anon.csv'));
+test('readers see no data downloads or data-vendor names, and the sitemap lists the blog and the article', () => {
+    for (const page of [art, read('blog.html')]) {
+        assert.doesNotMatch(page, /dataforseo/i, 'name Google Maps as the source, not the data vendor');
+        assert.doesNotMatch(page, /\.csv|summary\.json|docs\/research|descarg/i, 'the study data is not given away');
+    }
     const sm = read('sitemap.xml');
     assert.match(sm, /<loc>https:\/\/montaweb\.pe\/blog<\/loc>/);
     assert.match(sm, /<loc>https:\/\/montaweb\.pe\/blog\/estudio-web-negocios-lima-2026<\/loc>/);

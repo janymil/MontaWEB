@@ -53,8 +53,7 @@
           "articleSection": "Estudios",
           "author": { "@type": "Organization", "name": "MontaWeb · Semantika TECH", "url": "https://montaweb.pe/empresa" },
           "publisher": { "@type": "Organization", "name": "MontaWeb", "url": "https://montaweb.pe/", "logo": { "@type": "ImageObject", "url": "https://montaweb.pe/android-chrome-512x512.png" } },
-          "about": { "@type": "Thing", "name": "Presencia web de las pymes de Lima" },
-          "isBasedOn": { "@id": "https://montaweb.pe/blog/estudio-web-negocios-lima-2026#dataset" }
+          "about": { "@type": "Thing", "name": "Presencia web de las pymes de Lima" }
         },
         {
           "@type": "BreadcrumbList",
@@ -62,23 +61,6 @@
             { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://montaweb.pe/" },
             { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://montaweb.pe/blog" },
             { "@type": "ListItem", "position": 3, "name": "Estudio web de negocios en Lima 2026", "item": "https://montaweb.pe/blog/estudio-web-negocios-lima-2026" }
-          ]
-        },
-        {
-          "@type": "Dataset",
-          "@id": "https://montaweb.pe/blog/estudio-web-negocios-lima-2026#dataset",
-          "name": "Presencia web de 19 168 negocios independientes de Lima (2026)",
-          "description": "Un registro por negocio, anonimizado (sin nombres, teléfonos ni direcciones): rubro, zona, distrito, categoría en Google, tipo de enlace web, estado de la web, reseñas y posición en Google Maps. Incluye tablas agregadas por rubro, zona, segmento y tramo de reseñas.",
-          "url": "https://montaweb.pe/blog/estudio-web-negocios-lima-2026#metodologia",
-          "creator": { "@type": "Organization", "name": "MontaWeb · Semantika TECH", "url": "https://montaweb.pe/" },
-          "datePublished": "2026-11-24",
-          "inLanguage": "es-PE",
-          "spatialCoverage": "Lima Metropolitana, Perú (10 distritos en 5 zonas)",
-          "temporalCoverage": "2026-11-24",
-          "keywords": ["páginas web", "pymes", "Lima", "Google Maps", "presencia digital", "Perú"],
-          "distribution": [
-            { "@type": "DataDownload", "encodingFormat": "text/csv", "name": "Un registro por negocio (anonimizado)", "contentUrl": "https://montaweb.pe/docs/research/lima-web-census/data/businesses-anon.csv" },
-            { "@type": "DataDownload", "encodingFormat": "text/csv", "name": "Resultados por rubro (negocios activos)", "contentUrl": "https://montaweb.pe/docs/research/lima-web-census/data/by_category_active.csv" }
           ]
         },
         {
@@ -184,38 +166,26 @@
       <li><strong>Reservas, pedidos o matrícula</strong> (13): restaurantes, hoteles y hostales, centros médicos, dentistas, gimnasios, spas, salones, barberías, veterinarias, fisioterapia, academias, nidos y locales de eventos.</li>
       <li><strong>Tienda online</strong> (9): ropa, mueblerías, florerías, pastelerías, ópticas, joyerías, ferreterías, pet shops y cosméticos.</li>
     </ul>
-    <p>Buscamos cada rubro en Google Maps, en 10 distritos (dos por zona), y nos quedamos con <strong>19&nbsp;168 negocios independientes</strong>: sin cerrados, sin duplicados y sin cadenas. Luego miramos el enlace «sitio web» de cada ficha y visitamos cada web. El detalle completo está en la <a href="#metodologia">metodología</a>, y los datos, para descargar.</p>
+    <p>Buscamos cada rubro en Google Maps, en 10 distritos (dos por zona), y nos quedamos con <strong>19&nbsp;168 negocios independientes</strong>: sin cerrados, sin duplicados y sin cadenas. Luego miramos el enlace «sitio web» de cada ficha y visitamos cada web. El detalle está en la <a href="#metodologia">metodología</a>.</p>
     <p>Como muchas fichas de Google están abandonadas (el 34 % no tiene ni una reseña), damos dos cifras: todos los negocios y los <strong>negocios activos</strong>, con 5 reseñas o más (7&nbsp;441). Cuando decimos «activos» hablamos de negocios con clientela comprobada.</p>
 
     <h2 id="resultado" data-toc="El resultado general">Lo que encuentra tu cliente cuando te busca</h2>
     <p>Un cliente que te encuentra en Google Maps hace una de dos cosas: llama, o toca el enlace de la web. Lo que hay detrás de ese enlace decide si te elige o sigue buscando.</p>
 
-    <figure class="fig" id="fig-stack">
+    <figure class="fig" id="fig-simple">
       <div class="fig__head">
-        <h3>¿Qué hay detrás del enlace «sitio web» de la ficha?</h3>
-        <p>Distribución de <span class="js-n">7&nbsp;441</span> negocios independientes.</p>
+        <h3>De cada 100 negocios activos de Lima…</h3>
       </div>
-      <div class="fig__tools">
-        <div class="seg" role="group" aria-label="Base de negocios" data-group="base">
-          <button type="button" data-value="active" aria-pressed="true">Negocios activos</button>
-          <button type="button" data-value="all" aria-pressed="false">Todos</button>
-        </div>
+      <div class="fig__body">
+        <ul class="tally">
+          <li class="tally--bad"><b>52</b><span class="tally__bar" style="--w:52%"></span><span>no tienen ninguna web</span></li>
+          <li class="tally--good"><b>24</b><span class="tally__bar" style="--w:24%"></span><span>tienen una web que funciona</span></li>
+          <li><b>17</b><span class="tally__bar" style="--w:17%"></span><span>solo tienen Facebook, Instagram o WhatsApp</span></li>
+          <li class="tally--bad"><b>5</b><span class="tally__bar" style="--w:5%"></span><span>tienen una web que no abre o está «en construcción»</span></li>
+          <li><b>2</b><span class="tally__bar" style="--w:2%"></span><span>solo aparecen en un directorio o plataforma</span></li>
+        </ul>
       </div>
-      <div class="fig__body"><div class="stack"></div><ul class="stack-list"></ul></div>
-      <details>
-        <summary>Ver datos en tabla</summary>
-        <div class="tbl-wrap"><table>
-          <thead><tr><th>Lo que encuentra el cliente</th><th>Todos (19&nbsp;168)</th><th>Activos (7&nbsp;441)</th></tr></thead>
-          <tbody>
-            <tr><td>Una web propia que funciona</td><td>16,1 %</td><td>24,4 %</td></tr>
-            <tr><td>Ningún enlace</td><td>65,0 %</td><td>51,9 %</td></tr>
-            <tr><td>Solo Facebook, Instagram o WhatsApp</td><td>13,4 %</td><td>17,0 %</td></tr>
-            <tr><td>Una web caída, vencida o «en construcción»</td><td>4,2 %</td><td>5,1 %</td></tr>
-            <tr><td>Solo un perfil en una plataforma o directorio</td><td>1,2 %</td><td>1,5 %</td></tr>
-          </tbody>
-        </table></div>
-      </details>
-      <p class="fig__foot">Fuente: Estudio MontaWeb 2026, datos de Google Maps vía DataForSEO y visita a cada web. «Funciona» = carga, no está estacionada ni «en construcción» y no redirige a una red social.</p>
+      <p class="fig__foot">Fuente: Estudio MontaWeb 2026, con datos de Google Maps. Negocios con 5 reseñas o más.</p>
     </figure>
 
     <p><strong>Las redes sociales no reemplazan a la web.</strong> Uno de cada seis negocios activos pone su Facebook o Instagram como «sitio web». Sirve para mostrarse, pero no para aparecer en Google con tus servicios, precios y horarios, ni para recibir reservas, y el canal no es tuyo: la plataforma puede cambiar sus reglas o cerrar la cuenta.</p>
@@ -403,12 +373,12 @@
       <li><a href="https://abogados.montaweb.pe" target="_blank" rel="noopener"><img src="/images/modern/portfolio-abogado.jpg" alt="Vista previa de la web de ejemplo para un estudio de abogados" width="640" height="480" loading="lazy"><span>Abogados</span></a></li>
     </ul>
 
-    <h2 id="metodologia" data-toc="Metodología y datos">Metodología, límites y datos abiertos</h2>
+    <h2 id="metodologia" data-toc="Metodología">Metodología y límites</h2>
     <details class="method">
       <summary>Cómo hicimos el estudio (y qué no dice)</summary>
       <div class="method__body">
         <ol>
-          <li><strong>Fuente.</strong> Datos públicos de Google Maps obtenidos con la API de <a href="https://docs.dataforseo.com/v3/serp/google/maps/overview/" target="_blank" rel="noopener">DataForSEO</a> el 24 de noviembre de 2026. Después visitamos la página de inicio de cada web (una visita por dirección).</li>
+          <li><strong>Fuente.</strong> Datos públicos de Google Maps, recogidos el 24 de noviembre de 2026. Después visitamos la página de inicio de cada web (una visita por dirección).</li>
           <li><strong>Búsqueda.</strong> 30 rubros × 10 distritos, los 100 primeros resultados de Google Maps por búsqueda: 300 búsquedas y 28&nbsp;731 resultados.</li>
           <li><strong>Limpieza.</strong> Quitamos 5&nbsp;227 resultados de otro rubro, los negocios cerrados y 3&nbsp;821 duplicados. Quedaron 19&nbsp;683 negocios. De ellos, 515 fichas pertenecen a <strong>cadenas</strong> (la misma web en 3 o más fichas) y las excluimos: su web es corporativa y no dice nada sobre la pyme limeña. Quedaron <strong>19&nbsp;168 independientes</strong>.</li>
           <li><strong>Clasificación.</strong> Cada ficha cae en una categoría: sin enlace, solo red social, solo plataforma o directorio, web gratuita de Google (business.site, ya cerrada), subdominio de un constructor gratuito o dominio propio.</li>
@@ -425,14 +395,6 @@
           <li><strong>Validación.</strong> Una muestra independiente previa en Lima Norte y Lima Sur (7 rubros) encontró cerca del 30 % de negocios con algún enlace; aquí obtuvimos el 31 % para las mismas zonas.</li>
           <li><strong>Privacidad.</strong> No publicamos nombres, teléfonos ni direcciones, en línea con la <a href="https://www.gob.pe/institucion/anpd/normas-legales/2018427-29733-2011" target="_blank" rel="noopener">Ley N.° 29733, de Protección de Datos Personales</a>.</li>
         </ul>
-        <h3>Descarga los datos</h3>
-        <ul>
-          <li><a href="/docs/research/lima-web-census/data/businesses-anon.csv" download>businesses-anon.csv</a>: una fila por negocio, anonimizada (19&nbsp;683 filas, incluye cadenas marcadas).</li>
-          <li><a href="/docs/research/lima-web-census/data/by_category_active.csv" download>by_category_active.csv</a>: resultados por rubro, negocios activos.</li>
-          <li><a href="/docs/research/lima-web-census/data/by_zone_active.csv" download>by_zone_active.csv</a>: resultados por zona, negocios activos.</li>
-          <li><a href="/docs/research/lima-web-census/data/summary.json" download>summary.json</a>: resumen y totales.</li>
-        </ul>
-        <p>Si usas estos datos, cita: «Estudio de presencia web de negocios en Lima, MontaWeb · Semantika TECH, 2026» y enlaza a esta página.</p>
       </div>
     </details>
 
@@ -453,7 +415,6 @@
       <li><a href="https://support.google.com/business/answer/7091?hl=es" target="_blank" rel="noopener">Google Business Profile: consejos para mejorar tu posición local</a>.</li>
       <li><a href="https://www.seroundtable.com/google-business-profiles-websites-now-404-37566.html" target="_blank" rel="noopener">Search Engine Roundtable: las webs de Google Business Profile dejan de cargar (junio de 2024)</a>.</li>
       <li><a href="https://www.gob.pe/institucion/indecopi/noticias/1286430-comercios-electronicos-tambien-estan-obligados-a-contar-con-libro-de-reclamaciones-activo-y-visible" target="_blank" rel="noopener">Indecopi: los comercios electrónicos también deben tener Libro de Reclamaciones activo y visible</a>, útil si tu web vende.</li>
-      <li><a href="https://docs.dataforseo.com/v3/serp/google/maps/overview/" target="_blank" rel="noopener">DataForSEO</a>: proveedor de los datos públicos de Google Maps usados en este estudio.</li>
       <li><a href="https://www.gob.pe/institucion/anpd/normas-legales/2018427-29733-2011" target="_blank" rel="noopener">Ley N.° 29733, Ley de Protección de Datos Personales</a> (texto oficial).</li>
     </ul>
   </article>

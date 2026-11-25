@@ -259,3 +259,15 @@
   .bar__fill,.stack span,.dots__grid i,.post-card,.copied { transition:none; }
 }
 @media print { .site-header,.toc,.toc-mobile,.share,.post-cta,.scroll-progress { display:none !important; } }
+
+/* simple "de cada 100" chart */
+.tally { list-style:none; margin:0; padding:0; display:grid; gap:14px; }
+.tally li { display:grid; grid-template-columns:64px 1fr; grid-template-rows:auto auto; column-gap:16px; align-items:center; }
+.tally b { grid-row:1 / span 2; font:800 44px/1 var(--font-body); letter-spacing:-.04em; color:var(--ink); }
+.tally__bar { display:block; height:12px; width:var(--w); min-width:6px; background:var(--home-muted); }
+.tally li > span:last-child { font-size:17px; color:var(--ink); padding-top:4px; }
+.tally--good b { color:#476b24; } .tally--good .tally__bar { background:#476b24; }
+.tally--bad b { color:var(--orange-text); } .tally--bad .tally__bar { background:var(--orange); }
+/* finder text sits on a dark band: keep bold words readable */
+.finder strong, .finder .finder__txt strong { color:var(--lime); }
+.finder__txt, .finder__note { color:var(--cream); }
