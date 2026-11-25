@@ -18,6 +18,7 @@ Precios y condiciones:
 - [Diseño web en Lima](https://montaweb.pe/dise%C3%B1o-web-lima): servicio para negocios de Lima y preguntas frecuentes
 - [Ejemplos](https://montaweb.pe/ejemplos): diseños de ejemplo por rubro (restaurantes, abogados, inmobiliarias, barberías, veterinarias, tiendas)
 - [Contacto](https://montaweb.pe/contacto): cotización gratis por WhatsApp
+- [Referidos](https://montaweb.pe/referidos): los clientes que recomiendan a otro negocio ganan S/ 20 por Yape o S/ 40 en hosting; el negocio recomendado recibe gratis su perfil de Google Mi Negocio
 - [Brief del proyecto](https://montaweb.pe/brief): cuestionario de 6 pasos para empezar una web
 
 ## Estudios

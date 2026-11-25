@@ -8,6 +8,8 @@ Delete a lesson only when the thing that caused it no longer exists.
 
 ---
 
+- 2026-11-25 — the `montaweb-static` preview server from launch.json was not reachable at 127.0.0.1 from Claude in Chrome (connection refused); run `python -m http.server <port> --bind 127.0.0.1` in the background from the worktree and open that instead.
+
 - 2026-11-25 — tests pinned exact `?v=` cache-bust strings, so every legitimate version bump broke them; they now match `\?v=\d{8}[a-z]?`. Also: the in-app Browser pane refuses localhost here and headless Chrome screenshots skip `.reveal-item` sections; check pages in Claude in Chrome at 127.0.0.1 instead.
 - 2026-11-24 — research data under `docs/` was publicly downloadable because Caddy serves the whole checkout; `/docs` and `/scripts` are now 404 via the `@private` matcher in `/etc/caddy/Caddyfile` (backup `.bak-*`). Anything new under the web root is public unless that matcher covers it.
 - 2026-11-24 — the 28 s 480×854 promo re-encoded *smaller* as H.264/MP4 (1.20 MB, CRF 26) than as VP9/WebM (1.44 MB, CRF 34), so "WebM is always the light one" is false at this size; encode both, measure, and keep `<source>` order WebM→MP4 for browser support rather than for bytes.

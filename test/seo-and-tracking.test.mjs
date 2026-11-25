@@ -15,6 +15,7 @@ const INDEXABLE = {
     'blog.html': 'https://montaweb.pe/blog',
     'diseño-web-lima.html': 'https://montaweb.pe/dise%C3%B1o-web-lima',
     'google-mi-negocio.html': 'https://montaweb.pe/google-mi-negocio',
+    'referidos.html': 'https://montaweb.pe/referidos',
     'blog/estudio-web-negocios-lima-2026.html': 'https://montaweb.pe/blog/estudio-web-negocios-lima-2026',
 };
 
