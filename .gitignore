@@ -53,6 +53,7 @@ build/
 api/config.php
 api/vendor/
 api/leads/*
+api/leads/rcp-*.json
 !api/leads/.htaccess
 montaweb-mail-config.php
 *.env

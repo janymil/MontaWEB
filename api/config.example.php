@@ -26,6 +26,11 @@ return [
     'from' => 'hola@montaweb.pe',
     'from_name' => 'MontaWeb · Brief',
 
+    // Secreto del webhook post-llamada de ElevenLabs (/api/receptionist-lead.php).
+    // Cópialo desde ElevenLabs al crear el webhook. También vale la variable de entorno
+    // ELEVENLABS_WEBHOOK_SECRET. Sin secreto el endpoint rechaza todo (503).
+    'elevenlabs_webhook_secret' => 'PON_AQUI_EL_SECRETO_DEL_WEBHOOK',
+
     'smtp' => [
         'host' => 'smtp.zoho.com',
         'port' => 465,
