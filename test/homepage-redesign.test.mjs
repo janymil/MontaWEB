@@ -12,7 +12,7 @@ const css = readFileSync(path.join(ROOT, 'css/home.css'), 'utf8');
 
 test('homepage loads its isolated editorial design and interaction layer', () => {
     assert.match(html, /<body class="home-page">/);
-    assert.match(html, /css\/home\.css\?v=20261124d/);
+    assert.match(html, /css\/home\.css\?v=\d{8}[a-z]?/);
     assert.match(html, /js\/home\.js\?v=20261124d/);
     assert.match(html, /Webs con diseño\.<br><em>Y con intención\.<\/em>/);
     assert.match(css, /--paper:\s*#f3f0e7/);

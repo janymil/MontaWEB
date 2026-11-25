@@ -15,7 +15,7 @@ const css = read('css/site.css');
 for (const page of pages) {
     test(`${page} uses the complete shared public-site shell`, () => {
         const html = read(page);
-        assert.match(html, /css\/site\.css\?v=20261124c/);
+        assert.match(html, /css\/site\.css\?v=\d{8}[a-z]?/);
         assert.match(html, /js\/site\.js\?v=20261124c/);
         assert.match(html, /class="site-header" id="site-header"/);
         assert.match(html, /id="home-nav-toggle"/);

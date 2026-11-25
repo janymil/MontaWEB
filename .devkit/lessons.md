@@ -8,6 +8,7 @@ Delete a lesson only when the thing that caused it no longer exists.
 
 ---
 
+- 2026-11-25 — tests pinned exact `?v=` cache-bust strings, so every legitimate version bump broke them; they now match `\?v=\d{8}[a-z]?`. Also: the in-app Browser pane refuses localhost here and headless Chrome screenshots skip `.reveal-item` sections; check pages in Claude in Chrome at 127.0.0.1 instead.
 - 2026-11-24 — research data under `docs/` was publicly downloadable because Caddy serves the whole checkout; `/docs` and `/scripts` are now 404 via the `@private` matcher in `/etc/caddy/Caddyfile` (backup `.bak-*`). Anything new under the web root is public unless that matcher covers it.
 - 2026-11-24 — the 28 s 480×854 promo re-encoded *smaller* as H.264/MP4 (1.20 MB, CRF 26) than as VP9/WebM (1.44 MB, CRF 34), so "WebM is always the light one" is false at this size; encode both, measure, and keep `<source>` order WebM→MP4 for browser support rather than for bytes.
 - 2026-11-24 — "deploy to washington" looks like `git push live`, but `/var/www/montaweb` is a non-bare checkout of `main` with `receive.denyCurrentBranch` unset and no hooks, and the local `live/main` ref is often stale; deploy by pushing `origin` and running `git pull --ff-only origin main` on the server, commit only the paths you mean (the server carries its own uncommitted demo-site work), then verify the origin with `curl --resolve` because Cloudflare rewrites the public body (email obfuscation, challenge script).

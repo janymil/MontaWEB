@@ -1,8 +1,8 @@
 # MontaWeb — bloque de sitio para el Caddyfile compartido del VPS (/etc/caddy/Caddyfile).
 #
 # ⚠️ NO copies este archivo ENCIMA de /etc/caddy/Caddyfile: ese archivo ya contiene
-#    kaptia.app, librodigital.pe, mt5connector.uk, etc. Añade SOLO el bloque
-#    `montaweb.pe, www.montaweb.pe { … }` al final del Caddyfile compartido y luego:
+#    kaptia.app, librodigital.pe, mt5connector.uk, etc. Añade SOLO los bloques
+#    `www.montaweb.pe { … }` y `montaweb.pe { … }` al final del Caddyfile compartido y luego:
 #        caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile
 #        systemctl reload caddy
 #    (No incluye bloque global `{ email … }`: solo puede haber uno por Caddyfile.)
@@ -16,8 +16,17 @@
 # config.example.php) con la contraseña de aplicación de Zoho y garantizar que el
 # buzón destinatario exista (mx.zoho.com responde 550 5.1.1 si no existe).
 
-montaweb.pe, www.montaweb.pe {
+# www es solo un alias: redirige a la versión canónica sin www (evita contenido duplicado).
+www.montaweb.pe {
+	redir https://montaweb.pe{uri} 301
+}
+
+montaweb.pe {
 	root * /var/www/montaweb
+
+	# /index y /index.html sirven una copia de la portada: unificar en "/".
+	redir /index / 301
+	redir /index.html / 301
 
 	encode gzip zstd
 

@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es-PE" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="_U_bKHrjGV2Ev7gkqi0ojRidbsht0rAg2gybQcGkB2c">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MontaWeb — Diseño web con intención | Páginas web en Perú</title>
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://montaweb.pe/">
+    <link rel="canonical" href="https://montaweb.pe/">
     <meta name="description" content="Creamos páginas web modernas, rápidas y listas para convertir visitas en clientes. Diseño profesional desde S/ 50, entrega en 3 a 7 días y WhatsApp integrado.">
     <meta name="keywords" content="MontaWeb, diseño web Perú, páginas web profesionales, landing page Perú, tiendas online Perú">
     <meta name="author" content="MontaWeb">
     <meta property="og:title" content="MontaWeb — Webs con diseño. Y con intención.">
     <meta property="og:description" content="Diseño web profesional para negocios que quieren verse bien y vender mejor.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/modern/portfolio-restaurante-brasa.jpg">
+    <meta property="og:image" content="https://montaweb.pe/images/og/montaweb-og.jpg">
     <meta property="og:site_name" content="MontaWeb">
     <meta property="og:locale" content="es_PE">
     <meta name="twitter:card" content="summary_large_image">
@@ -25,18 +29,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/montaweb.css?v=20261123">
-    <link rel="stylesheet" href="css/home.css?v=20261124d">
+    <link rel="stylesheet" href="css/home.css?v=20261125">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "MontaWeb",
-      "url": "https://montaweb.pe/",
-      "description": "Diseño y desarrollo de páginas web profesionales para empresas y emprendedores en Perú.",
-      "telephone": "+51965403196",
-      "priceRange": "Desde S/ 50",
-      "address": {"@type": "PostalAddress", "addressLocality": "San Isidro", "addressRegion": "Lima", "addressCountry": "PE"},
-      "parentOrganization": {"@type": "Organization", "name": "SEMANTIKA TECH E.I.R.L.", "identifier": "20616806981"}
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://montaweb.pe/#organization",
+          "name": "MontaWeb",
+          "alternateName": ["MontaWeb Perú", "montaweb.pe"],
+          "url": "https://montaweb.pe/",
+          "logo": {"@type": "ImageObject", "url": "https://montaweb.pe/android-chrome-512x512.png", "width": 512, "height": 512},
+          "image": "https://montaweb.pe/images/og/montaweb-og.jpg",
+          "description": "Diseño y desarrollo de páginas web profesionales para empresas y emprendedores en Perú.",
+          "disambiguatingDescription": "Agencia de diseño web en Lima, Perú, operada por SEMANTIKA TECH E.I.R.L. Sin relación con otras empresas llamadas MontaWeb fuera del Perú.",
+          "telephone": "+51965403196",
+          "priceRange": "Desde S/ 50",
+          "currenciesAccepted": "PEN",
+          "paymentAccepted": "Yape, Plin, transferencia bancaria",
+          "address": {"@type": "PostalAddress", "addressLocality": "San Isidro", "addressRegion": "Lima", "addressCountry": "PE"},
+          "areaServed": {"@type": "Country", "name": "Perú"},
+          "contactPoint": {"@type": "ContactPoint", "telephone": "+51965403196", "contactType": "sales", "availableLanguage": "es", "areaServed": "PE"},
+          "parentOrganization": {"@type": "Organization", "@id": "https://montaweb.pe/empresa#organization", "name": "SEMANTIKA TECH E.I.R.L.", "identifier": "20616806981"}
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://montaweb.pe/#website",
+          "url": "https://montaweb.pe/",
+          "name": "MontaWeb",
+          "inLanguage": "es-PE",
+          "publisher": {"@id": "https://montaweb.pe/#organization"}
+        }
+      ]
     }
     </script>
     <link rel="stylesheet" href="css/site.css?v=20261124c">
@@ -210,6 +235,20 @@
         </section>
 
 
+        <section class="guarantee-home home-section" id="garantia" aria-labelledby="guarantee-title">
+            <div class="home-container guarantee-grid reveal-item">
+                <div class="guarantee-intro">
+                    <div class="section-kicker"><span aria-hidden="true">✦</span> PAGO 50/50</div>
+                    <h2 id="guarantee-title">Pagas la mitad para empezar.<br><em>La otra mitad, cuando apruebes tu web.</em></h2>
+                    <a class="text-link" href="/terminos#cancelacion">Lee las condiciones completas <span aria-hidden="true">↗</span></a>
+                </div>
+                <ol class="guarantee-points">
+                    <li><b>01</b><div><h3>Un adelanto del 50%</h3><p>Con el adelanto reservamos tu fecha y empezamos a trabajar. El alcance y el precio final quedan por escrito antes de que pagues.</p></div></li>
+                    <li><b>02</b><div><h3>Ves tu web antes de pagar el resto</h3><p>Te la mostramos terminada en un enlace de prueba. Pides los ajustes de tus rondas incluidas y recién ahí pagas el saldo.</p></div></li>
+                    <li><b>03</b><div><h3>Si no cumplimos, te devolvemos tu dinero</h3><p>Si no podemos entregar lo acordado por causas nuestras, te devolvemos lo que pagaste por la parte no entregada.</p></div></li>
+                </ol>
+            </div>
+        </section>
         <section class="process-home home-section" id="proceso" aria-labelledby="process-title">
             <div class="home-container process-layout">
                 <div class="process-intro reveal-item"><div class="section-kicker"><span>05</span> ASÍ DE SIMPLE</div><h2 id="process-title">De “tengo una idea”<br>a <em>“mira mi web”.</em></h2><p>Sin tecnicismos ni procesos eternos. Tú conoces tu negocio; nosotros convertimos eso en una experiencia digital.</p><a class="text-link" href="/brief">Completar mi brief <span>↗</span></a></div>
@@ -279,7 +318,7 @@
         <div class="footer-grid">
             <div class="footer-location"><span>HECHO CON INTENCIÓN EN</span><strong>Lima, Perú <i>✦</i></strong><p>MontaWeb es una marca de SEMANTIKA TECH E.I.R.L.<br>RUC 20616806981 · San Isidro, Lima</p></div>
             <div class="footer-column"><h3>Explora</h3><a href="/servicios">Servicios</a><a href="/ejemplos">Proyectos</a><a href="/#planes">Planes</a><a href="/empresa">Nosotros</a><a href="/blog">Blog</a><a href="/contacto">Contacto</a></div>
-            <div class="footer-column"><h3>Servicios</h3><a href="/servicios#web-simple">Diseño web</a><a href="/servicios#tienda-online">Tiendas online</a><a href="/servicios#google-mi-negocio">Google Mi Negocio</a><a href="/servicios#software-a-medida">Software a medida</a><a href="/brief">Brief de proyecto</a></div>
+            <div class="footer-column"><h3>Servicios</h3><a href="/servicios#web-simple">Diseño web</a><a href="/dise%C3%B1o-web-lima">Diseño web en Lima</a><a href="/servicios#tienda-online">Tiendas online</a><a href="/servicios#google-mi-negocio">Google Mi Negocio</a><a href="/servicios#software-a-medida">Software a medida</a><a href="/brief">Brief de proyecto</a></div>
             <div class="footer-column"><h3>Conecta</h3><a href="https://wa.me/51965403196" target="_blank" rel="noopener">WhatsApp ↗</a><a href="tel:+51965403196">+51 965 403 196</a><a href="https://librodigital.pe/libro/semantikatech" target="_blank" rel="noopener">Libro de Reclamaciones ↗</a></div>
         </div>
         <div class="footer-bottom"><span>© 2026 MontaWeb. Todos los derechos reservados.</span><div><a href="/privacidad">Privacidad</a><a href="/terminos">Términos</a><a href="/privacidad#cookies">Cookies</a></div><span>Diseño que se siente. <em>Tecnología que funciona.</em></span></div>
@@ -288,5 +327,6 @@
     <script src="js/site.js?v=20261124c"></script>
     <script src="js/home.js?v=20261124d"></script>
     <script src="js/app.js?v=20261123b"></script>
+<script src="/js/consent.js?v=20261125" defer></script>
 </body>
 </html>
