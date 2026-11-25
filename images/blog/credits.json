@@ -1,0 +1,79 @@
+[
+  {
+    "file": "images/blog/lima-hero.webp",
+    "alt": "Vista del jirón Gamarra, en La Victoria, con galerías y tiendas de ropa a ambos lados de la calle.",
+    "width": 1600,
+    "height": 900,
+    "author": "Ministerio de la Producción (Perú)",
+    "license": "Dominio público",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jir%C3%B3n_Gamarra,_La_Victoria.jpg",
+    "credit": "Foto: Ministerio de la Producción (Perú), dominio público, vía Wikimedia Commons"
+  },
+  {
+    "file": "images/blog/zona-moderna.webp",
+    "alt": "Panorámica de Miraflores con la vía expresa, edificios altos y un mural de colores.",
+    "width": 1200,
+    "height": 800,
+    "author": "Avodrocc",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Miraflores_Cityscape_-_Lima,_Peru.jpg",
+    "credit": "Foto: Avodrocc, CC BY 2.0, vía Wikimedia Commons"
+  },
+  {
+    "file": "images/blog/zona-centro.webp",
+    "alt": "Plaza San Martín en el Centro de Lima, con el monumento ecuestre y edificios históricos.",
+    "width": 1200,
+    "height": 800,
+    "author": "Ibrehaut",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Plaza_San_Mart%C3%ADn,_Lima.jpg",
+    "credit": "Foto: Ibrehaut, CC BY-SA 4.0, vía Wikimedia Commons"
+  },
+  {
+    "file": "images/blog/zona-norte.webp",
+    "alt": "Vista aérea de la avenida Naranjal y las manzanas de viviendas de Los Olivos, en Lima Norte.",
+    "width": 1200,
+    "height": 800,
+    "author": "Ministerio de Defensa del Perú",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Avenida_Naranjal_2020.jpg",
+    "credit": "Foto: Ministerio de Defensa del Perú, CC BY 2.0, vía Wikimedia Commons"
+  },
+  {
+    "file": "images/blog/zona-este.webp",
+    "alt": "Viviendas en la ladera de un cerro y la vía del tren en San Juan de Lurigancho, Lima Este.",
+    "width": 1200,
+    "height": 800,
+    "author": "Ariana Milla Orosco",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Casas_en_el_cerro._SJL.jpg",
+    "credit": "Foto: Ariana Milla Orosco, CC BY-SA 4.0, vía Wikimedia Commons"
+  },
+  {
+    "file": "images/blog/zona-sur.webp",
+    "alt": "Casas y calles al pie del Morro Solar, en Chorrillos, Lima Sur.",
+    "width": 1200,
+    "height": 800,
+    "author": "Gaboct",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Casas_situadas_sobre_el_Morro_Solar.jpg",
+    "credit": "Foto: Gaboct, CC BY-SA 4.0, vía Wikimedia Commons"
+  },
+  {
+    "file": "images/blog/comercio-local.webp",
+    "alt": "Puesto de carnes en un mercado de barrio de Villa El Salvador, en Lima Sur.",
+    "width": 1200,
+    "height": 800,
+    "author": "PCHS-NJROTC",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Market_in_Villa_El_Salvador.jpg",
+    "credit": "Foto: PCHS-NJROTC, CC BY 4.0, vía Wikimedia Commons"
+  }
+]
