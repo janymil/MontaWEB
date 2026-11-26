@@ -2,10 +2,67 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
 import { ROOT } from './dom-harness.mjs';
 
 const read = file => readFileSync(path.join(ROOT, file), 'utf8');
 const page = read('referidos.html');
+
+// Boots the real js/referidos.js against the few DOM nodes it touches.
+function boot(search) {
+    const node = () => ({ hidden: true, textContent: '', value: '', href: '', attrs: {}, on: {},
+        addEventListener(type, fn) { this.on[type] = fn; },
+        setAttribute(k, v) { this.attrs[k] = v; }, removeAttribute(k) { delete this.attrs[k]; }, focus() {} });
+    const els = {};
+    const doc = node();
+    doc.getElementById = id => (els[id] ??= node());
+    const opened = [];
+    vm.runInNewContext(read('js/referidos.js'), { document: doc, location: { search },
+        window: { open: url => opened.push(url) }, URLSearchParams, encodeURIComponent });
+    const click = (href, skip = false) => {
+        const link = { href, hasAttribute: name => skip && name === 'data-ref-skip' };
+        const closest = selector => (href.startsWith(selector.match(/\^="(.*)"\]/)[1]) ? link : null);
+        doc.on.click?.({ target: { closest } });
+        return decodeURIComponent(link.href);
+    };
+    const share = value => {
+        doc.getElementById('ref-share-code').value = value;
+        doc.getElementById('ref-share-form').on.submit({ preventDefault() {} });
+    };
+    return { el: id => doc.getElementById(id), click, share, opened };
+}
+
+test('referidos: a code in the URL (any case) shows the banner and goes into every WhatsApp link to us', () => {
+    const ref = boot('?ref=%20eden24');
+    assert.equal(ref.el('ref-welcome').hidden, false);
+    assert.equal(ref.el('ref-code-label').textContent, 'EDEN24');
+    assert.match(decodeURIComponent(ref.el('ref-welcome-cta').href), /código EDEN24/);
+    assert.match(ref.click('https://wa.me/51965403196?text=Hola'), /código EDEN24/, 'header and floating buttons');
+    assert.match(ref.click('https://wa.me/51965403196'), /código EDEN24/, 'footer link');
+    assert.equal(ref.click('https://wa.me/51965403196?text=cliente', true), 'https://wa.me/51965403196?text=cliente');
+    assert.equal(ref.click('https://wa.me/?text=x'), 'https://wa.me/?text=x', 'share links are not ours');
+    assert.match(page, /data-ref-skip[^>]*>[\s\S]{0,120}Pedir mi código/);
+});
+
+test('referidos: no code or a bad code changes nothing', () => {
+    for (const search of ['', '?ref=EDEN-24', '?ref=<b>']) {
+        const ref = boot(search);
+        assert.equal(ref.el('ref-welcome').hidden, true, search);
+        assert.equal(ref.click('https://wa.me/51965403196'), 'https://wa.me/51965403196', search);
+    }
+});
+
+test('referidos: the share form builds the link, rejects bad codes and clears the error on typing', () => {
+    const ref = boot('');
+    ref.share('x!');
+    assert.equal(ref.opened.length, 0);
+    assert.equal(ref.el('ref-share-code').attrs['aria-invalid'], 'true');
+    ref.el('ref-share-code').on.input();
+    assert.equal(ref.el('ref-share-code').attrs['aria-invalid'], undefined);
+    assert.equal(ref.el('ref-share-status').textContent, '');
+    ref.share('eden24');
+    assert.match(decodeURIComponent(decodeURIComponent(ref.opened[0])), /montaweb\.pe\/referidos\?ref=EDEN24/);
+});
 
 test('referidos: three steps, both rewards, FAQ as details and terms', () => {
     assert.equal((page.match(/<ol class="ref-steps">([\s\S]*?)<\/ol>/)[1].match(/<li>/g) || []).length, 3);
@@ -22,6 +79,9 @@ test('referidos: FAQ JSON-LD matches the visible questions', () => {
     const faq = ld['@graph'].find(n => n['@type'] === 'FAQPage');
     const visible = [...page.matchAll(/<summary>(.*?)<\/summary>/g)].map(m => m[1]);
     assert.deepEqual(faq.mainEntity.map(q => q.name), visible);
+    const plain = html => html.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    const answers = [...page.matchAll(/<\/summary>([\s\S]*?)<\/details>/g)].map(m => plain(m[1]));
+    assert.deepEqual(faq.mainEntity.map(q => plain(q.acceptedAnswer.text)), answers);
 });
 
 test('referidos: script puts the code in the WhatsApp message and validates it', () => {
@@ -35,7 +95,8 @@ test('referidos: script puts the code in the WhatsApp message and validates it',
 
 test('referidos: in the sitemap and in every footer', () => {
     assert.match(read('sitemap.xml'), /<loc>https:\/\/montaweb\.pe\/referidos<\/loc>/);
-    for (const f of readdirSync(ROOT).filter(n => n.endsWith('.html'))) {
+    const pages = [...readdirSync(ROOT), ...readdirSync(path.join(ROOT, 'blog')).map(n => `blog/${n}`)];
+    for (const f of pages.filter(n => n.endsWith('.html'))) {
         const html = read(f);
         if (!html.includes('<h3>Explora</h3>')) continue;
         assert.match(html, /<h3>Explora<\/h3>.*href="\/referidos"/, f);

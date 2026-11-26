@@ -4,6 +4,8 @@ Date: 2026-11-25 · Decision: `docs/decisions/2026-11-25-referral-program.md` ·
 
 Jan sends these by hand from the MontaWeb WhatsApp, one client at a time (not a broadcast list: WhatsApp flags mass messages from new business numbers). Nothing has been sent.
 
+**Opt-in required (open, from review):** `privacidad.html` section 4 says promotions go by WhatsApp or email only to people who ticked the optional box in the brief. Send messages 1 and 2 only to those clients (with a "BAJA" way out), or get a lawyer ruling first.
+
 Before sending: give each client a code (business name + 2 digits, e.g. EDEN24), note it in the referral sheet (code · client · referred business · sale · reward · paid on), and replace `[Nombre]`, `[CÓDIGO]`.
 
 ## 1. Announcement

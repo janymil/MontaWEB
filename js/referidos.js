@@ -13,12 +13,23 @@
         const text = `Hola MontaWeb, me pasaron su contacto con el código ${code}. Quiero información para la web de mi negocio.`;
         document.getElementById('ref-welcome-cta').href = `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
         welcome.hidden = false;
+
+        // The header, floating and footer buttons carry the code too. Delegated, because app.js adds
+        // the floating button later. data-ref-skip marks the link meant for existing clients.
+        document.addEventListener('click', event => {
+            const link = event.target.closest(`a[href^="https://wa.me/${PHONE}"]`);
+            if (link && !link.hasAttribute('data-ref-skip')) link.href = `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
+        }, true);
     }
 
     // A client types their code and gets a ready message to forward to another business.
     const form = document.getElementById('ref-share-form');
     const input = document.getElementById('ref-share-code');
     const status = document.getElementById('ref-share-status');
+    input.addEventListener('input', () => {
+        input.removeAttribute('aria-invalid');
+        status.textContent = '';
+    });
     form.addEventListener('submit', event => {
         event.preventDefault();
         const own = clean(input.value);
