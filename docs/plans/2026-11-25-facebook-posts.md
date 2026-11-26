@@ -100,7 +100,7 @@ Es un ejemplo, esa veterinaria no existe. Somos MontaWeb y hacemos webs para neg
 
 # Round 3 (drafts, for 2026-11-26 onwards; nothing posted)
 
-Status on 2026-11-25 ~21:00: B, C, D, E, F still pending admin approval (the C and D groups also still review the Page as a new participant). A declined. Nothing live, so no comments to answer.
+Status on 2026-11-25 ~21:00: B, C, D, E, F still pending admin approval (F also still under Removed) (the C and D groups also still review the Page as a new participant). A declined. Nothing live, so no comments to answer.
 
 Facts used (study JSON, active businesses = 5+ Google reviews, [checked, with working web]): restaurants 121 of 743 (Lima Moderna 61/171, Norte 13/139, Sur 22/173, Este 6/129); gyms 47 of 431 (Este 2/78); vets 66 of 636 (Norte 10/136, Sur 9/136); all 7 441 active businesses: 52 % no web, 17 % only Facebook/Instagram as web, 5 % broken web. Among businesses with a web, about half have a WhatsApp button (study podcast). Prices from `servicios.html`; hosting + SSL first year included, then S/ 120 a year (decision 2026-11-25). Restaurant demo = "Brasa & Criolla" (pollo a la brasa, cart that sends the order to WhatsApp, carta QR, reservas).
 
