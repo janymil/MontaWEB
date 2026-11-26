@@ -7,6 +7,7 @@ Jan asked whether DataForSEO could be monetised through MontaWeb for B2B clients
 ## Decision
 - Do not sell SEO data, keyword reports or a Peru SEO tool.
 - Use the Maps data inside MontaWeb's existing offers: a free one-page Google Maps check (ranking grid, comparison with the top 3, 3 fixes) that opens the sale of Google Mi Negocio, web and support.
+- A broken or parked website is its own fix, separate from "no website": the report offers a new site from S/ 99, because rebuilding is often cheaper than repairing (Jan, 2026-11-25). The site is checked live when the report is made; a Facebook/Instagram link counts as no website.
 - The report goes out both ways: a link on montaweb.pe (`/d/<token>`) and an image/PDF in WhatsApp.
 - Test it outbound on 30 hot census leads (score ≥ 9, all categories) first; build the public page only if ≥ 20% reply and ≥ 3 paid sales.
 - Phase 3 monthly add-on "Google Maps al día": **S/ 59/month on its own**, and **included in Soporte S/ 99** (confirmed by Jan 2026-11-25). Standalone so businesses without a MontaWeb site can buy it; inside S/ 99 as the reason to move up from S/ 49. Starting price: raise it if Phase 1 shows easy yeses. It goes on /servicios only when Phase 3 starts.
