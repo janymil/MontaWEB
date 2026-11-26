@@ -5,7 +5,8 @@
   "scripts": {
     "test": "node --test test/*.test.mjs",
     "deploy:status": "bash scripts/deploy.sh status",
-    "deploy": "bash scripts/deploy.sh deploy"
+    "deploy": "bash scripts/deploy.sh deploy",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "keywords": [],
   "author": "",
