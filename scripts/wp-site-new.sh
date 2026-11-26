@@ -40,7 +40,9 @@ for f in Dockerfile docker-compose.yml wp-admin-rotate.php; do [ -f "$TEMPLATE/$
 # The compose template uses table prefix wp_ and the dump must already point at the real host.
 grep -q 'CREATE TABLE `wp_options`' "$SQL" || die "dump has no wp_options table (table prefix must be wp_)"
 grep -q "https://$HOST" "$SQL" || die "dump does not contain https://$HOST; run wp search-replace in Local first"
-if grep -qiE '[a-z0-9-][.]local([^a-z0-9.-]|$)' "$SQL"; then
+# URLs only (plain or JSON-escaped //); Local's default email dev-email@wpengine.local is
+# on the admin user, which wp-rotate-admin.sh deletes.
+if grep -qiE '/[a-z0-9.-]+[.]local([^a-z0-9.-]|$)' "$SQL"; then
   die "dump still contains *.local URLs; run wp search-replace in Local first"
 fi
 tar -tzf "$CODE_TGZ" >/dev/null || die "code tarball is not a valid .tgz"
