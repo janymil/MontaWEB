@@ -71,3 +71,5 @@ scripts/podcast/.cache/
 
 # Raw source videos (the site uses the re-encoded copies in images/video/)
 Videos/
+# Maps diagnostico: business phones and raw data (Ley 29733)
+docs/research/maps-diagnostico/private/
