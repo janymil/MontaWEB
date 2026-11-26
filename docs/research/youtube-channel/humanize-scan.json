@@ -1,0 +1,95 @@
+{
+  "file": "C:\\Users\\USER\\Documents\\MontaWeb\\docs\\research\\youtube-channel\\2026-11-25-niche-recommendation.md",
+  "words": 923,
+  "sentences": 42,
+  "paragraphs": 15,
+  "score": 92,
+  "checks": [
+    {
+      "name": "AI vocabulary + inflation per 1k",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Filler/signposting per 1k",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Chatbot + citation artifacts",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Sentence-initial connectors per 1k",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Em dashes per 1k",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "\"Not X but Y\" (article)",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Formulaic openings/closings",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Sentence length SD (words)",
+      "value": 18.4,
+      "ok": true
+    },
+    {
+      "name": "Paragraph length CV",
+      "value": 0.64,
+      "ok": true
+    },
+    {
+      "name": "Bold phrases per H2",
+      "value": 3,
+      "ok": false
+    },
+    {
+      "name": "Emoji",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Lists with bold lead-ins (>=3 items)",
+      "value": 1,
+      "ok": true
+    }
+  ],
+  "info": {
+    "sentenceLength": {
+      "mean": 23.3,
+      "sd": 18.4,
+      "cv": 0.79
+    },
+    "paragraphLength": {
+      "mean": 35.5,
+      "sd": 22.6,
+      "cv": 0.64
+    },
+    "listSizes": [
+      4,
+      5,
+      10,
+      5
+    ],
+    "sameSizeLists": false,
+    "tripletsPer1k": 2.17,
+    "connectorsUsed": {},
+    "quotesMixed": false,
+    "spanishQuestionsMissingOpeningMark": 0,
+    "titleCaseSpanishHeadings": 0
+  },
+  "byCategory": {},
+  "findings": []
+}

@@ -25,6 +25,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://montaweb.pe/referidos</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://montaweb.pe/brief</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
