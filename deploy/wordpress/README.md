@@ -25,6 +25,45 @@ Decision: `docs/decisions/2026-11-25-hardened-wordpress-hosting.md`.
 6. **Clean sources only.** A rebuild takes code from the Local app copy (or another trusted
    copy), never from the live server tree. Media are copied by an allowlist of file types.
 
+## Add a NEW site from the Local app (e.g. dentista)
+
+1. **In Local** (right-click the site → Open site shell), export the database with the real URL.
+   This writes a file and leaves the Local database unchanged:
+   ```bash
+   wp search-replace 'http://dentista.local' 'https://dentista.montaweb.pe' --all-tables --export=dentista.sql
+   ```
+2. **On Windows**, pack the code and the media from `Local Sites\dentista\app\public\wp-content`
+   (leave out any folder that does not exist):
+   ```powershell
+   tar -czf dentista-code.tgz -C "$HOME\Local Sites\dentista\app\public\wp-content" plugins themes mu-plugins languages
+   tar -czf dentista-uploads.tgz -C "$HOME\Local Sites\dentista\app\public\wp-content" uploads
+   scp dentista.sql dentista-code.tgz dentista-uploads.tgz washington:/root/clean-src/
+   ```
+3. **On washington, as root** (pick a free port; the other demos' ports are in `/opt/montaweb-demos/*/.env`):
+   ```bash
+   cd /root/clean-src && mkdir -p dentista-uploads && tar -xzf dentista-uploads.tgz -C dentista-uploads
+   TEMPLATE=/var/www/montaweb/deploy/wordpress bash /var/www/montaweb/scripts/wp-site-new.sh \
+     dentista <port> /root/clean-src/dentista-code.tgz /root/clean-src/dentista.sql /root/clean-src/dentista-uploads/uploads
+   ```
+   It refuses to run if the folder or port exists or the dump still has `.local` URLs. It
+   imports the database, builds the hardened image, replaces `admin` / `admin` with
+   `mw-dentista-adm` and a random password, resets every other administrator, and exits
+   with an error unless `wp-rotate-admin.sh --check` passes. Until then the site is on
+   `127.0.0.1` only.
+4. Caddy block, Cloudflare DNS and the three curl checks: the script prints them at the end.
+   Each needs Jan's yes.
+
+## Replace admin logins on existing sites
+
+```bash
+bash /var/www/montaweb/scripts/wp-rotate-admin.sh --all --check   # report only; exit 1 if any site is unsafe
+bash /var/www/montaweb/scripts/wp-rotate-admin.sh <site>          # new password for mw-<site>-adm, delete "admin"
+bash /var/www/montaweb/scripts/wp-rotate-admin.sh <site> --reset-other-admins
+```
+
+Passwords are generated inside WordPress and only appended to
+`/root/montaweb-demo-credentials.txt`; the terminal never shows them. Every session is ended.
+
 ## Build or rebuild a site (on washington, as root)
 
 ```bash
