@@ -1,0 +1,3653 @@
+{
+ "version": "0.1.20261117",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "2.0748 sec.",
+ "cost": 0.09,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "11260313-3204-0367-0000-dd3911702f67",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "1.9891 sec.",
+   "cost": 0.09,
+   "result_count": 54,
+   "path": [
+    "v3",
+    "keywords_data",
+    "google_ads",
+    "search_volume",
+    "live"
+   ],
+   "data": {
+    "api": "keywords_data",
+    "function": "search_volume",
+    "se": "google_ads",
+    "keywords": [
+     "videos con ia",
+     "video con ia",
+     "crear videos con ia",
+     "crear video con ia",
+     "videos con inteligencia artificial",
+     "video con inteligencia artificial",
+     "videos publicitarios con ia",
+     "video publicitario con ia",
+     "videos publicitarios",
+     "video publicitario",
+     "videos promocionales",
+     "video promocional",
+     "video promocional para empresa",
+     "video publicitario precio",
+     "precio video publicitario",
+     "cuanto cuesta un video publicitario",
+     "reels para negocios",
+     "reels para empresas",
+     "reels con ia",
+     "reels con inteligencia artificial",
+     "reels para instagram",
+     "creacion de reels",
+     "creación de reels",
+     "edicion de reels",
+     "editor de reels",
+     "videos para redes sociales",
+     "videos para tiktok",
+     "videos para negocios",
+     "video para mi negocio",
+     "spot publicitario",
+     "spot publicitario con ia",
+     "spot publicitario precio",
+     "produccion de videos publicitarios",
+     "produccion audiovisual lima",
+     "videos publicitarios lima",
+     "video publicitario lima",
+     "agencia de videos con ia",
+     "videos ia para empresas",
+     "publicidad con ia",
+     "publicidad con inteligencia artificial",
+     "anuncios con ia",
+     "marketing con ia",
+     "videos animados publicitarios",
+     "video corporativo",
+     "video corporativo precio",
+     "contenido para redes sociales",
+     "paquete de reels",
+     "recepcionista virtual",
+     "recepcionista con ia",
+     "asistente virtual whatsapp",
+     "agente de voz ia",
+     "voz con ia",
+     "locucion con ia",
+     "locutor ia"
+    ],
+    "location_code": 2604,
+    "language_code": "es"
+   },
+   "result": [
+    {
+     "keyword": "videos con ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 62,
+     "search_volume": 4400,
+     "low_top_of_page_bid": 0.08,
+     "high_top_of_page_bid": 0.49,
+     "cpc": 0.56,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 4400
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 5400
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 4400
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 5400
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 5400
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 5400
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 4400
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 2900
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 2400
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 2400
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 2900
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 3600
+      }
+     ]
+    },
+    {
+     "keyword": "video con ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 62,
+     "search_volume": 4400,
+     "low_top_of_page_bid": 0.08,
+     "high_top_of_page_bid": 0.49,
+     "cpc": 0.56,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 4400
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 5400
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 4400
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 5400
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 5400
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 5400
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 4400
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 2900
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 2400
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 2400
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 2900
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 3600
+      }
+     ]
+    },
+    {
+     "keyword": "crear videos con ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "HIGH",
+     "competition_index": 68,
+     "search_volume": 6600,
+     "low_top_of_page_bid": 0.06,
+     "high_top_of_page_bid": 0.42,
+     "cpc": 0.47,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 8100
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 6600
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 5400
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 6600
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 8100
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 9900
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 6600
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 6600
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 5400
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 5400
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 6600
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 6600
+      }
+     ]
+    },
+    {
+     "keyword": "crear video con ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "HIGH",
+     "competition_index": 68,
+     "search_volume": 6600,
+     "low_top_of_page_bid": 0.06,
+     "high_top_of_page_bid": 0.42,
+     "cpc": 0.47,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 8100
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 6600
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 5400
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 6600
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 8100
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 9900
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 6600
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 6600
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 5400
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 5400
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 6600
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 6600
+      }
+     ]
+    },
+    {
+     "keyword": "videos con inteligencia artificial",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 52,
+     "search_volume": 110,
+     "low_top_of_page_bid": 0.05,
+     "high_top_of_page_bid": 0.42,
+     "cpc": 0.39,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 140
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 140
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 140
+      }
+     ]
+    },
+    {
+     "keyword": "video con inteligencia artificial",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 52,
+     "search_volume": 110,
+     "low_top_of_page_bid": 0.05,
+     "high_top_of_page_bid": 0.42,
+     "cpc": 0.39,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 140
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 140
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 140
+      }
+     ]
+    },
+    {
+     "keyword": "videos publicitarios con ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "HIGH",
+     "competition_index": 72,
+     "search_volume": 70,
+     "low_top_of_page_bid": 0.16,
+     "high_top_of_page_bid": 1.41,
+     "cpc": 1.94,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 70
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 70
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 90
+      }
+     ]
+    },
+    {
+     "keyword": "video publicitario con ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "HIGH",
+     "competition_index": 72,
+     "search_volume": 70,
+     "low_top_of_page_bid": 0.16,
+     "high_top_of_page_bid": 1.41,
+     "cpc": 1.94,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 70
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 70
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 90
+      }
+     ]
+    },
+    {
+     "keyword": "videos publicitarios",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 28,
+     "search_volume": 90,
+     "low_top_of_page_bid": 0.45,
+     "high_top_of_page_bid": 2.07,
+     "cpc": 2.67,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 70
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 90
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 170
+      }
+     ]
+    },
+    {
+     "keyword": "video publicitario",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 25,
+     "search_volume": 110,
+     "low_top_of_page_bid": 0.22,
+     "high_top_of_page_bid": 2.3,
+     "cpc": 1.55,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 70
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 140
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 210
+      }
+     ]
+    },
+    {
+     "keyword": "videos promocionales",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 20,
+     "search_volume": 110,
+     "low_top_of_page_bid": 0.33,
+     "high_top_of_page_bid": 1.92,
+     "cpc": 0.36,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 70
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 110
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 170
+      }
+     ]
+    },
+    {
+     "keyword": "video promocional",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 20,
+     "search_volume": 110,
+     "low_top_of_page_bid": 0.33,
+     "high_top_of_page_bid": 1.92,
+     "cpc": 0.36,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 70
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 110
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 170
+      }
+     ]
+    },
+    {
+     "keyword": "video promocional para empresa",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "video publicitario precio",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 0
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "precio video publicitario",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 0
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "cuanto cuesta un video publicitario",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "reels para negocios",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 0
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "reels para empresas",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 0
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 0
+      }
+     ]
+    },
+    {
+     "keyword": "reels con ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 56,
+     "search_volume": 20,
+     "low_top_of_page_bid": 0.14,
+     "high_top_of_page_bid": 0.41,
+     "cpc": 0.38,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 30
+      }
+     ]
+    },
+    {
+     "keyword": "reels con inteligencia artificial",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 0
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 0
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "reels para instagram",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 20
+      }
+     ]
+    },
+    {
+     "keyword": "creacion de reels",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "HIGH",
+     "competition_index": 86,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": 1.27,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "creación de reels",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "HIGH",
+     "competition_index": 86,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": 1.27,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "edicion de reels",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 11,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 0
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "editor de reels",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 43,
+     "search_volume": 10,
+     "low_top_of_page_bid": 0.15,
+     "high_top_of_page_bid": 1.82,
+     "cpc": 0.57,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "videos para redes sociales",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 21,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": 0.57,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 30
+      }
+     ]
+    },
+    {
+     "keyword": "videos para tiktok",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 13,
+     "search_volume": 90,
+     "low_top_of_page_bid": 0.14,
+     "high_top_of_page_bid": 0.7,
+     "cpc": 0.64,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 140
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 110
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 110
+      }
+     ]
+    },
+    {
+     "keyword": "videos para negocios",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "HIGH",
+     "competition_index": 86,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "video para mi negocio",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "spot publicitario",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 7,
+     "search_volume": 2900,
+     "low_top_of_page_bid": 0.41,
+     "high_top_of_page_bid": 1.48,
+     "cpc": 1.6,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 2400
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 2900
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 2400
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 2900
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 2900
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 3600
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 2900
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 1900
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 1600
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 1600
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 2900
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 4400
+      }
+     ]
+    },
+    {
+     "keyword": "spot publicitario con ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 52,
+     "search_volume": 70,
+     "low_top_of_page_bid": 0.13,
+     "high_top_of_page_bid": 1.72,
+     "cpc": 1.55,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 40
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 40
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 90
+      }
+     ]
+    },
+    {
+     "keyword": "spot publicitario precio",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "produccion de videos publicitarios",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 0
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 0
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "produccion audiovisual lima",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 54,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": 0.64,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 0
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "videos publicitarios lima",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "video publicitario lima",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "agencia de videos con ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "videos ia para empresas",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "publicidad con ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 16,
+     "search_volume": 140,
+     "low_top_of_page_bid": 0.32,
+     "high_top_of_page_bid": 2.33,
+     "cpc": 1.51,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 210
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 320
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 260
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 210
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 70
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 70
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 70
+      }
+     ]
+    },
+    {
+     "keyword": "publicidad con inteligencia artificial",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 57,
+     "search_volume": 10,
+     "low_top_of_page_bid": 0.24,
+     "high_top_of_page_bid": 1.41,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "anuncios con ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 22,
+     "search_volume": 90,
+     "low_top_of_page_bid": 0.18,
+     "high_top_of_page_bid": 1.82,
+     "cpc": 1.56,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 30
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 30
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 50
+      }
+     ]
+    },
+    {
+     "keyword": "marketing con ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 52,
+     "search_volume": 50,
+     "low_top_of_page_bid": 0.38,
+     "high_top_of_page_bid": 1.53,
+     "cpc": 1.63,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 30
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 30
+      }
+     ]
+    },
+    {
+     "keyword": "videos animados publicitarios",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 0
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 0
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "video corporativo",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 49,
+     "search_volume": 50,
+     "low_top_of_page_bid": 0.4,
+     "high_top_of_page_bid": 1.83,
+     "cpc": 2.67,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 50
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 50
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 70
+      }
+     ]
+    },
+    {
+     "keyword": "video corporativo precio",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 0
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "contenido para redes sociales",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 27,
+     "search_volume": 30,
+     "low_top_of_page_bid": 0.52,
+     "high_top_of_page_bid": 1.17,
+     "cpc": 0.58,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 30
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 30
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 40
+      }
+     ]
+    },
+    {
+     "keyword": "paquete de reels",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "recepcionista virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 19,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "recepcionista con ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "asistente virtual whatsapp",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 49,
+     "search_volume": 10,
+     "low_top_of_page_bid": 0.36,
+     "high_top_of_page_bid": 2.81,
+     "cpc": 1.24,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "agente de voz ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 31,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": 0.84,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "voz con ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 41,
+     "search_volume": 720,
+     "low_top_of_page_bid": 0.03,
+     "high_top_of_page_bid": 0.32,
+     "cpc": 0.3,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 880
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 880
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 720
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 880
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 880
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 720
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 590
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 590
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 590
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 590
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 720
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 880
+      }
+     ]
+    },
+    {
+     "keyword": "locucion con ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 63,
+     "search_volume": 10,
+     "low_top_of_page_bid": 0.12,
+     "high_top_of_page_bid": 0.89,
+     "cpc": 0.68,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "locutor ia",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 57,
+     "search_volume": 30,
+     "low_top_of_page_bid": 0.03,
+     "high_top_of_page_bid": 0.34,
+     "cpc": 0.26,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 40
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 40
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

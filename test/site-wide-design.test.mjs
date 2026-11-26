@@ -6,7 +6,7 @@ import { ROOT } from './dom-harness.mjs';
 
 const pages = [
     'index.html', 'servicios.html', 'ejemplos.html', 'contacto.html',
-    'empresa.html', 'brief.html', 'diseño-web-lima.html', 'diseño-de-paginas-web.html', 'tiendas-virtuales.html', 'privacidad.html',
+    'empresa.html', 'brief.html', 'diseño-web-lima.html', 'diseño-de-paginas-web.html', 'tiendas-virtuales.html', 'videos-publicitarios-con-ia.html', 'privacidad.html',
     'terminos.html', '404.html', 'gracias.html', 'gracias-descarga.html'
 ];
 const read = file => readFileSync(path.join(ROOT, file), 'utf8');

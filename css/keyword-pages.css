@@ -28,3 +28,28 @@
 .kw-note { max-width:760px; margin:28px auto 0; color:var(--home-muted, #5d5b55); line-height:1.7; text-align:center; }
 .kw-note a, .kw-cross a { color:var(--orange-text, #b8391f); font-weight:600; text-decoration:underline; text-underline-offset:3px; }
 .kw-cross { max-width:860px; margin:0 auto; padding:26px 28px; border:1px solid var(--ink, #181816); background:var(--cream, #fffdf7); font-size:18px; line-height:1.6; }
+
+/* /videos-publicitarios-con-ia: example reels, steps, include/exclude lists, receptionist block. */
+.reel-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:28px; align-items:start; }
+.reel-card { margin:0; display:flex; flex-direction:column; gap:14px; padding:16px; border:1px solid var(--ink, #181816); background:var(--cream, #fffdf7); }
+.reel-card video { display:block; inline-size:100%; block-size:auto; aspect-ratio:9 / 16; max-inline-size:360px; margin-inline:auto; background:var(--ink, #181816); object-fit:cover; }
+.reel-card h3 { margin:0; font-size:22px; line-height:1.2; }
+.reel-card figcaption { display:flex; flex-direction:column; gap:10px; line-height:1.6; }
+.reel-card figcaption p { margin:0; }
+.reel-tag { align-self:flex-start; padding:4px 10px; border:1px solid var(--ink, #181816); background:var(--lime, #d9fa65); font:500 12px/1.4 var(--font-mono, monospace); letter-spacing:.02em; }
+.reel-chips { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 28px; padding:0; list-style:none; }
+.reel-chips li { padding:6px 14px; border:1px solid var(--ink, #181816); background:var(--cream, #fffdf7); font-weight:600; font-size:15px; }
+.reel-steps { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:20px; }
+.reel-steps .f-card p { margin:0; }
+.reel-lists { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:28px; }
+.reel-lists h3 { margin:0 0 14px; font-size:24px; }
+.reel-lists ul { margin:0; padding-inline-start:1.2em; line-height:1.7; }
+.reel-lists li + li { margin-top:8px; }
+.reel-monthly, .reel-web { max-inline-size:760px; margin:24px auto 0; text-align:center; line-height:1.7; }
+.reel-monthly a, .reel-web a { color:var(--orange-text, #b8391f); font-weight:700; text-decoration:underline; text-underline-offset:3px; }
+.reel-soon { max-inline-size:860px; padding:28px; border:1px dashed var(--ink, #181816); background:var(--cream, #fffdf7); }
+.reel-soon h2 { margin-block:14px; }
+.reel-soon p { line-height:1.7; }
+.reel-pricing { max-inline-size:900px; margin-inline:auto; }
+@media (max-width: 560px) { .reel-card { padding:12px; } .reel-card video { max-inline-size:100%; } }
+.site-page .page-head h1 em, .site-page .section-head h2 em { font-family:var(--font-serif, 'Instrument Serif', serif); font-weight:400; font-style:italic; color:var(--orange-text, #b8391f); }

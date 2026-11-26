@@ -8,6 +8,8 @@ Delete a lesson only when the thing that caused it no longer exists.
 
 ---
 
+- 2026-11-25 — Google Flow refunded but failed every video request that used existing project videos as references (5 of 6, twice); the same prompts from text only, with the place and people described in words, all rendered. Ask Flow for text-only generations, and batch them in one request so Jan approves credits once.
+
 - 2026-11-25 — archive.org answers a repeated Save Page Now with the earlier copy and HTTP 200; the script logged it as new, although it showed our page before the deploy. A snapshot only counts if its timestamp matches the request.
 - 2026-11-25 — port 8781 was held by another worktree's server (404 on new pages), and the Chrome window would not shrink below desktop; serve this worktree on 8783 (`montaweb-static-8783`) and check 375 px in a same-origin 375 px iframe. Also: a stacked `.kw-table` needs `caption{display:block}` or the caption squeezes to one word per line.
 - 2026-11-25 — evidence captures: headless Chrome's print CSS gave a near-empty PDF for hosting.com.pe (emulate `screen` media), our cookie notice covered table rows (second pass with it closed), and `process.exit()` right after `fetch` crashes Node on Windows with a libuv assertion (set `process.exitCode`). Look at the captures before sealing them.

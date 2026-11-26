@@ -1,0 +1,7 @@
+{
+  "name": "demo-reels",
+  "private": true,
+  "type": "module",
+  "description": "Local tooling for the demo reel renderer (not part of the site)",
+  "dependencies": { "playwright-core": "^1.57.0" }
+}
