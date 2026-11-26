@@ -8,6 +8,7 @@ Delete a lesson only when the thing that caused it no longer exists.
 
 ---
 
+- 2026-11-25 — evidence captures: headless Chrome's print CSS gave a near-empty PDF for hosting.com.pe (emulate `screen` media), our cookie notice covered table rows (second pass with it closed), and `process.exit()` right after `fetch` crashes Node on Windows with a libuv assertion (set `process.exitCode`). Look at the captures before sealing them.
 - 2026-11-25 — first scripted deploy stopped because the server had uncommitted copies of files the commits added (demo sites); they were byte-identical (`git hash-object` vs `origin/main:<f>`), so they were backed up to `/var/www/montaweb-backup-*`, removed, and the pull finished. Check identity first, never stash or reset there.
 - 2026-11-25 — deploy only via `scripts/deploy.sh` (`npm run deploy:status` / `npm run deploy`); it locks, shows what goes live, verifies the origin and logs. Never hand-run push + server pull.
 - 2026-11-25 — tests pinned exact `?v=` cache-bust strings, so every legitimate version bump broke them; they now match `\?v=\d{8}[a-z]?`. Also: the in-app Browser pane refuses localhost here and headless Chrome screenshots skip `.reveal-item` sections; check pages in Claude in Chrome at 127.0.0.1 instead.
