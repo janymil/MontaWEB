@@ -119,19 +119,19 @@
       </div>
       <figure class="phone-demo" aria-labelledby="phone-cap">
         <div class="toggle" role="group" aria-label="Cómo se verá la llamada">
-          <button type="button" data-phone="hoy" aria-pressed="true">Hoy</button>
-          <button type="button" data-phone="500" aria-pressed="false">Con el prefijo 500</button>
+          <button type="button" data-phone="hoy" aria-pressed="false">Hoy</button>
+          <button type="button" data-phone="500" aria-pressed="true">Con el prefijo 500</button>
         </div>
-        <div class="phone" id="phone" data-mode="hoy">
+        <div class="phone" id="phone" data-mode="500">
           <div class="phone__screen" aria-live="polite">
             <span class="phone__label">Llamada entrante</span>
-            <span class="phone__num">+51 987 654 321</span>
-            <span class="phone__sub">Celular · Lima</span>
-            <span class="phone__avatar" aria-hidden="true">?</span>
+            <span class="phone__num"><b>500</b> 123 456</span>
+            <span class="phone__sub">Número 500</span>
+            <span class="phone__avatar" aria-hidden="true">500</span>
             <div class="phone__actions" aria-hidden="true"><span class="no"><i class="fas fa-phone-slash"></i></span><span class="yes"><i class="fas fa-phone"></i></span></div>
           </div>
         </div>
-        <figcaption id="phone-cap">Hoy: un número cualquiera. Puede ser tu banco, tu cliente o alguien que quiere venderte algo.</figcaption>
+        <figcaption id="phone-cap">Con el prefijo 500 sabes que te quieren vender algo antes de contestar. Tú decides.</figcaption>
       </figure>
     </div>
   </div>
@@ -259,6 +259,10 @@
 
     <h2 id="negocio" data-toc="Si vendes por teléfono">Qué hacer antes de marzo si tu negocio vende por teléfono</h2>
     <p>La norma pesa más sobre bancos, aseguradoras y operadoras, pero también alcanza al pequeño negocio que llama para ofrecer un plan, una clase de prueba o una promoción. Si es tu caso, revisa esto:</p>
+    <figure class="photo">
+      <img src="/images/blog/call-center.webp" alt="Sala de un call center con decenas de operadoras con auriculares frente a sus computadoras." width="1600" height="1067" loading="lazy" decoding="async">
+      <figcaption>Las llamadas de venta que salen de salas como esta tendrán que usar un número 500. Foto: Singhira, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, vía <a href="https://commons.wikimedia.org/wiki/File:Call_Centre.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+    </figure>
     <ol class="todo">
       <li><strong>Separa lo que informa de lo que vende.</strong> Recordar una cita o avisar de un pedido no requiere el 500. Ofrecer algo, sí, aunque sea en la misma llamada.</li>
       <li><strong>Consigue el permiso antes y por escrito.</strong> Una casilla en tu web, un formulario o un mensaje en el que el cliente acepta recibir ofertas. Que la casilla no venga marcada de antemano.</li>
@@ -287,10 +291,6 @@
 
     <h2 id="que-te-busquen" data-toc="Que el cliente te busque">Mejor que el cliente te busque a ti</h2>
     <p>Hay una forma de vender que no choca con ninguna de estas reglas: que la persona dé el primer paso. Cuando alguien te escribe por WhatsApp, llena el formulario de tu web o te llama porque te vio en Google Maps, ese contacto no es spam. Es un cliente que ya está interesado.</p>
-    <figure class="photo">
-      <img src="/images/blog/comercio-local.webp" alt="Puesto de carnes en un mercado de barrio de Villa El Salvador, en Lima Sur." width="1200" height="800" loading="lazy" decoding="async">
-      <figcaption>Foto: PCHS-NJROTC, CC BY 4.0, vía <a href="https://commons.wikimedia.org/wiki/File:Market_in_Villa_El_Salvador.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
-    </figure>
     <p>El primer paso casi siempre empieza en Google. Una ficha con horario, fotos y reseñas te hace aparecer cuando alguien busca tu rubro cerca; te explicamos cómo cuidarla en nuestra guía de <a href="/google-mi-negocio">Google Mi Negocio</a>.</p>
     <p>Desde la ficha, el cliente entra a tu web para ver qué haces y cuánto cuesta, y te escribe con el botón de WhatsApp o con el formulario. Si el formulario trae una casilla para aceptar ofertas, cada contacto te llega con su permiso registrado, que es lo que pide la ley. Y cuando quieras mandar promociones por WhatsApp, envíalas solo a quien aceptó recibirlas: la plataforma también se lo exige a las empresas.</p>
     <p>Todavía hay mucho margen. En nuestro <a href="/blog/estudio-web-negocios-lima-2026">estudio de 19&nbsp;168 negocios de Lima</a>, solo 1 de cada 4 negocios activos tenía una web que funcionaba. Quien la tiene recibe a los clientes que su competencia deja pasar.</p>
@@ -399,7 +399,7 @@
 <script src="/js/site.js?v=20261124c"></script>
 <script src="/js/app.js?v=20261125e"></script>
 <script src="/js/blog.js?v=20261124h"></script>
-<script src="/js/prefijo-500.js?v=20261126a"></script>
+<script src="/js/prefijo-500.js?v=20261126b"></script>
 <script src="/js/consent.js?v=20261125" defer></script>
 </body>
 </html>

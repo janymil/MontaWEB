@@ -24,7 +24,7 @@
             btns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.phone === mode)));
         };
         btns.forEach(b => b.addEventListener('click', () => show(b.dataset.phone)));
-        show('hoy');
+        show('500');
     }
 
     /* ---------- Checker ---------- */
