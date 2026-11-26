@@ -48,7 +48,7 @@ Somos MontaWeb, hacemos webs para negocios pequeños. Si tienes dudas sobre la c
 
 ---
 
-# Round 2 (drafts for 2026-11-26)
+# Round 2 (posted 2026-11-25 evening, Jan said "post them now")
 
 Status of round 1 on 2026-11-25 evening: A was **declined** by Lima Emprendedora's admins (no reason given; probably the offer). B and C are still pending admin approval. So round 2 leads with data, shows a demo only in trade groups, and makes no "first 5" offer.
 
@@ -72,7 +72,7 @@ Somos MontaWeb, hacemos webs para negocios pequeños de Lima. ¿Qué es lo prime
 
 ## E. Barberos del Perú – Asociación (no written rules)
 
-Imagen: captura de barberia.montaweb.pe en celular (la tomamos antes de publicar).
+Imagen: captura de escritorio de barberia.montaweb.pe (portada). Posted 2026-11-25 on Jan's go-ahead.
 
 Dato para los barberos de Lima: revisamos en Google Maps 388 barberías con clientela (5 reseñas o más) y solo 46 tienen una web propia que funciona. En Lima Este revisamos 42 y ninguna tenía web.
 
@@ -86,7 +86,7 @@ Es solo un ejemplo, esa barbería no existe. Somos MontaWeb, hacemos webs para n
 
 ## F. Veterinarios de Lima Perú (no written rules)
 
-Imagen: captura de veterinaria.montaweb.pe en celular (la tomamos antes de publicar).
+Imagen: captura de escritorio de veterinaria.montaweb.pe (portada). Posted 2026-11-25 on Jan's go-ahead.
 
 Revisamos en Google Maps 636 veterinarias de Lima con clientela (5 reseñas o más). Solo 66 tienen una web propia que funciona, una de cada diez. En Lima Este fueron 5 de 125.
 
