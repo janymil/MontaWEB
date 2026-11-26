@@ -12,7 +12,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { COMPETITORS } from './compare/competitors.mjs';
 import { openBrowser } from './lib/capture.mjs';
-import { arg, archiveAll, assertEmpty, limaDay, limaStamp, norm, sha256File, visibleText } from './lib/evidence.mjs';
+import { arg, archiveAll, archiveText, assertEmpty, limaDay, limaStamp, norm, sha256File, visibleText } from './lib/evidence.mjs';
 
 const args = process.argv.slice(2);
 const out = resolve(arg(args, '--out') ?? `docs/evidence/comparar/${limaDay()}`);
@@ -62,7 +62,7 @@ const quoteLines = e => e.quotes.map(q => `- ${q.found ? '✔' : '✘'} ${q.row}
 writeFileSync(join(out, 'LOG.md'), `# Evidencia /comparar — ${started}\n\n` +
   `Capturado con ${browser.method}. País de salida a internet (Cloudflare trace): ${country}.${proxy ? ` Proxy: ${proxy}.` : ''}\n\n` +
   log.map(e => `## ${e.competitor} — ${e.url}\n${e.error ? `ERROR: ${e.error}` : `Capturado: ${e.at} · HTTP ${e.status}${e.problems.length ? ` · PROBLEMAS: ${e.problems.join('; ')}` : ''}`}\n` +
-    `${e.archive ? `archive.org: ${e.archive.snapshot || e.archive.note}\n` : ''}` +
+    `${e.archive ? `archive.org: ${archiveText(e.archive)}\n` : ''}` +
     `${e.files.map(f => `- ${f.file} \`${f.sha256}\``).join('\n')}\n${quoteLines(e)}\n`).join('\n'));
 const all = log.flatMap(e => e.quotes);
 writeFileSync(join(out, 'RECHECK.md'), `# Recheck — ${started}\n\n${all.filter(q => q.found).length}/${all.length} quotes found; ${problems} problem(s).\n\n` +

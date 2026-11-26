@@ -56,35 +56,49 @@ export function checkManifest(dir) {
 }
 
 const SNAPSHOT = /^https:\/\/web\.archive\.org\/web\/(\d{14})/;
-export const snapshotDay = url => {
+export const snapshotTime = url => {
   const m = SNAPSHOT.exec(url || '');
   if (!m) return null;
   const [y, mo, d, h, mi, s] = [[0, 4], [4, 6], [6, 8], [8, 10], [10, 12], [12, 14]].map(([a, b]) => +m[1].slice(a, b));
-  return limaDay(new Date(Date.UTC(y, mo - 1, d, h, mi, s)));
+  return new Date(Date.UTC(y, mo - 1, d, h, mi, s));
 };
 
+/** archive.org answers a repeated request with an older copy: that is not a new snapshot. */
+const FRESH_MS = 10 * 60_000;
+
+/** One line for LOG.md: the link never appears without its caveat. */
+export const archiveText = a => (a ? [a.snapshot || '—', a.note && `(${a.note})`].filter(Boolean).join(' ') : '');
+
 /**
- * archive.org "Save Page Now". Anonymous requests are often rate limited (429), so
- * a failure also records the newest existing snapshot, labelled as such.
+ * archive.org "Save Page Now". ok only if the copy was made by this request.
+ * Anonymous requests are often rate limited (429), so a failure also records the
+ * newest existing copy, labelled with its date.
  */
-export async function savePageNow(url, { fetchImpl = fetch, pause = 8000, tries = 2 } = {}) {
+export async function savePageNow(url, { fetchImpl = fetch, pause = 8000, tries = 2, now = () => Date.now() } = {}) {
   const target = url.split('#')[0];
   const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const since = now() - FRESH_MS;
+  const older = snap => `existing copy from ${snapshotTime(snap).toISOString()}, not made by this request`;
   let why = '';
   for (let n = 0; n < tries; n++) {
     try {
       const res = await fetchImpl(`https://web.archive.org/save/${target}`, { signal: AbortSignal.timeout(150_000) });
       const where = res.headers.get('content-location');
       const snap = where ? new URL(where, 'https://web.archive.org').href : res.url;
-      if (res.ok && snapshotDay(snap) === limaDay()) return { url, ok: true, snapshot: snap };
-      why = res.ok ? 'no new snapshot returned' : `HTTP ${res.status}`;
+      const time = res.ok && snapshotTime(snap);
+      if (time) return time >= since ? { url, ok: true, snapshot: snap } : { url, ok: false, snapshot: snap, note: older(snap) };
+      why = res.ok ? 'no snapshot returned' : `HTTP ${res.status}`;
     } catch (e) { why = String(e.message || e); }
     await sleep(pause * (n + 1));
   }
   try {
     const res = await fetchImpl(`https://web.archive.org/web/2/${target}`, { signal: AbortSignal.timeout(60_000) });
-    const day = snapshotDay(res.url);
-    if (res.ok && day) return { url, ok: day === limaDay(), snapshot: res.url, note: `Save Page Now failed (${why}); newest existing copy, ${day}` };
+    if (res.ok && snapshotTime(res.url)) {
+      const note = snapshotTime(res.url) >= since
+        ? `copy from ${snapshotTime(res.url).toISOString()}, not confirmed as made by this request`
+        : older(res.url);
+      return { url, ok: false, snapshot: res.url, note: `Save Page Now failed (${why}); ${note}` };
+    }
   } catch { /* keep the first reason */ }
   return { url, ok: false, snapshot: '', note: `Save Page Now failed (${why}); no existing copy` };
 }

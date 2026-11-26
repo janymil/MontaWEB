@@ -11,7 +11,7 @@ import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { COMPETITORS } from './compare/competitors.mjs';
 import { openBrowser } from './lib/capture.mjs';
-import { arg, archiveAll, assertEmpty, limaDay, limaStamp, sha256File } from './lib/evidence.mjs';
+import { arg, archiveAll, archiveText, assertEmpty, limaDay, limaStamp, sha256File } from './lib/evidence.mjs';
 
 const args = process.argv.slice(2);
 const out = resolve(arg(args, '--out') ?? `docs/evidence/comparar/${limaDay()}/claims`);
@@ -88,7 +88,7 @@ writeFileSync(join(out, 'LOG.md'), [
   '',
   '| Captura | URL | Prueba | Hora | HTTP | archive.org |',
   '| --- | --- | --- | --- | --- | --- |',
-  ...log.map(e => `| ${e.name} | ${e.url} | ${e.proves} | ${e.at ?? ''} | ${e.status ?? e.error}${e.problems?.length ? ` · ${e.problems.join('; ')}` : ''} | ${e.archive?.snapshot ?? ''} |`),
+  ...log.map(e => `| ${e.name} | ${e.url} | ${e.proves} | ${e.at ?? ''} | ${e.status ?? e.error}${e.problems?.length ? ` · ${e.problems.join('; ')}` : ''} | ${archiveText(e.archive)} |`),
   '',
   '## Archivos (SHA-256)',
   ...[...copies, ...log.flatMap(e => e.files), ...sitemapFiles].map(f => `- ${f.file} \`${f.sha256}\``),

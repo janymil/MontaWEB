@@ -71,7 +71,7 @@ test('a rate-limited Save Page Now is not recorded as a new snapshot', async () 
   const r = await E.savePageNow('https://x.pe/#planes', { fetchImpl, pause: 0 });
   assert.equal(r.ok, false);
   assert.equal(r.snapshot, old);
-  assert.match(r.note, /HTTP 429.*2019-12-31/);
+  assert.match(r.note, /HTTP 429.*2020-01-01T00:00:00/);
 });
 
 test('the evidence scripts stamp captures and never reuse a folder', () => {
@@ -109,4 +109,22 @@ test('sealing can resume after a failed TSA without replacing a token or accepti
   assert.deepEqual(calls, [TSAS[0].name, TSAS[1].name, TSAS[1].name]);
   writeFileSync(join(d, 'a.txt'), 'changed');
   await assert.rejects(seal(d, stampOne), /differs from its SHA256SUMS/);
+});
+
+test('an older copy returned by Save Page Now does not count as a new snapshot', async () => {
+  const copy = 'https://web.archive.org/web/20261126005949/https://x.pe/';
+  const fetchImpl = async () => ({ ok: true, status: 200, url: copy, headers: new Headers() });
+  const at = iso => ({ fetchImpl, pause: 0, now: () => Date.parse(iso) });
+  assert.equal((await E.savePageNow('https://x.pe/', at('2026-11-26T01:00:00Z'))).ok, true);
+  const later = await E.savePageNow('https://x.pe/', at('2026-11-26T01:48:00Z'));
+  assert.equal(later.ok, false);
+  assert.match(later.note, /existing copy from 2026-11-26T00:59:49/);
+});
+
+test('LOG.md never shows an older copy without its note', () => {
+  assert.equal(E.archiveText({ snapshot: 'S', note: 'existing copy' }), 'S (existing copy)');
+  assert.equal(E.archiveText({ snapshot: '', note: 'failed' }), '— (failed)');
+  assert.equal(E.archiveText(undefined), '');
+  for (const f of ['compare-evidence.mjs', 'montaweb-claims-evidence.mjs'])
+    assert.match(readFileSync(new URL(`../scripts/${f}`, import.meta.url), 'utf8'), /archiveText\(e\.archive\)/, f);
 });
