@@ -44,8 +44,7 @@ SEO-first: target "google mi negocio", "google business profile", "como aparecer
 1. Delivery: **both**: the link on montaweb.pe (`/d/<token>`) and an image/PDF sent in WhatsApp. `render.py` outputs HTML + PNG + PDF.
 2. Phase 1: **all hot leads** (score ≥ 9), not only vets and dentists.
 
-## Still open
-3. Add-on price (Phase 3). Proposal: its own price (S/ 59/month) and also included in Soporte S/ 99; decide before Phase 3.
+3. Add-on price (Phase 3): **S/ 59/month on its own, and included in Soporte S/ 99.**
 
 ## Risks
 - Rank depends on who searches from where: the grid is the honest answer; the report says so in one plain line.
