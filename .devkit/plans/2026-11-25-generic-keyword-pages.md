@@ -1,0 +1,58 @@
+# 2026-11-25 — A business owner searching "diseño de páginas web" (Peru) or "… en Lima" lands on a MontaWeb page written for that search
+
+## Goal
+
+Rework `/diseño-web-lima` for the Lima searches and add a Peru-wide `/diseño-de-paginas-web` page for the national ones, without the two competing for the same keywords.
+
+## Keyword split (source: `docs/research/keywords/2026-11-25-industry-landing-keywords.md`, `2026-11-25-competitor-keywords-agg.json`)
+
+| Page | Primary | Secondary | Who ranks now |
+|---|---|---|---|
+| `/diseño-web-lima` | diseño de paginas web en lima (480) | pagina web en lima 170 · paginas web lima 170 · diseño web lima 170 · diseñador web lima 170 | kom #3, bersoft #4; bersoft #12–17, hosting.com.pe #9–11, respiraweb #19 |
+| `/diseño-de-paginas-web` | diseño de paginas web (1,900) | diseño web 1,000 · creacion de paginas web 320 · diseño web profesional 140 · paginas web peru 170 · diseño web peru 110 | kom #19, hosting.com.pe #6 (profesional), #39–70 |
+
+Rule against cannibalisation: the word "Lima" never appears in the national page's title, H1 or meta; "Perú"/"todo el país" never in the Lima page's title or H1. Each page links to the other once, with the other page's keyword as anchor text.
+
+## Out of scope
+
+Online shop page (waits for Jan, see below) · chatbot WhatsApp · price guide page · industry pages and hub (session `industry-pages`) · rewriting `/servicios` beyond one link.
+
+## Files that will change
+
+- `diseño-web-lima.html` — new title/H1/H2s, local data from our Lima study, districts by zone, FAQ as `<details>`, Service + FAQPage + BreadcrumbList JSON-LD
+- `diseño-de-paginas-web.html` — new national page, same shell
+- `css/site.css` — small shared block for `.kw-faq` (details) and `.kw-table` (stacked on mobile); bump `?v=` on the two pages only
+- `images/og/og-diseno-web-lima.png`, `images/og/og-diseno-de-paginas-web.png` + `scripts/make-og-keyword-pages.py`
+- `index.html`, `servicios.html` — one link each to the national page
+- footer "Servicios" column: "Diseño web" points to the national page instead of `/servicios#web-simple` (one-line change per page)
+- `sitemap.xml`, `llms.txt` — one entry
+- `test/keyword-pages.test.mjs` — new; `test/seo-and-tracking.test.mjs`, `test/site-wide-design.test.mjs` — add the new page
+
+## The risk
+
+A promise MontaWeb does not keep (online booking, S/ 50 "web", shipping integrations) → refund/trust; Jan notices on a call. The two pages cannibalise → both stuck on page 2; seen in Search Console in weeks. Footer line conflicts with `industry-pages` → seen at merge, trivial to resolve.
+
+## How it is proven
+
+- Test `test/keyword-pages.test.mjs`: per page, title/H1/meta contain the primary keyword; national page has no "Lima" in title/H1/meta; JSON-LD parses with Service + FAQPage + BreadcrumbList; FAQ JSON-LD questions equal the visible `<summary>` texts; "S/ 99" present; pages link to each other; in sitemap; linked from index, servicios and footer.
+- Gate: `./verify.sh`; rendered check desktop + 375 px in Chrome at 127.0.0.1.
+
+## Steps
+
+1. Write es-PE copy (Opus), run humanize scanner.
+2. Build both pages + CSS + OG images.
+3. Wiring + tests (sonnet subagent, checked).
+4. Render check, commit, Spanish sample to Jan, ask Jan about the shop page.
+
+## Online shops
+
+`/servicios` already sells Tienda Starter (S/ 299) and Tienda Pro (S/ 499), so the question for Jan is only whether to build a `/tiendas-virtuales` page for "tienda virtual" (1,900) and "diseño de tiendas virtuales" (480) with those prices.
+
+## Review — filled in after building, by the reviewer pass
+
+- [ ] Q1 · plain sentence a non-developer can read:
+- [ ] Q2 · the test that fails without this change:
+- [ ] Q3 · `./verify.sh` — result:
+- [ ] Q4 · the risk, named:
+- [ ] Q5 · the reviewer read the diff (who, when):
+- [ ] `lessons.md` updated — only if something surprised us

@@ -1,0 +1,29 @@
+/* Keyword landing pages (/diseño-web-lima, /diseño-de-paginas-web): FAQ accordion, data table, cross-link. */
+.kw-faq { max-width:860px; margin-inline:auto; }
+.kw-faq details { border-block-end:1px solid var(--home-line, rgba(24,24,22,.18)); }
+.kw-faq summary { list-style:none; display:flex; align-items:center; gap:.6ch; padding:20px 0; font-weight:700; font-size:18px; line-height:1.4; cursor:pointer; }
+.kw-faq summary::-webkit-details-marker { display:none; }
+.kw-faq summary::before { content:'+'; flex-shrink:0; inline-size:1.2em; font-family:var(--font-mono, monospace); color:var(--orange-text, #b8391f); }
+.kw-faq details[open] > summary::before { content:'–'; }
+.kw-faq details p { margin:0 0 20px; max-width:70ch; line-height:1.7; }
+.kw-faq details a { color:var(--orange-text, #b8391f); text-decoration:underline; text-underline-offset:3px; }
+
+.kw-table-wrap { overflow:auto; max-inline-size:100%; container-type:inline-size; border:1px solid var(--ink, #181816); background:var(--cream, #fffdf7); }
+.kw-table { inline-size:100%; border-collapse:separate; border-spacing:0; font-size:16px; }
+.kw-table caption { caption-side:bottom; padding:12px 16px; text-align:start; color:var(--home-muted, #5d5b55); font-size:14px; }
+.kw-table th, .kw-table td { padding:14px 16px; text-align:start; vertical-align:top; border-block-end:1px solid rgba(24,24,22,.12); }
+.kw-table thead th { background:var(--ink, #181816); color:var(--cream, #fffdf7); font-weight:700; }
+.kw-table tbody th { font-weight:700; }
+.kw-table .num { font-variant-numeric:tabular-nums; font-weight:700; white-space:nowrap; }
+@container (width < 560px) {
+  .kw-table, .kw-table thead, .kw-table tbody, .kw-table tr, .kw-table th, .kw-table td { display:block; }
+  .kw-table thead { display:none; }
+  .kw-table tr { border-block-end:1px solid var(--ink, #181816); padding-block:6px; }
+  .kw-table tbody th { padding-block-end:4px; }
+  .kw-table td { border:0; padding-block:4px; }
+  .kw-table td::before { content:attr(data-label) ': '; font-weight:600; color:var(--home-muted, #5d5b55); }
+}
+
+.kw-note { max-width:760px; margin:28px auto 0; color:var(--home-muted, #5d5b55); line-height:1.7; text-align:center; }
+.kw-note a, .kw-cross a { color:var(--orange-text, #b8391f); font-weight:600; text-decoration:underline; text-underline-offset:3px; }
+.kw-cross { max-width:860px; margin:0 auto; padding:26px 28px; border:1px solid var(--ink, #181816); background:var(--cream, #fffdf7); font-size:18px; line-height:1.6; }
