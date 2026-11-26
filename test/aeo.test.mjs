@@ -11,7 +11,7 @@ const findFaq = html => ldBlocks(html).flatMap(b => b['@graph'] || [b]).find(n =
 
 test('llms.txt exists, starts with an H1 and links only to pages that exist', () => {
     assert.ok(existsSync(path.join(ROOT, 'llms.txt')));
-    const txt = read('llms.txt');
+    const txt = read('llms.txt').replace(/\r\n/g, '\n'); // Windows checkouts (core.autocrlf) use CRLF
     assert.match(txt, /^# MontaWeb\n\n> /);
     const links = [...txt.matchAll(/\]\((https:\/\/montaweb\.pe\/[^)]*)\)/g)].map(m => m[1]);
     assert.ok(links.length >= 8);
