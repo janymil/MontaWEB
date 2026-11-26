@@ -1,0 +1,84 @@
+{
+  "reels": [
+    {
+      "slug": "polleria-dona-meche",
+      "voice": "I9uZPOVoQkQEhHPStmJz",
+      "voiceover": "¿Antojo de pollo a la brasa? En Pollería Doña Meche lo doramos despacito, al carbón. Los martes hay promo: cuarto de pollo con papas y ensalada. Ven con tu familia o pídelo por WhatsApp y te lo llevamos.",
+      "subtitles": [
+        "¿Antojo de pollo a la brasa?",
+        "En Pollería Doña Meche\nlo doramos despacito, al carbón.",
+        "Los martes hay promo:",
+        "cuarto de pollo\ncon papas y ensalada.",
+        "Ven con tu familia\no pídelo por WhatsApp",
+        "y te lo llevamos."
+      ],
+      "endTitle": "Pollería Doña Meche",
+      "endLine": "Delivery por WhatsApp",
+      "endColor": "#3b1d0e",
+      "accent": "#ffb347",
+      "music": "Upbeat Latin cumbia instrumental for a short restaurant ad, warm guitar and light percussion, friendly and happy, no vocals",
+      "posterAt": 10,
+      "clips": [
+        {
+          "file": "scripts/demo-reels/raw/polleria.mp4"
+        },
+        {
+          "file": "scripts/demo-reels/raw/polleria-2.mp4"
+        }
+      ]
+    },
+    {
+      "slug": "veterinaria-huellitas-del-parque",
+      "voice": "VywzfvxxNk4yFAaoMm4Q",
+      "voiceover": "¿Ya le toca su vacuna a tu engreído? Este mes hay campaña de vacunación para perros y gatos en Veterinaria Huellitas del Parque. Lo atendemos con paciencia y sale moviendo la cola. Separa tu cita por WhatsApp.",
+      "subtitles": [
+        "¿Ya le toca su vacuna\na tu engreído?",
+        "Este mes hay campaña de vacunación\npara perros y gatos",
+        "en Veterinaria\nHuellitas del Parque.",
+        "Lo atendemos con paciencia\ny sale moviendo la cola.",
+        "Separa tu cita por WhatsApp."
+      ],
+      "endTitle": "Huellitas del Parque",
+      "endLine": "Separa tu cita por WhatsApp",
+      "endColor": "#0f3d3a",
+      "accent": "#7ee0c3",
+      "music": "Light cheerful acoustic instrumental with ukulele and soft hand percussion, warm and caring, for a short pet clinic ad, no vocals",
+      "posterAt": 1,
+      "clips": [
+        {
+          "file": "scripts/demo-reels/raw/veterinaria.mp4"
+        },
+        {
+          "file": "scripts/demo-reels/raw/veterinaria-2.mp4"
+        }
+      ]
+    },
+    {
+      "slug": "barberia-don-lucho",
+      "voice": "I9uZPOVoQkQEhHPStmJz",
+      "voiceover": "¿Ya toca corte? En Barbería Don Lucho te dejamos el degradado como te gusta, bien parejito y sin apuro. Sales listo para la foto. Atendemos de lunes a sábado. Reserva por WhatsApp y no hagas cola.",
+      "subtitles": [
+        "¿Ya toca corte?",
+        "En Barbería Don Lucho te dejamos\nel degradado como te gusta,",
+        "bien parejito y sin apuro.",
+        "Sales listo para la foto.",
+        "Atendemos de lunes a sábado.",
+        "Reserva por WhatsApp\ny no hagas cola."
+      ],
+      "endTitle": "Barbería Don Lucho",
+      "endLine": "Reserva por WhatsApp",
+      "endColor": "#1c1917",
+      "accent": "#ffd166",
+      "music": "Modern urban hip-hop instrumental with Latin percussion, confident and relaxed groove, for a short barbershop ad, no vocals",
+      "posterAt": 12,
+      "clips": [
+        {
+          "file": "scripts/demo-reels/raw/barberia-2.mp4"
+        },
+        {
+          "file": "scripts/demo-reels/raw/barberia-3.mp4"
+        }
+      ]
+    }
+  ]
+}

@@ -27,7 +27,7 @@ URL: `/videos-publicitarios-con-ia` (ASCII, no accent, so no encoded URL).
 - **Monthly pack:** shown as one line "próximamente" without price (gated on 3 buyers).
 - **AI receptionist:** its decision is still *proposed* (no backend, no number yet), so the page mentions it only as "en preparación" with a WhatsApp interest link and **no price**. Showing S/ 179–349 for a product that can't be bought yet risks misleading advertising (INDECOPI). Jan decides when it goes on sale.
 - **/comparar:** not touched; it compares web providers, not video.
-- **Disclosure:** every delivered video carries a visible "Video generado con IA" mark (DS 115-2025-PCM asks for visible labelling of AI content; TikTok/Meta require AI labels on realistic content). Demo reels on the page say they are examples with a fictitious business. No article numbers on the page unless verified.
+- **Disclosure (changed by Jan, 2026-11-25):** no AI label anywhere: not on the page, not burned into the demo reels. Legal check (`docs/research/2026-11-25-ai-video-legal-check.md`): DS 115-2025-PCM art. 25 makes a visible label optional for non-high-risk AI, so this is allowed; TikTok/Meta AI toggles are set by the client at upload.
 
 ## Out of scope
 
@@ -51,7 +51,7 @@ A promise MontaWeb can't keep (delivery time, revisions, music rights, "realisti
 
 ## How it is proven
 
-- Test `test/ai-video-page.test.mjs`: title/H1/meta contain "videos publicitarios con IA"; prices S/ 149 and S/ 349 and "IGV" visible and equal in JSON-LD offers; FAQ JSON-LD = visible summaries; "Video generado con IA" present; no receptionist price on the page; no "S/ 1,490"/jingle offer; page in sitemap + llms.txt; linked from index, servicios and footer; every `<video>` has poster + playsinline + muted and no autoplay with sound.
+- Test `test/ai-video-page.test.mjs`: title/H1/meta contain "videos publicitarios con IA"; prices S/ 149 and S/ 349 and "IGV" visible and equal in JSON-LD offers; FAQ JSON-LD = visible summaries; no AI-label or "negocio ficticio" text on the page; no receptionist price on the page; no "S/ 1,490"/jingle offer; page in sitemap + llms.txt; linked from index, servicios and footer; every `<video>` has poster + playsinline + muted and no autoplay with sound.
 - Gate: `./verify.sh`; rendered check desktop + 375 px at 127.0.0.1:8783.
 
 ## Steps
@@ -63,9 +63,9 @@ A promise MontaWeb can't keep (delivery time, revisions, music rights, "realisti
 
 ## Review — filled in after building, by the reviewer pass
 
-- [ ] Q1 · plain sentence a non-developer can read:
-- [ ] Q2 · the test that fails without this change:
-- [ ] Q3 · `./verify.sh` — result:
-- [ ] Q4 · the risk, named:
-- [ ] Q5 · the reviewer read the diff (who, when):
+- [x] Q1 · A business owner sees 3 example reels, the prices (S/ 149 one, S/ 349 three, IGV incluido) and orders by WhatsApp; linked from home, /servicios and every footer.
+- [x] Q2 · test/ai-video-page.test.mjs (e.g. "S/ 149, S/ 349 and IGV equal the JSON-LD offers").
+- [x] Q3 · VERIFY OK, 166/166 tests (2026-11-25).
+- [x] Q4 · Over-promising (revisions, delivery, rights) or demos read as real client work → INDECOPI claim; receptionist has no price.
+- [x] Q5 · app-reviewer (Opus), 2026-11-25, full diff: APPROVE, minor items fixed (revision wording, plan text, reels-8s note).
 - [ ] `lessons.md` updated — only if something surprised us

@@ -101,7 +101,7 @@ Necesitamos entre 5 y 10 fotos, tu logo si tienes y el WhatsApp o la dirección 
 Con IA le damos movimiento a tus fotos y creamos las escenas, y luego le ponemos voz, subtítulos y música. Un video está listo en 3 días hábiles, contados desde que tenemos tus fotos y sabemos qué quieres promocionar.
 
 **4. Lo revisas y lo subes a tus redes.**
-Si algo no te convence, lo cambiamos. Cuando lo apruebas, pagas el otro 50 % y te mandamos el archivo MP4 por WhatsApp o con un enlace de descarga.
+Si algo no te convence, tienes una revisión para cambiarlo. Cuando lo apruebas, pagas el otro 50 % y te mandamos el archivo MP4 por WhatsApp o con un enlace de descarga.
 
 ---
 
