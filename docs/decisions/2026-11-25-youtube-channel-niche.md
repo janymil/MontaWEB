@@ -6,8 +6,8 @@ Point 4 of `2026-11-25-ai-video-voice-income.md` (YouTube niche) was reopened be
 
 ## Decision
 - One English channel: 25–35 min documentaries on ancient and pre-Columbian civilizations of the Americas. 1 long video + 2 Shorts a week.
-- Visuals: AI reconstructions plus real photos/clips of the sites and artifacts from free stock (Pexels, Pixabay), Wikimedia Commons, museum open access, and optionally a paid aggregator (Envato Elements or Storyblocks). Jan films nothing.
-- Stack: Claude, ElevenLabs, Google AI Pro/Flow, Canva/Picsart, free editor, stock sources. Extra spend $0–69/month.
+- Visuals: AI reconstructions plus real photos/clips of the sites and artifacts from free stock (Pexels, Pixabay), Wikimedia Commons, museum open access, and Envato Elements (Core plan, $16.50/month billed annually). Jan films nothing.
+- Stack: Claude, ElevenLabs, Google AI Pro/Flow, Canva/Picsart, free editor, stock sources. Extra spend $16.50–50.50/month.
 - 90-day test of 12 videos. Continue if one video reaches 25,000 views or the channel reaches 75,000, with AVD of 30% or more. Stop if the median of videos 7–12 stays under 1,000 views and no video passes 10,000.
 
 ## Why
@@ -19,5 +19,5 @@ Point 4 of `2026-11-25-ai-video-voice-income.md` (YouTube niche) was reopened be
 ## Consequences / next steps
 - Main risk: channel-level demonetization if the channel looks mass-produced. Rules: no title template, no daily uploads, sources in every description, AI disclosure for realistic scenes, real site photos for the evidence, a licence list per video.
 - Runner-up if Jan prefers Spanish: same topic in Spanish (more views, much lower RPM, every script needs the full non-English writing and review process).
-- Before video 1: check the Flow/Veo commercial terms and the Pro watermark, which ElevenLabs plan Jan is on, and which paid stock site Jan means.
+- Before video 1: check the Flow/Veo commercial terms and the Pro watermark, which ElevenLabs plan Jan is on (Envato Cyber Sale: $148.50 first year until 01.12.2026). Read the Envato licence once; register each download to its video.
 - Research: `docs/research/youtube-channel/2026-11-25-niche-recommendation.md` (ranked table, 10 ideas, stack, test), `2026-11-25-channel-data.md`.

@@ -52,7 +52,7 @@ Not ranked: kids (RPM $0.33, COPPA), music/lofi/sleep music (AI music oversupply
 | Pexels, Pixabay | free | commercial use, no attribution required; Peru/Mexico ruins are well covered (Machu Picchu, Teotihuacán), small sites less |
 | Wikimedia Commons | free | licence per file (CC BY / CC BY-SA / public domain); credit in the description; best for Caral, Chan Chan, Chavín, artifacts |
 | Museum open access (Smithsonian Open Access, The Met Open Access) | free | CC0 for most items; good for artifacts and old maps |
-| Paid aggregator: Envato Elements or Storyblocks (the one Jan has in mind is probably one of these) | about $17–35/month (not checked today) | unlimited downloads under a commercial licence; drone footage of Peruvian and Mexican sites |
+| Envato Elements (Jan's choice), Core plan | $16.50/month billed annually ($198/year); Cyber Sale until 01.12.2026: $148.50 for the first year. Monthly billing is shown as about $39 (not clearly labelled) | unlimited stock video, photo and music downloads for commercial projects; drone footage of Peruvian and Mexican sites. Register each download to the video it is used in (one project per video). Items in published videos stay licensed after cancelling; new videos need an active subscription. Music: use "Claim Clear ready" tracks and keep the licence certificate to clear Content ID claims |
 
 Check the licence of each file before use and keep a list per video. Never use clips from other YouTube channels or TV documentaries.
 
@@ -82,13 +82,13 @@ Fact-check each claim before production. These are working titles, not final cop
 | Narration + background music | ElevenLabs (already paid); needs Creator tier or higher: 121k credits ≈ 121 min of speech, commercial music rights | $0 if Jan is on Creator; else +$22 | 4 × 30 min = 120 min/month, tight; use a lower-cost model or top-ups |
 | AI stills, a few motion clips | Google AI Pro / Flow (already paid): 1,000 credits ≈ 100 Veo 3.1 Lite 8-s clips | $0 | Pro clips carry a visible watermark (third-party summaries; check) — use clips sparingly, or crop/avoid; Flow commercial terms not confirmed on an official page |
 | Real photos and clips of sites | Pexels, Pixabay, Wikimedia Commons, museum open access | $0 | see licence table above |
-| Drone/site footage | Envato Elements or Storyblocks | about +$17–35 | optional; add once the free sources run short |
+| Drone/site footage, extra music | Envato Elements Core | +$16.50 (annual) | Core is enough; Plus/Ultimate only add AI credits, which Flow already covers |
 | Thumbnails, Shorts layout | Canva + Picsart Pro (already paid) | $0 | |
 | Editing | DaVinci Resolve (free) or CapCut | $0 | |
 | Optional cleaner stills | Leonardo Apprentice | +$12 | only if Flow images are not good enough; verify commercial terms |
 | Not needed | Higgsfield, Suno | — | ElevenLabs music covers background music |
 
-**Total extra spend: $0–69/month**, within $50–150.
+**Total extra spend: $16.50–50.50/month** (Envato Core annual, plus ElevenLabs Creator and Leonardo only if needed), within $50–150.
 
 ## 90-day test with a stop rule
 
@@ -110,4 +110,4 @@ Money once monetized, at $4–10 RPM, with US share and 30% withholding on US ea
 - Niche-level RPM: no first-party creator data found; the numbers are category medians and vendor estimates.
 - Social Blade/Playboard/vidIQ growth curves (not used).
 - Flow/Veo commercial-use terms on an official page; the visible watermark on Pro clips; Leonardo/Higgsfield prices.
-- Envato Elements and Storyblocks prices and how well they cover each site.
+- Envato Elements: prices read from elements.envato.com/pricing on 2026-11-25; the full licence text page returned 403, so the licence points come from Envato's own summary page (elements.envato.com/llm-info) and help-center search results. Read the licence once before the first download. Coverage of small sites (Caral, Chavín) not checked.
