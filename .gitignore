@@ -68,3 +68,6 @@ docs/evidence/
 
 # Podcast generator cache (ElevenLabs renders)
 scripts/podcast/.cache/
+
+# Maps diagnostico: business phones and raw data (Ley 29733)
+docs/research/maps-diagnostico/private/
