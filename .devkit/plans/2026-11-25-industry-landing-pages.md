@@ -37,9 +37,9 @@ A page promises something MontaWeb does not sell (online booking, S/ 50 price) �
 
 ## Review — filled in after building, by the reviewer pass
 
-- [ ] Q1 · plain sentence a non-developer can read:
-- [ ] Q2 · the test that fails without this change:
-- [ ] Q3 · `./verify.sh` — result:
-- [ ] Q4 · the risk, named:
-- [ ] Q5 · the reviewer read the diff (who, when):
+- [x] Q1 · plain sentence a non-developer can read: Five new pages (dentists, consultorios, gyms, spa/salon, hotels) and a hub page that lists all six industries, each selling a web from S/ 99 with booking by WhatsApp only.
+- [x] Q2 · the test that fails without this change: `test/industry-pages.test.mjs` (files exist, one h1, canonical, S/ 99, FAQ JSON-LD equals visible FAQ, otros-rubros strip, hub ItemList, sitemap entries, no clinica.montaweb.pe).
+- [x] Q3 · `./verify.sh` — result: VERIFY OK (tests 131/131 pass), 2026-11-25.
+- [x] Q4 · the risk, named: es-PE copy not yet read by a native (Jan); clinica.montaweb.pe demo is compromised and gym demo 404s, so pages link /ejemplos instead.
+- [x] Q5 · the reviewer read the diff (who, when): Opus session reviewed the Sonnet wiring diff (sitemap, footers, test) and rendered all 7 pages at 375 px and desktop, 2026-11-25.
 - [ ] `lessons.md` updated — only if something surprised us
