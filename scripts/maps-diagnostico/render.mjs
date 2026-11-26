@@ -30,8 +30,8 @@ function gridSvg(cells, labelFn) {
     const label = position == null ? DASH : position;
     return `<g><rect x="${x}" y="${y}" width="${size}" height="${size}" rx="10" fill="${COLORS[band]}"` +
       (centre ? ' stroke="#181816" stroke-width="3"' : '') + '/>' +
-      `<text x="${x + size / 2}" y="${y + size / 2 + (centre ? 3 : 7)}" text-anchor="middle" font-size="20" font-weight="800" fill="#181816">${label}</text>` +
-      (centre ? `<circle cx="${x + size / 2}" cy="${y + 12}" r="5" fill="#181816"/><circle cx="${x + size / 2}" cy="${y + 12}" r="2" fill="#fffdf7"/>` : '') +
+      `<text x="${x + size / 2}" y="${y + size / 2 + (centre ? 14 : 7)}" text-anchor="middle" font-size="20" font-weight="800" fill="#181816">${label}</text>` +
+      (centre ? `<circle cx="${x + size / 2}" cy="${y + 11}" r="4" fill="#181816"/><circle cx="${x + size / 2}" cy="${y + 11}" r="1.6" fill="#fffdf7"/>` : '') +
       '</g>';
   }).join('');
   return `<svg viewBox="0 0 ${total} ${total}" role="img" aria-label="${esc(labelFn)}" class="grid"><title>${esc(labelFn)}</title>${rects}</svg>`;
@@ -46,7 +46,7 @@ function profileCard(copy, p, isSelf, vars) {
 <p class="cap">${t('col_business')}</p>
 <h3>${name}${isSelf ? ` <span class="tag">${esc(fill(copy.you_label, vars))}</span>` : ''}</h3>
 <dl>
-<div><dt>${t('col_rating')}</dt><dd>${num(p.rating)}</dd></div>
+<div><dt>${t('col_rating')}</dt><dd>${(p.rating == null ? num(p.rating) : Number(p.rating).toFixed(1))}</dd></div>
 <div><dt>${t('col_reviews')}</dt><dd>${num(p.reviews)}</dd></div>
 <div><dt>${t('col_photos')}</dt><dd>${num(p.photos)}</dd></div>
 <div><dt>${t('col_website')}</dt><dd>${yn(p.website)}</dd></div>
@@ -146,10 +146,10 @@ ${profileCard(copy, d.self, true, vars)}
 ${d.competitors.map((c) => profileCard(copy, c, false, vars)).join('\n')}
 </section>
 
-<section aria-labelledby="h-fixes">
+${fixes ? `<section aria-labelledby="h-fixes">
 <h2 id="h-fixes">${f('fixes_heading')}</h2>
 ${fixes}
-</section>
+</section>` : ''}
 
 <a class="cta" href="${esc(wa)}">${f('cta_button')}</a>
 <p class="src">${f('source_line')}</p>

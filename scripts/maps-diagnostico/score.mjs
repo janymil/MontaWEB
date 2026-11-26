@@ -41,8 +41,8 @@ export function scoreFromPositions(positions) {
 }
 
 export function scoreBand(score) {
-  if (score < 34) return 'low';
-  if (score < 67) return 'mid';
+  if (score < 35) return 'low';
+  if (score < 70) return 'mid';
   return 'high';
 }
 
@@ -54,6 +54,13 @@ export function bandOfPosition(p) {
 }
 
 /** profile fields from a SERP item; anything not present is null (shown as a dash). */
+// A Facebook/Instagram/WhatsApp link in the website field is not a website.
+const SOCIAL = /(^|\.)(facebook\.com|fb\.com|fb\.me|instagram\.com|tiktok\.com|linktr\.ee|wa\.me|whatsapp\.com|linkedin\.com|twitter\.com|x\.com|youtube\.com)$/i;
+export function isRealWebsite(url) {
+  if (!url) return false;
+  try { return !SOCIAL.test(new URL(/^https?:/i.test(url) ? url : 'http://' + url).hostname); } catch { return false; }
+}
+
 export function profileOf(item) {
   const has = (v) => v !== undefined && v !== null;
   let hours = null;
@@ -66,7 +73,7 @@ export function profileOf(item) {
     rating: item.rating && has(item.rating.value) ? item.rating.value : null,
     reviews: item.rating && has(item.rating.votes_count) ? item.rating.votes_count : null,
     photos: has(item.total_photos) ? item.total_photos : null,
-    website: 'url' in item ? !!item.url : null,
+    website: 'url' in item ? isRealWebsite(item.url) : null,
     hours,
     claimed: has(item.is_claimed) ? !!item.is_claimed : null,
   };
@@ -121,10 +128,11 @@ const median = (xs) => {
 export function chooseFixes(self, competitors) {
   const compReviews = competitors.map((c) => c.reviews).filter((v) => v != null);
   const med = median(compReviews);
+  const medPhotos = median(competitors.map((c) => c.photos).filter((v) => v != null));
   const candidates = [];
   if (self.website === false) candidates.push({ key: 'no_website', offer: 'web' });
   if (self.claimed === false) candidates.push({ key: 'unclaimed_profile', offer: 'gmn' });
-  if (self.hours === false || (self.photos != null && self.photos < MIN_PHOTOS)) {
+  if (self.hours === false || (self.photos != null && (self.photos < MIN_PHOTOS || (medPhotos != null && self.photos < medPhotos / 2)))) {
     candidates.push({ key: 'incomplete_profile', offer: 'gmn' });
   }
   if (self.reviews != null && med != null && self.reviews < med) {

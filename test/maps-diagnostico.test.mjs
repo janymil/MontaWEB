@@ -54,10 +54,10 @@ test('score: documented weights and a known result', () => {
 
 test('score: bands', () => {
   assert.equal(scoreBand(0), 'low');
-  assert.equal(scoreBand(33), 'low');
-  assert.equal(scoreBand(34), 'mid');
-  assert.equal(scoreBand(66), 'mid');
-  assert.equal(scoreBand(67), 'high');
+  assert.equal(scoreBand(34), 'low');
+  assert.equal(scoreBand(35), 'mid');
+  assert.equal(scoreBand(69), 'mid');
+  assert.equal(scoreBand(70), 'high');
 });
 
 test('positionOf: cid, then place_id, then exact title', () => {
@@ -129,7 +129,7 @@ test('fixes: unclaimed -> profile setup at 79', () => {
 test('fixes: incomplete profile when no hours or under 10 photos', () => {
   assert.ok(chooseFixes(profile({ hours: false }), comps3).some((x) => x.key === 'incomplete_profile'));
   assert.ok(chooseFixes(profile({ photos: 9 }), comps3).some((x) => x.key === 'incomplete_profile'));
-  assert.ok(!chooseFixes(profile({ photos: 10 }), comps3).some((x) => x.key === 'incomplete_profile'));
+  assert.ok(!chooseFixes(profile({ photos: 10 }), comps3.map((c) => ({ ...c, photos: null }))).some((x) => x.key === 'incomplete_profile'));
 });
 
 test('fixes: few reviews (below top-3 median) and low rating give advice only', () => {
@@ -235,4 +235,21 @@ test('fill: replaces all occurrences', () => {
 test('copy-es.json has exactly the agreed keys', () => {
   const copy = JSON.parse(fs.readFileSync(COPY_PATH, 'utf8'));
   assert.deepEqual(Object.keys(copy).sort(), [...COPY_KEYS].sort());
+});
+
+test('website: social links do not count as a website', async () => {
+  const { isRealWebsite, profileOf } = await import('../scripts/maps-diagnostico/score.mjs');
+  assert.equal(isRealWebsite('https://www.facebook.com/fidosvet'), false);
+  assert.equal(isRealWebsite('https://instagram.com/x'), false);
+  assert.equal(isRealWebsite('https://wa.me/51999'), false);
+  assert.equal(isRealWebsite('https://fidosvet.pe/'), true);
+  assert.equal(isRealWebsite(''), false);
+  assert.equal(profileOf({ url: 'https://m.facebook.com/a' }).website, false);
+});
+
+test('fixes: far fewer photos than the top 3 counts as an incomplete profile', async () => {
+  const { chooseFixes } = await import('../scripts/maps-diagnostico/score.mjs');
+  const self = { website: true, claimed: true, hours: true, photos: 40, reviews: 500, rating: 4.8 };
+  const comps = [{ photos: 200, reviews: 100 }, { photos: 300, reviews: 100 }, { photos: 90, reviews: 100 }];
+  assert.deepEqual(chooseFixes(self, comps).map((f) => f.key), ['incomplete_profile']);
 });
