@@ -6,7 +6,7 @@ import * as D from '../scripts/compare/competitors.mjs';
 import { buildAll } from '../scripts/build-compare.mjs';
 
 const root = new URL('../', import.meta.url);
-const read = f => readFileSync(new URL(f, root), 'utf8');
+const read = f => readFileSync(new URL(f, root), 'utf8').replace(/\r\n/g, '\n');
 const text = html => html.replace(/<(script|style)[\s\S]*?<\/\1>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ');
 
 test('every competitor has a dated source, and every cell either cites one or is unlisted', () => {

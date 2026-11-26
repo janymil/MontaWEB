@@ -23,6 +23,19 @@
       ],
       "port": 8781,
       "autoPort": false
+    },
+    {
+      "name": "montaweb-static-8783",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8783",
+        "--bind",
+        "127.0.0.1"
+      ],
+      "port": 8783,
+      "autoPort": false
     }
   ]
 }

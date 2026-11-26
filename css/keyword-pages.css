@@ -18,6 +18,7 @@
 @container (width < 560px) {
   .kw-table, .kw-table thead, .kw-table tbody, .kw-table tr, .kw-table th, .kw-table td { display:block; }
   .kw-table thead { display:none; }
+  .kw-table caption { display:block; inline-size:auto; border-block-end:1px solid var(--ink, #181816); }
   .kw-table tr { border-block-end:1px solid var(--ink, #181816); padding-block:6px; }
   .kw-table tbody th { padding-block-end:4px; }
   .kw-table td { border:0; padding-block:4px; }

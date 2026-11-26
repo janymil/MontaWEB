@@ -50,9 +50,10 @@ A promise MontaWeb does not keep (online booking, S/ 50 "web", shipping integrat
 
 ## Review — filled in after building, by the reviewer pass
 
-- [ ] Q1 · plain sentence a non-developer can read:
-- [ ] Q2 · the test that fails without this change:
-- [ ] Q3 · `./verify.sh` — result:
-- [ ] Q4 · the risk, named:
-- [ ] Q5 · the reviewer read the diff (who, when):
-- [ ] `lessons.md` updated — only if something surprised us
+- [x] Q1 · A business owner who searches "diseño de páginas web", "… en Lima" or "tienda virtual" now lands on a page written for that search, with the published prices, and every page's footer leads to those pages.
+- [x] Q2 · `test/keyword-pages.test.mjs` fails without this change (no /tiendas-virtuales, no sitemap/llms/footer links). It also caught the national meta description missing its own keyword, which was fixed.
+- [x] Q3 · `./verify.sh` — VERIFY OK (npm test 132/132), 2026-11-25. The two CRLF failures are fixed (compare and aeo tests normalise `
+`).
+- [x] Q4 · The risk, named: the shop page promising something the plans don't include; it now has a "Lo que tu tienda no incluye" section (no stock, couriers, e-invoicing or marketplace sync). Cannibalisation: no "Lima" in the national/shop titles, H1s or meta (tested).
+- [x] Q5 · Opus session (exciting-liskov) read the sonnet subagent's diff, 2026-11-25; corrected its broken CRLF regex. Rendered check in Claude in Chrome at 127.0.0.1:8783, desktop and 375 px (iframe): no duplicated or invisible text, tables stack; fixed the caption squeezing to one word per line and the H1 price wrapping ("S/" / "299").
+- [x] `lessons.md` updated.

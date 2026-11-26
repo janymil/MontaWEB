@@ -526,3 +526,5 @@ body.home-page a:focus-visible,body.home-page button:focus-visible,body.home-pag
 .consent-reset:hover { background:var(--ink); color:var(--cream); }
 .calc-vs--single { grid-template-columns:1fr; }
 .calc-save a { color:inherit; font-weight:700; text-decoration:underline; }
+.site-page .cat-head p a,.home-page .plans-local a { color:var(--orange-text,#bd3c20); font-weight:700; text-decoration:underline; text-underline-offset:3px; }
+.home-page .plans-local { margin-top:18px; color:var(--home-muted); font-size:15px; text-align:center; }

@@ -4,7 +4,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { ROOT } from './dom-harness.mjs';
 
-const read = f => readFileSync(path.join(ROOT, f), 'utf8');
+const read = f => readFileSync(path.join(ROOT, f), 'utf8').replace(/\r\n/g, '\n');
 const plain = html => html.replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
 const ldBlocks = html => [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m => JSON.parse(m[1]));
 const findFaq = html => ldBlocks(html).flatMap(b => b['@graph'] || [b]).find(n => n['@type'] === 'FAQPage');
