@@ -54,4 +54,8 @@ Post drafts: `docs/plans/2026-11-25-facebook-posts.md`.
 
 | Date | Group | Post link | Notes |
 |---|---|---|---|
-| | | | |
+| 2026-11-25 | Lima Emprendedora | facebook.com/groups/1911139212245179 (pending admin approval) | Draft A, free web check for 5 businesses, text only |
+| 2026-11-25 | Emprendedores Perú | facebook.com/groups/emprendedoresperuoficial (pending admin approval) | Draft B, study advice, no link or offer |
+| 2026-11-25 | RESTAURANTES LIMA PERU | facebook.com/groups/495869633809794 (published right away) | Draft C + study cover image, link to study |
+
+Facebook only shows a post's permalink once it's live, so the pending posts are logged by group. Surco Emprendedor and Barberos del Perú later sent "Now you can post" notifications, so the Surco question no longer blocks posting.
