@@ -32,7 +32,7 @@ Never promise "#1 on Google" or guaranteed results (Indecopi, misleading adverti
 ## Phases (each needs Jan's go; kill criteria decide the next one)
 **Phase 0 — prototype (1 session, sonnet implementer).** Generate reports for 3 known businesses (one MontaWeb client, two census leads). Measure cost per report; Jan judges whether the report reads right and is believable. Done = 3 HTML reports + real cost.
 
-**Phase 1 — outbound test (2–3 weeks).** 30 hot census leads (score ≥ 9, categories from the industry-pages order: vets, dentists, clinics first). Jan sends each report 1:1 on WhatsApp next to the demo preview, as the lead-targeting decision says; no broadcasts, nothing sent without Jan. Track replies and sales in a sheet.
+**Phase 1 — outbound test (2–3 weeks).** 30 hot census leads (score ≥ 9, all categories). Jan sends each report 1:1 on WhatsApp next to the demo preview, as the lead-targeting decision says; no broadcasts, nothing sent without Jan. Track replies and sales in a sheet.
 Go to Phase 2 if: ≥ 20% replies **and** ≥ 3 paid sales. Otherwise stop and record why.
 
 **Phase 2 — public page `/diagnostico-google-maps`.** Form: Maps link or business name + district, category, WhatsApp, consent checkbox (Ley 29733, link to privacy). `api/` endpoint stores the request, honeypot + per-IP daily cap (cost guard, e.g. 30 reports/day total). Phase 2a: Jan runs the generator by hand within 24 h; 2b: automatic via cron.
@@ -40,10 +40,12 @@ SEO-first: target "google mi negocio", "google business profile", "como aparecer
 
 **Phase 3 — monthly add-on "Google Maps al día".** Monthly re-run of the grid, profile kept up to date, review replies drafted, one-page monthly report on WhatsApp. Data cost about US$0.05/client/month. Price for Jan to decide; proposal S/ 59/month alone, or included in Soporte S/ 99. Needs its own decision file before it goes on /servicios.
 
-## Open questions for Jan
-1. Report link on montaweb.pe (`/d/<token>`) or sent as an image/PDF in WhatsApp? (Proposal: link + a screenshot of the grid as the WhatsApp preview.)
-2. Phase 1 categories: vets + dentists only, or all hot leads?
-3. Add-on price (Phase 3): S/ 59 alone, or folded into Soporte S/ 99?
+## Answered by Jan (2026-11-25)
+1. Delivery: **both**: the link on montaweb.pe (`/d/<token>`) and an image/PDF sent in WhatsApp. `render.py` outputs HTML + PNG + PDF.
+2. Phase 1: **all hot leads** (score ≥ 9), not only vets and dentists.
+
+## Still open
+3. Add-on price (Phase 3). Proposal: its own price (S/ 59/month) and also included in Soporte S/ 99; decide before Phase 3.
 
 ## Risks
 - Rank depends on who searches from where: the grid is the honest answer; the report says so in one plain line.
