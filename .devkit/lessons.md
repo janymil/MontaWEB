@@ -8,6 +8,7 @@ Delete a lesson only when the thing that caused it no longer exists.
 
 ---
 
+- 2026-11-25 — four WordPress demos were taken over because sites exported from the Local app keep `admin` / `admin`; the attacker installed WP File Manager from wp-admin and uploaded webshells. Never ship a Local site without a new admin name and random password; build WordPress only with `scripts/wp-site-build.sh` (immutable image, `DISALLOW_FILE_MODS`, Caddy `wp_hardening`). Also: Caddy serves the whole checkout, so `/deploy` and `/.devkit` were public until the `@internal` matcher — add every new repo folder that is not site content to it.
 - 2026-11-25 — first scripted deploy stopped because the server had uncommitted copies of files the commits added (demo sites); they were byte-identical (`git hash-object` vs `origin/main:<f>`), so they were backed up to `/var/www/montaweb-backup-*`, removed, and the pull finished. Check identity first, never stash or reset there.
 - 2026-11-25 — deploy only via `scripts/deploy.sh` (`npm run deploy:status` / `npm run deploy`); it locks, shows what goes live, verifies the origin and logs. Never hand-run push + server pull.
 - 2026-11-25 — tests pinned exact `?v=` cache-bust strings, so every legitimate version bump broke them; they now match `\?v=\d{8}[a-z]?`. Also: the in-app Browser pane refuses localhost here and headless Chrome screenshots skip `.reveal-item` sections; check pages in Claude in Chrome at 127.0.0.1 instead.
