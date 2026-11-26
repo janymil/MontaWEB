@@ -8,7 +8,7 @@ Prices are low and paid once (Web Simple S/ 99 … Tienda Pro S/ 499; hosting S/
 - Who can refer: past and current MontaWeb clients (not the general public, for now).
 - Referrer reward, per closed sale of S/ 99 or more: S/ 20 by Yape **or** S/ 40 off their next hosting renewal (their choice).
 - Referred business: a free Google Mi Negocio profile setup (list price S/ 79) with its web.
-- If the referred plan already includes Google Mi Negocio (Pack Presencia), the referred business gets S/ 20 off instead (proposed by Claude, on the page; Jan to confirm).
+- If the referred plan already includes Google Mi Negocio (Pack Presencia), the referred business gets S/ 20 off instead (confirmed by Jan).
 - Sales under S/ 99 (landing, Google Mi Negocio alone, menú QR) earn no reward.
 - Paid once the referred client has paid the second half (web delivered and approved).
 - Tracking: each client gets a code (e.g. EDEN24). The link `montaweb.pe/referidos?ref=CODE` opens WhatsApp with the code in the message; fallback is the referrer's name in the first message.
