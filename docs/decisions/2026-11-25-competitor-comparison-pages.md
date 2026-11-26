@@ -14,6 +14,6 @@ Jan asked for a professional comparison of MontaWeb and its competitors, built l
 Comparative advertising in Peru must be truthful, objective and verifiable (D. Leg. 1044 arts. 8, 11, 12), and MontaWeb carries the burden of proof. Unsourced market ranges are the riskiest claim on the site.
 
 ## Consequences / next steps
-- Monthly re-check: `node scripts/compare-evidence.mjs` (from Lima), then update `VERIFIED_ON`, rebuild and run `npm test`. The test fails after 45 days without a re-check, and the page hides the table on its own.
-- Evidence: `docs/evidence/comparar/<date>/` (gitignored), to be copied to Washington backups. Nubix animates its prices from 0, so a normal-browser screenshot is needed for it.
+- Monthly re-check, and before/after every change to these claims: the evidence capture in docs/COMPARATIVA.md (competitors, our own claims, archive.org, RFC 3161 timestamps, Washington + R2 `montaweb/comparar/<date>/`), then update `VERIFIED_ON`, rebuild and run `npm test`. The test fails after 45 days without a re-check, and the page hides the table on its own.
+- Evidence matches MiCita's method (parity table in .devkit/plans/2026-11-25-comparar-evidence.md). First sealed set: 2026-11-25, taken after the pages went live that day.
 - Details: docs/COMPARATIVA.md, plan .devkit/plans/2026-11-25-compare-pages.md, facts docs/research/2026-11-25-competitor-facts.md.
