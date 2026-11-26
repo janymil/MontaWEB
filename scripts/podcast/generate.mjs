@@ -119,8 +119,8 @@ const ff = (args) => execFileSync('ffmpeg', ['-hide_banner', '-loglevel', 'error
 const norm = [];
 files.forEach((f, i) => {
   const out = join(work, `n${String(i).padStart(2, '0')}.wav`);
-  const vol = f.type === 'dialogue' ? 'loudnorm=I=-16:TP=-1.5:LRA=11' : f.key === 'ooh' ? 'loudnorm=I=-22:TP=-3' : 'loudnorm=I=-20:TP=-2';
-  const fade = f.type === 'sfx' ? ',afade=t=out:st=0:d=0.01,areverse,afade=t=in:d=0.6,areverse' : '';
+  const vol = f.type === 'dialogue' ? 'loudnorm=I=-16:TP=-1.5:LRA=11' : f.key === 'ooh' ? 'loudnorm=I=-17:TP=-2' : f.key === 'stinger' ? 'loudnorm=I=-18:TP=-2' : 'loudnorm=I=-16:TP=-1.5';
+  const fade = f.type === 'sfx' ? ',afade=t=in:d=0.03,areverse,silenceremove=start_periods=1:start_threshold=-45dB,afade=t=in:d=' + (f.key === 'intro' || f.key === 'outro' ? '1.2' : '0.4') + ',areverse' : '';
   ff(['-i', f.file, '-af', vol + fade + ',apad=pad_dur=0.25', '-ar', '44100', '-ac', '1', out]);
   norm.push(out);
 });
