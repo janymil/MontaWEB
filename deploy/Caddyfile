@@ -40,6 +40,10 @@ montaweb.pe {
 	@dotfiles path /.git /.git/* /.gitignore /.env /.env.* /.htaccess /.user.ini /.replit /serve.py /package.json /package-lock.json /api/.htaccess
 	respond @dotfiles 404
 
+	# Repo internals (tooling, tests, deploy config) are not part of the site (2026-11-25 incident review)
+	@internal path /.claude /.claude/* /.devkit /.devkit/* /deploy /deploy/* /test /test/* /graft /graft/* /.mcp.json /.clinerules /.ignore /verify.sh /test.php
+	respond @internal 404
+
 	# Un .php fuera de /api/ lo entregaría file_server como texto plano (php_fastcgi
 	# solo cubre /api/*.php), filtrando el archivo entero. Ej.: un secrets file
 	# dejado en la raíz del webroot.

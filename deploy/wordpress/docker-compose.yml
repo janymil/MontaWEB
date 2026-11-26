@@ -1,0 +1,79 @@
+# Hardened WordPress site. Copied to /opt/montaweb-demos/<site>/ by scripts/wp-site-build.sh.
+# .env (root-only, 600) holds SITE, PORT, MYSQL_* and the eight WORDPRESS_*_KEY/SALT values.
+name: ${SITE}
+
+services:
+  db:
+    image: mysql:8.4
+    container_name: montaweb-demo-${SITE}-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - ./db_data:/var/lib/mysql
+    networks: [backend]
+    security_opt: ["no-new-privileges:true"]
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -uroot -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  wordpress:
+    image: montaweb-wp-${SITE}:current
+    build: ./build
+    container_name: montaweb-demo-${SITE}-wp
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${PORT}:80"
+    networks: [backend, frontend]
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: ${MYSQL_USER}
+      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
+      WORDPRESS_DB_NAME: ${MYSQL_DATABASE}
+      WORDPRESS_TABLE_PREFIX: wp_
+      WORDPRESS_AUTH_KEY: ${WORDPRESS_AUTH_KEY}
+      WORDPRESS_SECURE_AUTH_KEY: ${WORDPRESS_SECURE_AUTH_KEY}
+      WORDPRESS_LOGGED_IN_KEY: ${WORDPRESS_LOGGED_IN_KEY}
+      WORDPRESS_NONCE_KEY: ${WORDPRESS_NONCE_KEY}
+      WORDPRESS_AUTH_SALT: ${WORDPRESS_AUTH_SALT}
+      WORDPRESS_SECURE_AUTH_SALT: ${WORDPRESS_SECURE_AUTH_SALT}
+      WORDPRESS_LOGGED_IN_SALT: ${WORDPRESS_LOGGED_IN_SALT}
+      WORDPRESS_NONCE_SALT: ${WORDPRESS_NONCE_SALT}
+      WORDPRESS_CONFIG_EXTRA: |
+        if (isset($$_SERVER["HTTP_X_FORWARDED_PROTO"]) && strpos($$_SERVER["HTTP_X_FORWARDED_PROTO"], "https") !== false) {
+          $$_SERVER["HTTPS"] = "on";
+        }
+        define("WP_MEMORY_LIMIT", "512M");
+        define("DISALLOW_FILE_EDIT", true);
+        define("DISALLOW_FILE_MODS", true);
+        define("AUTOMATIC_UPDATER_DISABLED", true);
+        define("WP_AUTO_UPDATE_CORE", false);
+        define("FORCE_SSL_ADMIN", true);
+        define("WP_ENVIRONMENT_TYPE", "production");
+    volumes:
+      - ./uploads:/var/www/html/wp-content/uploads
+    # Container hardening: no privilege gain, minimal capabilities, read-only root
+    # file system (only uploads and tmp are writable), bounded resources.
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m
+      - /run/apache2:size=8m
+      - /var/lock/apache2:size=1m
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+    cap_add: [NET_BIND_SERVICE, SETUID, SETGID, KILL]
+    pids_limit: 200
+    mem_limit: 768m
+
+networks:
+  backend:
+    internal: true   # the database never talks to the internet
+  frontend: {}
