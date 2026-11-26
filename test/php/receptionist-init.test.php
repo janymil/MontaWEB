@@ -44,7 +44,7 @@ foreach (['UTC', 'Europe/Bratislava', 'Asia/Tokyo', 'Pacific/Honolulu', 'America
             'type' => 'conversation_initiation_client_data',
             'dynamic_variables' => [
                 'advisors_open' => $open ? 'si' : 'no',
-                'transfer_number' => $open ? FAKE_NUMBER : '',
+                'transfer_number' => $open ? FAKE_NUMBER : 'closed',
             ],
         ]);
     }
@@ -56,8 +56,8 @@ $open = lima('2026-11-23T10:00:00');
 foreach (['missing' => [], 'empty' => ['receptionist_transfer_number' => ''], 'blank' => ['receptionist_transfer_number' => '  '],
     'not a string' => ['receptionist_transfer_number' => ['x']]] as $label => $number) {
     [$status, $out] = mw_rcp_init_process('POST', SECRET, ['elevenlabs_init_secret' => SECRET] + $number, $open);
-    check("open, number $label -> advisors_open no, empty number", $status === 200
-        && $out['dynamic_variables'] === ['advisors_open' => 'no', 'transfer_number' => '']);
+    check("open, number $label -> advisors_open no, number closed", $status === 200
+        && $out['dynamic_variables'] === ['advisors_open' => 'no', 'transfer_number' => 'closed']);
 }
 
 // --- rejections: nothing about hours or the number leaks

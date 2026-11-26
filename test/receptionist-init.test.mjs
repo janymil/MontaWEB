@@ -57,7 +57,7 @@ test('served over HTTP the endpoint runs, authenticates and is not cacheable', {
         assert.equal(data.type, 'conversation_initiation_client_data');
         // the real clock is used here, so only the pairing of the two values is fixed
         const { advisors_open: open, transfer_number: number } = data.dynamic_variables;
-        assert.ok((open === 'si' && number === '+00000000000') || (open === 'no' && number === ''), JSON.stringify(data));
+        assert.ok((open === 'si' && number === '+00000000000') || (open === 'no' && number === 'closed'), JSON.stringify(data));
 
         const denied = await call({ method: 'POST' });
         assert.equal(denied.status, 401);

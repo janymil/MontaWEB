@@ -1,6 +1,6 @@
 # 2026-11-26 — a caller who asks for a person at night is offered a callback, and no phone rings
 
-Status: stage 2 code built (stage 1 skipped), not committed, deployed or set up in ElevenLabs.
+Status: stage 2 built, committed, deployed and set up; closed value is 'closed' (an empty number breaks the agent). Draft tested, not published.
 Cause checked 2026-11-26 01:38: the agent knows the time and the transfer tool condition includes {{system__time}}; the model skips the check. Transfer hours stay Mon–Sat 09:00–20:00 Lima.
 
 ## Goal
@@ -24,7 +24,7 @@ Replace `{{system__time}}` with `{{system__time_date}}` (weekday + date) and `{{
 ### Stage 2: our server decides
 ElevenLabs calls our server when an inbound SIP call starts; we answer with two variables:
 - `advisors_open`: `si` / `no`
-- `transfer_number`: the real number when open, empty when closed. The transfer tool takes `{{transfer_number}}`,
+- `transfer_number`: the real number when open, `closed` when closed. The transfer tool takes `{{transfer_number}}`,
   so a wrong model decision at night cannot ring anyone.
 
 Risks to accept before building:
@@ -58,7 +58,7 @@ Endpoint without the secret check would hand out the transfer number to anyone.
 
 ## How it is proven
 - Test (`test/php/receptionist-init.test.php`, stage 2), with an injected clock: Mon 08:59 closed, 09:00 open,
-  Sat 19:59 open, 20:00 closed, Sun 12:00 closed, Thu 01:28 closed; closed → empty number; wrong or no secret → 401;
+  Sat 19:59 open, 20:00 closed, Sun 12:00 closed, Thu 01:28 closed; closed → `closed` instead of the number; wrong or no secret → 401;
   secret not configured → 503; GET → 405.
 - Stage 1 has no automated test: the Preview runs above are the manual check.
 - Gate: `./verify.sh`
@@ -74,7 +74,7 @@ Stage 2
 1. Tests first, then `api/receptionist-init.php`; gate; reviewer pass.
 2. Jan's yes → commit; Jan's yes → `npm run deploy`; Jan puts both values in the server config.
 3. Jan sets the secret header and webhook URL in ElevenLabs; set placeholders for Preview
-   (`advisors_open`=`no`, `transfer_number` empty); enable fetching initiation data for the agent.
+   (`advisors_open`=`no`, `transfer_number`=`closed`); enable fetching initiation data for the agent.
 4. Prompt + transfer tool change as draft → Jan's yes → publish.
 5. Live calls; if calls fail to start, turn the webhook off in the dashboard.
 

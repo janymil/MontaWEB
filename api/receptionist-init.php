@@ -3,7 +3,7 @@
  * MontaWeb — Webhook de inicio de llamada de la recepcionista IA (/api/receptionist-init.php)
  *
  * ElevenLabs lo llama al empezar la llamada ("conversation initiation client data").
- * El servidor decide si hay asesores disponibles; fuera de horario no entrega el número,
+ * El servidor decide si hay asesores disponibles; fuera de horario entrega 'closed' en vez del número,
  * así el agente no puede transferir aunque se equivoque.
  *
  * No lee, guarda ni registra nada del cuerpo de la petición (Ley 29733).
@@ -48,7 +48,8 @@ function mw_rcp_init_process(string $method, string $secretHeader, array $config
         'type' => 'conversation_initiation_client_data',
         'dynamic_variables' => [
             'advisors_open' => $open ? 'si' : 'no',
-            'transfer_number' => $open ? $number : '',
+            // ElevenLabs rejects an empty destination and the agent stops; this word cannot be dialled.
+            'transfer_number' => $open ? $number : 'closed',
         ],
     ]];
 }
