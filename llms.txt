@@ -27,6 +27,7 @@ Precios y condiciones:
 ## Estudios
 
 - [Negocios sin página web en Lima (2026)](https://montaweb.pe/blog/estudio-web-negocios-lima-2026): estudio de 19 168 negocios independientes de 30 rubros en 10 distritos de Lima, con datos de Google Maps del 24 de noviembre de 2026. El 16,1 % tiene una web propia que funciona; entre los negocios activos (5 reseñas o más en Google) es el 24,4 %. Lima Este (12 %), Lima Norte (15 %) y Lima Sur (16 %) están muy por debajo de Lima Moderna (42 %).
+- [Prefijo 500 y llamadas comerciales en Perú (2027)](https://montaweb.pe/blog/prefijo-500-llamadas-comerciales): el Decreto Supremo 018-2026-MTC (El Peruano, 15 de septiembre de 2026) reserva los números 500 XXX XXX para llamadas y SMS comerciales; las operadoras tienen hasta el 15 de marzo de 2027 para adaptarse. El 500 no reemplaza el consentimiento previo que exige el artículo 58 del Código de Consumo (Ley 32323); llamar sin él es infracción muy grave, hasta 450 UIT.
 
 ## Empresa
 
