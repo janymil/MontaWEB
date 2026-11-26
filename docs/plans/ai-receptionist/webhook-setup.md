@@ -1,6 +1,6 @@
 # Post-call lead webhook: setup steps (founder does these)
 
-Date: 2026-11-25 · Status: code ready on branch `claude/lead-webhook-d50853`, not deployed
+Date: 2026-11-25 · Status: live since 2026-11-25 (webhook 47d5ddfb…, attached to the agent only; secret in server api/config.php; data fields name, business, preferred_time added; signed test passed). Not yet done: agent timezone and 90-day retention (step 4).
 
 The endpoint is `api/receptionist-lead.php`. It checks the ElevenLabs signature, stores name, business, caller phone, summary and preferred time in `api/leads/rcp-<conversation_id>.json` (not public: Caddy answers 404 for `/api/leads/*`), and emails `hola@montaweb.pe`. Files are purged after 90 days by `api/retener-leads.php` (daily cron already in `deploy/montaweb-lead-retention.cron`).
 
