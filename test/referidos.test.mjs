@@ -48,9 +48,7 @@ test('referidos: the price quote keeps its message and gains the code once', () 
     const ref = boot('?ref=eden24');
     const quote = `https://wa.me/51965403196?text=${encodeURIComponent('Presupuesto: Web Simple S/ 99 & extras')}`;
     const once = ref.click(quote, false, 'calcWhatsapp');
-    assert.match(once, /Presupuesto: Web Simple S\/ 99 & extras
-
-Código de referido: EDEN24$/);
+    assert.match(once, /Presupuesto: Web Simple S\/ 99 & extras\n\nCódigo de referido: EDEN24$/);
     const twice = ref.click(`https://wa.me/51965403196?text=${encodeURIComponent(once.split('?text=')[1])}`, false, 'calcWhatsapp');
     assert.equal(twice.match(/Código de referido/g).length, 1);
 });
