@@ -40,6 +40,16 @@ Skipped: Emprendedores de MI PERÚ (34.5K, ~210 posts a day), emprendedores lima
 
 2–3 posts a day, one per group, never the same text twice. Groups 1–3 first (largest real business audience), then the industry groups. In groups with no written rules, a first post that gives something (data, free check) before any price.
 
+## Membership (2026-11-25, as Semantika TECH Page)
+
+Joined (no questions asked): Lima Emprendedora, Emprendedores Perú, Promociona Tu Negocio y Emprendimiento en Lima, MyPes y PyMes del Perú, Dueños de Restaurantes, RESTAURANTES LIMA PERU, Restaurants y Afines de Perú, POLLERIAS Y RESTAURANTES DEL PERU, Groomers / Bañadores / Veterinarias LIMA-PERÚ, Veterinarios de Lima Perú, Barberos del Perú – Asociación, GIMNASIO PERÚ.
+
+Pending: Surco Emprendedor. Joined, but admins review every member before the first post or comment. The request needs an answer to "tan pronto te unas comparte invitando a 10 personas" (sí/no) and ticking "I agree to the group rules". Waiting for Jan.
+
+Not joined (Jan's call): the two real-estate agent groups (#13, #14).
+
+Post drafts: `docs/plans/2026-11-25-facebook-posts.md`.
+
 ## Post log
 
 | Date | Group | Post link | Notes |
