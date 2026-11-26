@@ -128,6 +128,45 @@ $xss = payload(['data' => ['conversation_id' => 'conv_XSS', 'analysis' => ['tran
 mw_rcp_process($xss, sign($xss, $now), $config, $dir, $mailer, $now);
 check('no raw script tag in mail html', !str_contains(end($sent)[1], '<script>'));
 
+// --- producto (which company product the call was about)
+foreach (['producto' => 'MiCita', 'product' => 'LibroDigital'] as $key => $value) {
+    $id = 'conv_' . $key;
+    $p = payload(['data' => ['conversation_id' => $id, 'analysis' => ['data_collection_results' => [$key => ['value' => $value]]]]]);
+    [$s] = mw_rcp_process($p, sign($p, $now), $config, $dir, $mailer, $now);
+    $saved = json_decode((string) file_get_contents($dir . '/rcp-' . $id . '.json'), true);
+    [$subject, $html, $text] = end($sent);
+    check("$key stored as producto", $s === 200 && ($saved['producto'] ?? null) === $value);
+    check("$key shown as Producto row in html and text", str_contains($text, "Producto: $value\n")
+        && str_contains($html, "<strong>Producto</strong></td><td>$value</td>"));
+    check("$key included in subject", str_contains($subject, $value));
+}
+[$subject] = mw_rcp_render(mw_rcp_extract_lead(json_decode($body, true), $now));
+check('subject unchanged when no producto', $subject === 'Nuevo lead (llamada) — Rosa Quispe · Panadería Rosa');
+
+// --- retry of a lead stored before 'producto' existed
+$old = payload(['data' => ['conversation_id' => 'conv_OLD']]);
+$oldLead = mw_rcp_extract_lead(json_decode($old, true), $now);
+unset($oldLead['producto']);
+file_put_contents($dir . '/rcp-conv_OLD.json', json_encode($oldLead, JSON_UNESCAPED_UNICODE));
+$warnings = [];
+set_error_handler(function (int $no, string $msg) use (&$warnings): bool {
+    if (error_reporting() & $no) { // skips @-suppressed calls
+        $warnings[] = $msg;
+    }
+    return true;
+});
+$before = count($sent);
+try {
+    [$s] = mw_rcp_process($old, sign($old, $now), $config, $dir, $mailer, $now);
+} catch (\Throwable $e) {
+    $s = 0;
+    $warnings[] = $e->getMessage();
+}
+restore_error_handler();
+check('old stored lead without producto is re-sent', $s === 200 && count($sent) === $before + 1);
+check('old stored lead renders without warnings', $warnings === []);
+check('old stored lead shows Producto as not indicated', str_contains(end($sent)[2], "Producto: (no indicado)\n"));
+
 foreach (glob($dir . '/*') ?: [] as $f) {
     unlink($f);
 }

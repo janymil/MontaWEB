@@ -97,6 +97,7 @@ function mw_rcp_extract_lead(array $payload, int $now): ?array
         'nombre'          => mw_rcp_collected($results, ['name', 'nombre']),
         'negocio'         => mw_rcp_collected($results, ['business', 'negocio']),
         'telefono'        => $phone,
+        'producto'        => mw_rcp_collected($results, ['producto', 'product']),
         'horario'         => mw_rcp_collected($results, ['preferred_time', 'horario']),
         'resumen'         => mw_rcp_clean($analysis['transcript_summary'] ?? '', 1500),
         'enviado'         => false,
@@ -110,9 +111,11 @@ function mw_rcp_lead_path(string $dir, string $conversationId): string
 
 function mw_rcp_render(array $lead): array
 {
+    $product = $lead['producto'] ?? ''; // los leads guardados antes no tienen la clave
     $rows = [
         'Nombre'           => $lead['nombre'],
         'Negocio'          => $lead['negocio'],
+        'Producto'         => $product,
         'Teléfono'         => $lead['telefono'],
         'Horario preferido' => $lead['horario'],
         'Resumen'          => $lead['resumen'],
@@ -129,7 +132,8 @@ function mw_rcp_render(array $lead): array
     $html .= '</table>';
     $who = $lead['nombre'] !== '' ? $lead['nombre'] : ($lead['telefono'] !== '' ? $lead['telefono'] : 'sin nombre');
     $business = $lead['negocio'] !== '' ? ' · ' . $lead['negocio'] : '';
-    $subject = str_replace(["\r", "\n"], ' ', 'Nuevo lead (llamada) — ' . $who . $business);
+    $about = $product !== '' ? ' · ' . $product : '';
+    $subject = str_replace(["\r", "\n"], ' ', 'Nuevo lead (llamada) — ' . $who . $business . $about);
     return [$subject, $html, $text];
 }
 
