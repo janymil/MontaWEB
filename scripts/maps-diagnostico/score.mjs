@@ -113,7 +113,7 @@ export function rankCompetitors(cells, self, limit = 3) {
     .slice(0, limit);
 }
 
-export const PRICES = { web: 99, gmn: 79 };
+export const PRICES = { web: 99, rebuild: 99, gmn: 79 };
 const MIN_PHOTOS = 10;
 const LOW_RATING = 4.2;
 
@@ -130,7 +130,8 @@ export function chooseFixes(self, competitors) {
   const med = median(compReviews);
   const medPhotos = median(competitors.map((c) => c.photos).filter((v) => v != null));
   const candidates = [];
-  if (self.website === false) candidates.push({ key: 'no_website', offer: 'web' });
+  if (self.websiteBroken === true) candidates.push({ key: 'broken_website', offer: 'rebuild' });
+  else if (self.website === false) candidates.push({ key: 'no_website', offer: 'web' });
   if (self.claimed === false) candidates.push({ key: 'unclaimed_profile', offer: 'gmn' });
   if (self.hours === false || (self.photos != null && (self.photos < MIN_PHOTOS || (medPhotos != null && self.photos < medPhotos / 2)))) {
     candidates.push({ key: 'incomplete_profile', offer: 'gmn' });

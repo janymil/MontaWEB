@@ -9,6 +9,7 @@ import { parseArgs } from 'node:util';
 import { fileURLToPath } from 'node:url';
 
 import { buildGrid } from './grid.mjs';
+import { probeSite } from './probe.mjs';
 import { positionOf, scoreFromPositions, rankCompetitors, profileOf, chooseFixes } from './score.mjs';
 import { fetchCell, balance, totalSpent, PRIVATE, REPO, BUDGET_USD } from './fetch.mjs';
 import { render } from './render.mjs';
@@ -108,6 +109,12 @@ async function main() {
   }
   const self = selfItem ? profileOf(selfItem) : { ...profileOf({ title: biz.name }), name: biz.name };
   const competitors = rankCompetitors(cells, target, 3).map((c) => profileOf(c.item));
+  if (self.website === true && selfItem?.url) {
+    const site = await probeSite(selfItem.url);
+    console.log(`Website check: ${selfItem.url} -> ${site}`);
+    if (site === 'broken') self.websiteBroken = true;
+    if (site === 'social') self.website = false;
+  }
   const fixes = chooseFixes(self, competitors);
 
   const id = crypto.randomBytes(9).toString('base64url');

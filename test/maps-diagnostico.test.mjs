@@ -17,6 +17,7 @@ const COPY_KEYS = [
   'legend_absent', 'score_heading', 'score_explainer', 'score_band_low', 'score_band_mid',
   'score_band_high', 'compare_heading', 'col_business', 'col_rating', 'col_reviews', 'col_photos',
   'col_website', 'col_hours', 'col_claimed', 'yes', 'no', 'you_label', 'fixes_heading',
+  'fix_broken_website_title', 'fix_broken_website_body', 'fix_broken_website_offer',
   'fix_no_website_title', 'fix_no_website_body', 'fix_no_website_offer',
   'fix_unclaimed_profile_title', 'fix_unclaimed_profile_body', 'fix_unclaimed_profile_offer',
   'fix_incomplete_profile_title', 'fix_incomplete_profile_body', 'fix_incomplete_profile_offer',
@@ -199,7 +200,7 @@ test('render: every copy key is used and no placeholder is left', () => {
   const htmls = [
     render(copy, data({ score: 10, fixes: fixesA })),
     render(copy, data({ score: 50, fixes: fixesB })),
-    render(copy, data({ score: 90, fixes: [] })),
+    render(copy, data({ score: 90, fixes: chooseFixes(profile({ websiteBroken: true }), comps3) })),
   ];
   const all = htmls.join('\n');
   for (const k of COPY_KEYS) {
@@ -252,4 +253,22 @@ test('fixes: far fewer photos than the top 3 counts as an incomplete profile', a
   const self = { website: true, claimed: true, hours: true, photos: 40, reviews: 500, rating: 4.8 };
   const comps = [{ photos: 200, reviews: 100 }, { photos: 300, reviews: 100 }, { photos: 90, reviews: 100 }];
   assert.deepEqual(chooseFixes(self, comps).map((f) => f.key), ['incomplete_profile']);
+});
+
+test('probe: broken, parked, blocked and social sites', async () => {
+  const { classifyProbe } = await import('../scripts/maps-diagnostico/probe.mjs');
+  assert.equal(classifyProbe({ status: null }), 'broken');
+  assert.equal(classifyProbe({ status: 404, finalHost: 'a.pe' }), 'broken');
+  assert.equal(classifyProbe({ status: 403, finalHost: 'a.pe', body: '<html>ok</html>' }), 'ok');
+  assert.equal(classifyProbe({ status: 200, finalHost: 'a.pe', body: '<html>Este dominio está en venta</html>' }), 'broken');
+  assert.equal(classifyProbe({ status: 200, finalHost: 'www.facebook.com', body: '' }), 'social');
+  assert.equal(classifyProbe({ status: 200, finalHost: 'a.pe', body: '<html><h1>Clínica</h1></html>' }), 'ok');
+});
+
+test('fixes: a broken website gets its own rebuild fix, not no_website', async () => {
+  const { chooseFixes } = await import('../scripts/maps-diagnostico/score.mjs');
+  const self = { website: true, websiteBroken: true, claimed: true, hours: true, photos: 50, reviews: 500, rating: 4.8 };
+  const f = chooseFixes(self, [{ photos: 50, reviews: 100 }]);
+  assert.deepEqual(f.map((x) => x.key), ['broken_website']);
+  assert.equal(f[0].price, 99);
 });
