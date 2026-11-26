@@ -10,6 +10,9 @@ Jan rejected the current reels (`images/video/demos/*`, 10–13 s, one 8 s Flow 
 
 Each reel: hook in the first 2 s (problem or craving) → 4–6 shots of 3–5 s (same people/place) → offer on screen (product, price, why now) → strong ending (name/logo, WhatsApp, CTA, music that lands). No AI label anywhere, no "ejemplo" text (Jan's rule). No real phone numbers.
 
+## Jan's direction (2026-11-25)
+Flow clips are **raw footage, not the finished ad**. The value is the edit around them: a designed **intro** (animated hook title, brand colours, punchy cut on the beat), **mid-video graphics** (offer/price card, kinetic text, zooms, speed ramps, transitions), and a designed **outro** (logo reveal, offer recap, WhatsApp CTA, music hit). Build these as motion graphics (e.g. HTML/CSS or Remotion rendered to video, or ffmpeg overlays), not just plain drawtext on a colour card. Existing good shots (pollería coals/plating, vet exam) can be reused.
+
 ## Steps
 1. Write a one-page script per business (es-PE voice-over + on-screen text + shot list) in `docs/plans/`. es-PE = Opus + global "Text in other languages" rules + Humanizer scan. **Show Jan the 3 scripts before spending credits.**
 2. Flow (Claude in Chrome, project "nov 25 - 22:17" at flow.google.com): stills first per shot (same location/people description), then image-to-video, 9:16, 720p. Prompts: only what the camera sees + "no text, no letters, no logos". Recipe: `~/.claude/skills/social-posts/subscriptions.md` §"AI video that works".
