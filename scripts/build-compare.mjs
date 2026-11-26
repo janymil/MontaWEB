@@ -67,11 +67,11 @@ function cellHtml(c, cell) {
   return `<div class="cmp-cell cmp-cell--${cell.k}">${tag}${text}${src}</div>`;
 }
 
-function compareTable(list, captionId, caption) {
+function compareTable(list, captionId, caption, rows = D.ROWS, mwCells = D.MONTAWEB.cells) {
   const cols = [{ name: 'MontaWeb', mw: true }, ...list.map(c => ({ name: c.name, c }))];
   const labels = cols.map((col, i) => `--label-${i + 2}:"${col.name.replace(/[^\p{L}\p{N} .-]/gu, '')}"`).join(';');
   const head = `<tr><th scope="col">Qué comparamos</th>${cols.map(col => `<th scope="col"${col.mw ? ' class="is-mw"' : ''}>${esc(col.name)}</th>`).join('')}</tr>`;
-  const rows = D.ROWS.map(r => `<tr><th scope="row">${esc(r.label)}</th>${cols.map(col => `<td${col.mw ? ' class="is-mw"' : ''}>${col.mw ? cellHtml(null, D.MONTAWEB.cells[r.id]) : cellHtml(col.c, col.c.cells[r.id])}</td>`).join('')}</tr>`).join('\n');
+  const body = rows.map(r => `<tr><th scope="row">${esc(r.label)}</th>${cols.map(col => `<td${col.mw ? ' class="is-mw"' : ''}>${col.mw ? cellHtml(null, mwCells[r.id]) : cellHtml(col.c, col.c.cells[r.id])}</td>`).join('')}</tr>`).join('\n');
   const n = cols.length;
   const nth = cols.map((_, i) => `.cmp-table--n${n} td:nth-child(${i + 2})::before{content:var(--label-${i + 2})}`).join('');
   return `<div class="cmp-table-wrap" tabindex="0" role="region" aria-labelledby="${captionId}">
@@ -79,7 +79,7 @@ function compareTable(list, captionId, caption) {
 <caption id="${captionId}">${esc(caption)}</caption>
 <thead>${head}</thead>
 <tbody>
-${rows}
+${body}
 </tbody>
 </table>
 </div>
@@ -88,6 +88,13 @@ ${rows}
 
 const priceNote = `<p class="cmp-note" data-price-note>Precios tal como cada empresa los publica en su propia página, revisados el ${fmtDate(D.VERIFIED_ON)}. No sumamos impuestos ni convertimos monedas. Cada plan incluye cosas distintas, así que revisa el detalle en la fuente.</p>
 <p class="cmp-note cmp-note--stale" data-stale-note hidden>${esc(D.PRICES_IN_REVIEW_TEXT)}</p>`;
+
+const factsNote = c => `<p class="cmp-note" data-price-note>Datos tal como cada empresa los publica en su propia página, revisados el ${fmtDate(D.VERIFIED_ON)}. No sumamos impuestos ni convertimos monedas. ${esc(c.noPrice)}</p>
+<p class="cmp-note cmp-note--stale" data-stale-note hidden>${esc(D.PRICES_IN_REVIEW_TEXT)}</p>`;
+
+const linkLine = l => `<p>${esc(l.before || '')}<a href="${esc(l.href)}">${esc(l.text)}</a>${esc(l.after || '')}</p>`;
+const GUIDE_PATH = `/comparar/${D.GUIDE.slug}`;
+const othersHtml = current => `<section class="cmp-section cmp-others"><div class="home-container"><h2>Otras comparaciones</h2><p>${D.COMPETITORS.filter(o => o !== current).map(o => `<a href="/comparar/${o.slug}">MontaWeb vs ${esc(o.name)}</a>`).join(' · ')} · <a href="/comparar">Todas en una tabla</a> · <a href="${GUIDE_PATH}">${esc(D.GUIDE.crumb)}</a></p></div></section>`;
 
 const staleScript = `<script>
 (function(){var b=document.body,v=Date.parse(b.dataset.verifiedOn+'T12:00:00-05:00'),d=+b.dataset.staleAfter;
@@ -123,7 +130,8 @@ ${trademark}
 // ---- hub ----
 function hub() {
   const H = D.HUB;
-  const cards = D.COMPETITORS.map(c => `<a class="cmp-card" href="/comparar/${c.slug}"><span class="cmp-card__vs">MontaWeb vs</span><strong>${esc(c.name)}</strong><span>${esc(c.cardLine)}</span><span class="cmp-card__more">Ver la comparación <span aria-hidden="true">→</span></span></a>`).join('\n');
+  const cards = [...D.COMPETITORS.map(c => `<a class="cmp-card" href="/comparar/${c.slug}"><span class="cmp-card__vs">MontaWeb vs</span><strong>${esc(c.name)}</strong><span>${esc(c.cardLine)}</span><span class="cmp-card__more">Ver la comparación <span aria-hidden="true">→</span></span></a>`),
+    `<a class="cmp-card" href="${GUIDE_PATH}"><span class="cmp-card__vs">Guía</span><strong>${esc(D.GUIDE.crumb)}</strong><span>${esc(D.GUIDE.description)}</span><span class="cmp-card__more">Leer la guía <span aria-hidden="true">→</span></span></a>`].join('\n');
   const body = `<header class="blog-head cmp-head"><div class="home-container">
 <nav class="cmp-crumbs" aria-label="Ruta"><a href="/">Inicio</a> / <span aria-current="page">Comparar</span></nav>
 <h1>${esc(H.h1)}</h1>
@@ -132,7 +140,7 @@ function hub() {
 <section class="cmp-section" aria-labelledby="tabla-title"><div class="home-container">
 <h2 id="tabla-title">${esc(H.tableTitle)}</h2>
 ${priceNote}
-${compareTable(D.COMPETITORS, 'cmp-caption-hub', H.caption)}
+${compareTable(D.PRICE_COMPETITORS, 'cmp-caption-hub', H.caption)}
 </div></section>
 <section class="cmp-section" aria-labelledby="cards-title"><div class="home-container">
 <h2 id="cards-title">${esc(H.cardsTitle)}</h2>
@@ -141,14 +149,16 @@ ${compareTable(D.COMPETITORS, 'cmp-caption-hub', H.caption)}
 <section class="cmp-section cmp-prose" aria-labelledby="how-title"><div class="home-container">
 <h2 id="how-title">${esc(H.howTitle)}</h2>
 ${H.how.map(p => `<p>${esc(p)}</p>`).join('\n')}
+${linkLine({ ...H.howLink, href: GUIDE_PATH })}
 </div></section>
 <section class="cmp-section cmp-prose" aria-labelledby="diy-title"><div class="home-container">
 <h2 id="diy-title">${esc(H.diyTitle)}</h2>
 ${H.diy.map(p => `<p>${esc(p)}</p>`).join('\n')}
+${linkLine(H.diyLink)}
 </div></section>
 ${faqHtml(H.faq)}
 ${cta()}
-${sourcesHtml(D.COMPETITORS)}
+${sourcesHtml(D.PRICE_COMPETITORS)}
 ${staleScript}`;
   return page({ path: '/comparar', title: H.title, description: H.description, ogImage: '/images/compare/og-comparar.png',
     ld: { '@context': 'https://schema.org', '@graph': [crumbs([['Inicio', '/'], ['Comparar', '/comparar']]), faqLd(H.faq)] }, body });
@@ -180,16 +190,85 @@ ${c.about.map(p => `<p>${esc(p)}</p>`).join('\n')}
 </div></section>
 ${faqHtml(faq)}
 ${cta(c)}
-<section class="cmp-section cmp-others"><div class="home-container"><h2>Otras comparaciones</h2><p>${D.COMPETITORS.filter(o => o !== c).map(o => `<a href="/comparar/${o.slug}">MontaWeb vs ${esc(o.name)}</a>`).join(' · ')} · <a href="/comparar">Todas en una tabla</a></p></div></section>
+${othersHtml(c)}
 ${sourcesHtml([c])}
 ${staleScript}`;
   return page({ path: `/comparar/${c.slug}`, title: c.title, description: c.description, ogImage: '/images/compare/og-comparar.png',
     ld: { '@context': 'https://schema.org', '@graph': [crumbs([['Inicio', '/'], ['Comparar', '/comparar'], [c.name, `/comparar/${c.slug}`]]), faqLd(faq)] }, body });
 }
 
+// ---- facts-only page (platforms without a soles price: no amounts) ----
+function factsDetail(c) {
+  const faq = c.faq;
+  const cell = id => c.cells[id];
+  const builders = c.builders?.length ? `<section class="cmp-section cmp-prose" aria-labelledby="builders-title"><div class="home-container">
+<h2 id="builders-title">${esc(c.buildersTitle)}</h2>
+<p>${esc(c.buildersIntro)}</p>
+<ul>${c.builders.map(b => `<li><strong>${esc(b.name)}:</strong> ${esc(cell(b.cell).text)} <a class="cmp-src" href="${esc(srcById(c, cell(b.cell).src).url)}" rel="nofollow noopener" target="_blank">fuente<span class="visually-hidden">: ${esc(srcById(c, cell(b.cell).src).label)}</span></a></li>`).join('\n')}</ul>
+</div></section>` : '';
+  const body = `<header class="blog-head cmp-head"><div class="home-container">
+<nav class="cmp-crumbs" aria-label="Ruta"><a href="/">Inicio</a> / <a href="/comparar">Comparar</a> / <span aria-current="page">${esc(c.name)}</span></nav>
+<h1>MontaWeb vs ${esc(c.name)}</h1>
+<p>${esc(c.lead)}</p>
+</div></header>
+<section class="cmp-section" aria-labelledby="tabla-title"><div class="home-container">
+<h2 id="tabla-title">Qué ofrece cada uno</h2>
+${factsNote(c)}
+${compareTable([c], 'cmp-caption', `MontaWeb y ${c.name}: condiciones publicadas`, D.FACT_ROWS, D.MONTAWEB.facts)}
+</div></section>
+<section class="cmp-section cmp-prose" aria-labelledby="about-title"><div class="home-container">
+<h2 id="about-title">${esc(c.aboutTitle)}</h2>
+${c.about.map(p => `<p>${esc(p)}</p>`).join('\n')}
+</div></section>
+${builders}
+<section class="cmp-section cmp-prose" aria-labelledby="choose-title"><div class="home-container">
+<h2 id="choose-title">Cuál te conviene</h2>
+<div class="cmp-choose">
+<div><h3>${esc(c.chooseThem.title)}</h3><ul>${c.chooseThem.items.map(i => `<li>${esc(i)}</li>`).join('')}</ul></div>
+<div class="is-mw"><h3>${esc(D.CHOOSE_MW.title)}</h3><ul>${D.CHOOSE_MW.items.map(i => `<li>${esc(i)}</li>`).join('')}</ul></div>
+</div>
+</div></section>
+${faqHtml(faq)}
+${cta(c)}
+${othersHtml(c)}
+${sourcesHtml([c])}
+${staleScript}`;
+  return page({ path: `/comparar/${c.slug}`, title: c.title, description: c.description, ogImage: '/images/compare/og-comparar.png',
+    ld: { '@context': 'https://schema.org', '@graph': [crumbs([['Inicio', '/'], ['Comparar', '/comparar'], [c.name, `/comparar/${c.slug}`]]), faqLd(faq)] }, body });
+}
+
+// ---- guide: what to ask when an agency only sends a quote (no company names) ----
+function guide() {
+  const G = D.GUIDE;
+  const qs = G.questions.map((q, i) => `<section class="cmp-q" aria-labelledby="q${i + 1}">
+<h3 id="q${i + 1}">${i + 1}. ${esc(q.q)}</h3>
+<p>${esc(q.why)}</p>
+<p class="cmp-q__mw"><strong>${esc(G.mwLabel)}:</strong> ${esc(q.mw)}</p>
+</section>`).join('\n');
+  const body = `<header class="blog-head cmp-head"><div class="home-container">
+<nav class="cmp-crumbs" aria-label="Ruta"><a href="/">Inicio</a> / <a href="/comparar">Comparar</a> / <span aria-current="page">${esc(G.crumb)}</span></nav>
+<h1>${esc(G.h1)}</h1>
+${G.lead.map(p => `<p>${esc(p)}</p>`).join('\n')}
+</div></header>
+<section class="cmp-section cmp-prose cmp-guide" aria-labelledby="preguntas-title"><div class="home-container">
+<h2 id="preguntas-title">Las preguntas</h2>
+${qs}
+</div></section>
+<section class="cmp-section cmp-prose" aria-labelledby="keep-title"><div class="home-container">
+<h2 id="keep-title">${esc(G.keepTitle)}</h2>
+${G.keep.map(p => `<p>${esc(p)}</p>`).join('\n')}
+${linkLine({ ...G.compareLink, href: '/comparar' })}
+</div></section>
+${faqHtml(G.faq)}
+${cta()}`;
+  return page({ path: GUIDE_PATH, title: G.title, description: G.description, ogImage: '/images/compare/og-comparar.png',
+    ld: { '@context': 'https://schema.org', '@graph': [crumbs([['Inicio', '/'], ['Comparar', '/comparar'], [G.crumb, GUIDE_PATH]]), faqLd(G.faq)] }, body });
+}
+
 export function buildAll() {
   const out = { 'comparar.html': hub() };
-  for (const c of D.COMPETITORS) out[`comparar/${c.slug}.html`] = detail(c);
+  for (const c of D.COMPETITORS) out[`comparar/${c.slug}.html`] = c.kind === 'facts' ? factsDetail(c) : detail(c);
+  out[`comparar/${D.GUIDE.slug}.html`] = guide();
   return out;
 }
 

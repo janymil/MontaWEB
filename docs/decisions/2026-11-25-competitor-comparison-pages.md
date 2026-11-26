@@ -1,5 +1,5 @@
 # /comparar compares MontaWeb with six Lima web providers, using only dated, quoted facts
-Date: 2026-11-25 · Status: proposed (Jan reads a sample and approves before deploy)
+Date: 2026-11-25 · Status: proposed (Jan reads a sample and approves before deploy) · competitor list superseded by 2026-11-26-comparar-competitor-selection.md (rules still apply)
 
 ## Context
 Jan asked for a professional comparison of MontaWeb and its competitors, built like MiCita's /comparar (Washington: /var/www/micita/docs/COMPARATIVA.md). An earlier informal table had two errors: "Go Negocio" (gonegocio.pe does not exist and gonegocio.net publishes no prices) and Bersoft "landing S/ 199" (its cheapest plan is S/ 300). The homepage calculator also showed an unsourced "Otras agencias S/ 550–1,400 / ¡Ahorras…!" range.

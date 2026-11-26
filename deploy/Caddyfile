@@ -28,6 +28,11 @@ montaweb.pe {
 	redir /index / 301
 	redir /index.html / 301
 
+	# /comparar pages dropped on 2026-11-26 (decision 2026-11-26-comparar-competitor-selection.md).
+	# Their sealed evidence stays in docs/evidence/comparar/2026-11-25*/ for 5 years.
+	@comparar_dropped path /comparar/nubix /comparar/kozma-360 /comparar/talentuperu /comparar/nubix/ /comparar/kozma-360/ /comparar/talentuperu/
+	redir @comparar_dropped /comparar 301
+
 	encode gzip zstd
 
 	# ---------- 1. Nunca servir secretos, logs ni documentación ----------

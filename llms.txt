@@ -34,5 +34,7 @@ Precios y condiciones:
 ## Optional
 
 - [Blog](https://montaweb.pe/blog): estudios y guías para negocios de Lima
-- [Comparar precios](https://montaweb.pe/comparar): precios publicados de MontaWeb y seis proveedores de páginas web en Lima (Bersoft, Hosting Perú, KOM, Kozma 360, Nubix, TalentuPeru), con fuente y fecha de revisión
+- [Comparar precios](https://montaweb.pe/comparar): precios publicados de MontaWeb y seis proveedores de páginas web y tiendas online en Lima (Bersoft, Glob Digital, Hosting Perú, Izipay web, KOM, Monstruo Creativo), con fuente y fecha de revisión
+- [MontaWeb vs Wix](https://montaweb.pe/comparar/wix): hacer tu web tú mismo en Wix, Shopify, Hostinger o GoDaddy, o que te la entreguen lista; condiciones publicadas, sin montos
+- [Qué preguntar en una cotización de página web](https://montaweb.pe/comparar/cotizacion-pagina-web): ocho preguntas antes de pagar el adelanto (IGV, renovación, dominio, archivos, plazos, cambios, cancelación)
 - [Guía de Google Mi Negocio](https://montaweb.pe/google-mi-negocio)
