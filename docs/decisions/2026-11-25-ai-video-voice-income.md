@@ -1,5 +1,5 @@
 # AI media income: receptionist + cheap AI reels for MontaWeb, YouTube only as a 90-day test
-Date: 2026-11-25 · Status: decided for points 1–3 and 5 (Jan approved building the B2B offer on montaweb.pe, 2026-11-25); point 4 (YouTube niche) reopened for more research
+Date: 2026-11-25 · Status: decided for points 1–3 and 5 (Jan approved building the B2B offer on montaweb.pe, 2026-11-25); point 4 (YouTube niche) decided in `2026-11-25-youtube-channel-niche.md`
 
 ## Context
 Jan wants extra income from AI video and AI voice. Grok proposed a Spanish horror channel (2 long + 10 shorts/week) and a S/ 1,490+IGV/month AI content retainer for Lima SMEs. Jan has 5–10 h/week, $50–150/month for tools, and 0 paying MontaWeb clients. Research and review: `docs/research/2026-11-25-ai-video-voice-income.md`.
@@ -8,7 +8,7 @@ Jan wants extra income from AI video and AI voice. Grok proposed a Spanish horro
 1. The AI receptionist (`2026-11-25-receptionist-number-and-vet-addon.md`) stays the main AI-voice product.
 2. AI promo reels are used as a hook in the 1:1 WhatsApp outreach and sold as a fixed add-on: S/ 149 for 1, S/ 349 for 3 (with IGV). A monthly pack (4 reels, about S/ 590 with IGV) is offered only after 3 one-off buyers.
 3. No S/ 1,490 retainer, no WhatsApp-audio packs, voice spots or jingles.
-4. YouTube: one 90-day test with 1 long video a week. Recommended niche: English documentary narration on Andean and Amazon history, after a manual demand check. The test has a stop rule.
+4. YouTube: one 90-day test with 1 long video a week. Niche: see `2026-11-25-youtube-channel-niche.md` (English AI documentaries on ancient and pre-Columbian civilizations). The test has a stop rule.
 5. One-off: publish Jan's Professional Voice Clone in the ElevenLabs Voice Library.
 
 ## Why
