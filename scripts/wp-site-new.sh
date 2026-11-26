@@ -71,7 +71,11 @@ for _ in $(seq 1 60); do
 done
 [ "$(docker inspect -f '{{.State.Health.Status}}' "montaweb-demo-$SITE-db")" = healthy ] || die "database did not become healthy"
 ROOTPW=$(sed -n 's/^MYSQL_ROOT_PASSWORD=//p' "$DIR/.env")
-docker exec -i -e MYSQL_PWD="$ROOTPW" "montaweb-demo-$SITE-db" mysql -uroot "$DBNAME" < "$SQL"
+# utf8mb4: without it the client in the container reads the dump as latin1 and every accent
+# breaks. sql_mode: Local's tables use '0000-00-00' defaults that MySQL 8.4 strict mode refuses
+# (WordPress relaxes the same mode at runtime).
+{ echo "SET SESSION sql_mode = 'NO_AUTO_VALUE_ON_ZERO';"; cat "$SQL"; } \
+  | docker exec -i -e MYSQL_PWD="$ROOTPW" "montaweb-demo-$SITE-db" mysql -uroot --default-character-set=utf8mb4 "$DBNAME"
 echo "database imported"
 
 # 3. Image from clean code + allowlisted uploads; rotates DB passwords and salts again.
