@@ -1,6 +1,6 @@
 # SEMANTIKA TECH voice receptionist: first message and system prompt (es-PE), v5 draft
 
-Date: 2026-11-26 · Status: text approved by Jan (2026-11-26), not yet published · Replaces: `prompt-es-PE.v4-draft.md` · Decision: `docs/decisions/2026-11-26-receptionist-answers-for-semantika-tech.md`
+Date: 2026-11-26 · Status: text approved by Jan and published in ElevenLabs (2026-11-26); phone tests pending · Replaces: `prompt-es-PE.v4-draft.md` · Decision: `docs/decisions/2026-11-26-receptionist-answers-for-semantika-tech.md`
 
 Change log v4 → v5:
 1. The agent answers as SEMANTIKA TECH, not MontaWeb. Greeting and goodbye say the company name.

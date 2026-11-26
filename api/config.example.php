@@ -31,6 +31,13 @@ return [
     // ELEVENLABS_WEBHOOK_SECRET. Sin secreto el endpoint rechaza todo (503).
     'elevenlabs_webhook_secret' => 'PON_AQUI_EL_SECRETO_DEL_WEBHOOK',
 
+    // Webhook de inicio de llamada (/api/receptionist-init.php). Los valores reales van solo
+    // en el servidor: el secreto que ElevenLabs envía en la cabecera X-Init-Secret (si queda
+    // vacío, el endpoint responde 503) y el número al que se transfieren las llamadas en
+    // horario de atención (si queda vacío, no se transfiere).
+    'elevenlabs_init_secret' => '',
+    'receptionist_transfer_number' => '',
+
     'smtp' => [
         'host' => 'smtp.zoho.com',
         'port' => 465,

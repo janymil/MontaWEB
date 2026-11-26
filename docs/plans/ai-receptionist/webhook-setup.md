@@ -26,3 +26,23 @@ The endpoint is `api/receptionist-lead.php`. It checks the ElevenLabs signature,
 2. Within a minute an email "Nuevo lead (llamada) — …" arrives at `hola@montaweb.pe`; the same call delivered twice sends one email.
 3. Make a second call and hang up at once: no email, no file (by design).
 4. If nothing arrives: ElevenLabs → Post-call webhooks shows the delivery status. 401 = wrong secret, 503 = secret missing on the server, 502 = server could not send the email (the lead is kept and the retry sends it). After 10 failures with no success in 7 days ElevenLabs disables the webhook, so check this after go-live.
+
+## Second webhook: opening hours at call start
+
+Status: code written, not deployed, nothing set up in ElevenLabs.
+
+`api/receptionist-init.php` is called when a call starts. Open means Monday to Saturday, 09:00 up to but not including 20:00, Lima time. It returns `advisors_open` (`si` or `no`) and `transfer_number` (the real number when open, empty when closed). It reads and stores nothing from the request.
+
+Do these in order, after your yes to merge and deploy.
+
+1. On the server, add two keys to `api/config.php`: `elevenlabs_init_secret` (a long random string you generate) and `receptionist_transfer_number` (the number to transfer to). Never commit either. These two have no environment variable fallback.
+2. In ElevenLabs, set the conversation initiation client data webhook:
+   - URL: `https://montaweb.pe/api/receptionist-init.php`
+   - Request header: `X-Init-Secret`, value = the same secret.
+3. Set the agent's dynamic variable placeholders to `advisors_open` = `no` and `transfer_number` = empty. Preview does not call the webhook and uses these.
+4. Enable fetching initiation data from the webhook for this agent only.
+5. The transfer tool must use `{{transfer_number}}` and the prompt must read `{{advisors_open}}`. Change both as a draft; publish only with your yes.
+
+Test with real calls: one in opening hours (the mobile rings) and one outside (a callback is offered, nothing rings).
+
+Risks: a failed or timed-out webhook can stop calls from starting, so add an uptime check, and if calls fail to start, turn the webhook off in ElevenLabs. 401 = header does not match the server secret; 503 = secret missing on the server. In hours with no number configured, the answer is `advisors_open` = `no`.
