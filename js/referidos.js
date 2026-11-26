@@ -18,7 +18,17 @@
         // the floating button later. data-ref-skip marks the link meant for existing clients.
         document.addEventListener('click', event => {
             const link = event.target.closest(`a[href^="https://wa.me/${PHONE}"]`);
-            if (link && !link.hasAttribute('data-ref-skip')) link.href = `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
+            if (!link || link.hasAttribute('data-ref-skip')) return;
+            let message = text;
+            // The price comparator's link carries the visitor's quote: keep it and add the code.
+            if (link.id === 'calcWhatsapp') {
+                const line = `Código de referido: ${code}`;
+                message = new URL(link.href).searchParams.get('text') || text;
+                if (!message.includes(line)) message += `
+
+${line}`;
+            }
+            link.href = `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
         }, true);
     }
 

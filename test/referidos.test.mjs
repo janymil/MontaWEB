@@ -18,9 +18,9 @@ function boot(search) {
     doc.getElementById = id => (els[id] ??= node());
     const opened = [];
     vm.runInNewContext(read('js/referidos.js'), { document: doc, location: { search },
-        window: { open: url => opened.push(url) }, URLSearchParams, encodeURIComponent });
-    const click = (href, skip = false) => {
-        const link = { href, hasAttribute: name => skip && name === 'data-ref-skip' };
+        window: { open: url => opened.push(url) }, URLSearchParams, URL, encodeURIComponent });
+    const click = (href, skip = false, id = '') => {
+        const link = { href, id, hasAttribute: name => skip && name === 'data-ref-skip' };
         const closest = selector => (href.startsWith(selector.match(/\^="(.*)"\]/)[1]) ? link : null);
         doc.on.click?.({ target: { closest } });
         return decodeURIComponent(link.href);
@@ -42,6 +42,17 @@ test('referidos: a code in the URL (any case) shows the banner and goes into eve
     assert.equal(ref.click('https://wa.me/51965403196?text=cliente', true), 'https://wa.me/51965403196?text=cliente');
     assert.equal(ref.click('https://wa.me/?text=x'), 'https://wa.me/?text=x', 'share links are not ours');
     assert.match(page, /data-ref-skip[^>]*>[\s\S]{0,120}Pedir mi código/);
+});
+
+test('referidos: the price quote keeps its message and gains the code once', () => {
+    const ref = boot('?ref=eden24');
+    const quote = `https://wa.me/51965403196?text=${encodeURIComponent('Presupuesto: Web Simple S/ 99 & extras')}`;
+    const once = ref.click(quote, false, 'calcWhatsapp');
+    assert.match(once, /Presupuesto: Web Simple S\/ 99 & extras
+
+Código de referido: EDEN24$/);
+    const twice = ref.click(`https://wa.me/51965403196?text=${encodeURIComponent(once.split('?text=')[1])}`, false, 'calcWhatsapp');
+    assert.equal(twice.match(/Código de referido/g).length, 1);
 });
 
 test('referidos: no code or a bad code changes nothing', () => {
