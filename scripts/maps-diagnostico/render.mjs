@@ -7,7 +7,7 @@ export const esc = (s) =>
   String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 export function fill(str, vars) {
-  return String(str).replace(/\{(business|keyword|district|date|n|price|id)\}/g, (m, k) =>
+  return String(str).replace(/\{(business|keyword|district|date|n|price|id|direction|rank)\}/g, (m, k) =>
     vars[k] === undefined || vars[k] === null ? m : String(vars[k]));
 }
 
@@ -19,7 +19,17 @@ export function whatsappLink(template, vars) {
 const DASH = '—';
 const COLORS = { top3: '#5fcf8a', top10: '#f6d04d', top20: '#ff9b6b', absent: '#d8d4c8' };
 
-function gridSvg(cells, labelFn) {
+// The squares touching the centre; row 0 is north, col 0 west (see grid.mjs).
+const ADJACENT = [['norte', 1, 2], ['este', 2, 3], ['sur', 3, 2], ['oeste', 2, 1]];
+
+/** Which neighbour the example line talks about: the first with a rank, else north with none. */
+export function gridExample(cells) {
+  const near = ADJACENT.map(([direction, row, col]) =>
+    ({ direction, rank: cells.find((c) => c.row === row && c.col === col)?.position ?? null }));
+  return near.find((n) => n.rank != null) ?? near[0];
+}
+
+function gridSvg(cells, labelFn, centreLabel) {
   const size = 58, gap = 6, pad = 4;
   const total = pad * 2 + 5 * size + 4 * gap;
   const rects = cells.map(({ row, col, position }) => {
@@ -34,25 +44,35 @@ function gridSvg(cells, labelFn) {
       (centre ? `<circle cx="${x + size / 2}" cy="${y + 11}" r="4" fill="#181816"/><circle cx="${x + size / 2}" cy="${y + 11}" r="1.6" fill="#fffdf7"/>` : '') +
       '</g>';
   }).join('');
-  return `<svg viewBox="0 0 ${total} ${total}" role="img" aria-label="${esc(labelFn)}" class="grid"><title>${esc(labelFn)}</title>${rects}</svg>`;
+  // Straddles the centre square's top edge, drawn last: clear of its dot and of the numbers.
+  const mid = total / 2, top = pad + 2 * (size + gap);
+  const tag = `<g class="me-tag"><rect x="${mid - 34}" y="${top - 11}" width="68" height="16" rx="4" fill="#181816"/>` +
+    `<text x="${mid}" y="${top + 1}" text-anchor="middle" font-size="11" font-weight="700" fill="#fffdf7">${esc(centreLabel)}</text></g>`;
+  return `<svg viewBox="0 0 ${total} ${total}" role="img" aria-label="${esc(labelFn)}" class="grid"><title>${esc(labelFn)}</title>${rects}${tag}</svg>`;
 }
 
-function profileCard(copy, p, isSelf, vars) {
+const COLS = ['col_rating', 'col_reviews', 'col_photos', 'col_website', 'col_hours', 'col_claimed'];
+
+// One compact table: a full-width name row (long names wrap) over a row of values, "you" first.
+function compareTable(copy, self, competitors, vars) {
   const t = (k) => esc(fill(copy[k], vars));
   const yn = (v) => (v === null || v === undefined ? DASH : v ? t('yes') : t('no'));
   const num = (v) => (v === null || v === undefined ? DASH : esc(v));
-  const name = p.name ? esc(p.name) : DASH;
-  return `<article class="card${isSelf ? ' me' : ''}">
-<p class="cap">${t('col_business')}</p>
-<h3>${name}${isSelf ? ` <span class="tag">${esc(fill(copy.you_label, vars))}</span>` : ''}</h3>
-<dl>
-<div><dt>${t('col_rating')}</dt><dd>${(p.rating == null ? num(p.rating) : Number(p.rating).toFixed(1))}</dd></div>
-<div><dt>${t('col_reviews')}</dt><dd>${num(p.reviews)}</dd></div>
-<div><dt>${t('col_photos')}</dt><dd>${num(p.photos)}</dd></div>
-<div><dt>${t('col_website')}</dt><dd>${yn(p.website)}</dd></div>
-<div><dt>${t('col_hours')}</dt><dd>${yn(p.hours)}</dd></div>
-<div><dt>${t('col_claimed')}</dt><dd>${yn(p.claimed)}</dd></div>
-</dl></article>`;
+  const group = (p, isSelf) => {
+    const rating = p.rating == null ? DASH : Number(p.rating).toFixed(1);
+    const values = [rating, num(p.reviews), num(p.photos), yn(p.website), yn(p.hours), yn(p.claimed)];
+    return `<tbody${isSelf ? ' class="me"' : ''}>
+<tr><th class="name" colspan="${COLS.length}" scope="rowgroup">${isSelf ? `<span class="tag">${t('you_label')}</span> ` : ''}${p.name ? esc(p.name) : DASH}</th></tr>
+<tr>${values.map((v) => `<td>${v}</td>`).join('')}</tr>
+</tbody>`;
+  };
+  return `<table class="cmp" aria-labelledby="h-compare">
+<thead>
+<tr><th class="name" colspan="${COLS.length}" scope="colgroup">${t('col_business')}</th></tr>
+<tr>${COLS.map((k) => `<th scope="col">${t(k)}</th>`).join('')}</tr>
+</thead>
+${[group(self, true), ...competitors.map((c) => group(c, false))].join('\n')}
+</table>`;
 }
 
 const CSS = `
@@ -70,20 +90,21 @@ section{margin-block:1.6rem 0}
 .grid{display:block;inline-size:100%;block-size:auto;margin-block:.5rem}
 .legend{list-style:none;padding:0;margin:.4rem 0 0;display:grid;grid-template-columns:1fr 1fr;gap:.35rem .75rem;font-size:.85rem}
 .legend li{display:flex;align-items:center;gap:.5rem}
-.sw{inline-size:1rem;block-size:1rem;border-radius:4px;flex:none}
+.sw{inline-size:1rem;block-size:1rem;border-radius:4px;flex:none;display:grid;place-items:center;font-size:.75rem;font-weight:800;line-height:1}
 .score{display:flex;align-items:baseline;gap:.4rem;margin-block:.25rem}
 .score strong{font-size:3.2rem;line-height:1;letter-spacing:-.05em}
 .score span{color:var(--muted);font-weight:700}
 .bar{block-size:12px;background:var(--paper-deep,#e9e4d8);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-block:.4rem .7rem}
 .bar i{display:block;block-size:100%;background:var(--orange)}
-.card{background:var(--cream);border:1px solid var(--line);border-radius:6px;padding:.8rem .9rem;margin-block-end:.7rem}
-.card.me{border:2px solid var(--ink)}
+.cmp{inline-size:100%;table-layout:fixed;border-collapse:collapse;background:var(--cream);border:1px solid var(--line)}
+.cmp th,.cmp td{padding:.2rem .15rem;text-align:center;overflow-wrap:anywhere}
+.cmp thead th{color:var(--muted);font-size:.68rem;font-weight:600;line-height:1.2;vertical-align:bottom}
+.cmp th.name{text-align:start;padding:.4rem .5rem 0}
+.cmp tbody{border-block-start:1px solid var(--line)}
+.cmp tbody th{font-size:.88rem;line-height:1.3}
+.cmp td{font-size:.95rem;font-weight:700;padding-block-end:.4rem}
+.cmp .me{background:var(--lime)}
 .tag{display:inline-block;font-size:.72rem;background:var(--ink);color:var(--cream);padding:0 .45rem;border-radius:2px;vertical-align:middle}
-.cap{margin:0;color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.06em}
-dl{display:grid;grid-template-columns:1fr 1fr;gap:.35rem .8rem;margin:0}
-dl div{display:flex;justify-content:space-between;gap:.5rem;border-block-end:1px dashed var(--line);padding-block-end:.15rem}
-dt{color:var(--muted);font-size:.85rem}
-dd{margin:0;font-weight:700}
 .fix{background:var(--cream);border-inline-start:4px solid var(--orange);padding:.7rem .9rem;margin-block-end:.7rem;border-radius:0 6px 6px 0}
 .fix h3{margin-block-end:.25rem}
 .offer{font-weight:700;color:var(--orange-text);margin:0}
@@ -93,6 +114,8 @@ dd{margin:0;font-weight:700}
 `;
 
 export function render(copy, d) {
+  // grid_explainer and the example line state the distance in words.
+  if (d.spacing != null && d.spacing !== 700) throw new Error(`copy says 700 m, this grid uses ${d.spacing} m`);
   const hits = d.cells.filter((c) => c.position != null).length;
   const vars = { business: d.business, keyword: d.keyword, district: d.district, date: d.date, id: d.id, n: hits, price: '' };
   const f = (key, extra = {}) => esc(fill(copy[key], { ...vars, ...extra }));
@@ -100,13 +123,16 @@ export function render(copy, d) {
 
   const legend = [
     ['top3', 'legend_top3'], ['top10', 'legend_4_10'], ['top20', 'legend_11_20'], ['absent', 'legend_absent'],
-  ].map(([b, k]) => `<li><span class="sw" style="background:${COLORS[b]}"></span>${f(k)}</li>`).join('');
+  ].map(([b, k]) => `<li><span class="sw" style="background:${COLORS[b]}"${b === 'absent' ? ` aria-hidden="true">${DASH}` : '>'}</span>${f(k)}</li>`).join('');
 
   const fixes = d.fixes.map((fx) => {
     const x = { price: fx.price ?? '', n: fx.n ?? '' };
     return `<div class="fix"><h3>${f(`fix_${fx.key}_title`, x)}</h3><p>${f(`fix_${fx.key}_body`, x)}</p>` +
       (fx.offer ? `<p class="offer">${f(`fix_${fx.key}_offer`, x)}</p>` : '') + '</div>';
   }).join('');
+
+  const example = gridExample(d.cells);
+  const exampleLine = f(example.rank == null ? 'grid_example_absent' : 'grid_example', example);
 
   const wa = whatsappLink(copy.cta_whatsapp_message, vars);
 
@@ -128,7 +154,9 @@ export function render(copy, d) {
 <section aria-labelledby="h-grid">
 <h2 id="h-grid">${f('grid_heading')}</h2>
 <p>${f('grid_explainer')}</p>
-${gridSvg(d.cells, fill(copy.grid_heading, vars))}
+<p>${f('grid_rank_hint')}</p>
+${gridSvg(d.cells, fill(copy.grid_heading, vars), fill(copy.grid_center_label, vars))}
+<p>${exampleLine}</p>
 <ul class="legend">${legend}</ul>
 </section>
 
@@ -140,13 +168,12 @@ ${gridSvg(d.cells, fill(copy.grid_heading, vars))}
 <p>${f('score_explainer')}</p>
 </section>
 
-<section aria-labelledby="h-compare">
+${d.competitors.length ? `<section aria-labelledby="h-compare">
 <h2 id="h-compare">${f('compare_heading')}</h2>
-${profileCard(copy, d.self, true, vars)}
-${d.competitors.map((c) => profileCard(copy, c, false, vars)).join('\n')}
+${compareTable(copy, d.self, d.competitors, vars)}
 </section>
 
-${fixes ? `<section aria-labelledby="h-fixes">
+` : ''}${fixes ? `<section aria-labelledby="h-fixes">
 <h2 id="h-fixes">${f('fixes_heading')}</h2>
 ${fixes}
 </section>` : ''}

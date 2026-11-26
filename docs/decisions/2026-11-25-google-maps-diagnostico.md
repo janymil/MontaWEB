@@ -13,6 +13,8 @@ Jan asked whether DataForSEO could be monetised through MontaWeb for B2B clients
 - Phase 3 monthly add-on "Google Maps al día": **S/ 59/month on its own**, and **included in Soporte S/ 99** (confirmed by Jan 2026-11-25). Standalone so businesses without a MontaWeb site can buy it; inside S/ 99 as the reason to move up from S/ 49. Starting price: raise it if Phase 1 shows easy yeses. It goes on /servicios only when Phase 3 starts.
 - Plan: `docs/plans/2026-11-25-google-maps-diagnostico.md`.
 
+- Before Phase 1 (Jan, 2026-11-26): the Spanish report lines stay; the comparison is one compact table; a rebuilt site stays at S/ 99; only businesses above the lead at more grid points than below are listed (section hidden if none); leads with nothing to fix are replaced.
+
 ## Why
 - Small Peruvian businesses pay to be found (calls, WhatsApp), not for reports; buyers who want SEO tools already use Semrush/Ahrefs.
 - Cost is about US$0.05 per report (estimate from the census, to be measured), so margin is limited by sales, not data.

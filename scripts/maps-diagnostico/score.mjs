@@ -113,6 +113,31 @@ export function rankCompetitors(cells, self, limit = 3) {
     .slice(0, limit);
 }
 
+/**
+ * Businesses that really come before you: at more grid points they rank above you than below.
+ * Absent ranks below any position; points where both are absent do not count.
+ * Candidates are every business seen in the grid, strongest first.
+ * cells: [{items, position}] where position is your own.
+ */
+export function leadersOf(cells, self, limit = 3) {
+  return rankCompetitors(cells, self, Infinity)
+    .map((c) => {
+      let above = 0;
+      let below = 0;
+      for (const cell of cells) {
+        const hit = (cell.items || []).find((i) => isMapItem(i) && keyOf(i) === c.key);
+        const raw = hit ? hit.rank_absolute ?? hit.rank_group : null;
+        const theirs = raw != null && raw <= 20 ? raw : Infinity;
+        const yours = cell.position ?? Infinity;
+        if (theirs < yours) above += 1;
+        else if (yours < theirs) below += 1;
+      }
+      return { ...c, above, below };
+    })
+    .filter((c) => c.above > c.below)
+    .slice(0, limit);
+}
+
 export const PRICES = { web: 99, rebuild: 99, gmn: 79 };
 const MIN_PHOTOS = 10;
 const LOW_RATING = 4.2;
@@ -124,11 +149,14 @@ const median = (xs) => {
   return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
 };
 
-/** Up to 3 fixes by rule, ordered by impact, never the same paid offer twice. */
-export function chooseFixes(self, competitors) {
-  const compReviews = competitors.map((c) => c.reviews).filter((v) => v != null);
-  const med = median(compReviews);
-  const medPhotos = median(competitors.map((c) => c.photos).filter((v) => v != null));
+/**
+ * Up to 3 fixes by rule, ordered by impact, never the same paid offer twice.
+ * leaders must come from leadersOf: the few_reviews text talks about them.
+ * nearby (strongest businesses around, ahead or not) only sets what "few photos" means.
+ */
+export function chooseFixes(self, leaders, nearby = leaders) {
+  const med = median(leaders.map((c) => c.reviews).filter((v) => v != null));
+  const medPhotos = median(nearby.map((c) => c.photos).filter((v) => v != null));
   const candidates = [];
   if (self.websiteBroken === true) candidates.push({ key: 'broken_website', offer: 'rebuild' });
   else if (self.website === false) candidates.push({ key: 'no_website', offer: 'web' });
@@ -136,7 +164,8 @@ export function chooseFixes(self, competitors) {
   if (self.hours === false || (self.photos != null && (self.photos < MIN_PHOTOS || (medPhotos != null && self.photos < medPhotos / 2)))) {
     candidates.push({ key: 'incomplete_profile', offer: 'gmn' });
   }
-  if (self.reviews != null && med != null && self.reviews < med) {
+  // The text says "those ahead of you have more reviews", so it must hold for every one listed.
+  if (self.reviews != null && leaders.length > 0 && leaders.every((c) => c.reviews != null && c.reviews > self.reviews)) {
     candidates.push({ key: 'few_reviews', offer: null, n: med });
   }
   if (self.rating != null && self.rating < LOW_RATING) candidates.push({ key: 'low_rating', offer: null });

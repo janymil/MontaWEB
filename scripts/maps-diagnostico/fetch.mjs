@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const REPO = path.resolve(HERE, '..', '..');
 export const PRIVATE = path.join(REPO, 'docs', 'research', 'maps-diagnostico', 'private');
-export const BUDGET_USD = 1.0; // hard cap for all of Phase 0
+export const BUDGET_USD = 2.36; // hard cap on cumulative spend, Phase 0 + Phase 1 batch and its replacements
 const API = 'https://api.dataforseo.com/v3/';
 
 function credentials() {
@@ -53,26 +53,40 @@ export function cacheDir(key) {
 }
 
 /** One grid cell. Reads the cache if present (cost 0); otherwise one paid call. */
-export async function fetchCell({ key, point, keyword, depth = 20 }) {
+export async function fetchCell({ key, point, keyword, depth = 20, cacheOnly = false }) {
   const file = path.join(cacheDir(key), `${point.row}-${point.col}.json`);
   if (fs.existsSync(file)) {
     const cached = JSON.parse(fs.readFileSync(file, 'utf8'));
-    return { items: itemsOf(cached), cost: 0, cached: true };
+    return { items: itemsFromResponse(cached), at: queriedAt(cached), cost: 0, cached: true };
   }
+  if (cacheOnly) throw new Error(`cell ${point.row}-${point.col} of ${key} is not cached`);
   if (totalSpent() >= BUDGET_USD) throw new Error(`budget US$${BUDGET_USD} reached, stopping`);
   const body = [{
     keyword, language_code: 'es', location_coordinate: `${point.lat},${point.lng},16z`, depth,
   }];
   const d = await call('POST', 'serp/google/maps/live/advanced', body);
-  const task = d.tasks?.[0];
-  if (!task || task.status_code !== 20000) throw new Error(`API task failed: ${task?.status_code} ${task?.status_message}`);
   const cost = Number(d.cost) || 0;
+  addSpend(cost); // before the status check: a failed task can still be billed
+  const items = itemsFromResponse(d);
   fs.mkdirSync(cacheDir(key), { recursive: true });
   fs.writeFileSync(file, JSON.stringify(d));
-  addSpend(cost);
-  return { items: itemsOf(d), cost, cached: false };
+  return { items, at: queriedAt(d), cost, cached: false };
 }
 
-function itemsOf(d) {
-  return d.tasks?.[0]?.result?.[0]?.items ?? [];
+/** Items of one SERP response. 40102 "No Search Results" means nothing ranks at that point. */
+export function itemsFromResponse(d) {
+  const task = d?.tasks?.[0];
+  const empty = task?.status_code === 40102 && /no search results/i.test(task.status_message || '');
+  if (!empty && task?.status_code !== 20000) throw new Error(`API task failed: ${task?.status_code} ${task?.status_message}`);
+  return task.result?.[0]?.items ?? [];
+}
+
+const queriedAt = (d) => d.tasks?.[0]?.result?.[0]?.datetime ?? null;
+
+/** "2026-11-26 03:10:00 +00:00" (or now) -> the Lima calendar day, es-PE. */
+export function limaDate(when) {
+  const date = when ? new Date(when.replace(' ', 'T').replace(' ', '')) : new Date();
+  return new Intl.DateTimeFormat('es-PE', {
+    timeZone: 'America/Lima', day: '2-digit', month: '2-digit', year: 'numeric',
+  }).format(date);
 }

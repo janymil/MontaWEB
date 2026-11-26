@@ -2,6 +2,8 @@
 // CLI: one business -> docs/research/maps-diagnostico/private/reports/<id>/{index.html,report.png,report.pdf}
 //   node scripts/maps-diagnostico/run.mjs --name "..." --cid ... --lat ... --lng ... --keyword ... --district ...
 //   node scripts/maps-diagnostico/run.mjs --from-census <cid>
+// --id <id> keeps a report id, --cache-only never makes a paid call, --facts <file> writes a JSON summary.
+// --website-state <state> reuses an earlier website check instead of probing again (for re-renders).
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -9,9 +11,9 @@ import { parseArgs } from 'node:util';
 import { fileURLToPath } from 'node:url';
 
 import { buildGrid } from './grid.mjs';
-import { probeSite } from './probe.mjs';
-import { positionOf, scoreFromPositions, rankCompetitors, profileOf, chooseFixes } from './score.mjs';
-import { fetchCell, balance, totalSpent, PRIVATE, REPO, BUDGET_USD } from './fetch.mjs';
+import { probeSite, applySiteState } from './probe.mjs';
+import { positionOf, scoreFromPositions, leadersOf, rankCompetitors, profileOf, chooseFixes } from './score.mjs';
+import { fetchCell, balance, totalSpent, limaDate, PRIVATE, REPO, BUDGET_USD } from './fetch.mjs';
 import { render } from './render.mjs';
 import { snapshot } from './snapshot.mjs';
 
@@ -58,10 +60,6 @@ function fromCensus(cid) {
   throw new Error(`cid ${cid} not found in census raw data`);
 }
 
-const limaDate = () => new Intl.DateTimeFormat('es-PE', {
-  timeZone: 'America/Lima', day: '2-digit', month: '2-digit', year: 'numeric',
-}).format(new Date());
-
 async function pool(items, size, fn) {
   const out = new Array(items.length);
   let next = 0;
@@ -77,7 +75,8 @@ async function main() {
       name: { type: 'string' }, cid: { type: 'string' }, 'place-id': { type: 'string' },
       lat: { type: 'string' }, lng: { type: 'string' }, keyword: { type: 'string' },
       district: { type: 'string' }, spacing: { type: 'string', default: '700' },
-      'from-census': { type: 'string' },
+      'from-census': { type: 'string' }, id: { type: 'string' }, 'cache-only': { type: 'boolean' }, facts: { type: 'string' },
+      'website-state': { type: 'string' },
     },
   });
   let biz;
@@ -94,7 +93,7 @@ async function main() {
   const grid = buildGrid(biz.lat, biz.lng, spacing);
 
   console.log(`Business: ${biz.name} | ${biz.keyword} | ${biz.district} | spent so far: US$${totalSpent().toFixed(4)} of ${BUDGET_USD}`);
-  const results = await pool(grid, 5, (point) => fetchCell({ key: cacheKey, point, keyword: biz.keyword }));
+  const results = await pool(grid, 5, (point) => fetchCell({ key: cacheKey, point, keyword: biz.keyword, cacheOnly: a['cache-only'] }));
   const cost = results.reduce((s, r) => s + r.cost, 0);
   const fresh = results.filter((r) => !r.cached).length;
 
@@ -108,29 +107,49 @@ async function main() {
     if (hit) { selfItem = hit; break; }
   }
   const self = selfItem ? profileOf(selfItem) : { ...profileOf({ title: biz.name }), name: biz.name };
-  const competitors = rankCompetitors(cells, target, 3).map((c) => profileOf(c.item));
+  const leaders = leadersOf(cells, target, 3);
+  const competitors = leaders.map((c) => profileOf(c.item));
+  let site = null;
   if (self.website === true && selfItem?.url) {
-    const site = await probeSite(selfItem.url);
+    site = a['website-state'] || await probeSite(selfItem.url, { log: (line) => console.log(`  probe ${line}`) });
     console.log(`Website check: ${selfItem.url} -> ${site}`);
-    if (site === 'broken') self.websiteBroken = true;
-    if (site === 'social') self.website = false;
+    applySiteState(self, site);
   }
-  const fixes = chooseFixes(self, competitors);
+  const nearby = rankCompetitors(cells, target, 3).map((c) => profileOf(c.item));
+  const fixes = chooseFixes(self, competitors, nearby);
 
-  const id = crypto.randomBytes(9).toString('base64url');
-  const data = { id, business: biz.name, keyword: biz.keyword, district: biz.district, date: limaDate(), score, cells, self, competitors, fixes };
+  const id = a.id || crypto.randomBytes(9).toString('base64url');
+  const data = { id, business: biz.name, keyword: biz.keyword, district: biz.district, date: limaDate(results.map((r) => r.at).filter(Boolean).sort()[0]), score, cells, self, competitors, fixes, spacing };
   const copy = JSON.parse(fs.readFileSync(path.join(HERE, 'copy-es.json'), 'utf8'));
   const outDir = path.join(PRIVATE, 'reports', id);
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, 'index.html'), render(copy, data));
   const height = await snapshot(path.join(outDir, 'index.html'));
 
-  const bal = await balance();
+  if (a.facts) {
+    fs.writeFileSync(a.facts, JSON.stringify({
+      report_id: id, business: biz.name, cid: biz.cid, keyword: biz.keyword, district: biz.district,
+      points_top3: cells.filter((c) => c.position && c.position <= 3).length,
+      points_found: cells.filter((c) => c.position).length,
+      grid_points: cells.length, score, self_from_serp: !!selfItem,
+      url: selfItem?.url ?? null, website_state: site,
+      top_fixes: fixes.map((f) => ({ key: f.key, price_soles: f.price })),
+      own: { rating: self.rating, reviews: self.reviews, photos: self.photos },
+      leaders: leaders.map((l) => ({
+        name: l.item.title, cid: l.item.cid ?? null, url: l.item.url ?? null,
+        points_ranking_above_business: l.above, points_ranking_below_business: l.below,
+        points_present: l.cellsPresent, avg_rank_all_points: Math.round(l.rankScore * 10) / 10,
+        ...(({ rating, reviews, photos, website }) => ({ rating, reviews, photos, website }))(profileOf(l.item)),
+      })),
+    }, null, 1));
+  }
+
+  const bal = a['cache-only'] ? 'not checked' : await balance().catch(() => 'unknown');
   const missing = ['rating', 'reviews', 'photos', 'website', 'hours', 'claimed']
     .filter((k) => [self, ...competitors].every((p) => p[k] === null));
-  console.log(`Report id: ${id} | score: ${score} | self found in ${cells.filter((c) => c.position).length}/25 cells | fixes: ${fixes.map((f) => f.key).join(',') || '-'}`);
+  console.log(`Report id: ${id} | score: ${score} | self found in ${cells.filter((c) => c.position).length}/25 cells | leaders: ${leaders.length} | fixes: ${fixes.map((f) => f.key).join(',') || '-'}`);
   console.log(`Fields missing for all businesses: ${missing.join(',') || 'none'} | self from SERP: ${!!selfItem}`);
-  console.log(`Cost this report: US$${cost.toFixed(4)} (${fresh} paid calls, ${25 - fresh} cached) | total Phase 0: US$${totalSpent().toFixed(4)} | balance after: US$${bal} | page height ${height}px`);
+  console.log(`Cost this report: US$${cost.toFixed(4)} (${fresh} paid calls, ${25 - fresh} cached) | total spent: US$${totalSpent().toFixed(4)} | balance after: US$${bal} | page height ${height}px`);
   console.log(`Output: ${outDir}`);
 }
 
