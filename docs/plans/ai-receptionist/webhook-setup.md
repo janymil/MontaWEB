@@ -29,7 +29,7 @@ The endpoint is `api/receptionist-lead.php`. It checks the ElevenLabs signature,
 
 ## Second webhook: opening hours at call start
 
-Status: deployed and set up 2026-11-26; agent changes are an unpublished draft.
+Status: deployed, set up and published in ElevenLabs 2026-11-26; not yet tested with a real call.
 
 `api/receptionist-init.php` is called when a call starts. Open means Monday to Saturday, 09:00 up to but not including 20:00, Lima time. It returns `advisors_open` (`si` or `no`) and `transfer_number` (the real number when open, the word `closed` when not). It reads and stores nothing from the request.
 

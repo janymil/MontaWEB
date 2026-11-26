@@ -1,6 +1,6 @@
 # 2026-11-26 — a caller who asks for a person at night is offered a callback, and no phone rings
 
-Status: stage 2 built, committed, deployed and set up; closed value is 'closed' (an empty number breaks the agent). Draft tested, not published.
+Status: stage 2 built, committed, deployed and set up; closed value is 'closed' (an empty number breaks the agent). Published 2026-11-26; real calls pending.
 Cause checked 2026-11-26 01:38: the agent knows the time and the transfer tool condition includes {{system__time}}; the model skips the check. Transfer hours stay Mon–Sat 09:00–20:00 Lima.
 
 ## Goal

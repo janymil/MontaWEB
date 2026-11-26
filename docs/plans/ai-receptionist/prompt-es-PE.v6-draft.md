@@ -1,6 +1,6 @@
 # SEMANTIKA TECH voice receptionist: first message and system prompt (es-PE), v6 draft
 
-Date: 2026-11-26 · Status: transfer rule approved by Jan (2026-11-26), not yet published · Replaces: `prompt-es-PE.v5-draft.md`
+Date: 2026-11-26 · Status: transfer rule approved by Jan, published in ElevenLabs 2026-11-26 · Replaces: `prompt-es-PE.v5-draft.md`
 
 Change log v5 → v6:
 1. "Cuándo pasar el caso a un asesor": the server says whether advisors are available (`{{advisors_open}}`, from `api/receptionist-init.php`); `{{system__time}}` is gone from the prompt. Reason: the model transferred at 01:28 although it knew the time.

@@ -18,6 +18,6 @@ the model's judgement.
 ## Consequences / next steps
 - A failing webhook may stop calls from starting: add an uptime check; if calls fail, turn it off in ElevenLabs.
 - Holidays are not handled.
-- Deployed and set up 2026-11-26 (server keys, ElevenLabs webhook). Not yet live:
-  publishing the tested draft (prompt v6, transfer rule) with Jan's yes, then live calls.
+- Deployed, set up and published in ElevenLabs 2026-11-26. Still to do: real calls (blocked until Zadarma verifies
+  the documents); only they prove that ElevenLabs holds the same secret as the server.
 - Setup steps: `docs/plans/ai-receptionist/webhook-setup.md`.
