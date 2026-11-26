@@ -35,6 +35,33 @@ montaweb.pe {
 
 	encode gzip zstd
 
+	# ---------- Maps diagnostico reports: /d/<token>/ ----------
+	# Private per-business reports, kept OUTSIDE the checkout and uploaded by
+	# scripts/maps-diagnostico/publish.mjs. Only the page, report.png and report.pdf are reachable:
+	# no listing, no markers, unknown token = 404. Not in sitemap; robots.txt must NOT block /d/
+	# (crawlers have to be able to read the noindex).
+	@reports path /d /d/*
+	handle @reports {
+		header {
+			X-Robots-Tag "noindex, nofollow"
+			Cache-Control "private, no-store"
+		}
+		@noSlash path_regexp noSlash ^/d/([A-Za-z0-9_-]{12})$
+		redir @noSlash /d/{re.noSlash.1}/ 308
+
+		@reportFile path_regexp ^/d/[A-Za-z0-9_-]{12}/(report\.png|report\.pdf)?$
+		handle @reportFile {
+			uri strip_prefix /d
+			# `root` as a subdirective: the site root stays in force for the 404 page.
+			file_server {
+				root /var/www/montaweb-reports
+			}
+		}
+		handle {
+			error 404
+		}
+	}
+
 	# ---------- 1. Nunca servir secretos, logs ni documentación ----------
 	@private path /api/config.php /api/config.example.php /api/leads /api/leads/* /api/*.log /montaweb-mail-config.php
 	respond @private 404

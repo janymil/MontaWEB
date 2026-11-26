@@ -213,9 +213,19 @@ test('render: every copy key is used and no placeholder is left', () => {
   for (const h of htmls) {
     assert.ok(!/\{(business|keyword|district|date|n|price|id|direction|rank)\}/.test(h), 'placeholder left unfilled');
     assert.match(h, /<meta name="robots" content="noindex">/);
-    assert.ok(!/https?:\/\/(?!wa\.me)/.test(h.replace(/xmlns="http:\/\/www\.w3\.org\/2000\/svg"/g, '')), 'external request in HTML');
+    assert.ok(!/https?:\/\/(?!wa\.me)/.test(h.replace(/<meta property="og:image"[^>]*>/, '').replace(/xmlns="http:\/\/www\.w3\.org\/2000\/svg"/g, '')), 'external request in HTML');
     assert.ok(!/google/i.test(h.replace(/KK_[a-z0-9_]+_/g, '')), 'vendor/brand name in HTML');
   }
+});
+
+test('render: link preview tags carry the title and an absolute image under /d/<id>/', () => {
+  const copy = marked();
+  copy.title = 'T "{business}"';
+  const h = render(copy, data({ id: '-h2qzzTest00', business: 'A & B' }));
+  assert.ok(h.includes('<meta property="og:title" content="T &quot;A &amp; B&quot;">'));
+  assert.ok(h.includes('<meta property="og:type" content="website">'));
+  assert.ok(h.includes('<meta property="og:image" content="https://montaweb.pe/d/-h2qzzTest00/report.png">'));
+  assert.match(h, /<meta name="robots" content="noindex">/);
 });
 
 test('render: unknown fields show a dash and copy is HTML-escaped', () => {

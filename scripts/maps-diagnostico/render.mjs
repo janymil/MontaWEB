@@ -143,6 +143,9 @@ export function render(copy, d) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>${f('title')}</title>
+<meta property="og:title" content="${f('title')}">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://montaweb.pe/d/${esc(d.id)}/report.png">
 <style>${CSS}</style>
 </head>
 <body>

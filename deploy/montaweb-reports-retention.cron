@@ -1,0 +1,3 @@
+# Maps diagnostico: delete a published report 90 days after its first upload. Install as /etc/cron.d/montaweb-reports-retention (daily 03:30 server time).
+# The path /var/www/montaweb-reports is hardcoded; it must match DEPLOY_REPORTS_DIR in scripts/maps-diagnostico/publish.mjs.
+30 3 * * * root find /var/www/montaweb-reports -mindepth 2 -maxdepth 2 -name .published -mtime +89 -exec sh -c 'for m; do d=$(dirname -- "$m"); mkdir -p /var/www/montaweb-reports/.removed && : > "/var/www/montaweb-reports/.removed/${d##*/}" && rm -rf -- "$d"; done' sh {} +
