@@ -68,3 +68,6 @@ docs/evidence/
 
 # Podcast generator cache (ElevenLabs renders)
 scripts/podcast/.cache/
+
+# Raw source videos (the site uses the re-encoded copies in images/video/)
+Videos/
