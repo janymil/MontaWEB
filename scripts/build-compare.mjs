@@ -8,7 +8,7 @@ import * as D from './compare/competitors.mjs';
 
 const root = new URL('../', import.meta.url);
 const SITE = 'https://montaweb.pe';
-const CSS_V = '20261125c';
+const CSS_V = '20261126a';
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const jsonLd = o => JSON.stringify(o).replace(/</g, '\\u003c');

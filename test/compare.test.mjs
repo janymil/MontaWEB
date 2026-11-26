@@ -128,3 +128,9 @@ test('scrolled sideways, the first column header stays over the row labels and n
   // without a positioned wrapper the hidden "fuente" text widens the whole page
   assert.match(css, /\.cmp-table-wrap \{ position:relative;/);
 });
+
+test('the page hero clears the fixed site header (these pages do not load blog.css)', () => {
+  const css = read('css/compare.css');
+  assert.match(css, /\.compare-page \.cmp-head \{ padding:1[2-9]\dpx 0/);
+  for (const [f, html] of Object.entries(pages)) assert.match(html, /<body[^>]*class="[^"]*compare-page/, f);
+});

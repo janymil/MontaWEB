@@ -1,6 +1,9 @@
 /* /comparar pages (scripts/build-compare.mjs). Editorial design tokens come from site.css. */
-.compare-page .cmp-head { padding-bottom:48px; }
-.compare-page .cmp-head h1 { max-width:14ch; }
+/* page hero: clears the fixed site header (blog.css is not loaded on these pages) */
+.compare-page .cmp-head { padding:170px 0 56px; border-bottom:1px solid var(--ink); background-color:var(--paper); background-image:linear-gradient(rgba(24,24,22,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(24,24,22,.04) 1px,transparent 1px); background-size:65px 65px; }
+.compare-page .cmp-head h1 { margin:0; max-width:14ch; font-size:clamp(40px,6.5vw,88px); line-height:.95; font-weight:800; text-wrap:balance; }
+.compare-page .cmp-head p { margin:24px 0 0; max-width:62ch; font-size:19px; color:var(--home-muted); text-wrap:pretty; }
+@media (max-width: 760px) { .compare-page .cmp-head { padding:130px 0 40px; } .compare-page .cmp-head p { font-size:17px; } }
 .cmp-crumbs { margin:0 0 22px; font:500 13px/1.4 var(--font-mono); letter-spacing:.04em; text-transform:uppercase; color:var(--home-muted); }
 .cmp-crumbs a { color:inherit; }
 .cmp-section { padding:64px 0 0; }
