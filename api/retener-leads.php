@@ -51,6 +51,20 @@ foreach (glob($leadDir . '/brief-*.json') ?: [] as $path) {
     }
 }
 
+// Recepcionista IA: leads de llamadas, purga a los 90 días (Ley 29733, minimización).
+$receptionistCutoff = $now->modify('-90 days')->getTimestamp();
+$deletedReceptionist = 0;
+foreach (glob($leadDir . '/rcp-*.json') ?: [] as $path) {
+    $record = json_decode((string) @file_get_contents($path), true);
+    $created = is_array($record) ? strtotime((string) ($record['fecha'] ?? '')) : false;
+    if ($created === false) {
+        $created = @filemtime($path);
+    }
+    if ($created !== false && $created <= $receptionistCutoff && @unlink($path)) {
+        $deletedReceptionist++;
+    }
+}
+
 foreach (glob($leadDir . '/rl-*.json') ?: [] as $path) {
     $modified = @filemtime($path);
     if ($modified !== false && $modified <= $rateLimitCutoff && @unlink($path)) {
