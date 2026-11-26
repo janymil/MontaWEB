@@ -81,3 +81,10 @@ test('homepage calculator no longer shows an unsourced "otras agencias" price ra
   assert.doesNotMatch(app, /Ahorras entre/);
   assert.match(app, /\/comparar/);
 });
+
+test('scrolled sideways, the first column header stays over the row labels and nothing leaks out of the table box', () => {
+  const css = read('css/compare.css');
+  assert.match(css, /\.cmp-table thead th:first-child \{[^}]*position:sticky; inset-inline-start:0;/);
+  // without a positioned wrapper the hidden "fuente" text widens the whole page
+  assert.match(css, /\.cmp-table-wrap \{ position:relative;/);
+});
