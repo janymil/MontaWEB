@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "node --test test/*.test.mjs"
+    "test": "node --test test/*.test.mjs",
+    "deploy:status": "bash scripts/deploy.sh status",
+    "deploy": "bash scripts/deploy.sh deploy"
   },
   "keywords": [],
   "author": "",

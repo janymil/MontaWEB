@@ -63,3 +63,7 @@ docs/research/lima-web-census/private/
 
 # graft's local graph cache — regenerable, not committed (run `graft build`).
 /graft/
+docs/evidence/
+
+# Podcast generator cache (ElevenLabs renders)
+scripts/podcast/.cache/

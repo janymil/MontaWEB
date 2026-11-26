@@ -8,6 +8,7 @@ Delete a lesson only when the thing that caused it no longer exists.
 
 ---
 
+- 2026-11-25 — deploy only via `scripts/deploy.sh` (`npm run deploy:status` / `npm run deploy`); it locks, shows what goes live, verifies the origin and logs. Never hand-run push + server pull.
 - 2026-11-25 — tests pinned exact `?v=` cache-bust strings, so every legitimate version bump broke them; they now match `\?v=\d{8}[a-z]?`. Also: the in-app Browser pane refuses localhost here and headless Chrome screenshots skip `.reveal-item` sections; check pages in Claude in Chrome at 127.0.0.1 instead.
 - 2026-11-24 — research data under `docs/` was publicly downloadable because Caddy serves the whole checkout; `/docs` and `/scripts` are now 404 via the `@private` matcher in `/etc/caddy/Caddyfile` (backup `.bak-*`). Anything new under the web root is public unless that matcher covers it.
 - 2026-11-24 — the 28 s 480×854 promo re-encoded *smaller* as H.264/MP4 (1.20 MB, CRF 26) than as VP9/WebM (1.44 MB, CRF 34), so "WebM is always the light one" is false at this size; encode both, measure, and keep `<source>` order WebM→MP4 for browser support rather than for bytes.
@@ -17,3 +18,4 @@ Delete a lesson only when the thing that caused it no longer exists.
 - 2026-11-23 — `clinica.html` and `restaurante.html` are immediate redirects, but the shared page test required a scroll button on them; detect redirect-only documents and verify their destination instead of forcing unused UI onto them.
 - 2026-11-07 — "add a go-up button" was already built on every live page by `initBackToTop()` in `js/app.js`; the only pages without one were the three orphan Google guides. Grep for the behaviour before building it, not just for the markup.
 - 2026-11-07 — every page pins `js/app.js?v=2026` and Caddy serves `/js/*` with a 24 h TTL, so a fixed script keeps being served from cache. Bump `?v=` whichever shared js/css file you touch. The `update-cache-version.py` the README mentions no longer exists.
+- 2026-11-25: Local port 8765 belongs to another app (returns "Not Found" JSON); preview MontaWeb with the `montaweb-static-8781` launch config. Nubix (nubix.pe) animates prices from 0, so headless captures show "S/ 0": check `data-count` in the source and save a normal-browser screenshot.
