@@ -41,7 +41,7 @@
         }
         input.removeAttribute('aria-invalid');
         status.textContent = '';
-        const text = `Hola, yo hice mi web con MontaWeb y me fue bien. Si necesitas una para tu negocio, escríbeles desde este enlace y te arman gratis tu perfil de Google Mi Negocio: ${pageUrl(own)}`;
+        const text = `Hola, yo contraté a MontaWeb y me fue bien. Si necesitas una web para tu negocio, escríbeles desde este enlace y, si contratas algo desde S/ 99, te arman gratis tu perfil de Google Mi Negocio: ${pageUrl(own)}`;
         window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
     });
 })();

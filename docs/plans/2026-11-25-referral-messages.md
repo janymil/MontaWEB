@@ -10,9 +10,9 @@ Before sending: give each client a code (business name + 2 digits, e.g. EDEN24),
 
 ## 1. Announcement
 
-> Hola [Nombre], ¿cómo va todo con la web? Te escribo porque empezamos un programa de referidos y pensé en ti.
+> Hola [Nombre], ¿cómo va todo con el negocio? Te escribo porque empezamos un programa de referidos y pensé en ti.
 >
-> Si conoces a alguien con negocio que necesite una web, pásale la voz. Cuando contrate, te damos S/ 20 por Yape o S/ 40 de descuento en la renovación de tu hosting, como prefieras. Y a ese negocio le armamos gratis su perfil de Google Mi Negocio.
+> Si conoces a alguien con negocio que necesite una web, pásale la voz. Cuando contrate un servicio desde S/ 99, te damos S/ 20 por Yape o S/ 40 de descuento en la renovación de tu hosting, como prefieras. Y a ese negocio le armamos gratis su perfil de Google Mi Negocio.
 >
 > Tu código es [CÓDIGO]. Este es tu enlace para compartir: https://montaweb.pe/referidos?ref=[CÓDIGO]
 >
@@ -20,7 +20,7 @@ Before sending: give each client a code (business name + 2 digits, e.g. EDEN24),
 
 ## 2. Follow-up (about 10 days later, only if there was no reply or no referral)
 
-> Hola [Nombre], te recuerdo lo de los referidos: si alguien te pregunta quién te hizo la web, mándale este enlace https://montaweb.pe/referidos?ref=[CÓDIGO]. Cada negocio que contrate te da S/ 20 o S/ 40 para tu hosting.
+> Hola [Nombre], te recuerdo lo de los referidos: si alguien busca quién le haga una web, mándale este enlace https://montaweb.pe/referidos?ref=[CÓDIGO]. Cada negocio que contrate un servicio desde S/ 99 te da S/ 20 o S/ 40 para tu hosting.
 
 ## 3. When a referral pays (template for Jan)
 

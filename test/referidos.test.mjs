@@ -102,3 +102,16 @@ test('referidos: in the sitemap and in every footer', () => {
         assert.match(html, /<h3>Explora<\/h3>.*href="\/referidos"/, f);
     }
 });
+
+test('referidos: every offer of the free profile states the S/ 99 minimum', () => {
+    const msg = read('docs/plans/2026-11-25-referral-messages.md').split('## 1.')[1].split('## 2.')[0];
+    const offers = [
+        ...page.match(/<meta (name="description"|property="og:description")[^>]*>/g),
+        ...(page.match(/<(p|li)[^>]*>[^\n]*?<\/(p|li)>/g) || []).filter(t => /Google Mi Negocio/.test(t) && /gratis|sin costo/.test(t)),
+        ...read('js/referidos.js').split('\n').filter(l => l.includes('Google Mi Negocio')),
+        ...read('llms.txt').split('\n').filter(l => l.includes('[Referidos]')),
+        ...msg.split('\n').filter(l => l.includes('Google Mi Negocio')),
+    ];
+    assert.ok(offers.length >= 8, `found ${offers.length}`);
+    for (const offer of offers) assert.match(offer, /S\/ 99/, offer);
+});
