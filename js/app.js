@@ -169,7 +169,7 @@ function initFloatingWidgets() {
         btn.type = 'button';
         btn.id = 'calcFloatBtn';
         btn.className = 'calc-btn-float';
-        btn.innerHTML = '<i class="fas fa-calculator"></i><span>Comparar Precios</span>';
+        btn.innerHTML = '<i class="fas fa-calculator"></i><span>Calcular precio</span>';
         document.body.appendChild(btn);
     }
 }
@@ -177,23 +177,23 @@ function initFloatingWidgets() {
 /* ---------- 9. Price comparator ---------- */
 const MW_PRICES = {
     types: {
-        menuqr:    { name: 'Menú Digital QR', min: 150, max: 450, ours: 69 },
-        landing:   { name: 'Landing Page', min: 550, max: 1400, ours: 50 },
-        catalogo:  { name: 'Catálogo WhatsApp', min: 120, max: 400, ours: 59 },
-        simple:    { name: 'Web Simple Profesional', min: 850, max: 2200, ours: 99 },
-        redesign:  { name: 'Rediseño Web Moderno', min: 900, max: 2500, ours: 199 },
-        corporate: { name: 'Web Corporativa', min: 1500, max: 3800, ours: 249 },
-        ecommerce: { name: 'Tienda Starter', min: 2400, max: 6000, ours: 299 },
-        tiendapro: { name: 'Tienda Pro con pasarela', min: 3500, max: 8500, ours: 499 },
-        custom:    { name: 'Proyecto a Medida', min: 2800, max: 7500, ours: 399 }
+        menuqr:    { name: 'Menú Digital QR', ours: 69 },
+        landing:   { name: 'Landing Page', ours: 50 },
+        catalogo:  { name: 'Catálogo WhatsApp', ours: 59 },
+        simple:    { name: 'Web Simple Profesional', ours: 99 },
+        redesign:  { name: 'Rediseño Web Moderno', ours: 199 },
+        corporate: { name: 'Web Corporativa', ours: 249 },
+        ecommerce: { name: 'Tienda Starter', ours: 299 },
+        tiendapro: { name: 'Tienda Pro con pasarela', ours: 499 },
+        custom:    { name: 'Proyecto a Medida', ours: 399 }
     },
     addons: {
-        seo:         { name: 'SEO Básico', comp: 250, ours: 0 },
-        content:     { name: 'Creación de Contenido', comp: 300, ours: 40 },
-        hosting:     { name: 'Hosting + SSL', comp: 220, ours: 0 },
-        gmb:         { name: 'Google Mi Negocio', comp: 280, ours: 79 },
-        maintenance: { name: 'Soporte Mensual', comp: 250, ours: 49 },
-        analytics:   { name: 'WhatsApp + Analytics', comp: 150, ours: 0 }
+        seo:         { name: 'SEO Básico', ours: 0 },
+        content:     { name: 'Creación de Contenido', ours: 40 },
+        hosting:     { name: 'Hosting + SSL', ours: 0 },
+        gmb:         { name: 'Google Mi Negocio', ours: 79 },
+        maintenance: { name: 'Soporte Mensual', ours: 49 },
+        analytics:   { name: 'WhatsApp + Analytics', ours: 0 }
     },
     timelines: {
         normal:   { mult: 1.0 },
@@ -211,7 +211,7 @@ function initCalculator() {
         <div class="calc-modal__overlay" id="calcOverlay"></div>
         <div class="calc-modal__box">
             <div class="calc-modal__head">
-                <h3><i class="fas fa-scale-balanced"></i>Comparador de Precios Web</h3>
+                <h3><i class="fas fa-scale-balanced"></i>Calculadora de precio</h3>
                 <button class="calc-close" id="calcClose" aria-label="Cerrar"><i class="fas fa-times"></i></button>
             </div>
             <div class="calc-field">
@@ -221,7 +221,7 @@ function initCalculator() {
                     <option value="menuqr">Menú Digital QR (S/ 69)</option>
                     <option value="landing">Landing Page de Alta Conversión (S/ 50)</option>
                     <option value="catalogo">Catálogo WhatsApp (S/ 59)</option>
-                    <option value="simple">Web Simple Profesional 1-3 secciones (S/ 99)</option>
+                    <option value="simple">Web Simple Profesional 1-3 páginas (S/ 99)</option>
                     <option value="redesign">Rediseño de Web Existente (S/ 199)</option>
                     <option value="corporate">Web Corporativa / Empresarial (S/ 249)</option>
                     <option value="ecommerce">Tienda Starter con Yape y Plin (S/ 299)</option>
@@ -249,12 +249,10 @@ function initCalculator() {
                 </select>
             </div>
             <div class="calc-results" id="calcResults" style="display:none;">
-                <div class="calc-vs">
-                    <div class="calc-vs__side"><small>Otras agencias</small><div class="val" id="calcCompetitor"></div><small style="text-transform:none;letter-spacing:0;">+ cobros extras</small></div>
-                    <div class="calc-vs__divider">VS</div>
-                    <div class="calc-vs__side calc-vs__side--ours"><small>Precio MontaWeb</small><div class="val" id="calcOurs"></div><small style="text-transform:none;letter-spacing:0;">todo incluido</small></div>
+                <div class="calc-vs calc-vs--single">
+                    <div class="calc-vs__side calc-vs__side--ours"><small>Precio MontaWeb</small><div class="val" id="calcOurs"></div><small style="text-transform:none;letter-spacing:0;">precio final en soles</small></div>
                 </div>
-                <div class="calc-save"><i class="fas fa-piggy-bank"></i><span id="calcSaveText"></span></div>
+                <p class="calc-save"><i class="fas fa-scale-balanced"></i><span>¿Quieres ver lo que cobran otros proveedores de Lima? <a href="/comparar">Compara precios con fuente y fecha</a>.</span></p>
                 <a href="#" id="calcWhatsapp" class="btn btn--whatsapp btn--block" target="_blank"><i class="fab fa-whatsapp"></i> Solicitar este presupuesto por WhatsApp</a>
                 <button type="button" class="btn btn--ghost btn--block" id="calcReset" style="margin-top:.7rem;"><i class="fas fa-rotate-left"></i> Calcular otra combinación</button>
             </div>
@@ -280,20 +278,18 @@ function initCalculatorLogic() {
         const results = document.getElementById('calcResults');
         if (!type) { results.style.display = 'none'; return; }
         const p = MW_PRICES.types[type];
-        let min = p.min, max = p.max, ours = p.ours;
+        let ours = p.ours;
         const chosen = [];
         document.querySelectorAll('#calcModal .calc-checks input:checked').forEach(cb => {
             const a = MW_PRICES.addons[cb.value];
-            if (a) { min += a.comp; max += a.comp; ours += a.ours; chosen.push(a.name); }
+            if (a) { ours += a.ours; chosen.push(a.name); }
         });
         const tl = document.getElementById('calcTimeline').value;
         const mult = MW_PRICES.timelines[tl] ? MW_PRICES.timelines[tl].mult : 1;
-        min = Math.round(min * mult); max = Math.round(max * mult); ours = Math.round(ours * mult);
+        ours = Math.round(ours * mult);
 
-        document.getElementById('calcCompetitor').textContent = `S/ ${min.toLocaleString()} - S/ ${max.toLocaleString()}`;
         document.getElementById('calcOurs').textContent = `S/ ${ours.toLocaleString()}`;
-        document.getElementById('calcSaveText').textContent = `¡Ahorras entre S/ ${Math.max(0, min - ours).toLocaleString()} y S/ ${Math.max(0, max - ours).toLocaleString()}!`;
-        const msg = `Hola MontaWeb, usé el Comparador de Precios y quiero cotizar:\n• Proyecto: ${p.name}\n• Extras: ${chosen.join(', ') || 'Estándar'}\n• Precio estimado MontaWeb: S/ ${ours}`;
+        const msg = `Hola MontaWeb, usé la calculadora de precios y quiero cotizar:\n• Proyecto: ${p.name}\n• Extras: ${chosen.join(', ') || 'Estándar'}\n• Precio estimado MontaWeb: S/ ${ours}`;
         document.getElementById('calcWhatsapp').href = `https://wa.me/${MW.wa}?text=${encodeURIComponent(msg)}`;
         results.style.display = 'block';
     };
@@ -328,13 +324,13 @@ function initQuiz() {
     function showResult(st) {
         let rec;
         if (st.goal === 'store') {
-            rec = { title: 'Tienda Starter', price: 'S/ 299 • pago único', desc: 'Catálogo de hasta 20 productos con carrito, pedidos y pagos por Yape/Plin directo a tu WhatsApp, diseño premium y hosting gratis por 6 meses. Si necesitas más catálogo o cobros con tarjeta, existe Tienda Pro (S/ 499).', plan: 'Tienda Starter' };
+            rec = { title: 'Tienda Starter', price: 'S/ 299 • pago único', desc: 'Catálogo de hasta 20 productos con carrito, pedidos y pagos por Yape/Plin directo a tu WhatsApp, diseño premium y hosting gratis el primer año. Si necesitas más catálogo o cobros con tarjeta, existe Tienda Pro (S/ 499).', plan: 'Tienda Starter' };
         } else if (st.goal === 'campaign') {
             rec = { title: 'Landing Page de Alta Conversión', price: 'desde S/ 50 • pago único', desc: 'Página de aterrizaje veloz y persuasiva, perfecta para campañas de Facebook, Instagram o TikTok Ads con embudo directo a WhatsApp.', plan: 'Landing Page' };
         } else if (st.situation === 'redesign') {
             rec = { title: 'Rediseño Web Moderno', price: 'desde S/ 199 • pago único', desc: 'Renovamos tu sitio actual: nuevo diseño UI/UX, migración segura del contenido, velocidad extrema y mejor conversión a WhatsApp.', plan: 'Rediseño Web' };
         } else {
-            rec = { title: 'Web Simple Profesional', price: 'S/ 99 • pago único', desc: 'Hasta 3 secciones modernas, botón directo a WhatsApp, SEO básico, SSL y hosting gratis por 6 meses. La favorita de los negocios peruanos.', plan: 'Web Simple Profesional' };
+            rec = { title: 'Web Simple Profesional', price: 'S/ 99 • pago único', desc: 'Hasta 3 páginas modernas, botón directo a WhatsApp, SEO básico, SSL y hosting gratis el primer año. La favorita de los negocios peruanos.', plan: 'Web Simple Profesional' };
         }
         if (st.situation === 'maps') rec.desc += ' Además, potencia tu zona con Google Mi Negocio (+S/ 79).';
         if (st.content === 'need') rec.desc += ' Incluye la Creación de Contenido (+S/ 40) si no tienes textos ni fotos.';

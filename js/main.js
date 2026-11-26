@@ -501,7 +501,7 @@ function initProjectQuiz() {
     function showQuizRecommendation(st) {
         let planName = 'Web Simple Profesional';
         let basePrice = 99;
-        let desc = 'Ideal para presentar tu negocio con hasta 3 secciones modernas, botón directo a WhatsApp, SEO básico y hosting gratis por 6 meses.';
+        let desc = 'Ideal para presentar tu negocio con hasta 3 secciones modernas, botón directo a WhatsApp, SEO básico y hosting gratis el primer año.';
 
         if (st.goal === 'campaign') {
             planName = 'Landing Page de Conversión';

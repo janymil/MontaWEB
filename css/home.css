@@ -217,6 +217,8 @@ html { overflow-x:hidden; }
 .plans-note { display:flex; align-items:center; justify-content:space-between; margin-top:25px; font-size:10px; }
 .plans-note > span { color:var(--home-muted); }
 .plans-note button { padding:0 0 3px; border:0; border-bottom:1px solid var(--ink); background:none; cursor:pointer; font-size:11px; font-weight:700; }
+.plans-note a { padding:0 0 3px; border-bottom:1px solid var(--ink); color:var(--ink); font-size:11px; font-weight:700; text-decoration:none; }
+.plans-note button + a { margin-inline-start:18px; }
 .plans-note button span { margin-left:8px; }
 
 .process-home { background:var(--cream); }

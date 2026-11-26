@@ -524,3 +524,5 @@ body.home-page a:focus-visible,body.home-page button:focus-visible,body.home-pag
 /* Privacy page: reopen the cookie consent choice */
 .consent-reset { font:inherit; font-weight:700; color:var(--ink); background:transparent; border:1px solid var(--ink); border-radius:999px; padding:6px 14px; margin-left:4px; cursor:pointer; }
 .consent-reset:hover { background:var(--ink); color:var(--cream); }
+.calc-vs--single { grid-template-columns:1fr; }
+.calc-save a { color:inherit; font-weight:700; text-decoration:underline; }

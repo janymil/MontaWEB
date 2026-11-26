@@ -7,7 +7,7 @@ Precios y condiciones:
 - Precios con pago único: Landing Page desde S/ 50, Web Simple Profesional S/ 99, Rediseño Web S/ 199, Web Corporativa S/ 249, Tienda Starter desde S/ 299, Tienda Pro S/ 499.
 - Otros servicios: Catálogo WhatsApp S/ 59, Menú Digital QR S/ 69, Google Mi Negocio S/ 79, Creación de Contenido S/ 40 por página, Correo Corporativo S/ 49 al año.
 - Soporte opcional: Soporte Básico S/ 49 al mes, Soporte Pro S/ 99 al mes, cambio puntual S/ 25.
-- Cada web incluye 6 meses de hosting y SSL gratis. Desde el segundo año, hosting y SSL cuestan S/ 120 al año. Dominio propio: .com S/ 50 y .pe S/ 65 al año.
+- Cada web incluye el primer año de hosting y SSL gratis. Desde el segundo año, hosting y SSL cuestan S/ 120 al año. Dominio propio: .com S/ 50 y .pe S/ 65 al año.
 - Forma de pago: 50 % para empezar y 50 % cuando el cliente aprueba la web terminada.
 - Plazos: landing page de 2 a 4 días hábiles; web simple y rediseño de 3 a 7 días hábiles.
 - Atendemos a todo el Perú, por WhatsApp: +51 965 403 196.
@@ -32,4 +32,5 @@ Precios y condiciones:
 ## Optional
 
 - [Blog](https://montaweb.pe/blog): estudios y guías para negocios de Lima
+- [Comparar precios](https://montaweb.pe/comparar): precios publicados de MontaWeb y seis proveedores de páginas web en Lima (Bersoft, Hosting Perú, KOM, Kozma 360, Nubix, TalentuPeru), con fuente y fecha de revisión
 - [Guía de Google Mi Negocio](https://montaweb.pe/google-mi-negocio)

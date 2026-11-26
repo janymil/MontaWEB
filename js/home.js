@@ -23,7 +23,7 @@ function recommendProject(answers) {
     const plans = {
         presence: {
             title: 'Web Simple Profesional', price: 'Desde S/ 99 · pago único',
-            description: 'Hasta 3 secciones con diseño personalizado, WhatsApp, Google Maps, SEO básico, SSL y hosting gratis por 6 meses.'
+            description: 'Hasta 3 secciones con diseño personalizado, WhatsApp, Google Maps, SEO básico, SSL y hosting gratis el primer año.'
         },
         campaign: {
             title: 'Landing Page', price: 'Desde S/ 50 · pago único',
