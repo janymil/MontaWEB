@@ -73,3 +73,6 @@ scripts/podcast/.cache/
 Videos/
 # Maps diagnostico: business phones and raw data (Ley 29733)
 docs/research/maps-diagnostico/private/
+
+# Radio test render (never commit)
+images/audio/_test-*.mp3

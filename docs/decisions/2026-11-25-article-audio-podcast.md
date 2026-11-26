@@ -1,5 +1,5 @@
 # Blog studies get a two-host audio version made with ElevenLabs
-Date: 2026-11-25 · Status: decided
+Date: 2026-11-25 · Status: decided (radio format for later articles: 2026-11-26-montaweb-radio-audio-format.md)
 
 ## Context
 Jan wanted an audio version of the Lima web study, NotebookLM-style, with a radio feel.
