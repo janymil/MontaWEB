@@ -5,8 +5,8 @@ set -euo pipefail
 HOST="${DEPLOY_HOST:-washington}"
 SPATH="${DEPLOY_PATH:-/var/www/montaweb}"
 SITE_HOST="${DEPLOY_SITE:-montaweb.pe}"
-SLOG="/var/www/montaweb-deploy.log"
-SLOCK="/tmp/montaweb-deploy.lock"
+SLOG="${DEPLOY_LOG:-/var/www/montaweb-deploy.log}"
+SLOCK="${DEPLOY_LOCK:-/tmp/montaweb-deploy.lock}"
 NOTE="${DEPLOY_NOTE:-}"
 LOCK_MAX_AGE=1800
 
@@ -32,7 +32,7 @@ usage() {
   cat <<USAGE
 Usage: scripts/deploy.sh [status|deploy [--yes]|rollback <sha>|help]
   status     read-only report of everything that could be forgotten (default)
-  deploy     guarded deploy: lock, show commits, push origin main, ff-only pull on server, verify, log
+  deploy     guarded deploy: lock, show commits, push origin main, ff-only update on server (backs up identical copies, stops on differing ones), verify, log
   rollback   print safe rollback instructions (does nothing)
 Env: DEPLOY_HOST (default washington), DEPLOY_PATH (default /var/www/montaweb), DEPLOY_NOTE (session note)
 USAGE
@@ -167,6 +167,86 @@ check_cache_bust() {
   if [ "$bad" = 0 ]; then ok "?v= cache-busting looks bumped"; fi
 }
 
+# "blob<TAB>path" for every path the commits base..main change (all-zero blob = deleted)
+incoming_files() {
+  gq diff --raw --no-abbrev --no-renames "$1" main |
+    awk -F'\t' '{ split($1, m, " "); print m[4] "\t" $2 }'
+}
+
+# Runs ON THE SERVER (sent over ssh). stdin: incoming_files output.
+# A server copy the update would overwrite is harmless only if it already equals the incoming file.
+# mode check: report only. mode apply: back up identical copies, clear them, ff-only to $target.
+# Exit 3 = some copy differs (nothing touched).
+server_pull() {
+  local dir="$1" mode="$2" target="$3" bk="$4"
+  local blob f st same=() diff=()
+  cd "$dir" || return 1
+  if [ "$mode" = apply ]; then
+    git fetch -q origin main </dev/null || return 1
+    [ "$(git rev-parse FETCH_HEAD)" = "$target" ] || { echo "origin/main moved during the deploy; run it again."; return 1; }
+  fi
+  while IFS=$'\t' read -r blob f; do
+    [ -n "$f" ] || continue
+    st="$(git status --porcelain --untracked-files=all --ignored --no-renames -- ":(literal)$f" </dev/null)" || return 1
+    [ -n "$st" ] || continue
+    if [ -f "$f" ] && [ ! -L "$f" ] && [ "$(git hash-object -- "$f" </dev/null)" = "$blob" ] && staged_matches "${st:0:1}" "$blob" "$f"; then
+      same+=("$f")
+    else
+      diff+=("$f")
+    fi
+  done
+  if [ "${#diff[@]}" -gt 0 ]; then
+    printf 'DIFF %s\n' "${diff[@]}"
+    return 3
+  fi
+  if [ "${#same[@]}" -gt 0 ]; then printf 'SAME %s\n' "${same[@]}"; fi
+  [ "$mode" = apply ] || return 0
+
+  if [ "${#same[@]}" -gt 0 ]; then
+    mkdir "$bk" || return 1
+    for f in "${same[@]}"; do
+      mkdir -p "$bk/$(dirname "$f")" && cp -p -- "$f" "$bk/$f" || return 1
+    done
+    echo "backup: $bk"
+    # if anything below fails or the connection drops, put the files back
+    trap 'for f in "${same[@]}"; do mkdir -p "$(dirname "$f")"; cp -p -- "$bk/$f" "$f"; done; echo "restored server copies from $bk"' EXIT
+    trap 'exit 1' HUP INT TERM
+    for f in "${same[@]}"; do
+      if git cat-file -e "HEAD:$f" 2>/dev/null; then
+        git checkout -q HEAD -- ":(literal)$f" </dev/null || exit 1
+      else
+        git rm -q --cached --ignore-unmatch -- ":(literal)$f" </dev/null || exit 1
+        rm -f -- "$f" || exit 1
+      fi
+    done
+  fi
+  git merge --ff-only "$target" </dev/null || exit 1
+  trap - EXIT HUP INT TERM
+}
+
+# true unless something else than the incoming content is staged ($1 = index status letter)
+staged_matches() {
+  case "$1" in " "|"?"|"!") return 0;; esac
+  [ "$(git ls-files -s -- ":(literal)$3" </dev/null | awk '{ print $2 }')" = "$2" ]
+}
+
+run_server_pull() {
+  local mode="$1" base="$2" bk="$3"
+  {
+    declare -f staged_matches server_pull
+    printf "server_pull %q %q %q %q <<'INCOMING'\n" "$SPATH" "$mode" "$(git rev-parse main)" "$bk"
+    incoming_files "$base"
+    echo INCOMING
+  } | sshc "bash -s" 2>&1 | tr -d '\r'
+}
+
+differ_help() {
+  printf '%s\n' "$1"
+  case "$1" in
+    *"DIFF "*) echo "DIFF = the server copy is not the same as the incoming file. Compare and resolve by hand; never stash or reset there.";;
+  esac
+}
+
 VERIFY="?"
 verify() {
   local base="$1" files paths="" f
@@ -234,6 +314,16 @@ cmd_deploy() {
   gq diff --stat "$sh..main" | tail -n 60
   check_cache_bust "$sh"
 
+  local pre
+  if ! pre="$(run_server_pull check "$sh" -)"; then
+    differ_help "$pre"
+    die "server copies block this deploy (or the check failed). Nothing pushed, server unchanged."
+  fi
+  if [ -n "$pre" ]; then
+    h "Server copies identical to incoming files (will be backed up, then replaced)"
+    printf '%s\n' "$pre" | sed 's/^SAME /   /'
+  fi
+
   if [ "$yes" = 0 ]; then
     [ -t 0 ] || die "no terminal for confirmation; use --yes."
     local ans
@@ -243,12 +333,13 @@ cmd_deploy() {
 
   h "Push origin main"
   git push origin main || die "push failed (never forced). Nothing deployed."
-  h "Server pull --ff-only"
+  h "Server update (ff-only)"
   local perr
-  if ! perr=$(sshc "git -C '$SPATH' pull --ff-only origin main" 2>&1); then
-    printf '%s\n' "$perr"
+  if ! perr="$(run_server_pull apply "$sh" "$SPATH-backup-$(date +%Y%m%d-%H%M%S)")"; then
+    differ_help "$perr"
     die "server pull failed. Commits ARE on origin but NOT deployed. Not fixing automatically; inspect the server by hand."
   fi
+  printf '%s\n' "$perr" | grep '^backup: ' || true
   printf '%s\n' "$perr" | tail -n 5
   local nh line
   nh="$(server_head)"
