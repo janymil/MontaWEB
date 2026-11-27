@@ -6,6 +6,8 @@
  * 2. Evita duplicados por conversation_id.
  * 3. Guarda el lead mínimo en /api/leads/rcp-<conversation_id>.json (no público, ver Caddyfile).
  * 4. Lo envía por correo a la dirección de contacto.
+ * 5. Después de responder, envía una copia de cada petición con firma válida a rcp-staging
+ *    (modo sombra). Si ese envío falla, la respuesta no cambia.
  *
  * Secreto: NUNCA en el repo. Se lee de api/config.php, de montaweb-mail-config.php
  * (clave 'elevenlabs_webhook_secret') o de la variable de entorno ELEVENLABS_WEBHOOK_SECRET.
@@ -18,6 +20,7 @@ const MW_RCP_DIR = __DIR__ . '/leads';
 const MW_RCP_DEFAULT_TO = 'hola@montaweb.pe';
 const MW_RCP_MAX_BODY = 2097152;   // 2 MB: el payload trae la transcripción completa
 const MW_RCP_TOLERANCE = 1800;     // 30 min de margen en la marca de tiempo
+const MW_RCP_SHADOW_URL = 'https://rcp-staging.montaweb.pe/hooks/elevenlabs/post-call?shadow=1';
 
 function mw_rcp_clean($value, int $max = 400): string
 {
@@ -210,6 +213,56 @@ function mw_rcp_process(string $body, string $sigHeader, array $config, string $
     return [200, ['ok' => true]];
 }
 
+/**
+ * Shadow copy of a verified request. $sender(string $url, string $body, array $headers): bool
+ * Call it only after the response has been sent. It never throws and never prints.
+ */
+function mw_rcp_shadow_forward(string $body, string $sigHeader, array $config, callable $sender, int $now): void
+{
+    $secret = (string) ($config['elevenlabs_webhook_secret'] ?? '');
+    if (strlen($body) > MW_RCP_MAX_BODY || !mw_rcp_verify_signature($body, $sigHeader, $secret, $now)) {
+        return;
+    }
+    try {
+        $sent = $sender(MW_RCP_SHADOW_URL, $body, [
+            'Content-Type: application/json',
+            'ElevenLabs-Signature: ' . $sigHeader,
+        ]);
+    } catch (\Throwable $e) {
+        $sent = false;
+    }
+    if (!$sent) {
+        error_log('[MontaWeb receptionist] reenvío en sombra fallido');
+    }
+}
+
+function mw_rcp_shadow_send(string $url, string $body, array $headers): bool
+{
+    if (!function_exists('curl_init')) {
+        return false;
+    }
+    $curl = curl_init($url);
+    if ($curl === false) {
+        return false;
+    }
+    $ready = curl_setopt_array($curl, [
+        CURLOPT_POST           => true,
+        CURLOPT_POSTFIELDS     => $body,
+        CURLOPT_HTTPHEADER     => array_merge($headers, ['Expect:']),
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_CONNECTTIMEOUT => 2,
+        CURLOPT_TIMEOUT        => 4,
+        CURLOPT_SSL_VERIFYPEER => true,
+        CURLOPT_SSL_VERIFYHOST => 2,
+        CURLOPT_FOLLOWLOCATION => false,
+    ]);
+    if (!$ready || curl_exec($curl) === false) {
+        return false;
+    }
+    $status = (int) curl_getinfo($curl, CURLINFO_RESPONSE_CODE);
+    return $status >= 200 && $status < 300;
+}
+
 function mw_rcp_load_config(): array
 {
     $paths = [
@@ -303,15 +356,12 @@ function mw_rcp_main(): void
         echo '{"ok":false}';
         return;
     }
+    $sigHeader = (string) ($_SERVER['HTTP_ELEVENLABS_SIGNATURE'] ?? '');
+    $config = [];
+    $now = time();
     try {
-        [$status, $out] = mw_rcp_process(
-            $body,
-            (string) ($_SERVER['HTTP_ELEVENLABS_SIGNATURE'] ?? ''),
-            mw_rcp_load_config(),
-            MW_RCP_DIR,
-            'mw_rcp_send_mail',
-            time()
-        );
+        $config = mw_rcp_load_config();
+        [$status, $out] = mw_rcp_process($body, $sigHeader, $config, MW_RCP_DIR, 'mw_rcp_send_mail', $now);
     } catch (\Throwable $e) {
         error_log('[MontaWeb receptionist] error interno');
         $status = 500;
@@ -319,6 +369,11 @@ function mw_rcp_main(): void
     }
     http_response_code($status);
     echo json_encode($out);
+    // Answer first, so the shadow copy cannot delay ElevenLabs.
+    if (function_exists('fastcgi_finish_request')) {
+        fastcgi_finish_request();
+    }
+    mw_rcp_shadow_forward($body, $sigHeader, $config, 'mw_rcp_shadow_send', $now);
 }
 
 if (!defined('MW_RCP_NO_RUN')) {

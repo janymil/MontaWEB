@@ -167,6 +167,66 @@ check('old stored lead without producto is re-sent', $s === 200 && count($sent) 
 check('old stored lead renders without warnings', $warnings === []);
 check('old stored lead shows Producto as not indicated', str_contains(end($sent)[2], "Producto: (no indicado)\n"));
 
+// --- shadow forwarding (injected sender, no network)
+$calls = [];
+$sender = function (string $url, string $b, array $headers) use (&$calls): bool {
+    $calls[] = [$url, $b, $headers];
+    return true;
+};
+$logFile = tempnam(sys_get_temp_dir(), 'mw-rcp-log-');
+$prevLog = ini_set('error_log', $logFile);
+
+$raw = "{\"type\":\"post_call_transcription\",  \"data\":{\"x\":\"Panadería \u00e1 /\"}}\r\n";
+$header = sign($raw, $now);
+mw_rcp_shadow_forward($raw, $header, $config, $sender, $now);
+check('verified request is forwarded once', count($calls) === 1);
+check('forwarded to the staging shadow URL',
+    ($calls[0][0] ?? '') === 'https://rcp-staging.montaweb.pe/hooks/elevenlabs/post-call?shadow=1');
+check('forwarded body is byte for byte', ($calls[0][1] ?? null) === $raw);
+check('forwarded with original signature and JSON content type',
+    ($calls[0][2] ?? null) === ['Content-Type: application/json', 'ElevenLabs-Signature: ' . $header]);
+check('successful forward logs nothing', (string) file_get_contents($logFile) === '');
+
+$calls = [];
+mw_rcp_shadow_forward($body, '', $config, $sender, $now);
+mw_rcp_shadow_forward($body, sign($body, $now, 'other'), $config, $sender, $now);
+mw_rcp_shadow_forward($body . ' ', sign($body, $now), $config, $sender, $now);
+mw_rcp_shadow_forward($body, sign($body, $now - 4000), $config, $sender, $now);
+mw_rcp_shadow_forward($body, sign($body, $now, ''), [], $sender, $now);
+mw_rcp_shadow_forward($big, sign($big, $now), $config, $sender, $now);
+check('not forwarded: unsigned, bad, tampered, stale, no secret or oversized', $calls === []);
+
+foreach ([
+    'sender failure' => static fn(): bool => false,
+    'sender exception' => static function (): bool {
+        throw new \RuntimeException('DETAIL ' . SECRET);
+    },
+    'sender error' => static function (): bool {
+        throw new \Error('Call to undefined function curl_init()');
+    },
+] as $label => $broken) {
+    file_put_contents($logFile, '');
+    $header = sign($body, $now);
+    $threw = false;
+    $status = http_response_code();
+    ob_start();
+    try {
+        mw_rcp_shadow_forward($body, $header, $config, $broken, $now);
+    } catch (\Throwable $e) {
+        $threw = true;
+    }
+    $printed = ob_get_clean();
+    $log = (string) file_get_contents($logFile);
+    check("$label is harmless: no throw, no output, same status",
+        !$threw && $printed === '' && http_response_code() === $status);
+    check("$label logs one line without data or secrets", substr_count($log, "\n") === 1
+        && str_contains($log, 'reenvío')
+        && !str_contains($log, 'Rosa') && !str_contains($log, '+51999888777') && !str_contains($log, 'conv_')
+        && !str_contains($log, $header) && !str_contains($log, SECRET) && !str_contains($log, 'DETAIL'));
+}
+ini_set('error_log', (string) $prevLog);
+unlink($logFile);
+
 foreach (glob($dir . '/*') ?: [] as $f) {
     unlink($f);
 }
