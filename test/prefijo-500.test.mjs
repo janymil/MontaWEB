@@ -60,3 +60,11 @@ test('prefijo 500 article is listed in the blog index, sitemap and llms.txt, and
     assert.match(art, /js\/prefijo-500\.js\?v=\d{8}[a-z]?/);
     assert.ok(existsSync(path.join(ROOT, 'css/prefijo-500.css')) && existsSync(path.join(ROOT, 'js/prefijo-500.js')));
 });
+
+test('prefijo 500 article: video loads from YouTube only after a click', () => {
+    assert.doesNotMatch(art, /<iframe[^>]+youtube/, 'no YouTube iframe in the static page');
+    assert.match(art, /<button[^>]+data-yt="eWcyFwyDCPI"/);
+    assert.ok(existsSync(path.join(ROOT, 'images/video/prefijo-500-poster.webp')));
+    assert.match(read('js/prefijo-500.js'), /youtube-nocookie\.com\/embed\//);
+    assert.match(read('privacidad.html'), /youtube-nocookie\.com/);
+});

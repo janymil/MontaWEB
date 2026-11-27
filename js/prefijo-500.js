@@ -93,5 +93,20 @@
         draw();
     }
 
-    initPhone(); initChecker(); initMoney(); initCalc();
+    /* ---------- Video: nothing loads from YouTube until the reader presses play ---------- */
+    function initVideo() {
+        const btn = $('[data-yt]'); if (!btn) return;
+        btn.addEventListener('click', () => {
+            const frame = document.createElement('iframe');
+            frame.src = `https://www.youtube-nocookie.com/embed/${btn.dataset.yt}?autoplay=1&rel=0`;
+            frame.title = btn.dataset.title;
+            frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+            frame.referrerPolicy = 'strict-origin-when-cross-origin';  // YouTube refuses to play without a referrer
+            $('.pod audio')?.pause();
+            btn.replaceWith(frame);
+            frame.focus();
+        });
+    }
+
+    initPhone(); initChecker(); initMoney(); initCalc(); initVideo();
 })();
