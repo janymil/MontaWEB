@@ -1,0 +1,55 @@
+dimension,value,n_total,n_classifiable,yes,mention_only,yes_pct,yes_or_mention_pct
+overall,all,2586,2399,688,33,28.7,30.1
+segment,P,1086,1015,192,22,18.9,21.1
+segment,C,986,921,245,9,26.6,27.6
+segment,E,514,463,251,2,54.2,54.6
+category,abogado,205,197,36,7,18.3,21.8
+category,contador,151,142,16,7,11.3,16.2
+category,psicologo,144,139,32,0,23.0,23.0
+category,constructora,143,134,21,0,15.7,15.7
+category,clinica,141,135,39,3,28.9,31.1
+category,hotel,141,128,40,0,31.2,31.2
+category,arquitecto,140,127,12,1,9.4,10.2
+category,inmobiliaria,128,115,49,2,42.6,44.3
+category,dentista,126,123,26,2,21.1,22.8
+category,floreria,118,111,64,1,57.7,58.6
+category,restaurante,115,107,48,2,44.9,46.7
+category,joyeria,96,85,45,0,52.9,52.9
+category,imprenta,96,88,12,2,13.6,15.9
+category,ropa,95,83,57,0,68.7,68.7
+category,taller,79,73,14,3,19.2,23.3
+category,spa,79,73,12,1,16.4,17.8
+category,cosmeticos,70,64,33,0,51.6,51.6
+category,fisioterapia,64,60,9,0,15.0,15.0
+category,veterinaria,60,55,20,0,36.4,36.4
+category,eventos,57,52,7,0,13.5,13.5
+category,academia,52,47,20,0,42.6,42.6
+category,gimnasio,51,49,9,1,18.4,20.4
+category,nido,48,43,8,0,18.6,18.6
+category,pasteleria,39,34,21,0,61.8,61.8
+category,barberia,37,35,4,0,11.4,11.4
+category,muebleria,36,32,12,1,37.5,40.6
+category,optica,36,34,12,0,35.3,35.3
+category,ferreteria,17,13,4,0,30.8,30.8
+category,salon,15,14,3,0,21.4,21.4
+category,petshop,7,7,3,0,42.9,42.9
+zone,Lima Moderna,944,884,280,9,31.7,32.7
+zone,Lima Centro,683,621,181,10,29.1,30.8
+zone,Lima Sur,405,375,108,6,28.8,30.4
+zone,Lima Norte,303,285,67,5,23.5,25.3
+zone,Lima Este,251,234,52,3,22.2,23.5
+shop_like,not_shop_like,1630,1448,319,25,22.0,23.8
+shop_like,shop_like,956,951,369,8,38.8,39.6
+active,active_5plus_reviews,1651,1543,523,23,33.9,35.4
+active,not_active,935,856,165,10,19.3,20.4
+cms,wordpress,1234,1221,368,14,30.1,31.3
+cms,other,987,925,216,15,23.4,25.0
+cms,shopify,108,107,76,1,71.0,72.0
+cms,,101,0,0,0,,
+cms,wix,90,88,13,2,14.8,17.0
+cms,godaddy,24,19,3,0,15.8,15.8
+cms,joomla,13,13,3,1,23.1,30.8
+cms,squarespace,12,9,1,0,11.1,11.1
+cms,prestashop,12,12,7,0,58.3,58.3
+cms,webflow,3,3,1,0,33.3,33.3
+cms,jimdo,2,2,0,0,0.0,0.0

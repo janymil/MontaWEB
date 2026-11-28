@@ -1,0 +1,4231 @@
+{
+ "version": "0.1.20261117",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "2.8857 sec.",
+ "cost": 0.09,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "11280337-3204-0367-0000-593874c94091",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "2.8018 sec.",
+   "cost": 0.09,
+   "result_count": 121,
+   "path": [
+    "v3",
+    "keywords_data",
+    "google_ads",
+    "search_volume",
+    "live"
+   ],
+   "data": {
+    "api": "keywords_data",
+    "function": "search_volume",
+    "se": "google_ads",
+    "keywords": [
+     "libro de reclamaciones virtual",
+     "libro de reclamaciones para página web",
+     "libro de reclamaciones para pagina web",
+     "libro de reclamaciones online",
+     "libro de reclamaciones obligatorio",
+     "multa libro de reclamaciones",
+     "multa indecopi libro de reclamaciones",
+     "libro de reclamaciones indecopi gratis",
+     "como hacer un libro de reclamaciones virtual",
+     "libro de reclamaciones web",
+     "aviso libro de reclamaciones",
+     "libro de reclamaciones tienda virtual",
+     "libro de reclamaciones emprendedores",
+     "libro de reclamaciones electrónico",
+     "libro de reclamaciones digital",
+     "libro de reclamaciones virtual indecopi",
+     "libro de reclamaciones virtual gratis",
+     "libro de reclamaciones virtual para empresas",
+     "libro de reclamaciones virtual obligatorio",
+     "libro de reclamaciones virtual modelo",
+     "libro de reclamaciones virtual formato",
+     "libro de reclamaciones virtual wordpress",
+     "libro de reclamaciones virtual shopify",
+     "libro de reclamaciones virtual ley",
+     "libro de reclamaciones virtual como hacerlo",
+     "libro de reclamaciones virtual plantilla",
+     "libro de reclamaciones virtual pdf",
+     "libro de reclamaciones virtual multa",
+     "libro de reclamaciones virtual sunat",
+     "crear libro de reclamaciones virtual",
+     "crear libro de reclamaciones",
+     "hacer libro de reclamaciones",
+     "libro de reclamaciones gratis",
+     "libro de reclamaciones formato",
+     "libro de reclamaciones modelo",
+     "libro de reclamaciones plantilla",
+     "libro de reclamaciones pdf",
+     "libro de reclamaciones word",
+     "libro de reclamaciones ley",
+     "libro de reclamaciones decreto supremo 011-2011-pcm",
+     "libro de reclamaciones multa",
+     "libro de reclamaciones sancion",
+     "libro de reclamaciones indecopi multa",
+     "libro de reclamaciones quien debe tener",
+     "libro de reclamaciones obligatorio virtual",
+     "libro de reclamaciones obligatorio para todos",
+     "libro de reclamaciones obligatorio emprendedores",
+     "libro de reclamaciones obligatorio pagina web",
+     "libro de reclamaciones obligatorio tienda online",
+     "libro de reclamaciones obligatorio ecommerce",
+     "libro de reclamaciones ecommerce",
+     "libro de reclamaciones tienda online",
+     "libro de reclamaciones wordpress",
+     "libro de reclamaciones shopify",
+     "libro de reclamaciones woocommerce",
+     "libro de reclamaciones wix",
+     "libro de reclamaciones para negocios",
+     "libro de reclamaciones para empresas",
+     "libro de reclamaciones para restaurantes",
+     "libro de reclamaciones whatsapp",
+     "libro de reclamaciones redes sociales",
+     "libro de reclamaciones instagram",
+     "libro de reclamaciones facebook",
+     "libro de reclamaciones servicios online",
+     "libro de reclamaciones freelance",
+     "libro de reclamaciones independientes",
+     "libro de reclamaciones sin ruc",
+     "libro de reclamaciones rus",
+     "libro de reclamaciones indecopi",
+     "libro de reclamaciones indecopi virtual",
+     "libro de reclamaciones indecopi online",
+     "libro de reclamaciones indecopi pagina web",
+     "libro de reclamaciones indecopi formato",
+     "libro de reclamaciones indecopi obligatorio",
+     "libro de reclamaciones indecopi como descargar",
+     "libro de reclamaciones aviso",
+     "aviso del libro de reclamaciones",
+     "cartel libro de reclamaciones",
+     "letrero libro de reclamaciones",
+     "logo libro de reclamaciones",
+     "logo libro de reclamaciones virtual",
+     "hoja de reclamacion virtual",
+     "hoja de reclamación",
+     "hoja de reclamaciones",
+     "hoja de reclamacion virtual indecopi",
+     "hoja de reclamacion indecopi",
+     "reclamo indecopi virtual",
+     "reclamos online indecopi",
+     "libro de reclamaciones digital indecopi",
+     "libro de reclamaciones qr",
+     "libro de reclamaciones codigo qr",
+     "plantilla libro de reclamaciones virtual",
+     "software libro de reclamaciones virtual",
+     "plugin libro de reclamaciones",
+     "libro de reclamaciones en pagina web obligatorio",
+     "libro de reclamaciones en linea",
+     "libro de reclamaciones en línea",
+     "libro de reclamaciones virtual para emprendedores",
+     "libro de reclamaciones negocio online",
+     "tengo que tener libro de reclamaciones en mi pagina web",
+     "libro de reclamaciones web multa",
+     "cuanto es la multa por no tener libro de reclamaciones",
+     "multa por no tener libro de reclamaciones",
+     "multa por no tener libro de reclamaciones virtual",
+     "multa por no tener libro de reclamaciones en pagina web",
+     "multa por no tener libro de reclamaciones tienda online",
+     "sancion por no tener libro de reclamaciones",
+     "multa libro de reclamaciones indecopi",
+     "libro de reclamaciones uit multa",
+     "indecopi fiscalizacion libro de reclamaciones",
+     "indecopi libro de reclamaciones virtual",
+     "indecopi libro de reclamaciones gratis",
+     "indecopi libro de reclamaciones plataforma",
+     "como poner libro de reclamaciones en mi pagina web",
+     "como implementar libro de reclamaciones virtual",
+     "como tener un libro de reclamaciones virtual",
+     "como crear un libro de reclamaciones virtual",
+     "como hacer libro de reclamaciones virtual gratis",
+     "como hacer un libro de reclamaciones",
+     "como hacer un libro de reclamaciones para mi negocio",
+     "como hacer libro de reclamaciones virtual en wordpress"
+    ],
+    "location_code": 2604,
+    "language_code": "es"
+   },
+   "result": [
+    {
+     "keyword": "libro de reclamaciones virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 19,
+     "search_volume": 1900,
+     "low_top_of_page_bid": 0.4,
+     "high_top_of_page_bid": 0.65,
+     "cpc": 0.78,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 1600
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 1600
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 1600
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 1600
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 1600
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 1900
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 1900
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 2400
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 2400
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 2400
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 2400
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 1900
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones para página web",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones para pagina web",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones online",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 26,
+     "search_volume": 30,
+     "low_top_of_page_bid": 0.38,
+     "high_top_of_page_bid": 0.66,
+     "cpc": 0.71,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 50
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 50
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 30
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones obligatorio",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 20
+      }
+     ]
+    },
+    {
+     "keyword": "multa libro de reclamaciones",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "multa indecopi libro de reclamaciones",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones indecopi gratis",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "como hacer un libro de reclamaciones virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 39,
+     "search_volume": 30,
+     "low_top_of_page_bid": 0.42,
+     "high_top_of_page_bid": 1.14,
+     "cpc": 0.91,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 40
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 30
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 40
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones web",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 13,
+     "search_volume": 30,
+     "low_top_of_page_bid": 0.41,
+     "high_top_of_page_bid": 0.61,
+     "cpc": 0.7,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 50
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 40
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 30
+      }
+     ]
+    },
+    {
+     "keyword": "aviso libro de reclamaciones",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 6,
+     "search_volume": 30,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 50
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones tienda virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones emprendedores",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones electrónico",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 19,
+     "search_volume": 20,
+     "low_top_of_page_bid": 0.56,
+     "high_top_of_page_bid": 0.67,
+     "cpc": 0.85,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 20
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones digital",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 16,
+     "search_volume": 110,
+     "low_top_of_page_bid": 0.31,
+     "high_top_of_page_bid": 0.62,
+     "cpc": 0.79,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 170
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 170
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 170
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones virtual indecopi",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 140,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": 0.56,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 170
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 140
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 110
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones virtual gratis",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 4,
+     "search_volume": 170,
+     "low_top_of_page_bid": 0.21,
+     "high_top_of_page_bid": 0.45,
+     "cpc": 0.66,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 260
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 210
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 210
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 140
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 170
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones virtual para empresas",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones virtual obligatorio",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones virtual modelo",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones virtual formato",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones virtual wordpress",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones virtual shopify",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones virtual ley",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones virtual como hacerlo",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones virtual plantilla",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones virtual pdf",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones virtual multa",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones virtual sunat",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "crear libro de reclamaciones virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 52,
+     "search_volume": 20,
+     "low_top_of_page_bid": 0.52,
+     "high_top_of_page_bid": 1.5,
+     "cpc": 2.8,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "crear libro de reclamaciones",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "hacer libro de reclamaciones",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones gratis",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones formato",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 140,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 210
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 140
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 140
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 170
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones modelo",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 140,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 140
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 110
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 140
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones plantilla",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones pdf",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 1,
+     "search_volume": 70,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": 0.25,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 90
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 70
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 90
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones word",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones ley",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 210,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 210
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 260
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 210
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 260
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 260
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 260
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 210
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 260
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 320
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones decreto supremo 011-2011-pcm",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones multa",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones sancion",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones indecopi multa",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 0
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 0
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 0
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 0
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones quien debe tener",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones obligatorio virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones obligatorio para todos",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones obligatorio emprendedores",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones obligatorio pagina web",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones obligatorio tienda online",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones obligatorio ecommerce",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones ecommerce",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones tienda online",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones wordpress",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 19,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 30
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones shopify",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 17,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones woocommerce",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones wix",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones para negocios",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones para empresas",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones para restaurantes",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones whatsapp",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones redes sociales",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones instagram",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones facebook",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones servicios online",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones freelance",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones independientes",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones sin ruc",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones rus",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones indecopi",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 880,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 880
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 880
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 880
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 880
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 880
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 880
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 880
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 1000
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 880
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 1000
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 1000
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 880
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones indecopi virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 140,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": 0.56,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 170
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 140
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 110
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones indecopi online",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones indecopi pagina web",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones indecopi formato",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 1,
+     "search_volume": 20,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 30
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 20
+      }
+     ]
+    },
+    {
+     "keyword": "libro de reclamaciones indecopi obligatorio",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones indecopi como descargar",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones aviso",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "aviso del libro de reclamaciones",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 70,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 50
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 50
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 90
+      }
+     ]
+    },
+    {
+     "keyword": "cartel libro de reclamaciones",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 40,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 50
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 30
+      }
+     ]
+    },
+    {
+     "keyword": "letrero libro de reclamaciones",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 30,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 30
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 30
+      }
+     ]
+    },
+    {
+     "keyword": "logo libro de reclamaciones",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 70,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 70
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 70
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 70
+      }
+     ]
+    },
+    {
+     "keyword": "logo libro de reclamaciones virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "hoja de reclamacion virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "hoja de reclamación",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 1,
+     "search_volume": 210,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": 1.72,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 260
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 210
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 210
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 210
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 390
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 210
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 260
+      }
+     ]
+    },
+    {
+     "keyword": "hoja de reclamaciones",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 1,
+     "search_volume": 210,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": 1.72,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 260
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 210
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 210
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 210
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 390
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 210
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 260
+      }
+     ]
+    },
+    {
+     "keyword": "hoja de reclamacion virtual indecopi",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "hoja de reclamacion indecopi",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "reclamo indecopi virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 140,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 210
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 210
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 170
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 50
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 210
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 140
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 140
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 70
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 30
+      }
+     ]
+    },
+    {
+     "keyword": "reclamos online indecopi",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones digital indecopi",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones qr",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones codigo qr",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "plantilla libro de reclamaciones virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "software libro de reclamaciones virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "plugin libro de reclamaciones",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones en pagina web obligatorio",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones en linea",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones en línea",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones virtual para emprendedores",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones negocio online",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "tengo que tener libro de reclamaciones en mi pagina web",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones web multa",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "cuanto es la multa por no tener libro de reclamaciones",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 40,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 40
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 50
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 50
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 40
+      }
+     ]
+    },
+    {
+     "keyword": "multa por no tener libro de reclamaciones",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 110,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 110
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 140
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 110
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 140
+      }
+     ]
+    },
+    {
+     "keyword": "multa por no tener libro de reclamaciones virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "multa por no tener libro de reclamaciones en pagina web",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "multa por no tener libro de reclamaciones tienda online",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "sancion por no tener libro de reclamaciones",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 10,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "multa libro de reclamaciones indecopi",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "libro de reclamaciones uit multa",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "indecopi fiscalizacion libro de reclamaciones",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "indecopi libro de reclamaciones virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 0,
+     "search_volume": 70,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": 0.64,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 90
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 70
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 50
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 50
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 30
+      }
+     ]
+    },
+    {
+     "keyword": "indecopi libro de reclamaciones gratis",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "indecopi libro de reclamaciones plataforma",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "como poner libro de reclamaciones en mi pagina web",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "como implementar libro de reclamaciones virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 51,
+     "search_volume": 10,
+     "low_top_of_page_bid": 0.5,
+     "high_top_of_page_bid": 1.4,
+     "cpc": 1.32,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "como tener un libro de reclamaciones virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 23,
+     "search_volume": 10,
+     "low_top_of_page_bid": 0.57,
+     "high_top_of_page_bid": 0.67,
+     "cpc": 0.71,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 10
+      }
+     ]
+    },
+    {
+     "keyword": "como crear un libro de reclamaciones virtual",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "MEDIUM",
+     "competition_index": 44,
+     "search_volume": 20,
+     "low_top_of_page_bid": 0.37,
+     "high_top_of_page_bid": 0.72,
+     "cpc": 0.9,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 10
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 10
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 30
+      }
+     ]
+    },
+    {
+     "keyword": "como hacer libro de reclamaciones virtual gratis",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "como hacer un libro de reclamaciones",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": "LOW",
+     "competition_index": 4,
+     "search_volume": 20,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": 3.8,
+     "monthly_searches": [
+      {
+       "year": 2026,
+       "month": 10,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 9,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 8,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 7,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 6,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 5,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 4,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 3,
+       "search_volume": 20
+      },
+      {
+       "year": 2026,
+       "month": 2,
+       "search_volume": 30
+      },
+      {
+       "year": 2026,
+       "month": 1,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 12,
+       "search_volume": 20
+      },
+      {
+       "year": 2025,
+       "month": 11,
+       "search_volume": 20
+      }
+     ]
+    },
+    {
+     "keyword": "como hacer un libro de reclamaciones para mi negocio",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    },
+    {
+     "keyword": "como hacer libro de reclamaciones virtual en wordpress",
+     "spell": null,
+     "location_code": 2604,
+     "language_code": "es",
+     "search_partners": false,
+     "competition": null,
+     "competition_index": null,
+     "search_volume": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "cpc": null,
+     "monthly_searches": null
+    }
+   ]
+  }
+ ]
+}

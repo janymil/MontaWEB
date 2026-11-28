@@ -1,0 +1,280 @@
+{
+ "version": "0.1.20261117",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "0.2316 sec.",
+ "cost": 0.01668,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "11280337-3204-0392-0000-30349cae6b86",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "0.2223 sec.",
+   "cost": 0.01668,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "dataforseo_labs",
+    "google",
+    "bulk_keyword_difficulty",
+    "live"
+   ],
+   "data": {
+    "api": "dataforseo_labs",
+    "function": "bulk_keyword_difficulty",
+    "se_type": "google",
+    "keywords": [
+     "libro de reclamaciones virtual",
+     "libro de reclamaciones indecopi",
+     "libro de reclamaciones ley",
+     "hoja de reclamación",
+     "hoja de reclamaciones",
+     "libro de reclamaciones virtual gratis",
+     "reclamo indecopi virtual",
+     "libro de reclamaciones virtual indecopi",
+     "libro de reclamaciones modelo",
+     "libro de reclamaciones indecopi virtual",
+     "libro de reclamaciones formato",
+     "multa por no tener libro de reclamaciones",
+     "libro de reclamaciones digital",
+     "logo libro de reclamaciones",
+     "libro de reclamaciones pdf",
+     "indecopi libro de reclamaciones virtual",
+     "aviso del libro de reclamaciones",
+     "cuanto es la multa por no tener libro de reclamaciones",
+     "cartel libro de reclamaciones",
+     "libro de reclamaciones web",
+     "libro de reclamaciones online",
+     "letrero libro de reclamaciones",
+     "como hacer un libro de reclamaciones virtual",
+     "aviso libro de reclamaciones",
+     "libro de reclamaciones indecopi formato",
+     "libro de reclamaciones electrónico",
+     "crear libro de reclamaciones virtual",
+     "como hacer un libro de reclamaciones",
+     "como crear un libro de reclamaciones virtual",
+     "sancion por no tener libro de reclamaciones",
+     "multa libro de reclamaciones",
+     "libro de reclamaciones wordpress",
+     "libro de reclamaciones virtual sunat",
+     "libro de reclamaciones shopify",
+     "libro de reclamaciones obligatorio",
+     "libro de reclamaciones multa",
+     "libro de reclamaciones indecopi multa",
+     "como tener un libro de reclamaciones virtual",
+     "como implementar libro de reclamaciones virtual"
+    ],
+    "location_code": 2604,
+    "language_code": "es"
+   },
+   "result": [
+    {
+     "se_type": "google",
+     "location_code": 2604,
+     "language_code": "es",
+     "total_count": 39,
+     "items_count": 39,
+     "items": [
+      {
+       "se_type": "google",
+       "keyword": "aviso del libro de reclamaciones",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "aviso libro de reclamaciones",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "como crear un libro de reclamaciones virtual",
+       "keyword_difficulty": 52
+      },
+      {
+       "se_type": "google",
+       "keyword": "como hacer un libro de reclamaciones",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "como hacer un libro de reclamaciones virtual",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "como implementar libro de reclamaciones virtual",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "como tener un libro de reclamaciones virtual",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "crear libro de reclamaciones virtual",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "cuanto es la multa por no tener libro de reclamaciones",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "hoja de reclamaciones",
+       "keyword_difficulty": 52
+      },
+      {
+       "se_type": "google",
+       "keyword": "indecopi libro de reclamaciones virtual",
+       "keyword_difficulty": 26
+      },
+      {
+       "se_type": "google",
+       "keyword": "letrero libro de reclamaciones",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones digital",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones indecopi",
+       "keyword_difficulty": 21
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones indecopi formato",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones indecopi virtual",
+       "keyword_difficulty": 26
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones ley",
+       "keyword_difficulty": 0
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones modelo",
+       "keyword_difficulty": 0
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones obligatorio",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones online",
+       "keyword_difficulty": 59
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones pdf",
+       "keyword_difficulty": 0
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones virtual",
+       "keyword_difficulty": 5
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones virtual gratis",
+       "keyword_difficulty": 36
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones virtual sunat",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones web",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones wordpress",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "logo libro de reclamaciones",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "multa por no tener libro de reclamaciones",
+       "keyword_difficulty": 0
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones formato",
+       "keyword_difficulty": 9
+      },
+      {
+       "se_type": "google",
+       "keyword": "hoja de reclamación",
+       "keyword_difficulty": 42
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones virtual indecopi",
+       "keyword_difficulty": 26
+      },
+      {
+       "se_type": "google",
+       "keyword": "reclamo indecopi virtual",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "cartel libro de reclamaciones",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones electrónico",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "sancion por no tener libro de reclamaciones",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "multa libro de reclamaciones",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones shopify",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones multa",
+       "keyword_difficulty": null
+      },
+      {
+       "se_type": "google",
+       "keyword": "libro de reclamaciones indecopi multa",
+       "keyword_difficulty": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

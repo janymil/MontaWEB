@@ -1,0 +1,483 @@
+{
+ "hosts_independent_own_domain": 3319,
+ "hosts_functional_N": 2586,
+ "fail_now_ERR": 101,
+ "unknown_js": 86,
+ "js_rendered": 222,
+ "counts": {
+  "NO": 1678,
+  "YES": 688,
+  "UNKNOWN_JS": 86,
+  "ERR": 101,
+  "MENTION_ONLY": 33
+ },
+ "overall": {
+  "n_total": 2586,
+  "n_classifiable": 2399,
+  "yes": 688,
+  "mention_only": 33,
+  "yes_pct": 28.7,
+  "yes_or_mention_pct": 30.1
+ },
+ "by_segment": {
+  "P": {
+   "n_total": 1086,
+   "n_classifiable": 1015,
+   "yes": 192,
+   "mention_only": 22,
+   "yes_pct": 18.9,
+   "yes_or_mention_pct": 21.1
+  },
+  "C": {
+   "n_total": 986,
+   "n_classifiable": 921,
+   "yes": 245,
+   "mention_only": 9,
+   "yes_pct": 26.6,
+   "yes_or_mention_pct": 27.6
+  },
+  "E": {
+   "n_total": 514,
+   "n_classifiable": 463,
+   "yes": 251,
+   "mention_only": 2,
+   "yes_pct": 54.2,
+   "yes_or_mention_pct": 54.6
+  }
+ },
+ "by_category": {
+  "abogado": {
+   "n_total": 205,
+   "n_classifiable": 197,
+   "yes": 36,
+   "mention_only": 7,
+   "yes_pct": 18.3,
+   "yes_or_mention_pct": 21.8
+  },
+  "contador": {
+   "n_total": 151,
+   "n_classifiable": 142,
+   "yes": 16,
+   "mention_only": 7,
+   "yes_pct": 11.3,
+   "yes_or_mention_pct": 16.2
+  },
+  "psicologo": {
+   "n_total": 144,
+   "n_classifiable": 139,
+   "yes": 32,
+   "mention_only": 0,
+   "yes_pct": 23.0,
+   "yes_or_mention_pct": 23.0
+  },
+  "constructora": {
+   "n_total": 143,
+   "n_classifiable": 134,
+   "yes": 21,
+   "mention_only": 0,
+   "yes_pct": 15.7,
+   "yes_or_mention_pct": 15.7
+  },
+  "clinica": {
+   "n_total": 141,
+   "n_classifiable": 135,
+   "yes": 39,
+   "mention_only": 3,
+   "yes_pct": 28.9,
+   "yes_or_mention_pct": 31.1
+  },
+  "hotel": {
+   "n_total": 141,
+   "n_classifiable": 128,
+   "yes": 40,
+   "mention_only": 0,
+   "yes_pct": 31.2,
+   "yes_or_mention_pct": 31.2
+  },
+  "arquitecto": {
+   "n_total": 140,
+   "n_classifiable": 127,
+   "yes": 12,
+   "mention_only": 1,
+   "yes_pct": 9.4,
+   "yes_or_mention_pct": 10.2
+  },
+  "inmobiliaria": {
+   "n_total": 128,
+   "n_classifiable": 115,
+   "yes": 49,
+   "mention_only": 2,
+   "yes_pct": 42.6,
+   "yes_or_mention_pct": 44.3
+  },
+  "dentista": {
+   "n_total": 126,
+   "n_classifiable": 123,
+   "yes": 26,
+   "mention_only": 2,
+   "yes_pct": 21.1,
+   "yes_or_mention_pct": 22.8
+  },
+  "floreria": {
+   "n_total": 118,
+   "n_classifiable": 111,
+   "yes": 64,
+   "mention_only": 1,
+   "yes_pct": 57.7,
+   "yes_or_mention_pct": 58.6
+  },
+  "restaurante": {
+   "n_total": 115,
+   "n_classifiable": 107,
+   "yes": 48,
+   "mention_only": 2,
+   "yes_pct": 44.9,
+   "yes_or_mention_pct": 46.7
+  },
+  "joyeria": {
+   "n_total": 96,
+   "n_classifiable": 85,
+   "yes": 45,
+   "mention_only": 0,
+   "yes_pct": 52.9,
+   "yes_or_mention_pct": 52.9
+  },
+  "imprenta": {
+   "n_total": 96,
+   "n_classifiable": 88,
+   "yes": 12,
+   "mention_only": 2,
+   "yes_pct": 13.6,
+   "yes_or_mention_pct": 15.9
+  },
+  "ropa": {
+   "n_total": 95,
+   "n_classifiable": 83,
+   "yes": 57,
+   "mention_only": 0,
+   "yes_pct": 68.7,
+   "yes_or_mention_pct": 68.7
+  },
+  "taller": {
+   "n_total": 79,
+   "n_classifiable": 73,
+   "yes": 14,
+   "mention_only": 3,
+   "yes_pct": 19.2,
+   "yes_or_mention_pct": 23.3
+  },
+  "spa": {
+   "n_total": 79,
+   "n_classifiable": 73,
+   "yes": 12,
+   "mention_only": 1,
+   "yes_pct": 16.4,
+   "yes_or_mention_pct": 17.8
+  },
+  "cosmeticos": {
+   "n_total": 70,
+   "n_classifiable": 64,
+   "yes": 33,
+   "mention_only": 0,
+   "yes_pct": 51.6,
+   "yes_or_mention_pct": 51.6
+  },
+  "fisioterapia": {
+   "n_total": 64,
+   "n_classifiable": 60,
+   "yes": 9,
+   "mention_only": 0,
+   "yes_pct": 15.0,
+   "yes_or_mention_pct": 15.0
+  },
+  "veterinaria": {
+   "n_total": 60,
+   "n_classifiable": 55,
+   "yes": 20,
+   "mention_only": 0,
+   "yes_pct": 36.4,
+   "yes_or_mention_pct": 36.4
+  },
+  "eventos": {
+   "n_total": 57,
+   "n_classifiable": 52,
+   "yes": 7,
+   "mention_only": 0,
+   "yes_pct": 13.5,
+   "yes_or_mention_pct": 13.5
+  },
+  "academia": {
+   "n_total": 52,
+   "n_classifiable": 47,
+   "yes": 20,
+   "mention_only": 0,
+   "yes_pct": 42.6,
+   "yes_or_mention_pct": 42.6
+  },
+  "gimnasio": {
+   "n_total": 51,
+   "n_classifiable": 49,
+   "yes": 9,
+   "mention_only": 1,
+   "yes_pct": 18.4,
+   "yes_or_mention_pct": 20.4
+  },
+  "nido": {
+   "n_total": 48,
+   "n_classifiable": 43,
+   "yes": 8,
+   "mention_only": 0,
+   "yes_pct": 18.6,
+   "yes_or_mention_pct": 18.6
+  },
+  "pasteleria": {
+   "n_total": 39,
+   "n_classifiable": 34,
+   "yes": 21,
+   "mention_only": 0,
+   "yes_pct": 61.8,
+   "yes_or_mention_pct": 61.8
+  },
+  "barberia": {
+   "n_total": 37,
+   "n_classifiable": 35,
+   "yes": 4,
+   "mention_only": 0,
+   "yes_pct": 11.4,
+   "yes_or_mention_pct": 11.4
+  },
+  "muebleria": {
+   "n_total": 36,
+   "n_classifiable": 32,
+   "yes": 12,
+   "mention_only": 1,
+   "yes_pct": 37.5,
+   "yes_or_mention_pct": 40.6
+  },
+  "optica": {
+   "n_total": 36,
+   "n_classifiable": 34,
+   "yes": 12,
+   "mention_only": 0,
+   "yes_pct": 35.3,
+   "yes_or_mention_pct": 35.3
+  },
+  "ferreteria": {
+   "n_total": 17,
+   "n_classifiable": 13,
+   "yes": 4,
+   "mention_only": 0,
+   "yes_pct": 30.8,
+   "yes_or_mention_pct": 30.8
+  },
+  "salon": {
+   "n_total": 15,
+   "n_classifiable": 14,
+   "yes": 3,
+   "mention_only": 0,
+   "yes_pct": 21.4,
+   "yes_or_mention_pct": 21.4
+  },
+  "petshop": {
+   "n_total": 7,
+   "n_classifiable": 7,
+   "yes": 3,
+   "mention_only": 0,
+   "yes_pct": 42.9,
+   "yes_or_mention_pct": 42.9
+  }
+ },
+ "by_zone": {
+  "Lima Moderna": {
+   "n_total": 944,
+   "n_classifiable": 884,
+   "yes": 280,
+   "mention_only": 9,
+   "yes_pct": 31.7,
+   "yes_or_mention_pct": 32.7
+  },
+  "Lima Centro": {
+   "n_total": 683,
+   "n_classifiable": 621,
+   "yes": 181,
+   "mention_only": 10,
+   "yes_pct": 29.1,
+   "yes_or_mention_pct": 30.8
+  },
+  "Lima Sur": {
+   "n_total": 405,
+   "n_classifiable": 375,
+   "yes": 108,
+   "mention_only": 6,
+   "yes_pct": 28.8,
+   "yes_or_mention_pct": 30.4
+  },
+  "Lima Norte": {
+   "n_total": 303,
+   "n_classifiable": 285,
+   "yes": 67,
+   "mention_only": 5,
+   "yes_pct": 23.5,
+   "yes_or_mention_pct": 25.3
+  },
+  "Lima Este": {
+   "n_total": 251,
+   "n_classifiable": 234,
+   "yes": 52,
+   "mention_only": 3,
+   "yes_pct": 22.2,
+   "yes_or_mention_pct": 23.5
+  }
+ },
+ "by_shop_like": {
+  "not_shop_like": {
+   "n_total": 1630,
+   "n_classifiable": 1448,
+   "yes": 319,
+   "mention_only": 25,
+   "yes_pct": 22.0,
+   "yes_or_mention_pct": 23.8
+  },
+  "shop_like": {
+   "n_total": 956,
+   "n_classifiable": 951,
+   "yes": 369,
+   "mention_only": 8,
+   "yes_pct": 38.8,
+   "yes_or_mention_pct": 39.6
+  }
+ },
+ "by_active": {
+  "active_5plus_reviews": {
+   "n_total": 1651,
+   "n_classifiable": 1543,
+   "yes": 523,
+   "mention_only": 23,
+   "yes_pct": 33.9,
+   "yes_or_mention_pct": 35.4
+  },
+  "not_active": {
+   "n_total": 935,
+   "n_classifiable": 856,
+   "yes": 165,
+   "mention_only": 10,
+   "yes_pct": 19.3,
+   "yes_or_mention_pct": 20.4
+  }
+ },
+ "by_cms": {
+  "wordpress": {
+   "n_total": 1234,
+   "n_classifiable": 1221,
+   "yes": 368,
+   "mention_only": 14,
+   "yes_pct": 30.1,
+   "yes_or_mention_pct": 31.3
+  },
+  "other": {
+   "n_total": 987,
+   "n_classifiable": 925,
+   "yes": 216,
+   "mention_only": 15,
+   "yes_pct": 23.4,
+   "yes_or_mention_pct": 25.0
+  },
+  "shopify": {
+   "n_total": 108,
+   "n_classifiable": 107,
+   "yes": 76,
+   "mention_only": 1,
+   "yes_pct": 71.0,
+   "yes_or_mention_pct": 72.0
+  },
+  "": {
+   "n_total": 101,
+   "n_classifiable": 0,
+   "yes": 0,
+   "mention_only": 0,
+   "yes_pct": null,
+   "yes_or_mention_pct": null
+  },
+  "wix": {
+   "n_total": 90,
+   "n_classifiable": 88,
+   "yes": 13,
+   "mention_only": 2,
+   "yes_pct": 14.8,
+   "yes_or_mention_pct": 17.0
+  },
+  "godaddy": {
+   "n_total": 24,
+   "n_classifiable": 19,
+   "yes": 3,
+   "mention_only": 0,
+   "yes_pct": 15.8,
+   "yes_or_mention_pct": 15.8
+  },
+  "joomla": {
+   "n_total": 13,
+   "n_classifiable": 13,
+   "yes": 3,
+   "mention_only": 1,
+   "yes_pct": 23.1,
+   "yes_or_mention_pct": 30.8
+  },
+  "squarespace": {
+   "n_total": 12,
+   "n_classifiable": 9,
+   "yes": 1,
+   "mention_only": 0,
+   "yes_pct": 11.1,
+   "yes_or_mention_pct": 11.1
+  },
+  "prestashop": {
+   "n_total": 12,
+   "n_classifiable": 12,
+   "yes": 7,
+   "mention_only": 0,
+   "yes_pct": 58.3,
+   "yes_or_mention_pct": 58.3
+  },
+  "webflow": {
+   "n_total": 3,
+   "n_classifiable": 3,
+   "yes": 1,
+   "mention_only": 0,
+   "yes_pct": 33.3,
+   "yes_or_mention_pct": 33.3
+  },
+  "jimdo": {
+   "n_total": 2,
+   "n_classifiable": 2,
+   "yes": 0,
+   "mention_only": 0,
+   "yes_pct": 0.0,
+   "yes_or_mention_pct": 0.0
+  }
+ },
+ "link_location": {
+  "footer": 540,
+  "other": 114,
+  "image_link": 12,
+  "header/nav": 22
+ },
+ "provider_distribution": {
+  "external:other": 433,
+  "own_site": 228,
+  "no_href(modal/js)": 17,
+  "claimbook": 8,
+  "indecopi/consumidor.gob.pe": 2
+ },
+ "top_external_domains_3plus": {
+  "external:forms.gle": 7,
+  "external:librovirtual.pe": 7,
+  "external:reclamovirtual.pe": 6,
+  "external:docs.google.com": 6,
+  "external:app.reclamovirtual.pe": 4,
+  "external:reclamaciones.acuriorestaurantes.net": 3,
+  "external:librodereclamaciones.franquiciasperu.com": 3,
+  "external:forms.office.com": 3
+ },
+ "mention_only_count": 33,
+ "runtime_s": 41
+}

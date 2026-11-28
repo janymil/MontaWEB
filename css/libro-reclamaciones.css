@@ -1,0 +1,56 @@
+/* Study page: libro de reclamaciones virtual. Extends blog.css (charts, scanner box, stacked table). */
+.lr { accent-color: var(--ink); }
+.lr .post-hero__grid { grid-template-columns: minmax(0, 1fr); padding-bottom: 44px; }
+.lr .post-hero h1 { max-width: 20ch; }
+.lr .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }
+
+/* Horizontal bar charts: real text list, bars are decoration */
+.lr-bars { list-style: none; margin: 0 !important; padding: 0 !important; max-width: none !important; display: grid; gap: 8px; }
+.lr-bar { margin: 0; display: grid; grid-template-columns: minmax(110px, 190px) minmax(0, 1fr) 64px; align-items: center; gap: 4px 14px; min-height: 40px; font-size: 16px; line-height: 1.25; }
+.lr-bar__label { font-weight: 700; color: var(--ink); }
+.lr-bar__label small { display: block; font-weight: 500; font-size: 13px; color: var(--home-muted); }
+.lr-bar__track { position: relative; height: 26px; background: var(--paper-deep, #e9e4d8); border: 1px solid var(--ink); }
+.lr-bar__fill { display: block; height: 100%; width: var(--w, 0%); min-width: 3px; background: var(--orange); }
+.lr-bar__val { font: 700 15px var(--font-mono); text-align: right; color: var(--ink); white-space: nowrap; }
+.lr-bar.is-total { margin-top: 6px; padding-top: 10px; border-top: 2px solid var(--ink); }
+.lr-bar.is-total .lr-bar__fill { background: var(--ink); }
+.lr-bar.is-total .lr-bar__label { font-weight: 800; }
+.lr-axis { display: grid; grid-template-columns: minmax(110px, 190px) minmax(0, 1fr) 64px; gap: 14px; margin: 6px 0 0; font: 500 12px var(--font-mono); color: var(--home-muted); }
+.lr-axis span:nth-child(2) { display: flex; justify-content: space-between; }
+
+/* "¿TU WEB CUMPLE?" scanner box */
+.scan { max-width: none !important; margin: 40px 0 44px; padding: 30px 32px; border: 1px solid var(--ink); background: var(--ink); color: var(--cream); box-shadow: 8px 8px 0 var(--orange); }
+.scan h3 { margin: 0 0 10px; font-size: clamp(30px, 4vw, 46px); line-height: 1; letter-spacing: -.01em; color: var(--lime); }
+.scan p { margin: 0 0 22px; max-width: 46ch; font-size: 19px; line-height: 1.5; color: var(--cream); }
+.scan .btn { background: var(--lime); border-color: var(--lime); color: var(--ink); text-decoration: none; }
+.scan .btn:hover { background: var(--orange); border-color: var(--orange); }
+
+/* Responsive table: stacks under 640px */
+.lr .tbl-wrap { margin: 24px 0 28px; }
+.lr .prose td:last-child, .lr .prose td { font-family: var(--font-body); font-size: 16px; }
+.lr .tbl-wrap table { min-width: 0; }
+.lr .tbl-wrap th[scope="row"] { font-weight: 800; color: var(--ink); width: 34%; border-bottom: 1px solid var(--home-line); }
+
+.lr .faq details { margin: 0; }
+.lr .sources li { overflow-wrap: anywhere; }
+.lr .takeaways h2 { margin-top: 0; }
+
+@media (max-width: 760px) {
+  .lr-bar { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "label val" "track track"; gap: 4px 10px; padding: 4px 0; }
+  .lr-bar__label { grid-area: label; }
+  .lr-bar__val { grid-area: val; }
+  .lr-bar__track { grid-area: track; }
+  .lr-axis { display: none; }
+  .scan { padding: 24px 20px; box-shadow: 5px 5px 0 var(--orange); }
+}
+@media (max-width: 640px) {
+  .lr .tbl-wrap { overflow: visible; }
+  .lr .tbl-wrap table, .lr .tbl-wrap tbody, .lr .tbl-wrap tr, .lr .tbl-wrap th, .lr .tbl-wrap td { display: block; width: 100%; }
+  .lr .tbl-wrap thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .lr .tbl-wrap tr { padding: 12px 0; border-bottom: 1px solid var(--ink); }
+  .lr .tbl-wrap th[scope="row"], .lr .tbl-wrap td { padding: 2px 0; border: 0; width: 100%; }
+  .lr .tbl-wrap td::before { content: attr(data-label); display: block; margin-top: 8px; font: 500 12px var(--font-mono); letter-spacing: .04em; text-transform: uppercase; color: var(--home-muted); }
+}
+
+.lr .prose > ul, .lr .takeaways ul, .lr .sources { list-style: disc; padding-left: 1.3em; }
+.lr .takeaways ul { padding-left: 1.3em; }
