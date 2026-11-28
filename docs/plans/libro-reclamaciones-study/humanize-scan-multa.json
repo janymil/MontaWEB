@@ -1,0 +1,97 @@
+{
+  "file": "C:\\Users\\USER\\Documents\\MontaWeb\\docs\\plans\\libro-reclamaciones-study\\multa.md",
+  "words": 1657,
+  "sentences": 80,
+  "paragraphs": 27,
+  "score": 92,
+  "checks": [
+    {
+      "name": "AI vocabulary + inflation per 1k",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Filler/signposting per 1k",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Chatbot + citation artifacts",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Sentence-initial connectors per 1k",
+      "value": 1.21,
+      "ok": true
+    },
+    {
+      "name": "Em dashes per 1k",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "\"Not X but Y\" (article)",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Formulaic openings/closings",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Sentence length SD (words)",
+      "value": 14.9,
+      "ok": true
+    },
+    {
+      "name": "Paragraph length CV",
+      "value": 0.53,
+      "ok": true
+    },
+    {
+      "name": "Bold phrases per H2",
+      "value": 1.14,
+      "ok": false
+    },
+    {
+      "name": "Emoji",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Lists with bold lead-ins (>=3 items)",
+      "value": 0,
+      "ok": true
+    }
+  ],
+  "info": {
+    "sentenceLength": {
+      "mean": 21.2,
+      "sd": 14.9,
+      "cv": 0.7
+    },
+    "paragraphLength": {
+      "mean": 47.6,
+      "sd": 25.3,
+      "cv": 0.53
+    },
+    "listSizes": [
+      7,
+      5,
+      5,
+      8
+    ],
+    "sameSizeLists": false,
+    "tripletsPer1k": 1.81,
+    "connectorsUsed": {
+      "Además": 2
+    },
+    "quotesMixed": false,
+    "spanishQuestionsMissingOpeningMark": 0,
+    "titleCaseSpanishHeadings": 0
+  },
+  "byCategory": {},
+  "findings": []
+}

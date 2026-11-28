@@ -54,3 +54,10 @@
 
 .lr .prose > ul, .lr .takeaways ul, .lr .sources { list-style: disc; padding-left: 1.3em; }
 .lr .takeaways ul { padding-left: 1.3em; }
+
+/* Takeaways method line, press section (embed code) */
+.lr .takeaways__method { margin: 14px 0 0; font-size: 15px; line-height: 1.5; color: var(--home-muted); }
+.lr .embed-preview { display: block; width: 100%; max-width: 720px; height: auto; margin: 0 0 16px; border: 1px solid var(--ink); }
+.lr .embed-code { display: block; width: 100%; max-width: 720px; box-sizing: border-box; padding: 12px 14px; font: 500 13px/1.5 var(--font-mono); color: var(--ink); background: var(--cream); border: 1px solid var(--ink); resize: vertical; overflow-wrap: anywhere; }
+.lr .embed-actions { margin: 12px 0 24px; }
+.lr .cite { max-width: none; }

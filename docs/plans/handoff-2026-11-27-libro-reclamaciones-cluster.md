@@ -32,3 +32,9 @@ Two es-PE support pages linked to and from the flagship, an outreach plan (send 
 - 2026 fines (Junín 0.50 UIT colegio; BBVA Puno 5 UIT) are physical-libro cases.
 - Site number format: "28,7 %", "2 399" with nbsp.
 - Don't touch `*lima-call-study*` or `*ai-recommends-lima*` files.
+
+## Status after session 2 (2026-11-27)
+- Steps 0–3 done except the flagship hero photo: no fitting free Lima photo on Pixabay/Pexels/Unsplash (waiting for Jan: Envato or the closest free one). Spec in `libro-reclamaciones-study/flagship-fixes.md` §2.
+- Support pages built: `blog/multa-por-no-tener-libro-de-reclamaciones.html` (calculator `js/multa-calc.js`), `blog/libro-de-reclamaciones-virtual-gratis-indecopi.html`. Drafts + fact-checks applied. Browser QA at 1280 and 375 px clean.
+- Outreach drafts: `libro-reclamaciones-study/outreach.md` (nothing sent).
+- Open: Jan's meaning of "KEO" (built as GEO/AEO); Jan's sample read of the Spanish; deploy + IndexNow (his yes).

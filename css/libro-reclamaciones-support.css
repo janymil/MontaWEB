@@ -1,0 +1,18 @@
+/* Support pages of the libro de reclamaciones cluster: calculator and single-column promo. */
+.promo:not(:has(.promo__side)) { grid-template-columns: minmax(0, 1fr); }
+
+.multa-calc { margin: 36px 0 40px; padding: 26px 28px; border: 1px solid var(--ink); background: var(--cream); }
+.multa-calc[hidden] { display: none; }
+.multa-calc h3 { margin: 0 0 8px; }
+.multa-calc > p { margin: 0 0 18px; }
+.multa-calc form { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; margin: 0 0 16px; }
+.multa-calc .multa-calc__field { display: grid; gap: 6px; flex: 1 1 240px; }
+.multa-calc label { font-weight: 800; font-size: 16px; color: var(--ink); }
+.multa-calc input { min-height: 48px; padding: 8px 12px; border: 1px solid var(--ink); border-radius: 0; background: #fff; color: var(--ink); font: 600 18px var(--font-mono, monospace); }
+.multa-calc input[aria-invalid="true"] { border-color: #b3261e; outline: 2px solid #b3261e; }
+.multa-calc .btn { min-height: 48px; cursor: pointer; }
+.multa-calc [data-multa-result] { margin: 0; font-size: 19px; line-height: 1.45; color: var(--ink); }
+.multa-calc [data-multa-result]:empty { display: none; }
+.multa-calc [data-multa-result].is-error { color: #b3261e; font-weight: 700; }
+.multa-calc [data-multa-note] { margin: 12px 0 0; font-size: 15px; color: var(--home-muted); }
+@media (max-width: 640px) { .multa-calc { padding: 20px 16px; } }

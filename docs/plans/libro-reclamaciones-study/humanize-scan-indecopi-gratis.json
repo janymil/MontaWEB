@@ -1,0 +1,96 @@
+{
+  "file": "C:\\Users\\USER\\Documents\\MontaWeb\\docs\\plans\\libro-reclamaciones-study\\indecopi-gratis.md",
+  "words": 1307,
+  "sentences": 61,
+  "paragraphs": 21,
+  "score": 92,
+  "checks": [
+    {
+      "name": "AI vocabulary + inflation per 1k",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Filler/signposting per 1k",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Chatbot + citation artifacts",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Sentence-initial connectors per 1k",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Em dashes per 1k",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "\"Not X but Y\" (article)",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Formulaic openings/closings",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Sentence length SD (words)",
+      "value": 17,
+      "ok": true
+    },
+    {
+      "name": "Paragraph length CV",
+      "value": 0.47,
+      "ok": true
+    },
+    {
+      "name": "Bold phrases per H2",
+      "value": 1.57,
+      "ok": false
+    },
+    {
+      "name": "Emoji",
+      "value": 0,
+      "ok": true
+    },
+    {
+      "name": "Lists with bold lead-ins (>=3 items)",
+      "value": 1,
+      "ok": true
+    }
+  ],
+  "info": {
+    "sentenceLength": {
+      "mean": 22.1,
+      "sd": 17,
+      "cv": 0.77
+    },
+    "paragraphLength": {
+      "mean": 46.6,
+      "sd": 21.8,
+      "cv": 0.47
+    },
+    "listSizes": [
+      2,
+      4,
+      3,
+      4,
+      7
+    ],
+    "sameSizeLists": false,
+    "tripletsPer1k": 1.53,
+    "connectorsUsed": {},
+    "quotesMixed": false,
+    "spanishQuestionsMissingOpeningMark": 0,
+    "titleCaseSpanishHeadings": 1
+  },
+  "byCategory": {},
+  "findings": []
+}
