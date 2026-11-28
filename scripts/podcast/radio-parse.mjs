@@ -131,9 +131,11 @@ export function buildSegments(items) {
 }
 
 // --test: sections 1 and 2 up to "Por fin." plus the first stinger.
-export function selectTest(items) {
-  const idx = items.findIndex((i) => i.type === 'speech' && i.text === '[relieved] Por fin.');
-  if (idx < 0) throw new Error('--test: line "[relieved] Por fin." not found');
+export function selectTest(items, until) {
+  const idx = until
+    ? items.findIndex((i) => i.type === 'speech' && i.text.includes(until))
+    : items.findIndex((i) => i.type === 'speech' && i.text === '[relieved] Por fin.');
+  if (idx < 0) throw new Error(`--test: line "${until ?? '[relieved] Por fin.'}" not found`);
   const stinger = items.slice(idx).find((i) => i.type === 'stinger');
   return [...items.slice(0, idx + 1), ...(stinger ? [stinger] : [])];
 }

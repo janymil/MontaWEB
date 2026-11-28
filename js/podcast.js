@@ -14,6 +14,7 @@
         return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
     };
     const total = Number(card.dataset.duration) || 0;
+    const start = Number(card.dataset.start) || 0;
     const roots = [card, mini].filter(Boolean);
     const all = (sel) => roots.flatMap((r) => [...r.querySelectorAll(sel)]);
 
@@ -29,13 +30,15 @@
     }
     function syncTime() {
         const dur = Number.isFinite(audio.duration) ? audio.duration : total;
-        const pct = dur ? (audio.currentTime / dur) * 100 : 0;
+        // Pages that start at a segment show that position until playback begins.
+        const now = !started && start && audio.currentTime === 0 ? start : audio.currentTime;
+        const pct = dur ? (now / dur) * 100 : 0;
         for (const r of all('[data-pod-seek]')) {
             if (document.activeElement !== r) r.value = pct;
             r.style.setProperty('--val', r.value);
-            r.setAttribute('aria-valuetext', `${fmt(audio.currentTime)} de ${fmt(dur)}`);
+            r.setAttribute('aria-valuetext', `${fmt(now)} de ${fmt(dur)}`);
         }
-        for (const t of all('[data-pod-cur]')) t.textContent = fmt(audio.currentTime);
+        for (const t of all('[data-pod-cur]')) t.textContent = fmt(now);
         for (const t of all('[data-pod-dur]')) t.textContent = fmt(dur);
     }
     function syncMini() {
@@ -88,7 +91,10 @@
         if (window.gtag) window.gtag('event', 'podcast_complete', { podcast: card.dataset.pod });
     });
     audio.addEventListener('timeupdate', syncTime);
-    audio.addEventListener('loadedmetadata', syncTime);
+    audio.addEventListener('loadedmetadata', () => {
+        if (start && !started && audio.currentTime === 0) audio.currentTime = start;
+        syncTime();
+    });
 
     new IntersectionObserver(([e]) => {
         cardVisible = e.isIntersecting;

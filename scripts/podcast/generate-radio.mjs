@@ -342,7 +342,8 @@ function parseArgs(argv) {
     if (k === '--guion') a.guion = argv[++i];
     else if (k === '--out') a.out = argv[++i];
     else if (k === '--work') a.work = argv[++i];
-    else if (['--test', '--spot-only', '--dry-run', '--fake-assets'].includes(k)) a[k.slice(2).replace(/-(\w)/g, (_, c) => c.toUpperCase())] = true;
+    else if (k === '--test-until') a.testUntil = argv[++i];
+    else if (['--test', '--spot-only', '--dry-run', '--fake-assets', '--timeline'].includes(k)) a[k.slice(2).replace(/-(\w)/g, (_, c) => c.toUpperCase())] = true;
     else throw new Error(`unknown option ${k}`);
   }
   a.out ??= a.test ? 'images/audio/_test-prefijo-500.mp3'
@@ -377,7 +378,7 @@ function dryRun(segs, reqs) {
 async function main() {
   const a = parseArgs(process.argv.slice(2));
   const parsed = parseGuion(readFileSync(a.guion, 'utf8'));
-  const items = a.test ? selectTest(parsed.items) : a.spotOnly ? selectSpot(parsed) : parsed.items;
+  const items = a.test ? selectTest(parsed.items, a.testUntil) : a.spotOnly ? selectSpot(parsed) : parsed.items;
   const segs = buildSegments(items);
   const reqs = attachRequests(segs, parsed.items);
   if (a.dryRun) return dryRun(segs, reqs);
@@ -385,6 +386,7 @@ async function main() {
   mkdirSync(ctx.work, { recursive: true });
   await prepareAll(segs, reqs, ctx);
   const lay = mixDown(segs, a.out, ctx);
+  if (a.timeline) for (const e of lay.events) console.log(`${e.start.toFixed(2).padStart(8)}s ${e.kind.padEnd(5)} ${e.label}`);
   const m = measureOutput(a.out);
   console.log(`done: ${a.out} (${Math.round(probeDur(a.out))} s, ${m.lufs} LUFS, peak ${m.peak} dBFS, ${lay.events.length} events)`);
 }

@@ -107,3 +107,9 @@ test('--spot-only selection is the spot plus the logo tail', () => {
 test('rejects an SFX with a bad at value', () => {
   assert.throws(() => parseGuion('## Show\n[SFX: x | d | sideways]\n## Spot\n'), /at/);
 });
+
+test('--test-until stops after the first speech line containing the text', () => {
+  const t = selectTest(parsed.items, 'Por fin.');
+  assert.equal(t.at(-2).text, '[relieved] Por fin.');
+  assert.throws(() => selectTest(parsed.items, 'zzz-not-in-guion'), /not found/);
+});

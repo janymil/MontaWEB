@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="/css/blog.css?v=20261125a">
     <link rel="stylesheet" href="/css/libro-reclamaciones.css?v=20261127b">
     <link rel="stylesheet" href="/css/libro-reclamaciones-support.css?v=20261127a">
+    <link rel="stylesheet" href="/css/podcast.css?v=20261125b">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -48,6 +49,7 @@
           "mainEntityOfPage": "https://montaweb.pe/blog/libro-de-reclamaciones-virtual-gratis-indecopi",
           "headline": "Libro de reclamaciones virtual gratis de Indecopi: qué hace",
           "description": "Indecopi tiene una herramienta gratis que genera la hoja y el aviso, pero no recibe los reclamos. Te mostramos qué hace y cómo completar lo que falta.",
+          "audio": { "@type": "AudioObject", "name": "Libro de reclamaciones virtual gratis de Indecopi: qué hace", "description": "Indecopi tiene una herramienta gratis que genera la hoja y el aviso, pero no recibe los reclamos. Te mostramos qué hace y cómo completar lo que falta.", "contentUrl": "https://montaweb.pe/images/audio/libro-de-reclamaciones-virtual-estudio-lima.mp3", "encodingFormat": "audio/mpeg", "duration": "PT8M46S", "inLanguage": "es-PE", "uploadDate": "2026-11-28" },
           "image": [
             "https://montaweb.pe/images/blog/og-indecopi-congreso.jpg"
           ],
@@ -172,6 +174,22 @@
           <time datetime="2026-11-27">27 de noviembre de 2026</time>
           <span>Lectura: 6 min</span>
         </div>
+        <section class="pod" data-pod="libro-de-reclamaciones-virtual-gratis-indecopi" data-duration="526" data-start="375.7" aria-labelledby="pod-gratis">
+          <audio preload="none" src="/images/audio/libro-de-reclamaciones-virtual-estudio-lima.mp3?v=20261128a#t=375.7"></audio>
+          <div class="pod__top">
+            <button type="button" class="pod__play" data-pod-play aria-label="Escuchar el audio"><i class="fas fa-play" aria-hidden="true"></i></button>
+            <div>
+              <h2 class="pod__title" id="pod-gratis">Escucha la parte sobre el libro gratis de Indecopi</h2>
+            </div>
+          </div>
+          <div class="pod__bar">
+            <span class="pod__time" data-pod-cur>0:00</span>
+            <input type="range" min="0" max="100" step="0.1" value="0" data-pod-seek aria-label="Posición del audio">
+            <span class="pod__time" data-pod-dur>8:46</span>
+            <button type="button" class="pod__btn" data-pod-back aria-label="Retroceder 15 segundos">−15</button>
+            <button type="button" class="pod__btn" data-pod-speed aria-label="Velocidad: 1 vez">1×</button>
+          </div>
+        </section>
       </div>
     </div>
   </div>
@@ -345,9 +363,22 @@
     </div>
 </footer>
 
+<div class="pod-mini" data-pod-mini hidden role="region" aria-label="Reproductor de audio">
+  <button type="button" class="pod__play" data-pod-play aria-label="Escuchar el audio"><i class="fas fa-play" aria-hidden="true"></i></button>
+  <div class="pod-mini__text">
+    <span class="pod-mini__label">Escuchando: la guía en audio</span>
+    <div class="pod-mini__row">
+      <span data-pod-cur>0:00</span>
+      <input type="range" min="0" max="100" step="0.1" value="0" data-pod-seek aria-label="Posición del audio">
+      <span data-pod-dur>8:46</span>
+    </div>
+  </div>
+  <button type="button" class="pod__btn" data-pod-back aria-label="Retroceder 15 segundos">−15</button>
+</div>
 <script src="/js/site.js?v=20261124c"></script>
 <script src="/js/app.js?v=20261125e"></script>
 <script src="/js/blog.js?v=20261124h"></script>
+<script src="/js/podcast.js?v=20261128a"></script>
 <script src="/js/consent.js?v=20261125" defer></script>
 <script>
 (function () {

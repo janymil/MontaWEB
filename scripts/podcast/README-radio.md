@@ -29,3 +29,4 @@ Bus: voice + ducked bed + music + SFX + brown room tone (about -55 dB), bus comp
 
 References like `same style as bed-a, slightly darker` become the earlier description plus `Variation: ...`.
 `--spot-only` renders the Spot section plus the `break-out` jingle as the logo tail. `--test` stops after the line `[relieved] Por fin.` and adds the first STINGER.
+`--test-until "<text>"` (with `--test`) stops after the first speech line containing that text instead of `Por fin.`, then adds the first STINGER.
